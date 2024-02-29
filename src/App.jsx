@@ -7,13 +7,8 @@ const SigninPage = lazy(() => import('./pages/SigninPage/SigninPage.jsx'));
 const SignupPage = lazy(() => import('./pages/SignupPage/SignupPage.jsx'));
 const ProfilePage = lazy(() => import('./pages/ProfilePage/ProfilePage.jsx'));
 const DiaryPage = lazy(() => import('./pages/DiaryPage/DiaryPage.jsx'));
-const ExercisesPage = lazy(() =>
-  import('./pages/ExercisesPage/ExercisesPage.jsx')
-);
-
-const ProductsPage = lazy(() =>
-  import('./pages/ProductsPage/ProductsPage.jsx')
-);
+const ExercisesPage = lazy(() => import('./pages/ExercisesPage/ExercisesPage.jsx'));
+const ProductsPage = lazy(() => import('./pages/ProductsPage/ProductsPage.jsx'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage.jsx'));
 
 function App() {
