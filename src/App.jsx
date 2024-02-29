@@ -1,27 +1,31 @@
 import { Route, Routes } from 'react-router-dom';
-import SharedLayout from 'components/SharedLayout/SharedLayout';
-import FirstPage from 'pages/FirstPage/FirstPage';
-import SecondPage from 'pages/SecondPage/SecondPage';
-import HalfPage from 'pages/HalfPage/HalfPage';
-import ErrorPage from 'pages/ErrorPage/ErrorPage';
-import { AppWrapper } from './App.styled';
+import { AppLayout } from './components/AppLayout/AppLayout.jsx';
+import { lazy } from 'react';
 
-const test = import.meta.env.VITE_API_TEST;
+const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage.jsx'));
+const SigninPage = lazy(() => import('./pages/SigninPage/SigninPage.jsx'));
+const SignupPage = lazy(() => import('./pages/SignupPage/SignupPage.jsx'));
+const ProfilePage = lazy(() => import('./pages/ProfilePage/ProfilePage.jsx'));
+const DiaryPage = lazy(() => import('./pages/DiaryPage/DiaryPage.jsx'));
+const ExercisesPage = lazy(() => import('./pages/ExercisesPage/ExercisesPage.jsx'));
+const ProductsPage = lazy(() => import('./pages/ProductsPage/ProductsPage.jsx'));
+const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage.jsx'));
 
 function App() {
-  console.log(test);
+
   return (
-    <AppWrapper>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route path="/first" element={<FirstPage />} />
-          <Route path="/second" element={<SecondPage />}>
-            <Route path=":half" element={<HalfPage />} />
-          </Route>
-          <Route path="*" element={<ErrorPage />} />
-        </Route>
-      </Routes>
-    </AppWrapper>
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<WelcomePage />} />
+        <Route path="signin" element={<SigninPage />} />
+        <Route path="signup" element={<SignupPage />} />
+        <Route path="profile" element={<ProfilePage />} />
+        <Route path="diary" element={<DiaryPage />} />
+        <Route path="exercises" element={<ExercisesPage />} />
+        <Route path="products" element={<ProductsPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Route>
+    </Routes>
   );
 }
 export default App;
