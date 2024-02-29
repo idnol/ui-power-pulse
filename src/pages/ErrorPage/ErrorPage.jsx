@@ -1,11 +1,3 @@
-import { Container, Title } from './ErrorPage.styled';
-
-const ErrorPage = () => {
-  return (
-    <Container>
-      <Title>404</Title>
-    </Container>
-  );
-};
-
-export default ErrorPage;
+export default function ErrorPage() {
+  return (<h1>404</h1>)
+}

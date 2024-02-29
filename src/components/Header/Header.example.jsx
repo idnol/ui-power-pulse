@@ -3,10 +3,10 @@ import {
   Navigation,
   StyledLink,
   IconWrapper,
-} from './Header.styled';
+} from './Header.example.styled.jsx';
 import sprite from 'assets/sprite.svg';
 
-export const Header = () => {
+export const HeaderExample = () => {
 
   return (
     <HeaderContainer>
