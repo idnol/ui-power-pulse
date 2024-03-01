@@ -22,6 +22,7 @@ export const theme =  {
     grey3: '1px solid rgba(239, 237, 232, .3)',
   },
   breakpoint: {
+    sm: '375px',
     md: '768px',
     xl: '1440px'
   }
