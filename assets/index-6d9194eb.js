@@ -121,5 +121,27 @@ Error generating stack: `+o.message+`
     a {
         text-decoration: none;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+    }
+
+    ul,
+    ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
     
-`,S0=()=>O.jsxs(g0,{children:[O.jsx(w0,{}),O.jsx(y0,{children:O.jsx("div",{className:"container"})}),O.jsx("main",{children:O.jsx("div",{className:"container",children:O.jsx(C.Suspense,{fallback:O.jsx(O.Fragment,{}),children:O.jsx(Zp,{})})})})]}),k0=C.lazy(()=>Wt(()=>import("./WelcomePage-40672663.js"),[])),x0=C.lazy(()=>Wt(()=>import("./SigninPage-488b7e41.js"),[])),E0=C.lazy(()=>Wt(()=>import("./SignupPage-2d14e950.js"),[])),C0=C.lazy(()=>Wt(()=>import("./ProfilePage-b1cc1fb1.js"),[])),_0=C.lazy(()=>Wt(()=>import("./DiaryPage-a7371ffc.js"),[])),P0=C.lazy(()=>Wt(()=>import("./ExercisesPage-ea4df445.js"),[])),R0=C.lazy(()=>Wt(()=>import("./ProductsPage-810576c3.js"),[])),N0=C.lazy(()=>Wt(()=>import("./ErrorPage-ff391941.js"),[]));function L0(){return O.jsx(C.Suspense,{fallback:O.jsx("div",{children:"Loading..."}),children:O.jsx(qp,{children:O.jsxs(_e,{path:"/",element:O.jsx(S0,{}),children:[O.jsx(_e,{index:!0,element:O.jsx(k0,{})}),O.jsx(_e,{path:"signin",element:O.jsx(x0,{})}),O.jsx(_e,{path:"signup",element:O.jsx(E0,{})}),O.jsx(_e,{path:"profile",element:O.jsx(C0,{})}),O.jsx(_e,{path:"diary",element:O.jsx(_0,{})}),O.jsxs(_e,{path:"exercises/",element:O.jsx(P0,{}),children:[O.jsx(_e,{path:"bodyparts",element:O.jsx("div",{children:"Body parts"})}),O.jsx(_e,{path:"muscles",element:O.jsx("div",{children:"Muscles"})}),O.jsx(_e,{path:"equipment",element:O.jsx("div",{children:"Equipment"})})]}),O.jsx(_e,{path:"products",element:O.jsx(R0,{})}),O.jsx(_e,{path:"*",element:O.jsx(N0,{})})]})})})}ai.createRoot(document.getElementById("root")).render(O.jsx(Qe.StrictMode,{children:O.jsx(lh,{basename:"/react_vite",children:O.jsx(L0,{})})}));export{T0 as N,Zp as O,O as j};
+`,S0=()=>O.jsxs(g0,{children:[O.jsx(w0,{}),O.jsx(y0,{children:O.jsx("div",{className:"container"})}),O.jsx("main",{children:O.jsx("div",{className:"container",children:O.jsx(C.Suspense,{fallback:O.jsx(O.Fragment,{}),children:O.jsx(Zp,{})})})})]}),k0=C.lazy(()=>Wt(()=>import("./WelcomePage-c6fd32d4.js"),[])),x0=C.lazy(()=>Wt(()=>import("./SigninPage-ee32f403.js"),[])),E0=C.lazy(()=>Wt(()=>import("./SignupPage-89882fe4.js"),[])),C0=C.lazy(()=>Wt(()=>import("./ProfilePage-99c4710f.js"),[])),_0=C.lazy(()=>Wt(()=>import("./DiaryPage-37e53049.js"),[])),P0=C.lazy(()=>Wt(()=>import("./ExercisesPage-f421d6bf.js"),[])),R0=C.lazy(()=>Wt(()=>import("./ProductsPage-74d10adf.js"),[])),N0=C.lazy(()=>Wt(()=>import("./ErrorPage-20decb0a.js"),[]));function L0(){return O.jsx(C.Suspense,{fallback:O.jsx("div",{children:"Loading..."}),children:O.jsx(qp,{children:O.jsxs(_e,{path:"/",element:O.jsx(S0,{}),children:[O.jsx(_e,{index:!0,element:O.jsx(k0,{})}),O.jsx(_e,{path:"signin",element:O.jsx(x0,{})}),O.jsx(_e,{path:"signup",element:O.jsx(E0,{})}),O.jsx(_e,{path:"profile",element:O.jsx(C0,{})}),O.jsx(_e,{path:"diary",element:O.jsx(_0,{})}),O.jsxs(_e,{path:"exercises/",element:O.jsx(P0,{}),children:[O.jsx(_e,{path:"bodyparts",element:O.jsx("div",{children:"Body parts"})}),O.jsx(_e,{path:"muscles",element:O.jsx("div",{children:"Muscles"})}),O.jsx(_e,{path:"equipment",element:O.jsx("div",{children:"Equipment"})})]}),O.jsx(_e,{path:"products",element:O.jsx(R0,{})}),O.jsx(_e,{path:"*",element:O.jsx(N0,{})})]})})})}ai.createRoot(document.getElementById("root")).render(O.jsx(Qe.StrictMode,{children:O.jsx(lh,{basename:"/react_vite",children:O.jsx(L0,{})})}));export{uh as L,T0 as N,Zp as O,Fd as g,O as j,C as r,ms as s,St as t};
