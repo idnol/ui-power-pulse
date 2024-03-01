@@ -1,22 +1,12 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import ExercisesCategories from './ExercisesCategories';
 
-export default function ExercisesPage() {
+export default function ExercisesPage({ subcategories }) {
   return (
-    <>
-      <h1>exercises</h1>
-      <ul>
-        <li>
-          <NavLink to="bodyparts">Body parts</NavLink>
-        </li>
-        <li>
-          <NavLink to="muscles">Muscles</NavLink>
-        </li>
-        <li>
-          <NavLink to="equipment">Equipment</NavLink>
-        </li>
-      </ul>
-
-      <Outlet />
-    </>
+    <div>
+      <h1>Exercises</h1>
+      <ExercisesCategories />
+      <Outlet context={{ subcategories }} />
+    </div>
   );
 }
