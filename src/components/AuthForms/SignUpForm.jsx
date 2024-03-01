@@ -18,32 +18,35 @@ export const SignUpForm = () => {
 
     return (
         <>
-        <StyledDiv>
-        <StyledTitle>Sign Up</StyledTitle>
-            <StyledGreetings>Thank you for your interest in our platform. To complete the registration process, please provide us with the following information.</StyledGreetings>
-            
-        <Formik
-            initialValues={{
+
+            <StyledDiv>
+                <StyledTitle>Sign Up</StyledTitle>
+                <StyledGreetings>Thank you for your interest in our platform. To complete the registration process, please provide us with the following information.</StyledGreetings>
+
+                <Formik
+                    initialValues={{
                         name: '',
                         email: '',
                         password: '',
                     }}
                     validationSchema={schema}
-                    onSubmit={(values) => {              
-                    handleRegistration(values);
+                    onSubmit={(values) => {
+                        handleRegistration(values);
                     }}>
-            <Form autoComplete="off">
-                <StyledInput type="text" name="name" placeholder="Name" />
-                <Error name="name" component="p"/>
-                <StyledInput type="email" name="email" placeholder="Email" />
-                <Error name="email" component="p"/>
-                <StyledInput type="password" name="password" placeholder="Password" />
-                <Error name="password" component="p" />
-                <StyledButton type="submit">Sign Up</StyledButton>
-            </Form>
-            </Formik>
-            
-        <StyledSecondaryText>Already have an account? <StyledLink to="/signin">Sign In</StyledLink></StyledSecondaryText>
-        </StyledDiv>
+                    <Form autoComplete="off">
+                        <StyledInput type="text" name="name" placeholder="Name" />
+                        <Error name="name" component="p" />
+                        <StyledInput type="email" name="email" placeholder="Email" />
+                        <Error name="email" component="p" />
+                        <StyledInput type="password" name="password" placeholder="Password" />
+                        <Error name="password" component="p" />
+                        <StyledButton type="submit">Sign Up</StyledButton>
+                    </Form>
+                </Formik>
+
+                <StyledSecondaryText>Already have an account? <StyledLink to="/signin">Sign In</StyledLink></StyledSecondaryText>
+            </StyledDiv>
+
         </>
-)}
+    )
+}

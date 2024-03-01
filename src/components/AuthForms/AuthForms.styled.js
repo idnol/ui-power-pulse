@@ -1,4 +1,4 @@
-import { ErrorMessage, Field} from "formik";
+import { ErrorMessage, Field } from "formik";
 import styled from "styled-components";
 import { StyledHeader, StyledText } from "../parts/ReusableStyles.styled";
 import { theme } from "../../vars";
@@ -10,24 +10,24 @@ export const StyledDiv = styled.div`
     max-width: 335px;
     margin-left: auto;
     margin-right: auto;
-        @media (min-width: ${theme.breakpoint.md}) {
-            max-width: 496px;
-            margin-left: 0px;
-        }
+    @media (min-width: ${theme.breakpoint.md}) {
+        max-width: 496px;
+        margin-left: 0px;
+    }
 `;
 
 export const StyledTitle = styled(StyledHeader)`
     margin-bottom: 14px;
-        @media (min-width: ${theme.breakpoint.md}) {
-            margin-bottom: 16px;
-        }
+    @media (min-width: ${theme.breakpoint.md}) {
+        margin-bottom: 16px;
+    }
 `;
 
 export const StyledGreetings = styled(StyledText)`
     margin-bottom: 28px;
-        @media (min-width: ${theme.breakpoint.md}) {
-            margin-bottom: 32px;
-        }
+    @media (min-width: ${theme.breakpoint.md}) {
+        margin-bottom: 32px;
+    }
 `;
 
 export const StyledInput = styled(Field)`
@@ -43,18 +43,18 @@ export const StyledInput = styled(Field)`
     background-color: transparent;
     color: ${theme.color.white};
     &:hover{
-    border: ${theme.border.orange};
+        border: ${theme.border.orange};
     };
-        @media (min-width: ${theme.breakpoint.md}) {
-            width: 307px;
-            height: 52px;
-            margin-top: 20px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        @media (min-width: ${theme.breakpoint.xl}) {
-            width: 310px;
-        }
+    @media (min-width: ${theme.breakpoint.md}) {
+        width: 307px;
+        height: 52px;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    @media (min-width: ${theme.breakpoint.xl}) {
+        width: 310px;
+    }
 `;
 
 export const Error = styled(ErrorMessage)`
@@ -77,26 +77,26 @@ export const StyledButton = styled.button`
     background-color: ${theme.color.orange};
     color: ${theme.color.white};
     &:hover{
-    background-color: ${theme.color.orangeSecond};
+        background-color: ${theme.color.orangeSecond};
     };
-        @media (min-width: ${theme.breakpoint.md}) {
-            height: 56px;
-            margin-top: 64px;
-            padding: 16px 60px;
-            font-size: 20px;
-            line-height: 1.2;
-        }
+    @media (min-width: ${theme.breakpoint.md}) {
+        height: 56px;
+        margin-top: 64px;
+        padding: 16px 60px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
 `;
 
 export const StyledSecondaryText = styled.p`
-color: ${theme.color.grey};
+    color: ${theme.color.grey};
     margin-top: 12px;
     font-size: 12px;
     line-height: 1.5;
     color: ${theme.color.greySecond};
-            @media (min-width: ${theme.breakpoint.md}) {
-                padding-left: 8px;
-        }
+    @media (min-width: ${theme.breakpoint.md}) {
+        padding-left: 8px;
+    }
 `;
 
 export const StyledLink = styled(Link)`
