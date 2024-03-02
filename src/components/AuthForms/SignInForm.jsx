@@ -1,6 +1,7 @@
 import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { Error, StyledButton, StyledDiv, StyledGreetings, StyledInput, StyledLink, StyledSecondaryText, StyledTitle } from './AuthForms.styled';
+import { PasswordField } from './PasswordField';
 
 
 const schema = Yup.object().shape({
@@ -34,7 +35,7 @@ export const SignInForm = () => {
                     <Form autoComplete="off">
                         <StyledInput type="email" name="email" placeholder="Email" />
                         <Error name="email" component="p" />
-                        <StyledInput type="password" name="password" placeholder="Password" />
+                        <StyledInput type="password" name="password" placeholder="Password" component={PasswordField} />
                         <Error name="password" component="p" />
                         <StyledButton type="submit">Sign Up</StyledButton>
                     </Form>
