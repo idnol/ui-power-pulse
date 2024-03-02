@@ -129,7 +129,7 @@ export const DashboardItemTitle = styled.p`
   font-feature-settings:
     'clig' off,
     'liga' off;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -151,7 +151,7 @@ export const DashboardItemNumber = styled.p`
   font-feature-settings:
     'clig' off,
     'liga' off;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -181,7 +181,7 @@ export const AttentionIcon = styled.svg`
 
 export const AttentionText = styled.p`
   color: ${theme.color.grey};
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
