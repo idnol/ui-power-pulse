@@ -33,12 +33,12 @@ export const MainTitle = styled.h1`
 `;
 
 export const WrapperNavLink = styled.nav`
-display: flex;
-gap: 14px;
-margin-top: 40px;
-width: 274px;
-height: 42px;
-text-align: center;
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+  width: 274px;
+  height: 42px;
+  text-align: center;
 
   @media (min-width: ${theme.breakpoint.md}) {
     gap: 20px;
