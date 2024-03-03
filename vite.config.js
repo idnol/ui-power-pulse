@@ -12,5 +12,5 @@ export default defineConfig({
           assets: '/src/assets'
         },
       },
-      base: '/ui-power-pulses/',
+      base: '/ui-power-pulse/',
     });
