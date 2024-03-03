@@ -11,7 +11,7 @@ export const ProductCard = styled.div`
  padding: 16px;
  width: 335px;
  height: 141px;
- background-color: ${theme.color. greyThird};
+ background-color: ${theme.color. greyTr};
  @media (min-width: ${theme.breakpoint.xl}) {
           width: 405px;
         }
@@ -22,7 +22,7 @@ export const DietBox = styled.div`
  padding: 5px 7px;
  width: 41px;
  height: 24px;
- background: ${theme.color. greyThird};
+ background: ${theme.color. greyTr};
  font-weight: 700;
  font-size: 12px;
  color: #fff;
