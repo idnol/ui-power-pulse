@@ -1,4 +1,4 @@
-import{s as o,t as i,j as t}from"./index-3672356f.js";const a=o.div`
+import{s as o,t as i,j as t}from"./index-52742af0.js";const a=o.div`
   max-width: 335px;
   width: 100%;
   margin: 0 auto;
