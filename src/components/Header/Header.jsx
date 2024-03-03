@@ -1,71 +1,76 @@
 import {
   HeaderContainer,
-  LinkWrapper,
-  UserBar,
   StyledLink,
-  User,
-  UserNav,
-  StyledNavLink,
   NavigationWrap,
   IconWrapper,
   LogoText,
-  SettingsIcon,
-  BurgerIcon,
-  UserIcon,
-  LogOutWrapDesktop,
+  Backdrop,
+  CloseButton,
+  CloseIcon,
+  MenuUserNav,
+  MenuUserLink,
 } from './Header.styled.jsx';
 import sprite from '/public/img/sprait.svg';
 import { theme } from '../../vars.js';
+import { UserNav } from './UserNav.jsx';
+import { UserBar } from './UserBar.jsx';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
 
-
 export const Header = () => {
-  const handleClick = (e) => {
-    console.dir(e.target)
-  }
-
+  const onCloseMenu = () => {
+    const menu = document.getElementById('menu-wrapper');
+    menu.style.visibility = 'hidden';
+    menu.style.opacity = 0;
+    menu.style.display = 'none';
+  };
   return (
-    <HeaderContainer>
-      <StyledLink to="/profile">
-        <IconWrapper
-          fill={theme.color.orange}
-          size={{ width: '40px', height: '16px' }}
-        >
-          <use href={`${sprite}#logo`} />
-        </IconWrapper>
-        <LogoText>PowerPulse</LogoText>
-      </StyledLink>
+    <>
+      <HeaderContainer>
+        <StyledLink to="/profile">
+          <IconWrapper
+            fill={theme.color.orange}
+            size={{ width: '40px', height: '24px' }}
+            stroke={theme.color.white}
+          >
+            <use href={`${sprite}#logo`} />
+          </IconWrapper>
+          <LogoText>PowerPulse</LogoText>
+        </StyledLink>
 
-      <NavigationWrap>
-        <UserNav>
-          <StyledNavLink to={'/diary'}>Diary</StyledNavLink>
-          <StyledNavLink to={'/products'}>Products</StyledNavLink>
-          <StyledNavLink to={'/exercises'}>Exercises</StyledNavLink>
-        </UserNav>
+        <NavigationWrap>
+          <UserNav />
+          <UserBar />
+        </NavigationWrap>
+      </HeaderContainer>
 
-        <UserBar>
-          <LinkWrapper to={'/profile'}>
-            <SettingsIcon
-              width={24}
-              height={24}
+      <div
+        id="menu-wrapper"
+        style={{
+          opacity: 0,
+          visibility: 'hidden',
+          display: 'none',
+        }}
+      >
+        <Backdrop>
+            <CloseButton id="close-btn" onClick={onCloseMenu}>
+              <CloseIcon>
+                <use href={`${sprite}#x-modal`} />
+              </CloseIcon>
+            </CloseButton>
+            <MenuUserNav>
+              <MenuUserLink to={'/diary'}>Diary</MenuUserLink>
+              <MenuUserLink to={'/products'}>Products</MenuUserLink>
+              <MenuUserLink to={'/exercises'}>Exercises</MenuUserLink>
+            </MenuUserNav>
+          <div>
+          <LogOut
+              color={theme.color.white}
+              hovercolor={theme.color.white}
               stroke={theme.color.white}
-              fill="none">
-              <use href={`${sprite}#settings`} />
-            </SettingsIcon>
-            <User>
-              <UserIcon>
-                <use href={`${sprite}#avatar-header`} />
-              </UserIcon>
-            </User>
-          </LinkWrapper>
-            <BurgerIcon onClick={handleClick}>
-              <use href={`${sprite}#burger-menu`} />
-            </BurgerIcon>
-          <LogOutWrapDesktop>
-            <LogOut />
-          </LogOutWrapDesktop>
-        </UserBar>
-      </NavigationWrap>
-    </HeaderContainer>
+            />
+          </div>
+        </Backdrop>
+      </div>
+    </>
   );
 };
