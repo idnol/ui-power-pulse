@@ -6,14 +6,32 @@ import {
   } from 'formik';
 import {theme} from "../../vars";
 
+export const FilterWrapper = styled.div`
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media (min-width: ${theme.breakpoint.md}) {
+    padding-top: 72px;
+    padding-bottom: 32px;
+  }
+  @media (min-width: ${theme.breakpoint.xl}) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`
+
 export const FiltersContainer = styled.div`
  max-width: 335px;
- margin: 0 auto 40px auto;
+ margin: 0 auto;
+ margin-top: 40px;
  @media (min-width: ${theme.breakpoint.md}) {
             max-width: 664px;
             margin: 0;
-            margin-bottom: 32px;
-            margin-top:32px;
+            margin-top: 32px;
+        }
+        @media (min-width: ${theme.breakpoint.xl}) {
+            margin-bottom: 0;
+            margin-top: 0;
         }
 `;
 

@@ -12,6 +12,9 @@ export const ProductCard = styled.div`
  width: 335px;
  height: 141px;
  background-color: ${theme.color. greyThird};
+ @media (min-width: ${theme.breakpoint.xl}) {
+          width: 405px;
+        }
 `;
 
 export const DietBox = styled.div`
@@ -53,6 +56,10 @@ export const AddBtn = styled.button`
  gap: 8px;
  align-items: center;
  padding: 0;
+ @media (min-width: ${theme.breakpoint.md}) {
+          font-size: 16px;
+          line-height: 1.5;
+        }
 `;
 
 export const IconSvg = styled.svg`
@@ -66,6 +73,9 @@ export const BtnContainer = styled.div`
  justify-content: space-between;
  align-items: center;
  margin-bottom: 35px;
+ @media (min-width: ${theme.breakpoint.md}) {
+          margin-bottom: 27px;
+        }
 `;
 
 export const BtnWrapper = styled.div`
@@ -104,7 +114,6 @@ export const ProductTitle = styled.h3`
 export const ProductInfoWrapper = styled.div`
  display: flex;
  gap: 16px;
- justify-content: center;
 `;
 
 export const ProductInfoText = styled.p`

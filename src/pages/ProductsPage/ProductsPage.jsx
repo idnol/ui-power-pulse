@@ -3,6 +3,8 @@ import { ProductsFilter } from "../../components/ProductsFilter/ProductsFilter";
 import { ProductsList } from "../../components/ProductsList/ProductsList";
 import { fetchProducts } from "../../redux/products/api";
 import { useDispatch } from "react-redux";
+import { ProductsSection } from "../../components/ProductsList/ProductsList.styled";
+import { FilterWrapper } from "../../components/ProductsFilter/ProductsFilter.styled";
 
 export default function ProductsPage() {
   const dispatch = useDispatch();
@@ -11,9 +13,11 @@ export default function ProductsPage() {
     dispatch(fetchProducts());
   }, [dispatch]);
   
-  return <>
-  <h1>product</h1>
-  <ProductsFilter/>
+  return <ProductsSection>
+  <FilterWrapper>
+  <h2>Products</h2>
+  < ProductsFilter/>
+  </FilterWrapper>
   <ProductsList/>
-  </>
+  </ProductsSection>
 }
