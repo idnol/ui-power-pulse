@@ -10,18 +10,9 @@ import {
 import sprite from '/public/img/sprait.svg';
 import { theme } from '../../vars.js';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
+import { closeMenu } from './closeMenu.js';
 
 export const Menu = () => {
-  const onCloseMenu = () => {
-    const menu = document.getElementById('menu-wrapper');
-    const backdrop = document.getElementById('backdrop');
-    !backdrop.style.left || backdrop.style.left === '-100%'
-      ? (backdrop.style.left = '0')
-      : (backdrop.style.left = '-100%');
-    menu.style.visibility = 'hidden';
-    menu.style.opacity = 0;
-    menu.style.display = 'none';
-  };
   return (
     <div
       id="menu-wrapper"
@@ -32,7 +23,7 @@ export const Menu = () => {
       }}
     >
       <Backdrop id="backdrop">
-        <CloseButton id="close-btn" onClick={onCloseMenu}>
+        <CloseButton id="close-btn" onClick={closeMenu}>
           <CloseIcon>
             <use href={`${sprite}#x-modal`} />
           </CloseIcon>
@@ -41,17 +32,17 @@ export const Menu = () => {
         <MenuUserNav>
           <MenuList>
             <li width="111" height="38">
-              <MenuUserLink to={'/diary'} onClick={onCloseMenu}>
+              <MenuUserLink to={'/diary'} onClick={closeMenu}>
                 Diary
               </MenuUserLink>
             </li>
             <li width="111" height="38">
-              <MenuUserLink to={'/products'} onClick={onCloseMenu}>
+              <MenuUserLink to={'/products'} onClick={closeMenu}>
                 Products
               </MenuUserLink>
             </li>
             <li width="111" height="38">
-              <MenuUserLink to={'/exercises'} onClick={onCloseMenu}>
+              <MenuUserLink to={'/exercises'} onClick={closeMenu}>
                 Exercises
               </MenuUserLink>
             </li>
@@ -61,7 +52,6 @@ export const Menu = () => {
         <LogOutWrapper>
           <LogOut
             color={theme.color.white}
-            hovercolor={theme.color.white}
             stroke={theme.color.white}
           />
         </LogOutWrapper>
@@ -69,5 +59,3 @@ export const Menu = () => {
     </div>
   );
 };
-
-export default Menu;

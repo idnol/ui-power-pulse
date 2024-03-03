@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../../vars';
-// import { keyframes } from 'styled-components'
+import { keyframes } from 'styled-components'
 
 export const Preloader = styled.div`
   position: fixed;
@@ -15,16 +15,23 @@ export const Preloader = styled.div`
   transition:
   opacity 0.5s ease,
   visibility 0.5s ease;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const Spin = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
 `;
 
 export const Spinner = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
   border: 8px solid ${theme.color.grey};
   border-top-color: ${theme.color.orange};
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 1s ease-in-out infinite;
+  animation: ${Spin} 1s ease-in-out infinite;
 `;

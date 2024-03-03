@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { theme } from '../../../vars';
 
 export const LogOutLink = styled(Link)`
   display: flex;
@@ -8,14 +9,14 @@ export const LogOutLink = styled(Link)`
   gap: 8px;
   width: 78px;
   height: 24px;
-  color: ${(props) => props.color || 'none'};
+  color: ${(props) => props.color || `${theme.color.white}`};
 
   :hover {
     color: ${(props) => props.hovercolor || 'none'};
   }
 `;
 export const LogOutIcon = styled.svg`
-width: 20px;
-height: 20px;
-  stroke: ${(props) => props.stroke || 'none'};
+  width: 23px;
+  height: 23px;
+  stroke: ${(props) => props.stroke || `${theme.color.white}`};
 `;

@@ -21,15 +21,16 @@ export const StyledLink = styled(Link)`
   align-items: center;
   color: #ffffff;
   cursor: pointer;
-  transition: 0.5s;
+  width: 152px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-image: url(${'../../../public/img/logo/logo-sm.svg'});
 
-  &:hover {
-    color: ${theme.color.orange};
+  @media (min-width: ${theme.breakpoint.md}) {
+    background-image: url(${'../../../public/img/logo/logo.svg'});
+    width: 152px;
+    height: 17px;
   }
-`;
-
-export const LogoText = styled.span`
-  margin-left: 3px;
 `;
 
 export const NavigationWrap = styled.div`
@@ -72,13 +73,6 @@ export const StyledNavLink = styled(NavLink)`
     border: ${theme.color.orange};
     background-color: ${theme.color.orange};
   }
-`;
-
-export const IconWrapper = styled.svg`
-  width: ${(props) => props.size?.width || '32px'};
-  height: ${(props) => props.size?.height || '32px'};
-  stroke: ${(props) => props.color || 'none'};
-  display: inline-block;
 `;
 
 export const SettingsIcon = styled.svg`
@@ -148,6 +142,7 @@ export const Backdrop = styled.div`
     width: 350px;
   }
 `;
+
 export const LogOutWrapper = styled.div`
   position: absolute;
   bottom: 20px;
@@ -166,8 +161,6 @@ export const LogOutWrapDesktop = styled.div`
   }
 `;
 
-// export const
-
 export const CloseIcon = styled.svg`
   width: 24px;
   height: 24px;
@@ -184,6 +177,7 @@ export const CloseButton = styled.button`
   background-color: inherit;
   border: none;
 `;
+
 export const MenuUserNav = styled.nav`
   width: fit-content;
   text-align: center;
@@ -196,12 +190,14 @@ export const MenuUserNav = styled.nav`
     left: 115px;
   }
 `;
+
 export const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 `;
+
 export const MenuUserLink = styled(NavLink)`
   display: block;
   border: ${theme.border.grey2};
