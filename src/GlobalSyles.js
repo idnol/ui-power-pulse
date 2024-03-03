@@ -64,7 +64,7 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         height: auto;
     }
-    
+
      .accent{
        background: ${theme.color.orange};
        border: ${theme.border.grey2}
@@ -81,5 +81,5 @@ export const GlobalStyle = createGlobalStyle`
 
     .greyTextColor{
         color: ${theme.color.greyFifth};
-
+    }
 `;
