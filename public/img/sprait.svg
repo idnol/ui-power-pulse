@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
   style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
+  <symbol id="icon-Line" viewBox="0 0 87 32">
+<path fill="none" stroke="#ef8964" style="stroke: var(--color1, #ef8964)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7297" d="M60.717 0.865c-20.169 0.292-64.211 3.812-59.502 21.728 4.232 12.649 64.534 9.932 79.413 0.414s-5.555-19.422-34.037-15.916"></path>
+</symbol>
     <symbol id="apple" viewBox="0 0 32 32">
       <path fill="#ef8964"
         d="M19.454 4.758a.794.794 0 0 0 .479-.399.798.798 0 0 0-.672-1.166.798.798 0 0 0-.314.048c-1.501.499-2.435 1.731-2.986 3.051a8.02 8.02 0 0 0-.203.542 6.394 6.394 0 0 0-1.138-1.541 6.39 6.39 0 0 0-4.705-1.872 1.74 1.74 0 0 0-1.694 1.694 6.39 6.39 0 0 0 1.872 4.705l.05.048a6.401 6.401 0 0 0-5.027 5.747l-.01.118a13.6 13.6 0 0 0 1.616 7.597l.576 1.053a.979.979 0 0 0 .051.08l1.6 2.243a4.301 4.301 0 0 0 3.142 1.785 4.297 4.297 0 0 0 3.392-1.244.743.743 0 0 1 .516-.214.72.72 0 0 1 .516.214 4.299 4.299 0 0 0 5.16.698 4.28 4.28 0 0 0 1.374-1.239l1.6-2.242a.625.625 0 0 0 .051-.082l.574-1.053a13.598 13.598 0 0 0 1.616-7.597l-.008-.118a6.386 6.386 0 0 0-2.442-4.533 6.404 6.404 0 0 0-4.99-1.268l-2.651.442c.016-1.09.208-2.315.638-3.349.448-1.08 1.114-1.848 2.013-2.149h.002zm-8.4 9.6a1.955 1.955 0 0 0-1.147.968c-.296.557-.499 1.475-.312 2.974a.8.8 0 0 1-1.587.198c-.213-1.702-.016-2.984.488-3.926a3.551 3.551 0 0 1 2.053-1.733.791.791 0 0 1 .858.235.814.814 0 0 1 .194.581.791.791 0 0 1-.274.548.814.814 0 0 1-.271.155z"
@@ -194,7 +197,6 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.462"
         d="M24 8 8 24M8 8l16 16" />
     </symbol>
-
     <symbol id="icon-calendar" viewBox="0 0 32 32">
 <path fill="none" stroke="#efede8" style="stroke: var(--color1, #efede8)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M25.333 5.333h-18.667c-1.473 0-2.667 1.194-2.667 2.667v18.667c0 1.473 1.194 2.667 2.667 2.667h18.667c1.473 0 2.667-1.194 2.667-2.667v-18.667c0-1.473-1.194-2.667-2.667-2.667z"></path>
 <path fill="none" stroke="#efede8" style="stroke: var(--color1, #efede8)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M21.333 2.667v5.333"></path>
