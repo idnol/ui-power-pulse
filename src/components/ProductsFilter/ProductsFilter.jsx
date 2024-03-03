@@ -1,29 +1,7 @@
 import { Formik,  } from "formik";
 import { Form, SearchBtn, Field, ErrorMessage, FieldTitle, StyledOption, FiltersContainer, SelectWrapper, CategoryField, InputGroup, IconSearch, CleanBtn, IconClean } from "./ProductsFilter.styled";
 
-export const ProductsFilter = () => {
-    const categories =[
-        "alcoholic drinks",
-        "berries",
-        "cereals",
-        "dairy",
-        "dried fruits",
-        "eggs",
-        "fish",
-        "flour",
-        "fruits",
-        "meat",
-        "mushrooms",
-        "nuts",
-        "oils and fats",
-        "poppy",
-        "sausage",
-        "seeds",
-        "sesame",
-        "soft drinks",
-        "vegetables and herbs"
-    ];
-
+export const ProductsFilter = ({categories}) => {
     return (
         <FiltersContainer>
         <Formik

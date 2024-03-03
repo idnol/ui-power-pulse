@@ -15,3 +15,8 @@ export const fetchProducts = createAsyncThunk(
     }
   }
 );
+
+export const fetchCategories = async () => {
+  const response = await axios.get(`/categories`);
+  return response.data;
+};
