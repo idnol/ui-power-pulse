@@ -1,4 +1,4 @@
-import { AddBtn, BtnContainer, BtnWrapper, DietBox, ProductCard, ProductInfoData, ProductInfoText, ProductInfoWrapper, RecomendedText, ProductTitle, RecomendSwitch, TitleWrapper } from "./ProductItem.styled"
+import { AddBtn, BtnContainer, BtnWrapper, DietBox, ProductCard, ProductInfoData, ProductInfoText, ProductInfoWrapper, RecomendedText, ProductTitle, RecomendSwitch, TitleWrapper, IconSvg, IconTitle } from "./ProductItem.styled"
 
 export const ProductItem = ({product:{title, calories, category, weight, groupBloodNotAllowed}, bloodGroup}) => {
   const notAllowed = groupBloodNotAllowed[bloodGroup];
@@ -11,24 +11,17 @@ export const ProductItem = ({product:{title, calories, category, weight, groupBl
       <BtnWrapper>
       <RecomendedText><RecomendSwitch $notAllowed={notAllowed}/>{isRecomended}</RecomendedText>
         <AddBtn>Add
-          <svg style={{
-            width: '18',
-            height: '18',
-            stroke: '#e6533c',
-          }} >
+          <IconSvg >
            <use href="/img/sprait.svg#arrow" />
-          </svg>
+          </IconSvg>
         </AddBtn>
       </BtnWrapper>
     </BtnContainer>
 
     <TitleWrapper>
-      <svg style={{
-            width: '24',
-            height: '24',
-          }} >
+      <IconTitle>
           <use href="/img/sprait.svg#run-man-circle" />
-      </svg>
+      </IconTitle>
       <ProductTitle>{title}</ProductTitle>
     </TitleWrapper>
 

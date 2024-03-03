@@ -1,13 +1,5 @@
 import { Formik,  } from "formik";
-import * as Yup from 'yup';
-import { Form,FormGroup, SearchBtn, Field, ErrorMessage, FieldTitle } from "./ProductsFilter.styled";
-
-const productSchema = Yup.object().shape({
-    title: Yup.string(),
-    category: Yup.string(),
-    recommended: Yup.string()
-      .oneOf(['all', 'recommended', 'not recommended']),
-  });
+import { Form, SearchBtn, Field, ErrorMessage, FieldTitle, StyledOption, FiltersContainer, SelectWrapper, CategoryField, InputGroup, IconSearch, CleanBtn, IconClean } from "./ProductsFilter.styled";
 
 export const ProductsFilter = () => {
     const categories =[
@@ -33,14 +25,13 @@ export const ProductsFilter = () => {
     ];
 
     return (
-        <div>
+        <FiltersContainer>
         <Formik
           initialValues={{
             title: "",
             category: "",
             recommended: "all",
           }}
-          validationSchema={productSchema}
           onSubmit={(values) => {
             console.log(values);
             // onAdd(values);
@@ -48,45 +39,50 @@ export const ProductsFilter = () => {
           }}
         >
           <Form>
-            <FormGroup>
-              
+            <InputGroup>
+               <label>
               <FieldTitle name="title" placeholder="Search"/>
-              <ErrorMessage name="title" component="span" />
-            </FormGroup>
-  
-            <label>
-              <Field as="select" name="category">
-              <option value="" disabled selected hidden>Categories</option>
-             { categories.map(item => {
-                return <option key={item.index} value={item}>{item}</option>
-             })}
-                
-              </Field>
-              <ErrorMessage name="category" component="span" />
-            </label>
-    
-  
-            <label>
-              <Field as="select" name="recommended">
-                <option value="all">All</option>
-                <option value="recommended">Recommended</option>
-                <option value="not recommended">Not recommended</option>
-              </Field>
-              <ErrorMessage name="recommended" component="span" />
-            </label>
-  
+              <CleanBtn type="submit" className="cleanBtn">
+             <IconClean>
+              <use href="/img/sprait.svg#x" />
+             </IconClean>
+            </CleanBtn>
+              </label>
+
+              
+
             <SearchBtn type="submit">
-            <svg style={{
-            width: '18',
-            height: '18',
-            stroke:"#EFEDE8",
-          }} >
-           <use href="/img/sprait.svg#search" />
-          </svg>
+             <IconSearch>
+              <use href="/img/sprait.svg#search" />
+             </IconSearch>
             </SearchBtn>
+            </InputGroup>
+            
+  
+            <SelectWrapper>
+             <label>
+               <CategoryField as="select" name="category">
+               <StyledOption value="" defaultValue hidden>Categories</StyledOption>
+              { categories.map((item, index) => {
+                 return <StyledOption key={index} value={item}>{item}</StyledOption>
+              })}  
+               </CategoryField>
+               <ErrorMessage name="category" component="span" />
+             </label>
+    
+             <label>
+               <Field as="select" name="recommended">
+                 <StyledOption value="all">All</StyledOption>
+                 <StyledOption value="recommended">Recommended</StyledOption>
+                 <StyledOption value="not recommended">Not recommended</StyledOption>
+               </Field>
+               <ErrorMessage name="recommended" component="span" />
+             </label>
+           </SelectWrapper>
+  
           </Form>
         </Formik>
-      </div>
+      </FiltersContainer>
     )
   }
   
