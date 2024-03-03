@@ -12,8 +12,10 @@ import { theme } from '../../vars.js';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
 
 export const UserBar = () => {
-  const handleClick = () => {
+  const openSidebar = () => {
     const menu = document.getElementById('menu-wrapper');
+    const backdrop = document.getElementById('backdrop')
+    !(backdrop.style.left) || backdrop.style.left === '-100%'? backdrop.style.left = '0': backdrop.style.left= '-100%';
     menu.style.visibility = 'visible';
     menu.style.opacity = 1;
     menu.style.display = 'block';
@@ -36,7 +38,7 @@ export const UserBar = () => {
             </UserIcon>
           </User>
         </LinkWrapper>
-        <BurgerIcon onClick={handleClick}>
+        <BurgerIcon onClick={openSidebar}>
           <use href={`${sprite}#burger-menu`} />
         </BurgerIcon>
         <LogOutWrapDesktop>

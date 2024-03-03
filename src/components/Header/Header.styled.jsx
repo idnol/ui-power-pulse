@@ -134,10 +134,31 @@ export const BurgerIcon = styled.svg`
   }
 `;
 
+export const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 5;
+  width: 200px;
+  height: 100vh;
+
+  background-color: ${theme.color.orange};
+
+  @media (min-width: ${theme.breakpoint.md}) {
+    width: 350px;
+  }
+`;
+export const LogOutWrapper = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+`;
+
 export const LogOutWrapDesktop = styled.div`
   opacity: 0;
   visibility: hidden;
   display: none;
+
   @media (min-width: ${theme.breakpoint.xl}) {
     opacity: 1;
     visibility: visible;
@@ -145,15 +166,7 @@ export const LogOutWrapDesktop = styled.div`
   }
 `;
 
-export const Backdrop = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 350px;
-  height: 100vh;
-  background-color: ${theme.color.orange};
-`;
+// export const
 
 export const CloseIcon = styled.svg`
   width: 24px;
@@ -172,21 +185,25 @@ export const CloseButton = styled.button`
   border: none;
 `;
 export const MenuUserNav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
   width: fit-content;
   text-align: center;
   position: absolute;
+  top: 245px;
+  left: 43px;
 
   @media (min-width: ${theme.breakpoint.md}) {
-    
     top: 200px;
     left: 115px;
   }
 `;
+export const MenuList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+`;
 export const MenuUserLink = styled(NavLink)`
+  display: block;
   border: ${theme.border.grey2};
   border-radius: 12px;
   padding: 10px 27px;
