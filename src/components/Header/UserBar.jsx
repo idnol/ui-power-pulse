@@ -7,7 +7,7 @@ import {
   UserIcon,
   LogOutWrapDesktop,
 } from './Header.styled.jsx';
-import sprite from '/public/img/sprait.svg';
+import sprite from 'assets/sprite-2.svg';
 import { theme } from '../../vars.js';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
 
@@ -42,7 +42,7 @@ export const UserBar = () => {
           <use href={`${sprite}#burger-menu`} />
         </BurgerIcon>
         <LogOutWrapDesktop>
-          <LogOut />
+          <LogOut stroke={`${theme.color.orange}`}/>
         </LogOutWrapDesktop>
       </StyledUserBar>
     </>

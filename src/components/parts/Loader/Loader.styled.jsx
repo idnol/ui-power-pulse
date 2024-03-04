@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../../../vars';
 import { keyframes } from 'styled-components'
 
-export const Preloader = styled.div`
+export const Preloader = styled.section`
   position: fixed;
   top: 0;
   left: 0;
