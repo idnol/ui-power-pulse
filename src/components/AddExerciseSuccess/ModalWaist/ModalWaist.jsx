@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import {
   BackDrop,
-  BoxBtnDiary,
-  BtnDiary,
   BtnSuccess,
   CaloriesText,
   Icon,
@@ -12,22 +12,25 @@ import {
   ModalSvg,
   ModalSvgArrow,
   Span,
+  StyledLink,
   SuccessBox,
+  TextLink,
   TimeText,
   TitleSuccess,
 } from './ModalWaist.styled';
 
 export const ModalWaist = ({ isOpen, onClose }) => {
+  const location = useLocation();
+  const backLinkRef = useRef(location);
+
   const onBackDropClick = (evt) => {
     if (evt.currentTarget === evt.target) onClose();
   };
-  const handleClose = () => {
-    onClose();
-  };
+
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.keyCode === 27) {
-        handleClose();
+        onClose();
       }
     };
     if (isOpen) {
@@ -68,14 +71,13 @@ export const ModalWaist = ({ isOpen, onClose }) => {
               <BtnSuccess type="button" onClick={onClose}>
                 Next exercise
               </BtnSuccess>
-              <BoxBtnDiary>
-                <BtnDiary>
-                  To the diary
-                  <ModalSvgArrow>
-                    <IconUse href="/public/img/sprait.svg#arrow" />
-                  </ModalSvgArrow>
-                </BtnDiary>
-              </BoxBtnDiary>
+
+              <StyledLink to={backLinkRef.current.state?.from ?? '/diary'}>
+                <TextLink>To the diary</TextLink>
+                <ModalSvgArrow>
+                  <IconUse href="/public/img/sprait.svg#arrow" />
+                </ModalSvgArrow>
+              </StyledLink>
             </SuccessBox>
           </Modal>
         </BackDrop>

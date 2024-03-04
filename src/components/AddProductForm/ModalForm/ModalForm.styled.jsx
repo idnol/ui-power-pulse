@@ -23,6 +23,8 @@ export const InputName = styled.input`
   border: ${theme.border.grey3};
   border-radius: 12px;
   background-color: transparent;
+  color: ${theme.color.white};
+  opacity: 0.3;
   &:hover {
     border: ${theme.border.orange};
   }
@@ -37,6 +39,7 @@ export const InputCalories = styled.input`
   border: ${theme.border.grey3};
   border-radius: 12px;
   background-color: transparent;
+  color: ${theme.color.white};
   &:hover {
     border: ${theme.border.orange};
   }

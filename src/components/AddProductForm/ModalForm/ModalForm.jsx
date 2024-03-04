@@ -15,9 +15,7 @@ import {
 
 const ProductSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').required('Required'),
-  number: Yup.string()
-    .matches(/^(\d{2,}-\d{2,}-\d{2,}|\d{2,}-\d{2,}|\d{5,})$/)
-    .required('Required'),
+  number: Yup.string().required('Required'),
 });
 
 export const ProductForm = ({ onClose }) => {

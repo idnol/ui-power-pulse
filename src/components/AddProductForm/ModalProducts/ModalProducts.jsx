@@ -14,13 +14,11 @@ export const ModalProducts = ({ isOpen, onClose }) => {
   const onBackDropClick = (evt) => {
     if (evt.currentTarget === evt.target) onClose();
   };
-  const handleClose = () => {
-    onClose();
-  };
+
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.keyCode === 27) {
-        handleClose();
+        onClose();
       }
     };
     if (isOpen) {

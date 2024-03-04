@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { theme } from '../../../vars';
@@ -30,9 +31,10 @@ export const Modal = styled.div`
 
   padding: 48px 89px;
   max-width: 335px;
+  overflow: hidden;
 
   @media (min-width: ${theme.breakpoint.md}) {
-    padding: 64px 134px;
+    padding: 64px 136px;
     max-width: 430px;
   }
 `;
@@ -86,26 +88,18 @@ export const SuccessBox = styled.div`
 export const TitleSuccess = styled.h3`
   font-size: 24px;
   margin-bottom: 0;
-  margin-top: 27px;
+  margin-top: 16px;
   color: ${theme.color.white};
   @media (min-width: ${theme.breakpoint.md}) {
     margin-top: 32px;
   }
 `;
 
-export const TimeText = styled.p`
-  font-size: 14px;
-  margin-top: 16px;
-  margin-bottom: 4px;
-  color: ${theme.color.white};
-  opacity: 0.4;
-`;
-
 export const CaloriesText = styled.p`
   font-size: 14px;
-  margin-top: 0;
+  margin-top: 16px;
   margin-bottom: 24px;
-  color: ${theme.color.white};
+  color: #efede8;
   opacity: 0.4;
   @media (min-width: ${theme.breakpoint.md}) {
     margin-bottom: 32px;
@@ -117,7 +111,7 @@ export const Span = styled.span`
 `;
 
 export const BtnSuccess = styled.button`
-  min-width: 162px;
+  min-width: 157px;
   padding: 12px 32px;
   border-radius: 12px;
   border: none;
@@ -137,17 +131,12 @@ export const BtnSuccess = styled.button`
 
 export const IconUse = styled.use`
   stroke: ${theme.color.white};
-  opacity: 0.3;
   fill: transparent;
 `;
 
 export const ModalSvgArrow = styled.svg`
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  right: 25px;
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
 
   @media (min-width: ${theme.breakpoint.md}) {
     width: 26px;
@@ -155,22 +144,18 @@ export const ModalSvgArrow = styled.svg`
   }
 `;
 
-export const BoxBtnDiary = styled.div`
-  position: relative;
-  width: 157px;
-  margin-top: 16px;
-`;
-
-export const BtnDiary = styled.button`
+export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
-  background-color: transparent;
-  min-width: 97px;
-  height: 18px;
-  border: none;
+  margin-top: 16px;
+  gap: 8px;
+
   color: ${theme.color.white};
   opacity: 0.3;
+`;
+
+export const TextLink = styled.p`
+  margin: 0;
+  text-align: center;
   font-size: 14px;
-  padding: 0;
 `;
