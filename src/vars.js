@@ -1,4 +1,4 @@
-export const theme =  {
+export const theme = {
   color: {
     black: '#040404',
     orange: '#e6533c',
@@ -12,10 +12,11 @@ export const theme =  {
     greyFourth: 'rgba(239, 237, 232, .8)',
     greyFifth: 'rgba(239, 237, 232, .4)',
     greySixth: 'rgba(239, 237, 232, .1)',
+    greySeven: 'rgba(239, 237, 232, .05)',
     darkGrey: '#303030',
     darkGreySecond: '#1c1c1c',
     green: '#419B09',
-    red: '#e9101d'
+    red: '#e9101d',
   },
   border: {
     orange: '1px solid #e6533c',
@@ -25,6 +26,6 @@ export const theme =  {
   breakpoint: {
     sm: '375px',
     md: '768px',
-    xl: '1440px'
-  }
-}
+    xl: '1440px',
+  },
+};

@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 import { theme } from './vars.js';
 
-
 export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
@@ -65,5 +64,22 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         height: auto;
     }
-    
+
+     .accent{
+       background: ${theme.color.orange};
+       border: ${theme.border.grey2}
+    }
+
+    .default{
+        border: ${theme.border.grey2};
+        background: ${theme.color.greySeven};
+    }
+
+    .whiteTextColor{
+        color: ${theme.color.white}
+    }
+
+    .greyTextColor{
+        color: ${theme.color.greyFifth};
+    }
 `;
