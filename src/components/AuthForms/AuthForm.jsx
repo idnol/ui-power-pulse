@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Error, StyledButton, StyledEye, StyledIFormWrapper, StyledInput, StyledInputWrapper } from './AuthForms.styled';
 import { Form, Formik } from 'formik';
 import sprite from 'assets/sprite-2.svg';
+import { theme } from '../../vars';
 
 
 export const AuthForm = ({ schema, handleSubmit, register }) => {
@@ -42,7 +43,7 @@ export const AuthForm = ({ schema, handleSubmit, register }) => {
                         <StyledInputWrapper>
                             <StyledInput name="password" type={handleShowPas()} placeholder="Password" error={(errors.password && touched.password) ? "true" : "false"} touched={touched.password ? "true" : "false"} />
                             <StyledEye type="button" onClick={() => setShowPassword(!showPassword)}>
-                                <svg width="20" height="20" stroke="#efede8" viewBox="0 0 20 20">
+                                <svg width="20" height="20" stroke={`${theme.color.white}`} viewBox="0 0 20 20">
                                     {showPassword ? (
                                         <use href={`${sprite}#eye-off`} />
                                     ) : (
