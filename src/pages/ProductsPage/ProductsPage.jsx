@@ -31,10 +31,12 @@ export default function ProductsPage() {
   },[])
 
   return <ProductsSection>
-  <FilterWrapper>
-  <h2>Products</h2>
-  < ProductsFilter categories={categories}/>
-  </FilterWrapper>
-  <ProductsList/>
+    <div className='container'>
+      <FilterWrapper>
+       <h2>Products</h2>
+       < ProductsFilter categories={categories}/>
+      </FilterWrapper>
+      <ProductsList/>
+    </div>
   </ProductsSection>
 }

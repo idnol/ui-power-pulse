@@ -1,9 +1,4 @@
 import styled from "styled-components";
-import {
-    ErrorMessage as FormikError,
-    Field as FormikField,
-    Form as FormikForm,
-  } from 'formik';
 import {theme} from "../../vars";
 
 export const FilterWrapper = styled.div`
@@ -35,7 +30,7 @@ export const FiltersContainer = styled.div`
         }
 `;
 
-export const Form = styled(FormikForm)`
+export const Form = styled.form`
  display: flex;
  flex-direction: column;
  gap: 16px;
@@ -57,7 +52,7 @@ export const InputGroup = styled.div`
  
 `;
 
-export const FieldTitle = styled(FormikField)`
+export const FieldTitle = styled.input`
  position: relative;
  display: inline-block;
  font-size: 14px;
@@ -124,7 +119,7 @@ export const IconSearch = styled.svg`
  stroke: ${theme.color.white};
 `;
 
-export const CategoryField = styled(FormikField)`
+export const CategoryField = styled.div`
  border: ${theme.border.grey3};
  border-radius: 12px;
  padding: 14px;
@@ -149,7 +144,7 @@ export const CategoryField = styled(FormikField)`
         }
 `;
 
-export const Field = styled(FormikField)`
+export const FecommendedField = styled.div`
  border: ${theme.border.grey3};
  border-radius: 12px;
  padding: 14px;
@@ -174,11 +169,6 @@ export const StyledOption = styled.option`
  padding: 14px 32px 14px 14px;
  width: 146px;
  height: 228px; */
-`
-
-export const ErrorMessage = styled(FormikError)`
- color: red;
- font-size: 14px;
 `;
 
 export const SelectWrapper = styled.div`

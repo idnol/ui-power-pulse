@@ -39,6 +39,80 @@ const items = [{
     "3": false,
     "4": false
   }
+},
+{
+  "_id": "5d51694902b2373622ff57730",
+  "weight": 100,
+  "calories": 340,
+  "category": "dairy",
+  "title": "Danbo cheese",
+  "groupBloodNotAllowed": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false
+  }
+},{
+  "_id": "5d51694902b2373622ff5b8f",
+  "weight": 100,
+  "calories": 112,
+  "category": "fish",
+  "title": "marlin",
+  "groupBloodNotAllowed": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false
+  }
+},{
+  "_id": "5d51694902b2373622ff5e18",
+  "weight": 100,
+  "calories": 17,
+  "category": "vegetables and herbs",
+  "title": "Salads Belaya Dacha Delicate root",
+  "groupBloodNotAllowed": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false
+  }
+},
+{
+  "_id": "5d51694902b2373622ff5778",
+  "weight": 100,
+  "calories": 340,
+  "category": "dairy",
+  "title": "Danbo cheese",
+  "groupBloodNotAllowed": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false
+  }
+},{
+  "_id": "5d51694902b2373622ff5b6f",
+  "weight": 100,
+  "calories": 112,
+  "category": "fish",
+  "title": "marlin",
+  "groupBloodNotAllowed": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false
+  }
+},{
+  "_id": "5d51694902b2373622ff5e15",
+  "weight": 100,
+  "calories": 17,
+  "category": "vegetables and herbs",
+  "title": "Salads Belaya Dacha Delicate root",
+  "groupBloodNotAllowed": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false
+  }
 }
 ]
 export const ProductsList = () => {
