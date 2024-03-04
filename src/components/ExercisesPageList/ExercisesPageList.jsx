@@ -1,18 +1,8 @@
+import { ListItem } from '../ListItem/ListItem';
 import {
   ExercisesListContainer,
   ExercisesList,
   ExercisesListItem,
-  ExercisesItemTitle,
-  WorkoutNameContainer,
-  WorkoutNameIcon,
-  WorkoutName,
-  WorkoutStatsList,
-  WorkoutStatsItem,
-  WorkoutStatsSpan,
-  ExercisesButton,
-  ExercisesButtonBox,
-  ExercisesButtonText,
-  ExercisesButtonIcon,
 } from './ExercisesPageList.styled';
 
 export const Exercises = () => {
@@ -66,33 +56,7 @@ export const Exercises = () => {
       <ExercisesList>
         {data.map((item, index) => (
           <ExercisesListItem key={index}>
-            <ExercisesItemTitle>workout</ExercisesItemTitle>
-            <WorkoutNameContainer>
-              <WorkoutNameIcon>
-                <use href="../../../public/img/sprait.svg#run-man-circle"></use>
-              </WorkoutNameIcon>
-              <WorkoutName>{item.workoutname}</WorkoutName>
-            </WorkoutNameContainer>
-            <WorkoutStatsList>
-              <WorkoutStatsItem>
-                Burned calories:
-                <WorkoutStatsSpan>{item.burnedcalories}</WorkoutStatsSpan>
-              </WorkoutStatsItem>
-              <WorkoutStatsItem>
-                Body part: <WorkoutStatsSpan>{item.bodyparts}</WorkoutStatsSpan>
-              </WorkoutStatsItem>
-              <WorkoutStatsItem>
-                Target: <WorkoutStatsSpan>{item.target}</WorkoutStatsSpan>
-              </WorkoutStatsItem>
-            </WorkoutStatsList>
-            <ExercisesButton type="button">
-              <ExercisesButtonBox>
-                <ExercisesButtonText>Start</ExercisesButtonText>
-                <ExercisesButtonIcon>
-                  <use href="../../../public/img/sprait.svg#arrow"></use>
-                </ExercisesButtonIcon>
-              </ExercisesButtonBox>
-            </ExercisesButton>
+            <ListItem item={item} />
           </ExercisesListItem>
         ))}
       </ExercisesList>
