@@ -1,33 +1,26 @@
-import {  Formik} from "formik";
-import * as  Yup from "yup";
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 import {
   BtnBox,
   CaloriesText,
   ErrorMessage,
-  
-  
-  
-  
   Form,
   FormBtnAdd,
   FormBtnCancel,
- 
   LabelBox,
   Span,
   InputCalories,
-  InputName
-} from "./ModalForm.styled";
+  InputName,
+} from './ModalForm.styled';
 
 const ProductSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').required('Required'),
   number: Yup.string()
-    .matches(
-      /^(\d{2,}-\d{2,}-\d{2,}|\d{2,}-\d{2,}|\d{5,})$/
-    )
+    .matches(/^(\d{2,}-\d{2,}-\d{2,}|\d{2,}-\d{2,}|\d{5,})$/)
     .required('Required'),
 });
 
-export const ProductForm = ({onClose}) => {
+export const ProductForm = ({ onClose }) => {
   return (
     <Formik
       initialValues={{
@@ -41,24 +34,26 @@ export const ProductForm = ({onClose}) => {
     >
       <Form>
         <LabelBox>
-        <label>
-          <InputName name="name" placeholder="Banana juice"/>
+          <label>
+            <InputName name="name" placeholder="Banana juice" />
             <ErrorMessage name="name" component="span" />
-            
-        </label>
+          </label>
 
-        <label>
-         <InputCalories name="number" />
-          <ErrorMessage name="number" component="span" />
-              </label>
-          </LabelBox>
-              
-              <CaloriesText>Calories: <Span>96</Span></CaloriesText>
+          <label>
+            <InputCalories name="number" />
+            <ErrorMessage name="number" component="span" />
+          </label>
+        </LabelBox>
+
+        <CaloriesText>
+          Calories: <Span>96</Span>
+        </CaloriesText>
         <BtnBox>
           <FormBtnAdd type="submit">Add to diary</FormBtnAdd>
-              <FormBtnCancel type="button" onClick={onClose}>Cancel</FormBtnCancel>
-          </BtnBox>
-              
+          <FormBtnCancel type="button" onClick={onClose}>
+            Cancel
+          </FormBtnCancel>
+        </BtnBox>
       </Form>
     </Formik>
   );
