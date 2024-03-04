@@ -11,6 +11,7 @@ export const AppLayoutStyled = styled.div`
 export const HeaderStyled = styled.header`
     height: 61px;
     position: absolute;
+    border-bottom: ${theme.border.grey2};
     width: 100%;
     top: 0;
     left: 0;
