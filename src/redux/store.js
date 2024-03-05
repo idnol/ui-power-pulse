@@ -12,7 +12,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice.js';
-import { exercisesReducer } from './exercises/productSlice.js';
+import { exerciseReducer } from './exercises/exerciseSlice.js';
 import { productsReducer } from './products/productSlice.js';
 import { profileReducer } from './profile/profileSlice.js';
 import { filterReducer } from './products/filterSlice.js';
@@ -23,9 +23,9 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const contactsReducer = combineReducers({
+const usersReducer = combineReducers({
   auth: authReducer,
-  exercises: exercisesReducer,
+  exercises: exerciseReducer,
   products: productsReducer,
   filters: filterReducer,
   profile: profileReducer
@@ -34,7 +34,7 @@ const contactsReducer = combineReducers({
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    contacts: contactsReducer,
+    users: usersReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
@@ -45,5 +45,3 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
-
