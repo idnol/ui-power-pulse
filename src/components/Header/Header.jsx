@@ -7,6 +7,7 @@ import { UserNav } from './UserNav.jsx';
 import { UserBar } from './UserBar.jsx';
 import { Menu } from './Menu.jsx';
 import { useLocation } from 'react-router';
+import { useEffect } from 'react';
 
 export const Header = () => {
   const { pathname } = useLocation();
@@ -34,12 +35,15 @@ export const Header = () => {
     '/diary',
     '/products',
     '/exercises',
-    '/exercises/bodyparts',
-    '/exercises/muscles',
-    '/exercises/equipment',
   ].includes(pathname);
-
   const isNotAuthenticatedUser = ['/', '/signup', '/signin'].includes(pathname);
+
+  useEffect(() => {
+    const headerLayout = document.getElementById('hdr-layout');
+    if (isNotCustomRoute || isNotAuthenticatedUser) {
+      headerLayout.style.borderBottom = 'none';
+    }
+  });
 
   return (
     <>

@@ -104,7 +104,6 @@ export const User = styled.div`
   height: 37px;
   border-radius: 50%;
   border: 1px solid ${theme.color.orange};
-  cursor: pointer;
 `;
 
 export const UserIcon = styled.svg`

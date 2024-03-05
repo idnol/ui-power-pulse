@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import {
   OrangePart,
   ContentContainer,
@@ -8,12 +7,6 @@ import {
 } from './ErrorPage.styled';
 
 export default function ErrorPage() {
-  const headerLayout = document.getElementById('hdr-layout');
-  useEffect(() => {
-    headerLayout.style.borderBottom = 'none';
-    console.dir(headerLayout.style);
-  });
-
   // Link веде на WelcomePage/Diary залежить від авторизації
   return (
     <section>
