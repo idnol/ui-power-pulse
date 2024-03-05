@@ -1,38 +1,37 @@
-import { AddBtn, BtnContainer, BtnWrapper, DietBox, ProductCard, ProductInfoData, ProductInfoText, ProductInfoWrapper, RecomendedText, ProductTitle, RecomendSwitch, TitleWrapper, IconSvg, IconTitle } from "./ProductItem.styled";
+import { useState } from "react";
+import { StatsList } from "../ListItem/ListItem.styled";
+import { ListItemName } from "../ListItemName/ListItemName";
+import { StatItem } from "../StatsItem/StatsItem";
+import { AddBtn, BtnContainer, BtnWrapper, DietBox, ProductCard, RecomendedText, RecomendSwitch, IconSvg } from "./ProductItem.styled";
+import {AddProductForm} from "../AddProductForm/ModalProducts/AddProductForm";
 import sprite from 'assets/sprite-2.svg';
 
-export const ProductItem = ({product:{title, calories, category, weight, groupBloodNotAllowed}, bloodGroup}) => {
+export const ProductItem = ({item:{title, calories, category, weight, groupBloodNotAllowed}, bloodGroup}) => {
+  const [isModalOpen, setIsModal] = useState(false);
   const notAllowed = groupBloodNotAllowed[bloodGroup];
   const isRecomended = notAllowed ? "Not recommended" : "Recommended";
   return (
-    <ProductCard>
-
+  <>
+  <ProductCard>
     <BtnContainer>
       <DietBox>Diet</DietBox>
       <BtnWrapper>
       <RecomendedText><RecomendSwitch $notAllowed={notAllowed}/>{isRecomended}</RecomendedText>
-        <AddBtn>Add
+        <AddBtn type="button" onClick={() => setIsModal(true)}>Add
           <IconSvg >
            <use href={`${sprite}#arrow`} />
           </IconSvg>
         </AddBtn>
       </BtnWrapper>
     </BtnContainer>
-
-    <TitleWrapper>
-      <IconTitle>
-       <use href={`${sprite}#run-man-circle`} />
-      </IconTitle>
-      <ProductTitle>{title}</ProductTitle>
-    </TitleWrapper>
-
-    <ProductInfoWrapper>
-      <ProductInfoText>Calories: <ProductInfoData>{calories}</ProductInfoData></ProductInfoText>
-      <ProductInfoText>Ctegory: <ProductInfoData>{category}</ProductInfoData></ProductInfoText>
-      <ProductInfoText>Weight: <ProductInfoData>{weight}</ProductInfoData></ProductInfoText>
-    </ProductInfoWrapper>
-
-   </ProductCard>
-
+    <ListItemName titleName={title}/>
+    <StatsList>
+      <StatItem text="Calories: " val={calories}/>
+      <StatItem text="Category: " val={category}/>
+      <StatItem text="Weight: " val={weight}/>
+    </StatsList>
+  </ProductCard>
+  <AddProductForm isOpen={isModalOpen} onClose={() => setIsModal(false)} />
+  </>
   )
 }

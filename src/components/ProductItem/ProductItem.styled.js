@@ -43,6 +43,7 @@ export const RecomendedText = styled.p`
  color: ${theme.color.white};
  display: flex;
  gap: 8px;
+ align-items: center;
  margin: 0;
 `
 
@@ -56,6 +57,7 @@ export const AddBtn = styled.button`
  gap: 8px;
  align-items: center;
  padding: 0;
+ cursor: pointer;
  @media (min-width: ${theme.breakpoint.md}) {
           font-size: 16px;
           line-height: 1.5;
@@ -81,55 +83,4 @@ export const BtnContainer = styled.div`
 export const BtnWrapper = styled.div`
  display: flex;
  gap: 16px;
-`;
-
-export const TitleWrapper = styled.div`
- display: flex;
- gap: 16px;
- margin-bottom: 8px;
-`;
-
-export const IconTitle = styled.svg`
-width: 24px;
-height: 24px;
-`;
-
-export const ProductTitle = styled.h3`
- font-weight: 400;
- font-size: 20px;
- line-height: 1.2;
- color: ${theme.color.white};
- margin: 0;
- text-align: center;
- max-width: 258px;
- white-space: nowrap;
- overflow: hidden;
- text-overflow: ellipsis;
- @media (min-width: ${theme.breakpoint.md}) {
-           font-size: 24px;
-           line-height: 1.33;
-        }
-`;
-
-export const ProductInfoWrapper = styled.div`
- display: flex;
- gap: 16px;
-`;
-
-export const ProductInfoText = styled.p`
- display: flex;
- gap: 4px;
- font-size: 12px;
- line-height: 1.5;
- color: ${theme.color.greyFifth};
- margin: 0;
-`;
-
-export const ProductInfoData = styled.span`
- display: block;
- color: ${theme.color.white};
- max-width: 76px;
- white-space: nowrap;
- overflow: hidden;
- text-overflow: ellipsis;
 `;

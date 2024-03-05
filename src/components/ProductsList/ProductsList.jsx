@@ -13,7 +13,7 @@ export const ProductsList = () => {
     <ListProducts>
       {items.map(product => (
         <li key={product._id}>
-          <ProductItem product={product} bloodGroup={bloodGroup} />
+          <ProductItem item={product} bloodGroup={bloodGroup}/>
         </li>
       ))}
     </ListProducts>

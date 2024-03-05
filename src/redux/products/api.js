@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTVlZGY3NjAwYzQ4ZjY3MTc5YzMxOCIsImlhdCI6MTcwOTU2NzQ5NCwiZXhwIjoxNzA5NjUwMjk0fQ.cAUhPSB8XSsGqh780dBUNzef8fztJK12eedKXwgjNeA"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTVlZGY3NjAwYzQ4ZjY3MTc5YzMxOCIsImlhdCI6MTcwOTY1ODUyNSwiZXhwIjoxNzA5NzQxMzI1fQ.XjfrnLkvGWsUL7DPXF7IwifCuYGM7301InU9VOlzPL0"
 
 axios.defaults.baseURL = 'http://localhost:3333/api/products';
 
@@ -12,13 +12,10 @@ const setAuthHeader = token => {
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async (filters, thunkAPI) => {
-    
+    console.log(filters);
     try {
       setAuthHeader(token);
-      // const state = thunkAPI.getState();
-      // const filters = state.contacts.filters;
       const response = await axios.get('/', filters);
-      console.log(filters);
       console.log(response);
       return response.data;
     } catch (e) {

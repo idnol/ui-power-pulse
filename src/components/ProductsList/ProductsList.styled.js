@@ -50,6 +50,7 @@ export const ListProducts = styled.ul`
 export const ProductsSection = styled.section`
 @media (min-width: ${theme.breakpoint.xl}) {
          height: 100vh;
+         width: 100%;
          background-image: url(../../../public/img/side-view-products-1x-desk.jpg);
          background-repeat: no-repeat;
          background-position: right;

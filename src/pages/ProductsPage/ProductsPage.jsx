@@ -1,48 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../redux/products/api";
 import { ProductsFilter } from "../../components/ProductsFilter/ProductsFilter";
 import { ProductsList } from "../../components/ProductsList/ProductsList";
 import { ProductsSection } from "../../components/ProductsList/ProductsList.styled";
-import { FilterWrapper } from "../../components/ProductsFilter/ProductsFilter.styled";
-import { fetchCategories } from "../../redux/products/api";
-import { selectFilter, selectProducts } from "../../redux/products/selectors";
+import { FilterWrapper, ProductsTitle } from "../../components/ProductsFilter/ProductsFilter.styled";
+import { selectError, selectFilter, selectIsLoading, selectProducts } from "../../redux/products/selectors";
+import { Loader } from "../../components/parts/Loader/Loader";
+import { ProductsError } from "../../components/ProductsError/ProductsError";
 
 export default function ProductsPage() {
-  const [categories, setCategories] = useState([]);
   const filters = useSelector(selectFilter);
   const products = useSelector(selectProducts);
-
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("Dispatching fetchProducts");
    dispatch(fetchProducts(filters));
   }, [dispatch, filters]);
 
-
-  useEffect(()=> {
-    async function getCategories() {
-      try {
-        const categories = await fetchCategories();
-        setCategories(categories);
-      } catch (error) {
-       console.log(error);
-      } finally {
-        // setIsLoading(false);
-      }
-    }
-
-    getCategories();
-  },[])
-
-  return <ProductsSection>
+  return <>
+  <ProductsSection>
     <div className='container'>
       <FilterWrapper>
-       <h2>Products</h2>
-       < ProductsFilter categories={categories}/>
+       <ProductsTitle>Products</ProductsTitle>
+       < ProductsFilter/>
       </FilterWrapper>
+      {isLoading && <Loader/>}
      {products.length>0 &&<ProductsList />}
+     {error && <ProductsError/>}
     </div>
   </ProductsSection>
+  </>
 }

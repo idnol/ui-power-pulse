@@ -13,7 +13,15 @@ export const FilterWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-`
+`;
+
+export const ProductsTitle = styled.h2`
+  margin-top: 61px;
+  @media (min-width: ${theme.breakpoint.md}) {
+    margin-top: 84px;
+  }
+`;
+
 
 export const FiltersContainer = styled.div`
  max-width: 335px;
@@ -82,8 +90,7 @@ export const FieldTitle = styled.input`
 
 export const CleanBtn = styled.button`
  position: absolute;
- top: 14px;
- right: 42px;
+ right: 40px;
  width: 18px;
  height: 18px;
  cursor: pointer;
@@ -122,25 +129,18 @@ export const IconSearch = styled.svg`
 export const CategoryField = styled.div`
  border: ${theme.border.grey3};
  border-radius: 12px;
- padding: 14px;
  width: 146px;
  background: transparent;
  color:  ${theme.color.white};
  font-weight: 400;
  font-size: 14px;
  line-height: 1.29;
+ cursor: pointer;
  scrollbar-width: none;
  position: relative;
- display: inline-block;
- /* &::-webkit-scrollbar {
-  width: 6px;
-  background: transparent; 
-}
-&::-webkit-scrollbar-thumb {
-  border-radius: 12px;
-} */
-
-@media (min-width: ${theme.breakpoint.md}) {
+ display: inline-block; 
+ z-index: 2;
+ @media (min-width: ${theme.breakpoint.md}) {
             width: 192px;
             font-size: 16px;
             line-height: 1.5;
@@ -150,7 +150,6 @@ export const CategoryField = styled.div`
 export const RecommendedField = styled.div`
  border: ${theme.border.grey3};
  border-radius: 12px;
- padding: 14px;
  width: 173px;
  background: transparent;
  color:  ${theme.color.white};
@@ -169,15 +168,35 @@ export const RecommendedField = styled.div`
 export const SelectHeader = styled.div` 
   font-size: 14px;
   line-height: 1.29;
+  padding: 14px;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  &::first-letter {
+  text-transform: capitalize;
+  }
+  @media (min-width: ${theme.breakpoint.md}) {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+`;
+
+export const IconDown = styled.svg`
+ width: 20px;
+ height: 20px;
+ stroke: ${theme.color.white};
+ position: absolute;
+ top: 14px;
+ right: 14px;
+ z-index: 1;
 `;
 
 export const OptionsContainer = styled.ul`
   list-style: none;
-  padding: 14px 42px 14px 14px;
+  padding: 14px 32px 14px 14px;
   margin: 0;
   position: absolute;
-  top: 101%; 
+  top: 103%; 
   left: 0; 
   width: 100%;
   max-height: 228px;
@@ -190,34 +209,35 @@ export const OptionsContainer = styled.ul`
   &::-webkit-scrollbar {
             width: 6px;
            }
-          &::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track {
             background-color: transparent;
             border-radius: 12px;
            } 
-           &::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
             background-color: ${theme.color.greySixth};
             border-radius: 12px;
             height: 147px;
            }
 `;
 
-
-
 export const StyledOption = styled.li`
  background-color: ${theme.color.darkGreySecond};
- /* font-size: 16px;
- line-height: 150%; */
  color:  ${theme.color.white};
  font-size: 14px;
  line-height: 1.29;
+ border-radius: 12px;
  margin-bottom: 8px;
  cursor: pointer;
- &:first-of-type {
+ &::first-letter {
   text-transform: capitalize;
 }
   &:hover {
     background-color: ${theme.color.grey};
   }
+  @media (min-width: ${theme.breakpoint.md}) {
+            font-size: 16px;
+            line-height: 1.5;
+        }
 `;
 
 export const SelectWrapper = styled.div`
