@@ -1,3 +1,4 @@
+import sprite from 'assets/sprite-2.svg';
 import { forwardRef, useState, useEffect, useRef } from 'react';
 import { format, subMonths, addMonths } from 'date-fns';
 import DatePicker from 'react-datepicker';
@@ -102,19 +103,19 @@ const StyledDatepicker = forwardRef((props, ref) => {
 
         <StyledSvgCalendar
           onClick={onClick} >
-          <use href="/img/sprait.svg#calendar" />
+          <use href={`${sprite}#calendar`} />
         </StyledSvgCalendar>
 
         <StyledSvgArrow
           className={isActiveLeftArrow}
           onClick={handlePreviousMonth}>
-            <use href="/img/sprait.svg#arrow-left" />
+          <use href={`${sprite}#arrow-left`} />
         </StyledSvgArrow>
 
         <StyledSvgArrow
           className={isActiveRightArrow}
           onClick={handleNextMonth}  >
-            <use href="/img/sprait.svg#arrow-right" />
+          <use href={`${sprite}#arrow-right`} />
         </StyledSvgArrow>
       </TitleWrapper>
     );});
@@ -150,7 +151,7 @@ const StyledDatepicker = forwardRef((props, ref) => {
                 <StyledSvgArrowCalendar
                   className={isActiveLeftArrow}
                   onClick={handlePreviousMonth} >
-                    <use href="/img/sprait.svg#arrow-left" />
+                <use href={`${sprite}#arrow-left`} />
                 </StyledSvgArrowCalendar>
             </StyledBtnArrow>
 
@@ -166,7 +167,7 @@ const StyledDatepicker = forwardRef((props, ref) => {
                 <StyledSvgArrowCalendar
                   className={isActiveRightArrow}
                   onClick={handleNextMonth} >
-                    <use href="/img/sprait.svg#arrow-right" />
+                <use href={`${sprite}#arrow-right`} />
                 </StyledSvgArrowCalendar>
             </StyledBtnArrow>
           </StyledMonthsWrapper> )}  />

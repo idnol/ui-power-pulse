@@ -14,8 +14,10 @@ import { LogOut } from '../parts/LogOut/LogOut.jsx';
 export const UserBar = () => {
   const openSidebar = () => {
     const menu = document.getElementById('menu-wrapper');
-    const backdrop = document.getElementById('backdrop')
-    !(backdrop.style.left) || backdrop.style.left === '-100%'? backdrop.style.left = '0': backdrop.style.left= '-100%';
+    const backdrop = document.getElementById('backdrop');
+    !backdrop.style.left || backdrop.style.left === '-100%'
+      ? (backdrop.style.left = '0')
+      : (backdrop.style.left = '-100%');
     menu.style.visibility = 'visible';
     menu.style.opacity = 1;
     menu.style.display = 'block';
@@ -32,17 +34,17 @@ export const UserBar = () => {
           >
             <use href={`${sprite}#settings`} />
           </SettingsIcon>
-          <User>
-            <UserIcon>
-              <use href={`${sprite}#avatar-header`} />
-            </UserIcon>
-          </User>
         </LinkWrapper>
+        <User>
+          <UserIcon>
+            <use href={`${sprite}#avatar-header`} />
+          </UserIcon>
+        </User>
         <BurgerIcon onClick={openSidebar}>
           <use href={`${sprite}#burger-menu`} />
         </BurgerIcon>
         <LogOutWrapDesktop>
-          <LogOut stroke={`${theme.color.orange}`}/>
+          <LogOut stroke={`${theme.color.orange}`} />
         </LogOutWrapDesktop>
       </StyledUserBar>
     </>
