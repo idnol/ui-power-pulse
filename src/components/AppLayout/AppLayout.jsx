@@ -10,7 +10,7 @@ export const AppLayout = () => {
       <GlobalStyle />
       <HeaderStyled>
         <div className='container'>
-          <Header/>
+          <Header />
         </div>
       </HeaderStyled>
       <main>
