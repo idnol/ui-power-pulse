@@ -1,6 +1,8 @@
 import * as Yup from 'yup';
 import { StyledDiv, StyledGreetings, StyledLink, StyledSecondaryText, StyledTitle } from './AuthForms.styled';
 import { AuthForm } from './AuthForm';
+import { useDispatch } from 'react-redux';
+import { login } from '../../redux/auth/api.js';
 
 
 const schema = Yup.object().shape({
@@ -9,10 +11,10 @@ const schema = Yup.object().shape({
 });
 
 export const SignInForm = () => {
+    const dispatch = useDispatch();
 
     const handleLogin = (values) => {
-        // dispatch(login(values));
-        console.log(values);
+        dispatch(login(values))
     }
 
     return (
