@@ -5,7 +5,7 @@ import sprite from 'assets/sprite-2.svg';
 import { theme } from '../../vars';
 
 
-export const AuthForm = ({ schema, handleSubmit, register }) => {
+export const AuthForm = ({ schema, handleSubmit, register, btnContent }) => {
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -54,7 +54,7 @@ export const AuthForm = ({ schema, handleSubmit, register }) => {
                         </StyledInputWrapper >
                         <Error name="password" component="p" />
                     </StyledIFormWrapper>
-                    <StyledButton type="submit">Sign Up</StyledButton>
+                    <StyledButton type="submit">{btnContent}</StyledButton>
                 </Form>
             )}
         </Formik>
