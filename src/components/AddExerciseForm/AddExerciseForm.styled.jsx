@@ -12,7 +12,6 @@ flex-wrap: wrap;
     height: 788px;
     margin-left: auto;
     margin-right: auto;
-    background-color:#2d2d2d; //delete
     @media (min-width: ${theme.breakpoint.md}) {
         padding: 48px 30px;
         width: 694px;
@@ -21,14 +20,17 @@ flex-wrap: wrap;
 `;
 
 export const ContainerImg = styled.div`
-    padding: 48px 32px;
     width: 270px;
     height: 226px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 14px;
     border-radius: 12px;
-    background-color:gray; //delete
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+    }
 `;
 
 export const ContainerTimer = styled.div`
@@ -54,23 +56,10 @@ export const StyledList = styled.ul`
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
-    background-color: gray; //delete
     @media (min-width: ${theme.breakpoint.md}) {
         margin-right: 0;
         width: 345px;
         height: 148px;
-    }
-`;
-
-export const StyledItem = styled.ul`
-    padding: 12px 18px;
-    width: 147px;
-    height: 62px;
-    border-radius: 12px;
-    background-color: yellow; //delete
-    @media (min-width: ${theme.breakpoint.md}) {
-        width: 168px;
-        height: 70px;
     }
 `;
 
@@ -120,3 +109,8 @@ export const StyledCalories = styled.span`
     line-height: 1.29;
 `
 
+export const StyledSecondaryText = styled.p`
+    font-size: 14px;
+    line-height: 1.29;
+    color: ${theme.color.grey};
+`
