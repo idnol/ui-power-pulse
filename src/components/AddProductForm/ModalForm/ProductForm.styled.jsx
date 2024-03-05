@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-import { Form as FormikForm, ErrorMessage as FormikError } from 'formik';
+import { ErrorMessage as FormikError } from 'formik';
 
 import { theme } from '../../../vars';
-
-export const Form = styled(FormikForm)`
-  //max-height: 287px;
-`;
 
 export const LabelBox = styled.div`
   display: flex;
@@ -24,13 +20,28 @@ export const InputName = styled.input`
   border-radius: 12px;
   background-color: transparent;
   color: ${theme.color.white};
-  opacity: 0.3;
   &:hover {
     border: ${theme.border.orange};
   }
+
   @media (min-width: ${theme.breakpoint.md}) {
     width: 244px;
   }
+`;
+
+export const BoxCalories = styled.div`
+  position: relative;
+`;
+
+export const Grams = styled.p`
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  font-size: 12px;
+  color: ${theme.color.white};
+  opacity: 0.4;
 `;
 
 export const InputCalories = styled.input`
@@ -47,6 +58,23 @@ export const InputCalories = styled.input`
     width: 155px;
   }
 `;
+
+export const CountsPro = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+`;
+
+export const Value = styled.p`
+  margin-top: 16px;
+  margin-bottom: 24px;
+  color: ${theme.color.white};
+  font-size: 12px;
+  @media (min-width: ${theme.breakpoint.md}) {
+    margin-bottom: 32px;
+  }
+`;
+
 export const BtnBox = styled.div`
   max-width: 286px;
   display: flex;
@@ -101,16 +129,11 @@ export const CaloriesText = styled.p`
   font-size: 12px;
   margin-top: 16px;
   margin-bottom: 24px;
-  color: #efede8;
+  color: ${theme.color.white};
   opacity: 0.4;
   @media (min-width: ${theme.breakpoint.md}) {
     margin-bottom: 64px;
   }
-`;
-
-export const Span = styled.span`
-  opacity: 1;
-  color: #efede8;
 `;
 
 export const ErrorMessage = styled(FormikError)``;
