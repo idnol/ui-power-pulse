@@ -15,6 +15,7 @@ import { authReducer } from './auth/authSlice.js';
 import { exercisesReducer } from './exercises/productSlice.js';
 import { productsReducer } from './products/productSlice.js';
 import { profileReducer } from './profile/profileSlice.js';
+import { filterReducer } from './products/filterSlice.js';
 
 const authPersistConfig = {
   key: 'auth',
@@ -26,6 +27,7 @@ const contactsReducer = combineReducers({
   auth: authReducer,
   exercises: exercisesReducer,
   products: productsReducer,
+  filters: filterReducer,
   profile: profileReducer
 });
 

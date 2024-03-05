@@ -130,13 +130,16 @@ export const CategoryField = styled.div`
  font-size: 14px;
  line-height: 1.29;
  scrollbar-width: none;
- &::-webkit-scrollbar {
+ position: relative;
+ display: inline-block;
+ /* &::-webkit-scrollbar {
   width: 6px;
   background: transparent; 
 }
 &::-webkit-scrollbar-thumb {
   border-radius: 12px;
-}
+} */
+
 @media (min-width: ${theme.breakpoint.md}) {
             width: 192px;
             font-size: 16px;
@@ -144,7 +147,7 @@ export const CategoryField = styled.div`
         }
 `;
 
-export const FecommendedField = styled.div`
+export const RecommendedField = styled.div`
  border: ${theme.border.grey3};
  border-radius: 12px;
  padding: 14px;
@@ -154,6 +157,8 @@ export const FecommendedField = styled.div`
  font-weight: 400;
  font-size: 14px;
  line-height: 1.29;
+ position: relative;
+ display: inline-block;
  @media (min-width: ${theme.breakpoint.md}) {
             width: 204px;
             font-size: 16px;
@@ -161,14 +166,58 @@ export const FecommendedField = styled.div`
         }
 `;
 
-export const StyledOption = styled.option`
+export const SelectHeader = styled.div` 
+  font-size: 14px;
+  line-height: 1.29;
+  cursor: pointer;
+`;
+
+export const OptionsContainer = styled.ul`
+  list-style: none;
+  padding: 14px 42px 14px 14px;
+  margin: 0;
+  position: absolute;
+  top: 101%; 
+  left: 0; 
+  width: 100%;
+  max-height: 228px;
+  overflow-y: scroll;
+  border: none;
+  border-radius: 12px;
+  background-color: ${theme.color.darkGreySecond};
+  z-index: 100;
+  display: ${({ $isopen }) => ($isopen ? 'block' : 'none')};
+  &::-webkit-scrollbar {
+            width: 6px;
+           }
+          &::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-radius: 12px;
+           } 
+           &::-webkit-scrollbar-thumb {
+            background-color: ${theme.color.greySixth};
+            border-radius: 12px;
+            height: 147px;
+           }
+`;
+
+
+
+export const StyledOption = styled.li`
  background-color: ${theme.color.darkGreySecond};
- /* font-size: 14px;
+ /* font-size: 16px;
+ line-height: 150%; */
+ color:  ${theme.color.white};
+ font-size: 14px;
  line-height: 1.29;
- border-radius: 12px;
- padding: 14px 32px 14px 14px;
- width: 146px;
- height: 228px; */
+ margin-bottom: 8px;
+ cursor: pointer;
+ &:first-of-type {
+  text-transform: capitalize;
+}
+  &:hover {
+    background-color: ${theme.color.grey};
+  }
 `;
 
 export const SelectWrapper = styled.div`

@@ -1,6 +1,8 @@
 
-export const selectProducts = state => state.products.items;
+export const selectProducts = state => state.contacts.products.items;
 
-export const selectIsLoading = state => state.products.isLoading;
+export const selectIsLoading = state => state.contacts.products.isLoading;
 
-export const selectError = state => state.products.error;
+export const selectError = state => state.contacts.products.error;
+
+export const selectFilter = state => state.contacts.filters;
