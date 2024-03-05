@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-import { OrangePart, ContentContainer, StyledLink, StyledTitle, StyledText } from './ErrorPage.styled';
+import {
+  OrangePart,
+  ContentContainer,
+  StyledLink,
+  StyledTitle,
+  StyledText,
+} from './ErrorPage.styled';
 
 export default function ErrorPage() {
   const headerLayout = document.getElementById('hdr-layout');
@@ -8,7 +13,8 @@ export default function ErrorPage() {
     headerLayout.style.borderBottom = 'none';
     console.dir(headerLayout.style);
   });
-  // Link веде на WelcomePage/
+
+  // Link веде на WelcomePage/Diary залежить від авторизації
   return (
     <section>
       <OrangePart>
@@ -20,11 +26,10 @@ export default function ErrorPage() {
             Perhaps this page went on vacation or decided to disappear into
             another dimension. We apologize for this inconvenience.
           </StyledText>
-          
+
           <StyledLink to={'/'}>Go Home</StyledLink>
         </ContentContainer>
       </OrangePart>
-
     </section>
   );
 }

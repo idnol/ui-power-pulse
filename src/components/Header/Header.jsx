@@ -25,36 +25,42 @@ export const Header = () => {
   //     width: ${theme.breakpoint.xl};
   //     padding: 0 96px;
   // }
+
+  const isNotCustomRoute = ![
+    '/',
+    '/signup',
+    '/signin',
+    '/profile',
+    '/diary',
+    '/products',
+    '/exercises',
+    '/exercises/bodyparts',
+    '/exercises/muscles',
+    '/exercises/equipment',
+  ].includes(pathname);
+
+  const isNotAuthenticatedUser = ['/', '/signup', '/signin'].includes(pathname);
+
   return (
     <>
       <HeaderContainer>
-        {pathname !== '/' &&
-        pathname !== '/signup' &&
-        pathname !== '/signin' &&
-        pathname !== '/profile' &&
-        pathname !== '/diary' &&
-        pathname !== '/products' &&
-        pathname !== '/exercises' &&
-        pathname !== '/exercises/bodyparts' &&
-        pathname !== '/exercises/muscles' &&
-        pathname !== '/exercises/equipment' ? (
+        {isNotCustomRoute ? (
           <StyledLink
-            to="/diary"
+            to="/"
             errSm="../../../public/img/logo/logo-sm-white.svg"
             errBig="../../../public/img/logo/logo-white.svg"
           ></StyledLink>
+        ) : isNotAuthenticatedUser ? (
+          <StyledLink to="/"></StyledLink>
         ) : (
-          <StyledLink to="/diary"></StyledLink>
-        )}
-        {pathname !== '/signin' &&
-          pathname !== '/signup' &&
-          pathname !== '/' &&
-          pathname !== '/jh' && (
+          <>
+            <StyledLink to="/"></StyledLink>
             <NavigationWrap>
               <UserNav />
               <UserBar />
             </NavigationWrap>
-          )}
+          </>
+        )}
       </HeaderContainer>
 
       <Menu />
