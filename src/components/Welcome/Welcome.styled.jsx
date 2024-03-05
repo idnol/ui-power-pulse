@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   @media (min-width: ${theme.breakpoint.md}) {
     height: 354px;
-   }
+  }
 `;
 
 export const MainTitle = styled.h1`
@@ -33,12 +33,12 @@ export const MainTitle = styled.h1`
 `;
 
 export const WrapperNavLink = styled.nav`
-display: flex;
-gap: 14px;
-margin-top: 40px;
-width: 274px;
-height: 42px;
-text-align: center;
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+  width: 274px;
+  height: 42px;
+  text-align: center;
 
   @media (min-width: ${theme.breakpoint.md}) {
     gap: 20px;
@@ -75,7 +75,7 @@ export const StyledSignUpNavLink = styled(NavLink)`
     height: 56px;
     font-size: 20px;
     line-height: 1.2;
-   }
+  }
 `;
 
 export const StyledSignInNavLink = styled(NavLink)`
@@ -88,7 +88,7 @@ export const StyledSignInNavLink = styled(NavLink)`
   height: 42px;
   color: ${theme.color.white};
   transition-duration: 300ms;
-  
+
   &:hover {
     background: ${theme.color.orange};
     border: 1px solid transparent;
@@ -101,7 +101,7 @@ export const StyledSignInNavLink = styled(NavLink)`
     height: 56px;
     font-size: 20px;
     line-height: 1.2;
-   }
+  }
 `;
 
 export const SvgLine = styled.svg`
@@ -118,7 +118,4 @@ export const SvgLine = styled.svg`
     width: 185px;
     height: 67px;
   }
-  `;
-
-
-
+`;
