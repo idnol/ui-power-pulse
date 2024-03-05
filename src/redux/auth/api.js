@@ -3,13 +3,13 @@ import toast from 'react-hot-toast';
 
 import axios from '../../axios.js';
 
-const setAuthHeader = token => {
+export const setAuthHeader = token => {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
-};
-
-const clearAuthHeader = () => {
+  };
+  
+  export const clearAuthHeader = () => {
     axios.defaults.headers.common.Authorization = '';
-};
+  };
 
 export const register = createAsyncThunk(
   'users/register',

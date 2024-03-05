@@ -1,17 +1,20 @@
-import { Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
+
 import {
   BtnBox,
   CaloriesText,
   ErrorMessage,
-  Form,
   FormBtnAdd,
   FormBtnCancel,
   LabelBox,
-  Span,
   InputCalories,
   InputName,
-} from './ModalForm.styled';
+  CountsPro,
+  Value,
+  BoxCalories,
+  Grams,
+} from './ProductForm.styled';
 
 const ProductSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').required('Required'),
@@ -32,20 +35,20 @@ export const ProductForm = ({ onClose }) => {
     >
       <Form>
         <LabelBox>
-          <label>
-            <InputName name="name" placeholder="Banana juice" />
-            <ErrorMessage name="name" component="span" />
-          </label>
+          <InputName name="name" placeholder="Banana juice" />
+          <ErrorMessage name="name" component="span" />
 
-          <label>
+          <BoxCalories>
             <InputCalories name="number" />
-            <ErrorMessage name="number" component="span" />
-          </label>
+            <Grams>grams</Grams>
+          </BoxCalories>
+          <ErrorMessage name="number" component="span" />
         </LabelBox>
+        <CountsPro>
+          <CaloriesText>Calories:</CaloriesText>
+          <Value>96</Value>
+        </CountsPro>
 
-        <CaloriesText>
-          Calories: <Span>96</Span>
-        </CaloriesText>
         <BtnBox>
           <FormBtnAdd type="submit">Add to diary</FormBtnAdd>
           <FormBtnCancel type="button" onClick={onClose}>

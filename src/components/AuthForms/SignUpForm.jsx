@@ -23,7 +23,7 @@ export const SignUpForm = () => {
             <StyledDiv>
                 <StyledTitle>Sign Up</StyledTitle>
                 <StyledGreetings>Thank you for your interest in our platform. To complete the registration process, please provide us with the following information.</StyledGreetings>
-                <AuthForm schema={schema} handleSubmit={handleRegistration} register />
+                <AuthForm schema={schema} handleSubmit={handleRegistration} register btnContent="Sign Up" />
                 <StyledSecondaryText>Already have an account? <StyledLink to="/signin">Sign In</StyledLink></StyledSecondaryText>
             </StyledDiv>
 
