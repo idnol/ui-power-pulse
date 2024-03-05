@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 import { theme } from './vars.js';
 
-
 export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
@@ -43,5 +42,44 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
     }
-    
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+    }
+
+    ul,
+    ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+     .accent{
+       background: ${theme.color.orange};
+       border: ${theme.border.grey2}
+    }
+
+    .default{
+        border: ${theme.border.grey2};
+        background: ${theme.color.greySeven};
+    }
+
+    .whiteTextColor{
+        color: ${theme.color.white}
+    }
+
+    .greyTextColor{
+        color: ${theme.color.greyFifth};
+    }
 `;
