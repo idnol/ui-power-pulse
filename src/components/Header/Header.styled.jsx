@@ -24,10 +24,17 @@ export const StyledLink = styled(Link)`
   width: 152px;
   height: 17px;
   background-repeat: no-repeat;
-  background-image: url(${'../../../public/img/logo/logo-sm.svg'});
+  // background-image: url(${'../../../public/img/logo/logo-sm.svg'});
+  background-image: ${(props) =>
+    props.errSm
+      ? `url(${props.errSm})`
+      : `url(${'../../../public/img/logo/logo-sm.svg'})`};
 
   @media (min-width: ${theme.breakpoint.md}) {
-    background-image: url(${'../../../public/img/logo/logo.svg'});
+    background-image: ${(props) =>
+      props.errBig
+        ? `url(${props.errBig})`
+        : `url(${'../../../public/img/logo/logo.svg'})`};
     width: 152px;
     height: 17px;
   }
@@ -97,7 +104,6 @@ export const User = styled.div`
   height: 37px;
   border-radius: 50%;
   border: 1px solid ${theme.color.orange};
-  cursor: pointer;
 `;
 
 export const UserIcon = styled.svg`
