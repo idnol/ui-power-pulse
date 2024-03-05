@@ -8,6 +8,8 @@ export const StyledItem = styled.li`
     width: 147px;
     height: 62px;
     border-radius: 12px;
+    border: ${theme.border.grey2};
+    background: ${theme.color.greySeven};
     @media (min-width: ${theme.breakpoint.md}) {
         width: 168px;
         height: 70px;

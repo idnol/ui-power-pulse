@@ -27,6 +27,8 @@ export const ContainerImg = styled.div`
     margin-bottom: 14px;
     border-radius: 12px;
     overflow: hidden;
+    border: ${theme.border.grey2};
+    background: ${theme.color.greySeven};
     img {
         width: 100%;
         height: 100%;
