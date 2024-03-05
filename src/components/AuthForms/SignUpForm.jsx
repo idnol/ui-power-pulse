@@ -1,6 +1,8 @@
-import { Form, Formik } from 'formik';
+import { AuthForm } from './AuthForm';
 import * as Yup from 'yup';
-import { Error, StyledButton, StyledDiv, StyledGreetings, StyledInput, StyledLink, StyledSecondaryText, StyledTitle } from './AuthForms.styled';
+import { StyledDiv, StyledGreetings, StyledLink, StyledSecondaryText, StyledTitle } from './AuthForms.styled';
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/auth/api.js';
 
 
 const schema = Yup.object().shape({
@@ -10,10 +12,9 @@ const schema = Yup.object().shape({
 });
 
 export const SignUpForm = () => {
-
+    const dispatch = useDispatch();
     const handleRegistration = (values) => {
-        // dispatch(login(values));
-        console.log(values);
+        dispatch(register(values))
     }
 
     return (
@@ -22,28 +23,7 @@ export const SignUpForm = () => {
             <StyledDiv>
                 <StyledTitle>Sign Up</StyledTitle>
                 <StyledGreetings>Thank you for your interest in our platform. To complete the registration process, please provide us with the following information.</StyledGreetings>
-
-                <Formik
-                    initialValues={{
-                        name: '',
-                        email: '',
-                        password: '',
-                    }}
-                    validationSchema={schema}
-                    onSubmit={(values) => {
-                        handleRegistration(values);
-                    }}>
-                    <Form autoComplete="off">
-                        <StyledInput type="text" name="name" placeholder="Name" />
-                        <Error name="name" component="p" />
-                        <StyledInput type="email" name="email" placeholder="Email" />
-                        <Error name="email" component="p" />
-                        <StyledInput type="password" name="password" placeholder="Password" />
-                        <Error name="password" component="p" />
-                        <StyledButton type="submit">Sign Up</StyledButton>
-                    </Form>
-                </Formik>
-
+                <AuthForm schema={schema} handleSubmit={handleRegistration} register />
                 <StyledSecondaryText>Already have an account? <StyledLink to="/signin">Sign In</StyledLink></StyledSecondaryText>
             </StyledDiv>
 
