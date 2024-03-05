@@ -1,5 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-
+import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -22,17 +21,12 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const usersReducer = combineReducers({
-  auth: authReducer,
-  exercises: exerciseReducer,
-  products: productsReducer,
-  profile: profileReducer
-});
-
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    users: usersReducer,
+    exercises: exerciseReducer,
+    products: productsReducer,
+    profile: profileReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

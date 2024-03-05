@@ -1,7 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import { AppLayout } from './components/AppLayout/AppLayout.jsx';
-import { Suspense, lazy } from 'react';
+import {Suspense, lazy, useEffect} from 'react';
 import { Exercises } from './components/ExercisesPageList/ExercisesPageList.jsx';
+import {useDispatch} from "react-redux";
+import {refreshUser} from "./redux/auth/api.js";
+// import {useAuth} from "./components/hooks/index.js";
 
 const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage.jsx'));
 const SigninPage = lazy(() => import('./pages/SigninPage/SigninPage.jsx'));
@@ -17,8 +20,14 @@ const ProductsPage = lazy(() =>
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage.jsx'));
 
 function App() {
+  const dispatch = useDispatch();
+  // const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<WelcomePage />} />
