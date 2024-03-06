@@ -15,6 +15,7 @@ import { exerciseReducer } from './exercises/exerciseSlice.js';
 import { productsReducer } from './products/productSlice.js';
 import { profileReducer } from './profile/profileSlice.js';
 
+
 const authPersistConfig = {
   key: 'auth',
   storage,

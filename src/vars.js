@@ -8,6 +8,7 @@ export const theme = {
     grey: 'rgba(239, 237, 232, .3)',
     greySecond: 'rgba(239, 237, 232, .6)',
     greyThird: 'rgba(239, 237, 232, .5)',
+    greyTr: 'rgba(239, 237, 232, .05)',
     greyFourth: 'rgba(239, 237, 232, .8)',
     greyFifth: 'rgba(239, 237, 232, .4)',
     greySixth: 'rgba(239, 237, 232, .1)',
