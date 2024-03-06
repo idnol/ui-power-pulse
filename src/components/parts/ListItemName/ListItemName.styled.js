@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { theme } from '../../vars';
+import { theme } from '../../../vars';
 
 export const NameContainer = styled.div`
   display: flex;

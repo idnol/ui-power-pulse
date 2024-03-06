@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StatsList } from "../ListItem/ListItem.styled";
-import { ListItemName } from "../ListItemName/ListItemName";
+import { ListItemName } from "../parts/ListItemName/ListItemName";
 import { StatItem } from "../StatsItem/StatsItem";
 import { AddBtn, BtnContainer, BtnWrapper, DietBox, ProductCard, RecomendedText, RecomendSwitch, IconSvg } from "./ProductItem.styled";
 import {AddProductForm} from "../AddProductForm/ModalProducts/AddProductForm";

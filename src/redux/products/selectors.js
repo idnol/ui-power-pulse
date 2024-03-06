@@ -1,6 +1,6 @@
 
-export const selectProducts = state => state.users.products.items;
+export const selectProducts = state => state.products.items;
 
-export const selectIsLoading = state => state.users.products.isLoading;
+export const selectIsLoading = state => state.products.isLoading;
 
-export const selectError = state => state.users.products.error;
+export const selectError = state => state.products.error;

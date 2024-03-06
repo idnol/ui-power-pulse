@@ -1,13 +1,10 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { setAuthHeader } from '../auth/api';
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTVlZGY3NjAwYzQ4ZjY3MTc5YzMxOCIsImlhdCI6MTcwOTY1ODUyNSwiZXhwIjoxNzA5NzQxMzI1fQ.XjfrnLkvGWsUL7DPXF7IwifCuYGM7301InU9VOlzPL0"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTVlZGY3NjAwYzQ4ZjY3MTc5YzMxOCIsImlhdCI6MTcwOTcyMjA5NywiZXhwIjoxNzA5ODA0ODk3fQ.6nH_lVmCfHnZuDob3BvjwaQ_gZN84zzRMHVyYvTXb1Q"
 
 axios.defaults.baseURL = 'http://localhost:3333/api/products';
-
-const setAuthHeader = token => {
-  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
-};
 
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
@@ -22,7 +19,6 @@ export const fetchProducts = createAsyncThunk(
     }
   }
 );
-
 
 export const fetchCategories = async () => {
   setAuthHeader(token);
