@@ -13,7 +13,8 @@ export const StatsItem = styled.li`
   line-height: 18px; /* 150% */
 
   margin-right: 16px;
-
+  display: flex;
+  gap: 4px;
   &:last-child {
     margin-right: 0;
   }
@@ -29,4 +30,9 @@ export const StatsSpan = styled.span`
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 150% */
+ display: block;
+ max-width: 76px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
 `;

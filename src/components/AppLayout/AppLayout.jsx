@@ -17,11 +17,9 @@ export const AppLayout = () => {
 
       <AddExerciseForm />
       <main>
-        <div className='container'>
           <Suspense fallback={<></>}>
             <Outlet />
           </Suspense>
-        </div>
       </main>
     </AppLayoutStyled>
   )
