@@ -14,9 +14,11 @@ export const BasicModalWindow = ({ isOpen, onClose, children }) => {
     };
     if (isOpen) {
       document.addEventListener('keydown', handleKeyPress);
+      document.body.classList.add('disable-scroll');
     }
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
+      document.body.classList.remove('disable-scroll');
     };
   }, [isOpen, onClose]);
   if (!isOpen) {

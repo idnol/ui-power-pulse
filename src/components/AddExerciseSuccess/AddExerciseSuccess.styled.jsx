@@ -20,6 +20,11 @@ export const ModalClBtn = styled.button`
   height: 22px;
   top: 14px;
   right: 14px;
+  stroke: ${theme.color.white};
+  fill: transparent;
+  &:hover {
+    stroke: ${theme.color.orangeSecond};
+  }
 
   @media (min-width: ${theme.breakpoint.md}) {
     width: 26px;
@@ -36,13 +41,7 @@ export const ModalClBtn = styled.button`
   padding: 0;
 `;
 
-export const Icon = styled.use`
-  stroke: ${theme.color.white};
-  fill: transparent;
-  &:hover {
-    stroke: ${theme.color.orangeSecond};
-  }
-`;
+
 
 export const ModalSvg = styled.svg`
   width: 22px;
@@ -132,15 +131,7 @@ export const BtnSuccess = styled.button`
   }
 `;
 
-// export const IconUse = styled.use`
-//   stroke: ${theme.color.grey};
 
-//   fill: transparent;
-//   &:hover{
-   
-//     stroke: ${theme.color.white}
-//   }
-// `;
 
 export const ModalSvgArrow = styled.svg`
   width: 22px;
@@ -157,11 +148,16 @@ export const StyledLink = styled(Link)`
   align-items: center;
   margin-top: 16px;
   gap: 8px;
+  stroke: ${theme.color.grey};
+  font-size: 14px;
+  
+
+  fill: transparent;
 
   color: ${theme.color.grey};
-  //opacity: 0.3;
   &:hover{
     color: ${theme.color.white};
+    stroke: ${theme.color.white}
    
   }
 `;

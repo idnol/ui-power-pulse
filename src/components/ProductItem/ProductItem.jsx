@@ -6,7 +6,7 @@ import { AddBtn, BtnContainer, BtnWrapper, DietBox, ProductCard, RecomendedText,
 import {AddProductForm} from "../AddProductForm/ModalProducts/AddProductForm";
 import sprite from 'assets/sprite-2.svg';
 
-export const ProductItem = ({item:{title, calories, category, weight, groupBloodNotAllowed}, bloodGroup}) => {
+export const ProductItem = ({item:{title, calories, category, weight, groupBloodNotAllowed, _id}, bloodGroup}) => {
   const [isModalOpen, setIsModal] = useState(false);
   const notAllowed = groupBloodNotAllowed[bloodGroup];
   const isRecomended = notAllowed ? "Not recommended" : "Recommended";
@@ -31,7 +31,7 @@ export const ProductItem = ({item:{title, calories, category, weight, groupBlood
       <StatItem text="Weight: " val={weight}/>
     </StatsList>
   </ProductCard>
-  <AddProductForm isOpen={isModalOpen} onClose={() => setIsModal(false)} />
+  <AddProductForm isOpen={isModalOpen} id={_id} title={title} calories={calories} onClose={() => setIsModal(false)} />
   </>
-  )
+  ) 
 }

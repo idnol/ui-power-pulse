@@ -86,4 +86,8 @@ export const GlobalStyle = createGlobalStyle`
     .greyTextColor{
         color: ${theme.color.greyFifth};
     }
+
+    .disable-scroll {
+        overflow: hidden;
+    }
 `;
