@@ -1,5 +1,7 @@
+// import { Link } from 'react-router-dom';
 import {
   OrangePart,
+  StyledImagePart,
   ContentContainer,
   StyledLink,
   StyledTitle,
@@ -23,6 +25,7 @@ export default function ErrorPage() {
           <StyledLink to={'/'}>Go Home</StyledLink>
         </ContentContainer>
       </OrangePart>
+      <StyledImagePart />
     </section>
   );
 }

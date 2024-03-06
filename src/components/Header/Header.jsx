@@ -51,8 +51,8 @@ export const Header = () => {
         {isNotCustomRoute ? (
           <StyledLink
             to="/"
-            errSm="../../../public/img/logo/logo-sm-white.svg"
-            errBig="../../../public/img/logo/logo-white.svg"
+            errsm="../../../public/img/logo/logo-sm-white.svg"
+            errbig="../../../public/img/logo/logo-white.svg"
           ></StyledLink>
         ) : isNotAuthenticatedUser ? (
           <StyledLink to="/"></StyledLink>
