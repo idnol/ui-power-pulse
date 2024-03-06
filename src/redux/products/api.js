@@ -12,11 +12,10 @@ const setAuthHeader = token => {
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async (filters, thunkAPI) => {
-    console.log(filters);
     try {
       setAuthHeader(token);
+      console.log(filters);
       const response = await axios.get('/', filters);
-      console.log(response);
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

@@ -20,6 +20,10 @@ export const ProductsTitle = styled.h2`
   @media (min-width: ${theme.breakpoint.md}) {
     margin-top: 84px;
   }
+  @media (min-width: ${theme.breakpoint.xl}) {
+    margin-top: 0;
+    display: block;
+  }
 `;
 
 

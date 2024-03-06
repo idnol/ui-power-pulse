@@ -1,18 +1,19 @@
 import { useDispatch } from "react-redux";
 import { Form, SearchBtn, RecommendedField, FieldTitle, StyledOption, FiltersContainer, SelectWrapper, CategoryField, InputGroup, IconSearch, CleanBtn, IconClean, SelectHeader, OptionsContainer } from "./ProductsFilter.styled";
 import sprite from 'assets/sprite-2.svg';
-import { findProducts } from "../../redux/products/filterSlice";
 import { useEffect, useRef, useState } from "react";
 import { IconDown } from "./ProductsFilter.styled";
-import { fetchCategories } from "../../redux/products/api";
+import { fetchCategories, fetchProducts } from "../../redux/products/api";
 import { toast } from "react-toastify";
 
-export const ProductsFilter = () => {
-  const [newFilters, setNewFilters] = useState({
-    title: '',
-    category: '',
-    recommended: 'all',
-  });
+const initialFilters = {
+  title: '',
+  category: '',
+  recommended: 'all',
+};
+
+export const ProductsFilter = ({onFilterChange}) => {
+  const [filters, setFilters] = useState(initialFilters);
 
   const [isOpenCategory, setIsOpenCategory] = useState(false);
   const [isOpenRecommend, setIsOpenRecommend] = useState(false);
@@ -21,7 +22,7 @@ export const ProductsFilter = () => {
   const [categories, setCategories] = useState([]);
   const [error, setError] = useState(null);
 
-  const recommendOptions =["all", "recommend", "not recommend"]
+  const recommendOptions =["all", "recommend", "not recommend"];
   const dispatch = useDispatch();
   
   useEffect(()=> {
@@ -38,8 +39,8 @@ export const ProductsFilter = () => {
   },[]);
 
   useEffect(() => {
-    dispatch(findProducts(newFilters))
-  }, [newFilters, dispatch]);
+    dispatch(fetchProducts(filters))
+  }, [filters, dispatch]);
 
   const handleDropdownCategory = () => {
     setIsOpenCategory(!isOpenCategory);
@@ -50,16 +51,16 @@ export const ProductsFilter = () => {
   };
 
   const handleTitleChange = (event) => {
-    setNewFilters((prevFilters) => ({ ...prevFilters, title: event.target.value }));
+    setFilters((prevFilters) => ({ ...prevFilters, title: event.target.value }));
   };
 
   const handleSelectCategory = (option) => {
-    setNewFilters((prevFilters) => ({ ...prevFilters, category: option }));
+    setFilters((prevFilters) => ({ ...prevFilters, category: option }));
     setIsOpenCategory(false);
   };
 
   const handleSelectRecommended = (option) => {
-    setNewFilters((prevFilters) => ({ ...prevFilters, recommended: option }));
+    setFilters((prevFilters) => ({ ...prevFilters, recommended: option }));
     setIsOpenRecommend(false);
   };
 
@@ -87,11 +88,11 @@ export const ProductsFilter = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(findProducts(newFilters))
+    onFilterChange(filters);
   };
 
   const handleCleanForm = () => {
-    setNewFilters((prevFilters) => ({ ...prevFilters, title: ""}));
+    setFilters((prevFilters) => ({ ...prevFilters, title: ""}));
   };
 
     return (
@@ -100,7 +101,7 @@ export const ProductsFilter = () => {
           <Form onSubmit={handleSubmit}>
             <InputGroup>
                
-               <FieldTitle type="text" name="title" placeholder="Search" value={newFilters.title } onChange={handleTitleChange} />
+               <FieldTitle type="text" name="title" placeholder="Search" value={filters.title } onChange={handleTitleChange} />
                <CleanBtn type="button" className="cleanBtn" onClick={handleCleanForm}>
                 <IconClean>
                  <use href={`${sprite}#x`} />
@@ -120,7 +121,7 @@ export const ProductsFilter = () => {
 
              <CategoryField>
                <SelectHeader onClick={handleDropdownCategory}>
-               {newFilters.category || 'Category'}
+               {filters.category || 'Category'}
                </SelectHeader>
                <IconDown>
                <use href={`${sprite}#arrow-down`} />
@@ -137,7 +138,7 @@ export const ProductsFilter = () => {
             
               <RecommendedField>
                <SelectHeader onClick={handleDropdownRecommend}>
-                {newFilters.recommended  || 'All'}
+                {filters.recommended  || 'All'}
                </SelectHeader>
                <IconDown>
                <use href={`${sprite}#arrow-down`} />
