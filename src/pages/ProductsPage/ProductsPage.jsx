@@ -26,7 +26,7 @@ export default function ProductsPage() {
        < ProductsFilter onFilterChange={handleFilterChange}/>
       </FilterWrapper>
       {isLoading && <Loader/>}
-     {products!=="undefined" && products.length>0  &&<ProductsList />}
+     {products.length>0  &&<ProductsList />}
      {error && <ProductsError/>}
     </div>
   </ProductsSection>
