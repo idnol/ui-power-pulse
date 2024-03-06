@@ -4,7 +4,6 @@ import { theme } from '../../../vars';
 export const NameContainer = styled.div`
   display: flex;
   gap: 16px;
-
   margin-bottom: 8px;
 `;
 
@@ -26,11 +25,9 @@ export const Name = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 120% */
-
   max-width: 240px;
-
   @media (min-width: ${theme.breakpoint.md}) {
-    font-size: 24px;
-    line-height: 32px;
+   font-size: 24px;
+   line-height: 32px;
   }
 `;

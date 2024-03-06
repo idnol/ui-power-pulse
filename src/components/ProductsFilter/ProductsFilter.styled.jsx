@@ -32,14 +32,14 @@ export const FiltersContainer = styled.div`
  margin: 0 auto;
  margin-top: 40px;
  @media (min-width: ${theme.breakpoint.md}) {
-            max-width: 664px;
-            margin: 0;
-            margin-top: 32px;
-        }
-        @media (min-width: ${theme.breakpoint.xl}) {
-            margin-bottom: 0;
-            margin-top: 0;
-        }
+  max-width: 664px;
+  margin: 0;
+  margin-top: 32px;
+  }
+ @media (min-width: ${theme.breakpoint.xl}) {
+  margin-bottom: 0;
+  margin-top: 0;
+  }
 `;
 
 export const Form = styled.form`
@@ -47,8 +47,8 @@ export const Form = styled.form`
  flex-direction: column;
  gap: 16px;
  @media (min-width: ${theme.breakpoint.md}) {
-           flex-direction: row;
-        }
+  flex-direction: row;
+  }
 `;
 
 export const InputGroup = styled.div`
@@ -59,9 +59,8 @@ export const InputGroup = styled.div`
  background: transparent;
  position: relative;
  @media (min-width: ${theme.breakpoint.md}) {
-            width: 236px;
-        }
- 
+  width: 236px;
+  }
 `;
 
 export const FieldTitle = styled.input`
@@ -79,17 +78,17 @@ export const FieldTitle = styled.input`
  color:  ${theme.color.white};
  &::placeholder {
   color: ${theme.color.white};
-}
+ }
 &:focus  {
   border: ${theme.border.orange};
-}
+ }
 &:not(:placeholder-shown) + .cleanBtn {
   display: block;
-}
+ }
 @media (min-width: ${theme.breakpoint.md}) {
-            width: 236px;
-            font-size: 16px;
-        }
+  width: 236px;
+  font-size: 16px;
+  }
 `;
 
 export const CleanBtn = styled.button`
@@ -145,10 +144,10 @@ export const CategoryField = styled.div`
  display: inline-block; 
  z-index: 2;
  @media (min-width: ${theme.breakpoint.md}) {
-            width: 192px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
+  width: 192px;
+  font-size: 16px;
+  line-height: 1.5;
+  }
 `;
 
 export const RecommendedField = styled.div`
@@ -163,10 +162,10 @@ export const RecommendedField = styled.div`
  position: relative;
  display: inline-block;
  @media (min-width: ${theme.breakpoint.md}) {
-            width: 204px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
+  width: 204px;
+  font-size: 16px;
+  line-height: 1.5;
+  }
 `;
 
 export const SelectHeader = styled.div` 
@@ -180,9 +179,9 @@ export const SelectHeader = styled.div`
   text-transform: capitalize;
   }
   @media (min-width: ${theme.breakpoint.md}) {
-            font-size: 16px;
-            line-height: 1.5;
-        }
+  font-size: 16px;
+  line-height: 1.5;
+  }
 `;
 
 export const IconDown = styled.svg`
@@ -211,17 +210,17 @@ export const OptionsContainer = styled.ul`
   z-index: 100;
   display: ${({ $isopen }) => ($isopen ? 'block' : 'none')};
   &::-webkit-scrollbar {
-            width: 6px;
-           }
+    width: 6px;
+    }
   &::-webkit-scrollbar-track {
-            background-color: transparent;
-            border-radius: 12px;
-           } 
+    background-color: transparent;
+    border-radius: 12px;
+    } 
   &::-webkit-scrollbar-thumb {
-            background-color: ${theme.color.greySixth};
-            border-radius: 12px;
-            height: 147px;
-           }
+    background-color: ${theme.color.greySixth};
+    border-radius: 12px;
+    height: 147px;
+    }
 `;
 
 export const StyledOption = styled.li`
@@ -234,14 +233,14 @@ export const StyledOption = styled.li`
  cursor: pointer;
  &::first-letter {
   text-transform: capitalize;
-}
-  &:hover {
-    background-color: ${theme.color.grey};
   }
+  &:hover {
+   background-color: ${theme.color.grey};
+   }
   @media (min-width: ${theme.breakpoint.md}) {
-            font-size: 16px;
-            line-height: 1.5;
-        }
+   font-size: 16px;
+   line-height: 1.5;
+   }
 `;
 
 export const SelectWrapper = styled.div`

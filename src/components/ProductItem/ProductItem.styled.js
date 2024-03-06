@@ -13,8 +13,8 @@ export const ProductCard = styled.div`
  height: 141px;
  background-color: ${theme.color. greyTr};
  @media (min-width: ${theme.breakpoint.xl}) {
-          width: 405px;
-        }
+  width: 405px;
+  }
 `;
 
 export const DietBox = styled.div`
@@ -59,9 +59,9 @@ export const AddBtn = styled.button`
  padding: 0;
  cursor: pointer;
  @media (min-width: ${theme.breakpoint.md}) {
-          font-size: 16px;
-          line-height: 1.5;
-        }
+  font-size: 16px;
+  line-height: 1.5;
+  }
 `;
 
 export const IconSvg = styled.svg`
@@ -76,8 +76,8 @@ export const BtnContainer = styled.div`
  align-items: center;
  margin-bottom: 35px;
  @media (min-width: ${theme.breakpoint.md}) {
-          margin-bottom: 27px;
-        }
+  margin-bottom: 27px;
+  }
 `;
 
 export const BtnWrapper = styled.div`
