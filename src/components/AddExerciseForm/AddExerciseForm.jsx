@@ -4,7 +4,9 @@ import { ContainerImg, ContainerTimer, StyledBtn, StyledCalories, StyledContaine
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import sprite from 'assets/sprite-2.svg';
 import { ExerciseDetailsItem } from "../ExerciseDetailsItem/ExerciseDetailsItem";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addExercise } from "../../redux/diary/api";
+import { toast } from "react-toastify";
 
 
 export const AddExerciseForm = ({ item = { name: "N/A", target: "N/A", bodyPart: "N/A", equipment: "N/A", gifUrl: "", burnedCalories: 300, _id: "N/A" } }) => {
@@ -16,7 +18,7 @@ export const AddExerciseForm = ({ item = { name: "N/A", target: "N/A", bodyPart:
 
     const { name, target, bodyPart, equipment, gifUrl, burnedCalories, _id: id } = item;
     const duration = 180;
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         let interval = null;
@@ -58,21 +60,18 @@ export const AddExerciseForm = ({ item = { name: "N/A", target: "N/A", bodyPart:
         return { shouldRepeat: false };
     };
 
-    const date = new Date();
-    const formattedDate = date.getDate().toString().padStart(2, '0') + '/' + (date.getMonth() + 1).toString().padStart(2, '0') + '/' + date.getFullYear().toString();
-
     const onSubmit = (e) => {
         e.preventDefault();
-
+        
         const data = {
             exercise: id,
-            date: formattedDate,
-            time: Math.floor((duration - remainingTimeRef.current) / 60), // in minites
-            calories: currentBurnedCal
+            time: duration - remainingTimeRef.current
         };
 
-        // dispatch();
-        console.log(data);
+        dispatch(addExercise(data));
+        toast.error('Oops, something went wrong');
+        
+        console.log(data); //delete later
     };
 
     return (
