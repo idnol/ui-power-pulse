@@ -14,11 +14,9 @@ export const AppLayout = () => {
         </div>
       </HeaderStyled>
       <main>
-        <div className='container'>
           <Suspense fallback={<></>}>
             <Outlet />
           </Suspense>
-        </div>
       </main>
     </AppLayoutStyled>
   )
