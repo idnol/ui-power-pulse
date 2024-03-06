@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ErrorMessage as FormikError } from 'formik';
+
 
 import { theme } from '../../../vars';
 
@@ -19,7 +19,7 @@ export const InputName = styled.input`
   border: ${theme.border.grey3};
   border-radius: 12px;
   background-color: transparent;
-  color: ${theme.color.white};
+  color: ${theme.color.greyFifth};
   &:hover {
     border: ${theme.border.orange};
   }
@@ -136,4 +136,4 @@ export const CaloriesText = styled.p`
   }
 `;
 
-export const ErrorMessage = styled(FormikError)``;
+

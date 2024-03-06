@@ -1,10 +1,8 @@
-import { Form, Formik } from 'formik';
-import * as Yup from 'yup';
 
+import { useState } from 'react';
 import {
   BtnBox,
   CaloriesText,
-  ErrorMessage,
   FormBtnAdd,
   FormBtnCancel,
   LabelBox,
@@ -16,37 +14,35 @@ import {
   Grams,
 } from './ProductForm.styled';
 
-const ProductSchema = Yup.object().shape({
-  name: Yup.string().min(3, 'Too Short!').required('Required'),
-  number: Yup.string().required('Required'),
-});
+
 
 export const ProductForm = ({ onClose }) => {
+  const [isInputValue, setIsInputValue] = useState('')
+  const [isCaloriesValue, setIsCaloriesValue] = useState('0')
+  const [isInputName, setIsInputName] = useState('Banana juice')
+  
+  const handleValue = (evt) => {
+    const value = evt.currentTarget.value;
+    setIsInputValue(value);
+    const calories = Math.round((value * 50) / 100);
+    setIsCaloriesValue(calories)
+  }
   return (
-    <Formik
-      initialValues={{
-        name: '',
-        number: '',
-      }}
-      validationSchema={ProductSchema}
-      onSubmit={(values, actions) => {
-        actions.resetForm();
-      }}
-    >
-      <Form>
+    
+      <form>
         <LabelBox>
-          <InputName name="name" placeholder="Banana juice" />
-          <ErrorMessage name="name" component="span" />
+          <InputName name="name" value={isInputName} readOnly />
+          
 
           <BoxCalories>
-            <InputCalories name="number" />
+            <InputCalories name="number" value={isInputValue} onChange={handleValue}/>
             <Grams>grams</Grams>
           </BoxCalories>
-          <ErrorMessage name="number" component="span" />
+         
         </LabelBox>
         <CountsPro>
           <CaloriesText>Calories:</CaloriesText>
-          <Value>96</Value>
+          <Value>{isCaloriesValue}</Value>
         </CountsPro>
 
         <BtnBox>
@@ -55,7 +51,7 @@ export const ProductForm = ({ onClose }) => {
             Cancel
           </FormBtnCancel>
         </BtnBox>
-      </Form>
-    </Formik>
+      </form>
+    
   );
 };
