@@ -132,11 +132,15 @@ export const BtnSuccess = styled.button`
   }
 `;
 
-export const IconUse = styled.use`
-  stroke: ${theme.color.white};
+// export const IconUse = styled.use`
+//   stroke: ${theme.color.grey};
 
-  fill: transparent;
-`;
+//   fill: transparent;
+//   &:hover{
+   
+//     stroke: ${theme.color.white}
+//   }
+// `;
 
 export const ModalSvgArrow = styled.svg`
   width: 22px;
@@ -154,8 +158,12 @@ export const StyledLink = styled(Link)`
   margin-top: 16px;
   gap: 8px;
 
-  color: ${theme.color.white};
-  opacity: 0.3;
+  color: ${theme.color.grey};
+  //opacity: 0.3;
+  &:hover{
+    color: ${theme.color.white};
+   
+  }
 `;
 
 export const TextLink = styled.p`

@@ -20,6 +20,10 @@ export const InputName = styled.input`
   border-radius: 12px;
   background-color: transparent;
   color: ${theme.color.greyFifth};
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
   &:hover {
     border: ${theme.border.orange};
   }
@@ -40,8 +44,7 @@ export const Grams = styled.p`
   transform: translateY(-50%);
   margin: 0;
   font-size: 12px;
-  color: ${theme.color.white};
-  opacity: 0.4;
+  color: ${theme.color.greyFifth};
 `;
 
 export const InputCalories = styled.input`
@@ -51,7 +54,7 @@ export const InputCalories = styled.input`
   border-radius: 12px;
   background-color: transparent;
   color: ${theme.color.white};
-  &:hover {
+  &:hover, &:active {
     border: ${theme.border.orange};
   }
   @media (min-width: ${theme.breakpoint.md}) {
@@ -136,4 +139,8 @@ export const CaloriesText = styled.p`
   }
 `;
 
+<<<<<<< Updated upstream
 
+=======
+//export const ErrorMessage = styled(FormikError)``;
+>>>>>>> Stashed changes

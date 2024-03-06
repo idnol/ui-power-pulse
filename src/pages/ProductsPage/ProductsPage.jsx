@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../redux/products/api";
 import { ProductsFilter } from "../../components/ProductsFilter/ProductsFilter";
@@ -32,3 +33,51 @@ export default function ProductsPage() {
   </ProductsSection>
   </>
 }
+=======
+import { useState } from 'react';
+import {AddProductForm} from '../../components/AddProductForm/ModalProducts/AddProductForm'
+import { AddProductSuccess } from '../../components/AddProductSuccess/AddProductSuccess';
+
+export default function ProductsPage() {
+  const [isModalOpen, setIsModal] = useState(false);
+   const [isModalSuccessOpen, setIsModalSuccessOpen] = useState(false)
+  // const [isModalWaistOpen, setIsModalWaistOpen] = useState(false)
+
+  return (
+    <>
+      <h1>product</h1>
+      <button
+        style={{
+          position: 'relative',
+        }}
+        type="button"
+        onClick={() => setIsModal(true)}
+      >
+        Open
+      </button>
+      <button
+        style={{
+          position: 'relative',
+        }}
+        type="button"
+        onClick={() => setIsModalSuccessOpen(true)}
+      >
+        Open Success
+      </button>
+
+      <button
+        style={{
+          position: 'relative',
+        }}
+        type="button"
+        onClick={() => setIsModalWaistOpen(true)}
+      >
+        Open Waist
+      </button>
+
+      <AddProductForm isOpen={isModalOpen} onClose={() => setIsModal(false)}/>
+      <AddProductSuccess isOpen={isModalSuccessOpen} onClose={() => setIsModalSuccessOpen(false)}/>
+    </>
+  );
+}
+>>>>>>> Stashed changes

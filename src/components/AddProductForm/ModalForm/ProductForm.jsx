@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+
+import { useState } from 'react';
+import { AddProductSuccess } from '../../AddProductSuccess/AddProductSuccess';
+
+>>>>>>> Stashed changes
 
 import { useState } from 'react';
 import {
@@ -14,9 +21,16 @@ import {
   Grams,
 } from './ProductForm.styled';
 
+<<<<<<< Updated upstream
 
 
 export const ProductForm = ({ onClose }) => {
+=======
+
+
+export const ProductForm = ({ onClose, onSuccess }) => {
+
+>>>>>>> Stashed changes
   const [isInputValue, setIsInputValue] = useState('')
   const [isCaloriesValue, setIsCaloriesValue] = useState('0')
   const [isInputName, setIsInputName] = useState('Banana juice')
@@ -27,13 +41,32 @@ export const ProductForm = ({ onClose }) => {
     const calories = Math.round((value * 50) / 100);
     setIsCaloriesValue(calories)
   }
+<<<<<<< Updated upstream
   return (
     
       <form>
         <LabelBox>
           <InputName name="name" value={isInputName} readOnly />
           
+=======
 
+
+
+
+
+
+
+
+  
+
+  return (
+    <>
+>>>>>>> Stashed changes
+
+        <form>
+        <LabelBox>
+          <InputName name="name" value={isInputName} readOnly />
+       
           <BoxCalories>
             <InputCalories name="number" value={isInputValue} onChange={handleValue}/>
             <Grams>grams</Grams>
@@ -46,12 +79,19 @@ export const ProductForm = ({ onClose }) => {
         </CountsPro>
 
         <BtnBox>
-          <FormBtnAdd type="submit">Add to diary</FormBtnAdd>
+          <FormBtnAdd type="submit" onClick={onSuccess}>Add to diary</FormBtnAdd>
           <FormBtnCancel type="button" onClick={onClose}>
             Cancel
           </FormBtnCancel>
         </BtnBox>
       </form>
+<<<<<<< Updated upstream
     
+=======
+      
+      
+    </>
+  
+>>>>>>> Stashed changes
   );
 };

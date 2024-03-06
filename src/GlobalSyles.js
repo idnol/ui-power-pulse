@@ -65,6 +65,10 @@ export const GlobalStyle = createGlobalStyle`
         height: auto;
     }
 
+    button {
+        cursor: pointer;
+    }
+
      .accent{
        background: ${theme.color.orange};
        border: ${theme.border.grey2}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BackDrop, Modal } from './BasicModalWindow.styled';
 
 export const BasicModalWindow = ({ isOpen, onClose, children }) => {
@@ -18,7 +18,7 @@ export const BasicModalWindow = ({ isOpen, onClose, children }) => {
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
   if (!isOpen) {
     return null;
   }

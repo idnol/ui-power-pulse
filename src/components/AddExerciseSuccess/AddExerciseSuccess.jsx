@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import sprite from 'assets/sprite-2.svg';
 import { useLocation } from 'react-router-dom';
 import { theme } from '../../vars';
 
@@ -32,7 +33,7 @@ export const AddExerciseSuccess = ({ isOpen, onClose }) => {
       <BasicModalWindow isOpen={isOpen} onClose={onClose}>
         <ModalClBtn onClick={onClose}>
           <ModalSvg>
-            <Icon href="/img/sprait.svg#x-modal" />
+            <Icon href={`${sprite}#x-modal`} />
           </ModalSvg>
         </ModalClBtn>
         <Wrapper>

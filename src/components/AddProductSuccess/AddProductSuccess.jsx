@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import sprite from 'assets/sprite-2.svg';
 import { useLocation } from 'react-router-dom';
 import { theme } from '../../vars';
 import {
@@ -28,22 +29,22 @@ export const AddProductSuccess = ({ isOpen, onClose }) => {
   const backLinkRef = useRef(location);
 
   return (
-    <>
+    
       <BasicModalWindow isOpen={isOpen} onClose={onClose}>
         <ModalCloseBtn onClick={onClose}>
           <ModalSvg>
-            <Icon href="/img/sprait.svg#x-modal" />
+            <Icon href={`${sprite}#x-modal`} />
           </ModalSvg>
         </ModalCloseBtn>
         <Wrapper>
           <SuccessBox>
             <picture>
               <source
-                media={theme.breakpoint.sm}
+                media={`${theme.breakpoint.sm}`}
                 srcset="/img/avocado-1x.png"
               ></source>
               <source
-                media={theme.breakpoint.md}
+                media={`${theme.breakpoint.md}`}
                 srcset="/img/avocado-2x.png"
               ></source>
               <img src="/img/avocado-1x.png" alt="Avocado" loading="lazy"></img>
@@ -66,6 +67,6 @@ export const AddProductSuccess = ({ isOpen, onClose }) => {
           </SuccessBox>
         </Wrapper>
       </BasicModalWindow>
-    </>
+    
   );
 };

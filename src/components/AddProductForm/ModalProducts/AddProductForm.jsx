@@ -1,5 +1,5 @@
 import { BasicModalWindow } from '../../BasicModalWindow/BasicModalWindow.jsx';
-
+import sprite from 'assets/sprite-2.svg';
 import { ProductForm } from '../ModalForm/ProductForm.jsx';
 
 import {
@@ -10,18 +10,24 @@ import {
 } from './AddProductForm.styled';
 
 export const AddProductForm = ({ isOpen, onClose }) => {
+
+  
+
   return (
-    <>
+    
       <BasicModalWindow isOpen={isOpen} onClose={onClose}>
-        <ModalCloseBtn onClick={onClose}>
+        
+             <ModalCloseBtn onClick={onClose}>
           <ModalSvg>
-            <Icon href="/img/sprait.svg#x-modal" />
+            <Icon href={`${sprite}#x-modal`} />
           </ModalSvg>
         </ModalCloseBtn>
         <Wrapper>
-          <ProductForm onClose={onClose} />
+          <ProductForm onClose={onClose} onSuccess={() => setIsSuccess(true)}/>
         </Wrapper>
+        
+        
       </BasicModalWindow>
-    </>
+    
   );
 };
