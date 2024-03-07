@@ -14,6 +14,7 @@ import { authReducer } from './auth/authSlice.js';
 import { exerciseReducer } from './exercises/exerciseSlice.js';
 import { productsReducer } from './products/productSlice.js';
 import { profileReducer } from './profile/profileSlice.js';
+import { diaryReducer } from './diary/diarySlice.js';
 
 
 const authPersistConfig = {
@@ -28,6 +29,7 @@ export const store = configureStore({
     exercises: exerciseReducer,
     products: productsReducer,
     profile: profileReducer,
+    diary: diaryReducer
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -44,6 +44,10 @@ export const StyledInput = styled(Field)`
     &:hover{
         border: ${theme.border.orange};
     };
+    &:focus {
+    outline: none;
+    border: ${theme.border.orange};
+}
     ${({ error, touched }) => touched === "true" && error === "true" && css`
         border-color: red;
     `}
@@ -77,6 +81,7 @@ export const StyledButton = styled.button`
     border: none;
     background-color: ${theme.color.orange};
     color: ${theme.color.white};
+    cursor: pointer;
     &:hover{
         background-color: ${theme.color.orangeSecond};
     };
@@ -112,6 +117,7 @@ export const StyledEye = styled.button`
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
+    cursor: pointer;
 `;
 
 export const StyledInputWrapper = styled.div`

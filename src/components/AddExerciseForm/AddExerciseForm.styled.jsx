@@ -76,6 +76,7 @@ export const StyledBtn = styled.button`
     font-size: 16px;
     font-weight: 500;
     line-height: 1.12;
+    cursor: pointer;
     background-color: ${theme.color.orange};
     &:hover{
         background-color: ${theme.color.orangeSecond};
@@ -97,6 +98,7 @@ export const StyledStartBtn = styled.button`
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 `;
 
 export const StyledSmallText = styled(StyledText)`
