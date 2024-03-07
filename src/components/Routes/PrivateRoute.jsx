@@ -4,7 +4,6 @@ import { selectIsLoggedin, selectIsRefreshing } from "../../redux/auth/selectors
 
 
 export const PrivateRoute = ({component: Component, redirectTo = "/"}) => {
-    
     const isLoggedin = useSelector(selectIsLoggedin);
     const isRefreshing = useSelector(selectIsRefreshing);
     const shouldRedirect = !isLoggedin && !isRefreshing;
