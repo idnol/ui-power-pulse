@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { Exercises } from '../../components/ExercisesPageList/ExercisesPageList';
 
 export default function ExercisesPage() {
   return (
@@ -15,7 +16,7 @@ export default function ExercisesPage() {
           <NavLink to="equipment">Equipment</NavLink>
         </li>
       </ul>
-
+      <Exercises />
       <Outlet />
     </>
   );
