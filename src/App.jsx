@@ -21,11 +21,7 @@ function App() {
           <Route path="signup" element={<SignupPage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="diary" element={<DiaryPage />} />
-          <Route path="exercises/" element={<ExercisesPage />}>
-            <Route path="bodyparts" element={<div>Body parts</div>} />
-            <Route path="muscles" element={<div>Muscles</div>} />
-            <Route path="equipment" element={<div>Equipment</div>} />
-          </Route>
+          <Route path="exercises/" element={<ExercisesPage />}></Route>
           <Route path="products" element={<ProductsPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>

@@ -1,12 +1,20 @@
-import { Outlet } from 'react-router-dom';
-import ExercisesCategories from './ExercisesCategories';
+import { useState } from 'react';
+import useFetchCategories from './ExercisesHelper/useFetchCategories';
+import ExercisesCategories from './Categories/ExercisesCategories';
+import ExercisesSubcategoriesList from './SubCategories/ExercisesSubcategoriesList';
 
-export default function ExercisesPage({ subcategories }) {
+export default function ExercisesPage() {
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const categories = useFetchCategories(selectedCategory);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div>
-      <h1>Exercises</h1>
-      <ExercisesCategories />
-      <Outlet context={{ subcategories }} />
+      <ExercisesCategories onClick={handleCategoryClick} />
+      <ExercisesSubcategoriesList categories={categories} selectedCategory={selectedCategory} />
     </div>
   );
 }
