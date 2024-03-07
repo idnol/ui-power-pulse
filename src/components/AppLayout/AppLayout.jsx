@@ -8,17 +8,15 @@ export const AppLayout = () => {
   return (
     <AppLayoutStyled>
       <GlobalStyle />
-      <HeaderStyled>
+      <HeaderStyled id='hdr-layout'>
         <div className='container'>
-          <Header/>
+          <Header />
         </div>
       </HeaderStyled>
       <main>
-        <div className='container'>
           <Suspense fallback={<></>}>
             <Outlet />
           </Suspense>
-        </div>
       </main>
     </AppLayoutStyled>
   )

@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 
 
 export const StyledDiv = styled.div`
-    margin-top: 127px;
+    //margin-top: 127px;
     max-width: 335px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 178px;
+    //margin-left: auto;
+    //margin-right: auto;
     @media (min-width: ${theme.breakpoint.md}) {
         max-width: 496px;
-        margin-left: 0px;
+        //margin-left: 0px;
     }
 `;
 
@@ -44,6 +45,10 @@ export const StyledInput = styled(Field)`
     &:hover{
         border: ${theme.border.orange};
     };
+    &:focus {
+    outline: none;
+    border: ${theme.border.orange};
+}
     ${({ error, touched }) => touched === "true" && error === "true" && css`
         border-color: red;
     `}
@@ -77,6 +82,7 @@ export const StyledButton = styled.button`
     border: none;
     background-color: ${theme.color.orange};
     color: ${theme.color.white};
+    cursor: pointer;
     &:hover{
         background-color: ${theme.color.orangeSecond};
     };
@@ -112,6 +118,7 @@ export const StyledEye = styled.button`
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
+    cursor: pointer;
 `;
 
 export const StyledInputWrapper = styled.div`

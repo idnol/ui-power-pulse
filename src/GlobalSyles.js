@@ -65,6 +65,10 @@ export const GlobalStyle = createGlobalStyle`
         height: auto;
     }
 
+    button {
+        cursor: pointer;
+    }
+
      .accent{
        background: ${theme.color.orange};
        border: ${theme.border.grey2}
@@ -81,5 +85,17 @@ export const GlobalStyle = createGlobalStyle`
 
     .greyTextColor{
         color: ${theme.color.greyFifth};
+    }
+
+    .disable-scroll {
+        overflow: hidden;
+    }
+    
+    .row {
+        display: flex;
+        align-items: center;
+        @media (min-width: ${theme.breakpoint.md}) {
+            min-height: 100vh;
+        }
     }
 `;

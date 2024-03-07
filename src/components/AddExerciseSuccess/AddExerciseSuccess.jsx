@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import sprite from 'assets/sprite-2.svg';
 import { useLocation } from 'react-router-dom';
 import { theme } from '../../vars';
 
@@ -8,14 +9,11 @@ import {
   BtnSuccess,
   CaloriesText,
   Counts,
-  Icon,
-  IconUse,
   ModalClBtn,
   ModalSvg,
   ModalSvgArrow,
   StyledLink,
   SuccessBox,
-  TextLink,
   TimeText,
   TitleSuccess,
   ValueClr,
@@ -32,20 +30,14 @@ export const AddExerciseSuccess = ({ isOpen, onClose }) => {
       <BasicModalWindow isOpen={isOpen} onClose={onClose}>
         <ModalClBtn onClick={onClose}>
           <ModalSvg>
-            <Icon href="/img/sprait.svg#x-modal" />
+            <use href={`${sprite}#x-modal`} />
           </ModalSvg>
         </ModalClBtn>
         <Wrapper>
           <SuccessBox>
             <picture>
-              <source
-                media={theme.breakpoint.sm}
-                srcset="/img/like-1x.png"
-              ></source>
-              <source
-                media={theme.breakpoint.md}
-                srcset="/img/like-2x.png"
-              ></source>
+              <source media={theme.breakpoint.sm} srcset="/img/like-1x.png" />
+              <source media={theme.breakpoint.md} srcset="/img/like-2x.png" />
               <img src="/img/like-1x.png" alt="Like" loading="lazy"></img>
             </picture>
             <TitleSuccess>Well done</TitleSuccess>
@@ -60,9 +52,9 @@ export const AddExerciseSuccess = ({ isOpen, onClose }) => {
             </BtnSuccess>
 
             <StyledLink to={backLinkRef.current.state?.from ?? '/diary'}>
-              <TextLink>To the diary</TextLink>
+              To the diary
               <ModalSvgArrow>
-                <IconUse href="/public/img/sprait.svg#arrow" />
+                <use href={`${sprite}#arrow`} />
               </ModalSvgArrow>
             </StyledLink>
           </SuccessBox>

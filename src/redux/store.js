@@ -1,5 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-
+import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -15,6 +14,8 @@ import { authReducer } from './auth/authSlice.js';
 import { exerciseReducer } from './exercises/exerciseSlice.js';
 import { productsReducer } from './products/productSlice.js';
 import { profileReducer } from './profile/profileSlice.js';
+import { diaryReducer } from './diary/diarySlice.js';
+
 
 const authPersistConfig = {
   key: 'auth',
@@ -22,17 +23,13 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const usersReducer = combineReducers({
-  auth: authReducer,
-  exercises: exerciseReducer,
-  products: productsReducer,
-  profile: profileReducer
-});
-
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    users: usersReducer,
+    exercises: exerciseReducer,
+    products: productsReducer,
+    profile: profileReducer,
+    diary: diaryReducer
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
