@@ -1,4 +1,4 @@
-import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js";import{F as f,E as y,b as $,d as S}from"./formik.esm-7d61118c.js";const k=t.h2`
+import{s as t,t as e,n as m,L as u,a as w,j as o,b as c}from"./index-d46c97fe.js";import{F as f,E as y,b as $,d as S}from"./formik.esm-27906595.js";const k=t.h2`
     line-height: 1.17;
     @media (min-width: ${e.breakpoint.md}) {
         font-size: 32px;
@@ -31,7 +31,7 @@ import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js
     @media (min-width: ${e.breakpoint.md}) {
         margin-bottom: 32px;
     }
-`,l=t(f)`
+`,p=t(f)`
     display: block;
     width: 100%;
     height: 46px;
@@ -45,6 +45,10 @@ import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js
     &:hover{
         border: ${e.border.orange};
     };
+    &:focus {
+    outline: none;
+    border: ${e.border.orange};
+}
     ${({error:n,touched:a})=>a==="true"&&n==="true"&&m`
         border-color: red;
     `}
@@ -57,7 +61,7 @@ import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js
         font-size: 16px;
         line-height: 1.5;
     }
-`,p=t(y)`
+`,l=t(y)`
     color: ${e.color.red};
     font-size: 12px;
     line-height: 1.5;
@@ -74,6 +78,7 @@ import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js
     border: none;
     background-color: ${e.color.orange};
     color: ${e.color.white};
+    cursor: pointer;
     &:hover{
         background-color: ${e.color.orangeSecond};
     };
@@ -93,7 +98,7 @@ import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js
     @media (min-width: ${e.breakpoint.md}) {
         padding-left: 8px;
     }
-`,C=t(w)`
+`,C=t(u)`
     color: ${e.color.white};
     text-decoration: underline;
 `,z=t.button`
@@ -103,6 +108,7 @@ import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
+    cursor: pointer;
 `,E=t.div`
     position: relative;
     display: inline-block;
@@ -113,4 +119,4 @@ import{s as t,t as e,n as m,L as w,a as u,j as o,b as h}from"./index-f6ba7e98.js
     @media (min-width: ${e.breakpoint.md}) {
         width: max-content;
     }
-`,W=({schema:n,handleSubmit:a,register:r,btnContent:c})=>{const[d,x]=u.useState(!1),g=()=>d?"text":"password",b=r?{email:"",password:"",name:""}:{email:"",password:""};return o.jsx($,{initialValues:b,validationSchema:n,onSubmit:s=>{a(s)},children:({errors:s,touched:i})=>o.jsxs(S,{autoComplete:"off",children:[o.jsxs(F,{children:[r&&o.jsxs(o.Fragment,{children:[o.jsx(l,{type:"text",name:"name",placeholder:"Name",error:s.name&&i.name?"true":"false",touched:i.name?"true":"false"}),o.jsx(p,{name:"name",component:"p"})]}),o.jsx(l,{type:"email",name:"email",placeholder:"Email",error:s.email&&i.email?"true":"false",touched:i.email?"true":"false"}),o.jsx(p,{name:"email",component:"p"}),o.jsxs(E,{children:[o.jsx(l,{name:"password",type:g(),placeholder:"Password",error:s.password&&i.password?"true":"false",touched:i.password?"true":"false"}),o.jsx(z,{type:"button",onClick:()=>x(!d),children:o.jsx("svg",{width:"20",height:"20",stroke:`${e.color.white}`,viewBox:"0 0 20 20",children:d?o.jsx("use",{href:`${h}#eye-off`}):o.jsx("use",{href:`${h}#eye`})})})]}),o.jsx(p,{name:"password",component:"p"})]}),o.jsx(v,{type:"submit",children:c})]})})};export{W as A,L as S,T as a,A as b,B as c,C as d};
+`,W=({schema:n,handleSubmit:a,register:r,btnContent:h})=>{const[d,x]=w.useState(!1),g=()=>d?"text":"password",b=r?{email:"",password:"",name:""}:{email:"",password:""};return o.jsx($,{initialValues:b,validationSchema:n,onSubmit:s=>{a(s)},children:({errors:s,touched:i})=>o.jsxs(S,{autoComplete:"off",children:[o.jsxs(F,{children:[r&&o.jsxs(o.Fragment,{children:[o.jsx(p,{type:"text",name:"name",placeholder:"Name",error:s.name&&i.name?"true":"false",touched:i.name?"true":"false"}),o.jsx(l,{name:"name",component:"p"})]}),o.jsx(p,{type:"email",name:"email",placeholder:"Email",error:s.email&&i.email?"true":"false",touched:i.email?"true":"false"}),o.jsx(l,{name:"email",component:"p"}),o.jsxs(E,{children:[o.jsx(p,{name:"password",type:g(),placeholder:"Password",error:s.password&&i.password?"true":"false",touched:i.password?"true":"false"}),o.jsx(z,{type:"button",onClick:()=>x(!d),children:o.jsx("svg",{width:"20",height:"20",stroke:`${e.color.white}`,viewBox:"0 0 20 20",children:d?o.jsx("use",{href:`${c}#eye-off`}):o.jsx("use",{href:`${c}#eye`})})})]}),o.jsx(l,{name:"password",component:"p"})]}),o.jsx(v,{type:"submit",children:h})]})})};export{W as A,L as S,T as a,A as b,B as c,C as d};
