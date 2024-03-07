@@ -5,7 +5,7 @@ import { addExercise, addProduct, getDiary, removeExercise, removeProduct } from
 export const diarySlice = createSlice({
     name: "diary",
     initialState: {
-        items: [], //what is here?
+        items: [],
         isLoading: false,
         error: null,
         isSuccess: false
@@ -18,7 +18,7 @@ export const diarySlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getDiary.fulfilled, (state, action) => {
-                state.items = action.payload; // what is payload?
+                state.items = action.payload;
                 state.isLoading = false;
                 state.error = null;
             })
@@ -45,7 +45,7 @@ export const diarySlice = createSlice({
             })
             .addCase(addExercise.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.items.exercises.push(action.payload); // structure of items? exercises?
+                state.items.exercises.push(action.payload);
                 state.error = null;
             })
             .addCase(addExercise.rejected, (state, action) => {
@@ -54,8 +54,8 @@ export const diarySlice = createSlice({
             })
 
             .addCase(removeProduct.fulfilled, (state, action) => {
-                const contactId = action.payload.id;
-                state.items = state.items.filter(contact => contact.id !== contactId);
+                const productId = action.payload.id;
+                state.items.products = state.items.products.filter(product => product._id !== productId);
                 state.isLoading = false;
                 state.error = null;
             })
@@ -65,8 +65,8 @@ export const diarySlice = createSlice({
             })
 
             .addCase(removeExercise.fulfilled, (state, action) => {
-                const contactId = action.payload.id;
-                state.items = state.items.filter(contact => contact.id !== contactId);
+                const exerciseId = action.payload.id;
+                state.items.exercises = state.items.exercises.filter(exercise => exercise._id !== exerciseId);
                 state.isLoading = false;
                 state.error = null;
             })
@@ -76,3 +76,5 @@ export const diarySlice = createSlice({
             })
         },
 })
+
+export const diaryReducer = diarySlice.reducer;

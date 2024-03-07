@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from '../../axios.js';
 
 export const getDiary = createAsyncThunk(
-    'diaries/getDiaries', async (_, thunkAPI) =>{
+    'diary/getDiaries', async (_, thunkAPI) =>{
         try {
             const result = await axios('/diaries');
             return result.data
@@ -13,7 +13,7 @@ export const getDiary = createAsyncThunk(
 )
 
 export const addProduct = createAsyncThunk(
-    'diaries/addProduct', async (newProduct, thunkAPI) =>{
+    'diary/addProduct', async (newProduct, thunkAPI) =>{
         try {
             const result = await axios.post('/diaries/product', newProduct);
             return result.data
@@ -24,7 +24,7 @@ export const addProduct = createAsyncThunk(
 )
 
 export const addExercise = createAsyncThunk(
-    'diaries/addExercise', async (newExercise, thunkAPI) =>{
+    'diary/addExercise', async (newExercise, thunkAPI) =>{
         try {
             const result = await axios.post('/diaries/exercise', newExercise);
             return result.data
@@ -35,9 +35,9 @@ export const addExercise = createAsyncThunk(
 )
 
 export const removeProduct = createAsyncThunk(
-    'diaries/deleteProduct', async (id, thunkAPI) =>{
+    'diary/deleteProduct', async (id, thunkAPI) =>{
         try {
-            const deleted = await axios.delete(`/diaries/product${id}`);
+            const deleted = await axios.delete(`/diaries/product/${id}`);
             return deleted.data
         } catch (error){
             return thunkAPI.rejectWithValue(error.message);
@@ -46,9 +46,9 @@ export const removeProduct = createAsyncThunk(
 )
 
 export const removeExercise = createAsyncThunk(
-    'diaries/deleteExercise', async (id, thunkAPI) =>{
+    'diary/deleteExercise', async (id, thunkAPI) =>{
         try {
-            const deleted = await axios.delete(`/diaries/exercise${id}`);
+            const deleted = await axios.delete(`/diaries/exercise/${id}`);
             return deleted.data
         } catch (error){
             return thunkAPI.rejectWithValue(error.message);

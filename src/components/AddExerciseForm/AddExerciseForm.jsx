@@ -4,12 +4,13 @@ import { ContainerImg, ContainerTimer, StyledBtn, StyledCalories, StyledContaine
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import sprite from 'assets/sprite-2.svg';
 import { ExerciseDetailsItem } from "../ExerciseDetailsItem/ExerciseDetailsItem";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addExercise } from "../../redux/diary/api";
 import { toast } from "react-toastify";
+import { selectError } from "../../redux/diary/diarySelectors";
 
 
-export const AddExerciseForm = ({ item = { name: "N/A", target: "N/A", bodyPart: "N/A", equipment: "N/A", gifUrl: "", burnedCalories: 300, _id: "N/A" } }) => {
+export const AddExerciseForm = ({ item = { name: "N/A", target: "N/A", bodyPart: "N/A", equipment: "N/A", gifUrl: "", burnedCalories: 0, _id: "N/A" } }) => {
 
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentBurnedCal, setCurrentBurnedCal] = useState(0);
@@ -19,6 +20,7 @@ export const AddExerciseForm = ({ item = { name: "N/A", target: "N/A", bodyPart:
     const { name, target, bodyPart, equipment, gifUrl, burnedCalories, _id: id } = item;
     const duration = 180;
     const dispatch = useDispatch();
+    const error = useSelector(selectError);
 
     useEffect(() => {
         let interval = null;
@@ -69,7 +71,7 @@ export const AddExerciseForm = ({ item = { name: "N/A", target: "N/A", bodyPart:
         };
 
         dispatch(addExercise(data));
-        toast.error('Oops, something went wrong');
+        error && toast.error('Oops, something went wrong');
         
         console.log(data); //delete later
     };
