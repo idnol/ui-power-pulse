@@ -10,10 +10,15 @@ import {
   AttentionIcon,
   AttentionText,
 } from './DayDashboard.styled';
-import { dashboardData } from './DayDashboardData';
+
+import sprite from 'assets/sprite-2.svg';
+
+import { DayDashboardData } from './DayDashboardData';
 
 export const DayDashboard = () => {
-  const data = dashboardData;
+  const data = DayDashboardData();
+
+  console.log(data[5]);
 
   return (
     <DashboardContainer>
@@ -40,7 +45,8 @@ export const DayDashboard = () => {
       </DashboardList>
       <AttentionBox>
         <AttentionIcon>
-          <use href="../../../../public/img/sprait.svg#attention-icon"></use>
+          {/* <use href="../../../../public/img/sprait.svg#attention-icon"></use> */}
+          <use href={`${sprite}#attention-icon`}></use>
         </AttentionIcon>
         <AttentionText>
           Record all your meals in the calorie diary every day. This will help

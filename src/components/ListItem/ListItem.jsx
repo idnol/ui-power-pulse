@@ -12,6 +12,7 @@ import {
 } from './ListItem.styled';
 
 import sprite from 'assets/sprite-2.svg';
+
 import { BasicModalWindow } from '../BasicModalWindow/BasicModalWindow';
 import { AddExerciseForm } from '../AddExerciseForm/AddExerciseForm';
 
