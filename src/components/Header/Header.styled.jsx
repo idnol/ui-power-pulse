@@ -27,13 +27,13 @@ export const StyledLink = styled(Link)`
   background-image: ${(props) =>
     props.errsm
       ? `url(${props.errsm})`
-      : `url(${'/public/img/logo/logo-sm.svg'})`};
+      : `url(${'../../assets/logo/logo-sm.svg'})`};
 
   @media (min-width: ${theme.breakpoint.md}) {
     background-image: ${(props) =>
       props.errbig
         ? `url(${props.errbig})`
-        : `url(${'/public/img/logo/logo.svg'})`};
+        : `url(${'../../assets/logo/logo.svg'})`};
     width: 152px;
     height: 17px;
   }
@@ -61,12 +61,10 @@ export const StyledUserNav = styled.nav`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  border: 1px solid rgba(239, 237, 232, 0.2);
+  border: ${theme.border.grey2};
   background-color: inherit;
   border-radius: 12px;
-  padding: 10px 27px;
-  width: 119px;
-  height: 44px;
+  padding: 12px 27px;
   text-align: center;
   cursor: pointer;
   color: ${theme.color.white};

@@ -44,7 +44,9 @@ export const UserBar = () => {
           <use href={`${sprite}#burger-menu`} />
         </BurgerIcon>
         <LogOutWrapDesktop>
-          <LogOut stroke={`${theme.color.orange}`} />
+          <LogOut
+            stroke={`${theme.color.orange}`}
+          />
         </LogOutWrapDesktop>
       </StyledUserBar>
     </>
