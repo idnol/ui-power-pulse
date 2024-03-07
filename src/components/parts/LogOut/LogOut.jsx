@@ -8,7 +8,6 @@ import { logout } from '../../../redux/auth/api.js';
 
 export const LogOut = ({color = theme.color.white, hovercolor=`none`, stroke = theme.color.orange}) => {
   const dispatch = useDispatch()
-  console.log(1);
   const logoutFoo = ()=>{
     dispatch(logout())
   }
