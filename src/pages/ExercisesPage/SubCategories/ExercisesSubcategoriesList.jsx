@@ -29,8 +29,8 @@ export default function ExercisesSubcategoriesList({ categories, selectedCategor
   }, []);
 
   useEffect(() => {
-    setCurrentPage(0); // При зміні категорії автоматично переходимо на перший слайд
-    scrollToTop(); // Прокручуємо до верху сторінки
+    setCurrentPage(0);
+    scrollToTop(); 
   }, [selectedCategory]);
 
   return (
