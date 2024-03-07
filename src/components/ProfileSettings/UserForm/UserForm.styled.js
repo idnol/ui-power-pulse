@@ -143,6 +143,7 @@ export const ActivityLabel =styled.label`
     gap:10px;
 `
 export const Button = styled.button`
+    cursor: pointer;
     border: none;
     background-color: ${theme.color.orange};
     border-radius: 12px;
