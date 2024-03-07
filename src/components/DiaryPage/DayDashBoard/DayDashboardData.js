@@ -18,28 +18,21 @@ export const DayDashboardData = () => {
     dispatch(current());
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   const fetchDiaryAndUser = async () => {
-  //     await Promise.all([dispatch(getDiary()), dispatch(current())]);
-  //   };
-
-  //   fetchDiaryAndUser();
-  // }, [dispatch]);
-
   const beData = [
     { userDailyCalories: responseUser.dailyCalorie },
-    { diaryExercises: responseDiary.exercises },
-    { diaryProducts: responseDiary.products },
+    { diaryExercises: responseDiary.statistic },
+    { diaryProducts: responseDiary.statistic },
     { diaryStats: responseDiary.statistic },
     { userCaloriesRemain: responseUser },
     { userSportsRemain: responseUser },
   ];
 
-  console.log('beData', beData);
-
-  // console.log(beData[4].userCaloriesRemain.dailyCalorie); calories remaining
-  // console.log(beData[5].userSportsRemain.dailyExerciseTime);
-  console.log(beData[1].diaryExercises);
+  let remaingTime =
+    beData[1]?.diaryExercises?.sportTime / 60 -
+    beData[5].userSportsRemain.dailyExerciseTime;
+  if (remaingTime > 0) {
+    remaingTime = `+${Math.abs(remaingTime)}`;
+  }
 
   const dashboardData = [
     {
@@ -53,8 +46,7 @@ export const DayDashboardData = () => {
     {
       icon: '../../../../public/img/sprait.svg#physical-activity',
       title: 'Daily physical activity',
-      count: beData[1]?.diaryExercises?.[0]?.time / 60,
-      // count: 0,
+      count: beData[5].userSportsRemain.dailyExerciseTime,
       countType: 'time',
       background: 'accent',
       textColor: 'whiteTextColor',
@@ -62,8 +54,8 @@ export const DayDashboardData = () => {
     {
       icon: '../../../../public/img/sprait.svg#calories-consumed',
       title: 'Сalories consumed',
-      count: beData[2]?.diaryProducts?.[0]?.calories,
-      // count: 0,
+
+      count: beData[2]?.diaryProducts?.calories,
       countType: 'cal',
       background: 'default',
       textColor: 'greyTextColor',
@@ -72,7 +64,6 @@ export const DayDashboardData = () => {
       icon: '../../../../public/img/sprait.svg#calories-burned',
       title: 'Сalories burned',
       count: beData[3]?.diaryStats?.burnedCalories,
-      // count: 0,
       countType: 'cal',
       background: 'default',
       textColor: 'greyTextColor',
@@ -80,13 +71,9 @@ export const DayDashboardData = () => {
     {
       icon: '../../../../public/img/sprait.svg#calories-remaining',
       title: 'Calories remaining',
-      count: parseInt(
-        beData[4].userCaloriesRemain.dailyCalorie -
-          beData[2]?.diaryProducts?.[0]?.calories
-      ),
-      // count: beData[4].userCaloriesRemain.dailyCalorie,
-
-      // count: 0,
+      count:
+        beData[4]?.userCaloriesRemain?.dailyCalorie -
+        beData[2]?.diaryProducts?.calories,
       countType: 'cal',
       background: 'default',
       textColor: 'greyTextColor',
@@ -94,11 +81,9 @@ export const DayDashboardData = () => {
     {
       icon: '../../../../public/img/sprait.svg#sports-remaining',
       title: 'Sports remaining',
-      count:
-        beData[5].userSportsRemain.dailyExerciseTime -
-        beData[1]?.diaryExercises?.[0]?.time / 60,
-      // count: beData[5].userSportsRemain.dailyExerciseTime,
-      // count: 0,
+
+      // count: beData[1]?.diaryExercises?.sportTime / 60,
+      count: remaingTime,
       countType: 'time',
       background: 'default',
       textColor: 'greyTextColor',
