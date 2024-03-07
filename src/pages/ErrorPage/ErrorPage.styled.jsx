@@ -19,6 +19,28 @@ export const OrangePart = styled.div`
   }
 `;
 
+export const StyledImagePart = styled.div`
+  height: 100vh;
+  // background-image: url(${`/public/img/side-view-1x-desk.jpg`});
+  background-image: url(${`/public/img/side-view-1x-mob.jpg`});
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (min-width: ${theme.breakpoint.xl}) {
+    background-image: url(${`/public/img/side-view-1x-desk.jpg`});
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dpx) {
+    background-image: url(${`/public/img/side-view-2x-mob.jpg`});
+
+    @media (min-width: ${theme.breakpoint.xl}) {
+      background-image: url(${`/public/img/side-view-2x-desk.jpg`});
+    }
+  }
+`;
+
 export const ContentContainer = styled.div`
   position: absolute;
   top: 50%;

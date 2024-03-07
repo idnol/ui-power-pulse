@@ -24,17 +24,16 @@ export const StyledLink = styled(Link)`
   width: 152px;
   height: 17px;
   background-repeat: no-repeat;
-  // background-image: url(${'../../../public/img/logo/logo-sm.svg'});
   background-image: ${(props) =>
-    props.errSm
-      ? `url(${props.errSm})`
-      : `url(${'../../../public/img/logo/logo-sm.svg'})`};
+    props.errsm
+      ? `url(${props.errsm})`
+      : `url(${'/public/img/logo/logo-sm.svg'})`};
 
   @media (min-width: ${theme.breakpoint.md}) {
     background-image: ${(props) =>
-      props.errBig
-        ? `url(${props.errBig})`
-        : `url(${'../../../public/img/logo/logo.svg'})`};
+      props.errbig
+        ? `url(${props.errbig})`
+        : `url(${'/public/img/logo/logo.svg'})`};
     width: 152px;
     height: 17px;
   }
