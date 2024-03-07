@@ -1,60 +1,25 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { exercisesGetAll } from '../../redux/exercises/api';
 import { ListItem } from '../ListItem/ListItem';
 import {
   ExercisesListContainer,
   ExercisesList,
   ExercisesListItem,
 } from './ExercisesPageList.styled';
+import { useEffect } from 'react';
 
 export const Exercises = () => {
-  const data = [
-    {
-      workoutname: 'Air bike',
-      burnedcalories: 312,
-      bodyparts: 'Waist',
-      target: 'Abs',
-    },
-    {
-      workoutname: '3/4 sit-up',
-      burnedcalories: 220,
-      bodyparts: 'Waist',
-      target: 'Abs',
-    },
-    {
-      workoutname: '45° side ben',
-      burnedcalories: 323,
-      bodyparts: 'Waist',
-      target: 'Abs',
-    },
-    {
-      workoutname: 'Barbell reverse preacher curl',
-      burnedcalories: 312,
-      bodyparts: 'Waist',
-      target: 'Biceps',
-    },
-    {
-      workoutname: 'Barbell rollerout',
-      burnedcalories: 87,
-      bodyparts: 'Waist',
-      target: 'Abs',
-    },
-    {
-      workoutname: 'Barbell side split squat v. 2',
-      burnedcalories: 60,
-      bodyparts: 'Waist',
-      target: 'Abs',
-    },
-    {
-      workoutname: 'Bottoms-up',
-      burnedcalories: 234,
-      bodyparts: 'Waist',
-      target: 'Abs',
-    },
-  ];
+  const exercises = useSelector((state) => state.exercises.items);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(exercisesGetAll());
+  }, [dispatch]);
 
   return (
     <ExercisesListContainer>
       <ExercisesList>
-        {data.map((item, index) => (
+        {exercises.map((item, index) => (
           <ExercisesListItem key={index}>
             <ListItem item={item} />
           </ExercisesListItem>

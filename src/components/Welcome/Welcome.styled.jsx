@@ -4,15 +4,20 @@ import { theme } from '../../vars.js';
 
 export const Container = styled.div`
   position: relative;
-  height: 202px;
+  margin-right: 72px;
+  //height: 202px;
 
-  @media (min-width: ${theme.breakpoint.md}) {
-    height: 354px;
-   }
+  // @media (min-width: ${theme.breakpoint.md}) {
+  //   height: 354px;
+  //  }
+`;
+
+export const TitleWrapper = styled.div`
+    position: relative;
 `;
 
 export const MainTitle = styled.h1`
-  margin-top: 127px;
+  //margin-top: 127px;
   margin-bottom: 0px;
   font-weight: 500;
   font-size: 38px;
@@ -21,14 +26,14 @@ export const MainTitle = styled.h1`
   width: 335px;
 
   @media (min-width: ${theme.breakpoint.md}) {
-    margin-top: 189px;
+    //margin-top: 189px;
     font-size: 70px;
     line-height: 1.11;
     width: 598px;
   }
 
   @media (min-width: ${theme.breakpoint.xl}) {
-    margin-top: 200px;
+    //margin-top: 200px;
   }
 `;
 
@@ -66,7 +71,7 @@ export const StyledSignUpNavLink = styled(NavLink)`
   &:hover {
     background: transparent;
     border: 1px solid rgba(239, 237, 232, 0.3);
-    box-shadow: 0px 2px 5px 1px #b7b7b7;
+    //box-shadow: 0px 2px 5px 1px #b7b7b7;
     transition-duration: 300ms;
   }
 
@@ -92,7 +97,7 @@ export const StyledSignInNavLink = styled(NavLink)`
   &:hover {
     background: ${theme.color.orange};
     border: 1px solid transparent;
-    box-shadow: 0px 2px 5px 1px #b7b7b7;
+    //box-shadow: 0px 2px 5px 1px #b7b7b7;
     transition-duration: 300ms;
   }
 

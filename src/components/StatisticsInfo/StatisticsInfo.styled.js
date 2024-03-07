@@ -193,4 +193,3 @@ color: rgba(239, 237, 232, 0.65);
   font-size: 16px;
   line-height: 1.5;
 }  `;
-
