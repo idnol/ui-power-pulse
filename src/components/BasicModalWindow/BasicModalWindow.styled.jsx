@@ -11,6 +11,8 @@ export const BackDrop = styled.div`
   align-items: center;
   background-color: rgba(0, 0, 0, 0);
   z-index: 1200;
+ 
+  
 `;
 
 export const Modal = styled.div`
@@ -26,4 +28,5 @@ export const Modal = styled.div`
   border-radius: 12px;
   border: none;
   overflow: hidden;
+  
 `;
