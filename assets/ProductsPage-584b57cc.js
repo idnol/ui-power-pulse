@@ -1,4 +1,4 @@
-import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S as G,m as S,o as j,p as Y}from"./index-854ce60b.js";import{B as q}from"./react-toastify.esm-23a682fb.js";const H=t.div`
+import{s as t,t as e,r as a,u as O,k as E,j as o,a as g,m as D,L as M,o as V,e as y,p as G}from"./index-be439271.js";import{B as Y}from"./react-toastify.esm-15ad27d0.js";import{e as q,S as H,b as S}from"./BasicModalWindow-932bc188.js";const _=t.div`
   padding-top: 40px;
   padding-bottom: 40px;
   @media (min-width: ${e.breakpoint.md}) {
@@ -10,7 +10,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
     align-items: center;
     justify-content: space-between;
   }
-`,K=t.h2`
+`,J=t.h2`
   margin-top: 61px;
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 84px;
@@ -19,7 +19,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
     margin-top: 0;
     display: block;
   }
-`,_=t.div`
+`,K=t.div`
  max-width: 335px;
  margin: 0 auto;
  margin-top: 40px;
@@ -32,14 +32,14 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
   margin-bottom: 0;
   margin-top: 0;
   }
-`,J=t.form`
+`,Q=t.form`
  display: flex;
  flex-direction: column;
  gap: 16px;
  @media (min-width: ${e.breakpoint.md}) {
   flex-direction: row;
   }
-`,Q=t.div`
+`,U=t.div`
  display: flex;
  align-items: center;
  width: 100%;
@@ -49,7 +49,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
  @media (min-width: ${e.breakpoint.md}) {
   width: 236px;
   }
-`,U=t.input`
+`,X=t.input`
  position: relative;
  display: inline-block;
  font-size: 14px;
@@ -75,7 +75,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
   width: 236px;
   font-size: 16px;
   }
-`,X=t.button`
+`,Z=t.button`
  position: absolute;
  right: 40px;
  width: 18px;
@@ -86,11 +86,11 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
  border: none;
  padding: 0;
  display: none;
-`,Z=t.svg`
+`,ee=t.svg`
  width: 18px;
  height: 18px;
  stroke: ${e.color.orange};
-`,ee=t.button`
+`,oe=t.button`
  position: absolute;
  right: 14px;
  display: inline-block;
@@ -101,11 +101,11 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
  background-color: transparent;
  border: none;
  padding: 0;
-`,oe=t.svg`
+`,te=t.svg`
  width: 18px;
  height: 18px;
  stroke: ${e.color.white};
-`,te=t.div`
+`,ie=t.div`
  border: ${e.border.grey3};
  border-radius: 12px;
  width: 146px;
@@ -124,7 +124,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
   font-size: 16px;
   line-height: 1.5;
   }
-`,ie=t.div`
+`,re=t.div`
  border: ${e.border.grey3};
  border-radius: 12px;
  width: 173px;
@@ -140,7 +140,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
   font-size: 16px;
   line-height: 1.5;
   }
-`,I=t.div` 
+`,B=t.div` 
   font-size: 14px;
   line-height: 1.29;
   padding: 14px;
@@ -162,7 +162,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
  top: 14px;
  right: 14px;
  z-index: 1;
-`,L=t.ul`
+`,R=t.ul`
   list-style: none;
   padding: 14px 32px 14px 14px;
   margin: 0;
@@ -189,7 +189,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
     border-radius: 12px;
     height: 147px;
     }
-`,R=t.li`
+`,L=t.li`
  background-color: ${e.color.darkGreySecond};
  color:  ${e.color.white};
  font-size: 14px;
@@ -207,17 +207,17 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
    font-size: 16px;
    line-height: 1.5;
    }
-`,re=t.div`
+`,ne=t.div`
  display: flex;
  gap: 16px;
-`,ne={title:"",category:"",recommended:"all"},de=({onFilterChange:i})=>{const[r,d]=s.useState(ne),[p,a]=s.useState(!1),[c,x]=s.useState(!1),h=s.useRef(null),m=s.useRef(null),[u,$]=s.useState([]),[w,f]=s.useState(null),v=["all","recommend","not recommend"],y=A();s.useEffect(()=>{async function n(){try{f(null);const l=await W();$(l)}catch{f(!0)}}n()},[]),s.useEffect(()=>{y(T(r))},[r,y]);const k=()=>{a(!p)},b=()=>{x(!c)},z=n=>{d(l=>({...l,title:n.target.value}))},C=n=>{d(l=>({...l,category:n})),a(!1)},N=n=>{d(l=>({...l,recommended:n})),x(!1)},F=n=>{h.current&&!h.current.contains(n.target)&&a(!1),m.current&&!m.current.contains(n.target)&&x(!1)};s.useEffect(()=>(document.addEventListener("mousedown",F),()=>{document.removeEventListener("mousedown",F)}),[]);const B=n=>{n.preventDefault(),i(r)},O=()=>{d(n=>({...n,title:""}))};return o.jsxs(o.Fragment,{children:[o.jsx(_,{children:o.jsxs(J,{onSubmit:B,children:[o.jsxs(Q,{children:[o.jsx(U,{type:"text",name:"title",placeholder:"Search",value:r.title,onChange:z}),o.jsx(X,{type:"button",className:"cleanBtn",onClick:O,children:o.jsx(Z,{children:o.jsx("use",{href:`${g}#x`})})}),o.jsx(ee,{type:"submit",onSubmit:B,children:o.jsx(oe,{children:o.jsx("use",{href:`${g}#search`})})})]}),o.jsxs(re,{children:[o.jsxs(te,{children:[o.jsx(I,{onClick:k,children:r.category||"Category"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(L,{ref:h,$isopen:p,children:u.map((n,l)=>o.jsx(R,{onClick:()=>C(n),children:n},l))})]}),o.jsxs(ie,{children:[o.jsx(I,{onClick:b,children:r.recommended||"All"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(L,{ref:m,$isopen:c,children:v.map((n,l)=>o.jsx(R,{onClick:()=>N(n),children:n},l))})]})]})]})}),w&&q.error("Something went wrong! Please try again.")]})},ae=t.div`
+`,ae={title:"",category:"",recommended:"all"},se=({onFilterChange:i})=>{const[n,s]=a.useState(ae),[l,p]=a.useState(!1),[d,x]=a.useState(!1),h=a.useRef(null),m=a.useRef(null),[u,k]=a.useState([]),[w,f]=a.useState(null),v=["all","recommend","not recommend"],j=O();a.useEffect(()=>{async function r(){try{f(null);const c=await D();k(c)}catch{f(!0)}}r()},[]),a.useEffect(()=>{j(E(n))},[n,j]);const $=()=>{p(!l)},b=()=>{x(!d)},z=r=>{s(c=>({...c,title:r.target.value}))},C=r=>{s(c=>({...c,category:r})),p(!1)},N=r=>{s(c=>({...c,recommended:r})),x(!1)},F=r=>{h.current&&!h.current.contains(r.target)&&p(!1),m.current&&!m.current.contains(r.target)&&x(!1)};a.useEffect(()=>(document.addEventListener("mousedown",F),()=>{document.removeEventListener("mousedown",F)}),[]);const I=r=>{r.preventDefault(),i(n)},W=()=>{s(r=>({...r,title:""}))};return o.jsxs(o.Fragment,{children:[o.jsx(K,{children:o.jsxs(Q,{onSubmit:I,children:[o.jsxs(U,{children:[o.jsx(X,{type:"text",name:"title",placeholder:"Search",value:n.title,onChange:z}),o.jsx(Z,{type:"button",className:"cleanBtn",onClick:W,children:o.jsx(ee,{children:o.jsx("use",{href:`${g}#x`})})}),o.jsx(oe,{type:"submit",onSubmit:I,children:o.jsx(te,{children:o.jsx("use",{href:`${g}#search`})})})]}),o.jsxs(ne,{children:[o.jsxs(ie,{children:[o.jsx(B,{onClick:$,children:n.category||"Category"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(R,{ref:h,$isopen:l,children:u.map((r,c)=>o.jsx(L,{onClick:()=>C(r),children:r},c))})]}),o.jsxs(re,{children:[o.jsx(B,{onClick:b,children:n.recommended||"All"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(R,{ref:m,$isopen:d,children:v.map((r,c)=>o.jsx(L,{onClick:()=>N(r),children:r},c))})]})]})]})}),w&&Y.error("Something went wrong! Please try again.")]})},de=t.div`
   display: flex;
   gap: 16px;
   margin-bottom: 8px;
-`,se=t.svg`
+`,ce=t.svg`
   width: 24px;
   height: 24px;
-`,ce=t.p`
+`,pe=t.p`
   color: ${e.color.white};
   font-feature-settings:
     'clig' off,
@@ -235,7 +235,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
    font-size: 24px;
    line-height: 32px;
   }
-`,pe=({titleName:i})=>o.jsx(o.Fragment,{children:o.jsxs(ae,{children:[o.jsx(se,{children:o.jsx("use",{href:"../../../public/img/sprait.svg#run-man-circle"})}),o.jsx(ce,{children:i})]})}),le=i=>i.$notAllowed?e.color.red:e.color.green,xe=t.div`
+`,le=({titleName:i})=>o.jsx(o.Fragment,{children:o.jsxs(de,{children:[o.jsx(ce,{children:o.jsx("use",{href:"../../../public/img/sprait.svg#run-man-circle"})}),o.jsx(pe,{children:i})]})}),xe=i=>i.$notAllowed?e.color.red:e.color.green,he=t.div`
  border: ${e.border.grey3};
  border-radius: 12px;
  padding: 16px;
@@ -245,7 +245,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
  @media (min-width: ${e.breakpoint.xl}) {
   width: 405px;
   }
-`,he=t.div`
+`,me=t.div`
  border-radius: 4px;
  padding: 5px 7px;
  width: 41px;
@@ -255,13 +255,13 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
  font-size: 12px;
  color: #fff;
  text-transform: uppercase;
-`,me=t.span`
+`,ge=t.span`
  display: block;
  width: 14px;
  height: 14px;
  border-radius: 50%;
- background-color: ${le};
-`,ge=t.p`
+ background-color: ${xe};
+`,ue=t.p`
  font-size: 12px;
  line-height: 1.5;
  color: ${e.color.white};
@@ -269,7 +269,7 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
  gap: 8px;
  align-items: center;
  margin: 0;
-`,ue=t.button`
+`,be=t.button`
  font-size: 14px;
  line-height: 1.29;
  color: ${e.color.orange};
@@ -284,11 +284,11 @@ import{s as t,t as e,r as s,u as A,f as T,j as o,a as g,h as W,L as M,k as V,S a
   font-size: 16px;
   line-height: 1.5;
   }
-`,be=t.svg`
+`,we=t.svg`
 width: 18px;
 height: 18px;
 stroke: ${e.color.orange};
-`,we=t.div`
+`,fe=t.div`
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -296,37 +296,10 @@ stroke: ${e.color.orange};
  @media (min-width: ${e.breakpoint.md}) {
   margin-bottom: 27px;
   }
-`,fe=t.div`
+`,$e=t.div`
  display: flex;
  gap: 16px;
-`,ke=t.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 1200;
- 
-  
-`,$e=t.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
-
-  transform: translate(-50%, -50%);
-  background-color: #10100f;
-  border-radius: 12px;
-  border: none;
-  overflow: hidden;
-  
-`,ye=({isOpen:i,onClose:r,children:d})=>{const p=a=>{a.currentTarget===a.target&&r()};return s.useEffect(()=>{const a=c=>{c.keyCode===27&&r()};return i&&(document.addEventListener("keydown",a),document.body.classList.add("disable-scroll")),()=>{document.removeEventListener("keydown",a),document.body.classList.remove("disable-scroll")}},[i,r]),i?o.jsx(o.Fragment,{children:i&&o.jsx(ke,{onClick:p,children:o.jsx($e,{children:d})})}):null};t.div`
+`;t.div`
   padding: 48px 89px;
   max-width: 335px;
 
@@ -368,7 +341,7 @@ stroke: ${e.color.orange};
     width: 26px;
     height: 26px;
   }
-`;const je=t.div`
+`;const ke=t.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -380,7 +353,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 32px;
   }
-`;const ve=t.div`
+`;const je=t.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -430,7 +403,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     padding: 14px 32px;
   }
-`;const Ce=t.svg`
+`;const ye=t.svg`
   width: 22px;
   height: 22px;
 
@@ -438,7 +411,7 @@ stroke: ${e.color.orange};
     width: 26px;
     height: 26px;
   }
-`,Se=t(M)`
+`,ve=t(M)`
   display: flex;
   align-items: center;
   margin-top: 16px;
@@ -459,7 +432,7 @@ stroke: ${e.color.orange};
   margin: 0;
   text-align: center;
   font-size: 14px;
-`;const ze=t.div`
+`;const Ce=t.div`
   padding: 48px 89px;
   max-width: 335px;
 
@@ -467,7 +440,7 @@ stroke: ${e.color.orange};
     padding: 64px 136px;
     max-width: 430px;
   }
-`,Fe=t.h3`
+`,Se=t.h3`
   font-size: 24px;
   margin-bottom: 0;
   margin-top: 16px;
@@ -475,7 +448,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 32px;
   }
-`,Be=t.p`
+`,ze=t.p`
   font-size: 14px;
   margin-top: 16px;
   margin-bottom: 24px;
@@ -484,7 +457,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 32px;
   }
-`,Ie=t.p`
+`,Fe=t.p`
   margin-top: 16px;
   margin-bottom: 24px;
   color: ${e.color.orange};
@@ -492,7 +465,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 32px;
   }
-`,Pe=t.button`
+`,Ie=t.button`
   min-width: 157px;
   padding: 12px 32px;
   border-radius: 12px;
@@ -509,7 +482,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     padding: 14px 32px;
   }
-`,Le=({isOpen:i,onClose:r,calories:d})=>{var c;const p=V(),a=s.useRef(p);return o.jsx(o.Fragment,{children:i&&o.jsx(ze,{children:o.jsxs(je,{children:[o.jsxs("picture",{children:[o.jsx("source",{media:`${e.breakpoint.sm}`,srcset:"/img/avocado-1x.png"}),o.jsx("source",{media:`${e.breakpoint.md}`,srcset:"/img/avocado-2x.png"}),o.jsx("img",{src:"/img/avocado-1x.png",alt:"Avocado",loading:"lazy"})]}),o.jsx(Fe,{children:"Well done"}),o.jsxs(ve,{children:[o.jsx(Be,{children:"Calories:"}),o.jsx(Ie,{children:d})]}),o.jsx(Pe,{type:"button",onClick:r,children:"Next product"}),o.jsxs(Se,{to:((c=a.current.state)==null?void 0:c.from)??"/diary",children:["To the diary",o.jsx(Ce,{children:o.jsx("use",{href:`${g}#arrow`})})]})]})})})},Re=t.div`
+`,Be=({isOpen:i,onClose:n,calories:s})=>{var d;const l=V(),p=a.useRef(l);return o.jsx(o.Fragment,{children:i&&o.jsx(Ce,{children:o.jsxs(ke,{children:[o.jsxs("picture",{children:[o.jsx("source",{media:`${e.breakpoint.sm}`,srcset:"/img/avocado-1x.png"}),o.jsx("source",{media:`${e.breakpoint.md}`,srcset:"/img/avocado-2x.png"}),o.jsx("img",{src:"/img/avocado-1x.png",alt:"Avocado",loading:"lazy"})]}),o.jsx(Se,{children:"Well done"}),o.jsxs(je,{children:[o.jsx(ze,{children:"Calories:"}),o.jsx(Fe,{children:s})]}),o.jsx(Ie,{type:"button",onClick:n,children:"Next product"}),o.jsxs(ve,{to:((d=p.current.state)==null?void 0:d.from)??"/diary",children:["To the diary",o.jsx(ye,{children:o.jsx("use",{href:`${g}#arrow`})})]})]})})})},Pe=t.div`
   padding: 48px 24px;
   max-width: 335px;
 
@@ -517,7 +490,7 @@ stroke: ${e.color.orange};
     padding: 48px 32px;
     max-width: 479px;
   }
-`,Ee=t.button`
+`,Re=t.button`
   position: absolute;
   stroke: ${e.color.white};
   fill: transparent;
@@ -543,7 +516,7 @@ stroke: ${e.color.orange};
   align-items: center;
   justify-content: center;
   padding: 0;
-`,Ae=t.use``,Te=t.svg`
+`,Le=t.use``,Ae=t.svg`
   width: 22px;
   height: 22px;
 
@@ -551,14 +524,14 @@ stroke: ${e.color.orange};
     width: 26px;
     height: 26px;
   }
-`,De=t.div`
+`,Oe=t.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
   @media (min-width: ${e.breakpoint.md}) {
     flex-direction: row;
   }
-`,Ne=t.div`
+`,Ee=t.div`
   width: 287px;
   padding: 8px 14px;
   border: ${e.border.orange};
@@ -566,7 +539,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     width: 244px;
   }
-`,Oe=t.p`
+`,Te=t.p`
   font-feature-settings:
     'clig' off,
     'liga' off;
@@ -575,9 +548,9 @@ stroke: ${e.color.orange};
   font-size: 16px;
   text-overflow: ellipsis;
   color: ${e.color.greyFifth};
-`,We=t.div`
+`,Ne=t.div`
   position: relative;
-`,Me=t.p`
+`,We=t.p`
   position: absolute;
   right: 16px;
   top: 50%;
@@ -585,7 +558,7 @@ stroke: ${e.color.orange};
   margin: 0;
   font-size: 12px;
   color: ${e.color.greyFifth};
-`,Ve=t.input`
+`,De=t.input`
   width: 287px;
   padding: 8px 14px;
   border: ${e.border.grey3};
@@ -602,11 +575,11 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     width: 155px;
   }
-`,Ge=t.div`
+`,Me=t.div`
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-`,Ye=t.p`
+`,Ve=t.p`
   margin-top: 16px;
   margin-bottom: 24px;
   color: ${e.color.white};
@@ -614,7 +587,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 32px;
   }
-`,qe=t.div`
+`,Ge=t.div`
   max-width: 286px;
   display: flex;
   gap: 14px;
@@ -622,7 +595,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     max-width: 309px;
   }
-`,He=t.button`
+`,Ye=t.button`
   min-width: 151px;
   padding: 12px 32px;
   border-radius: 12px;
@@ -640,7 +613,7 @@ stroke: ${e.color.orange};
     min-width: 151px;
     padding: 14px 32px;
   }
-`,Ke=t.button`
+`,qe=t.button`
   min-width: 121px;
   padding: 12px 36px;
   border-radius: 12px;
@@ -658,7 +631,7 @@ stroke: ${e.color.orange};
     min-width: 142px;
     padding: 12px 40px;
   }
-`,_e=t.p`
+`,He=t.p`
   font-size: 12px;
   margin-top: 16px;
   margin-bottom: 24px;
@@ -667,7 +640,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 64px;
   }
-`,Je=({isOpen:i,onClose:r,title:d,calories:p,id:a})=>{const[c,x]=s.useState(""),[h,m]=s.useState("0"),[u,$]=s.useState(p),[w,f]=s.useState(!1),v=k=>{const b=k.currentTarget.value;x(b);const C=Math.round(b*u/100);m(C)},y=k=>{k.preventDefault(),f(!0);const b={exercise:a,grams:+c};console.log(b),x("")};return o.jsxs(ye,{isOpen:i,onClose:r,children:[o.jsx(Ee,{onClick:r,children:o.jsx(Te,{children:o.jsx(Ae,{href:`${g}#x-modal`})})}),!w&&o.jsx(Re,{children:o.jsxs("form",{onSubmit:y,children:[o.jsxs(De,{children:[o.jsx(Ne,{children:o.jsx(Oe,{children:d})}),o.jsxs(We,{children:[o.jsx(Ve,{name:"number",required:!0,value:c,onChange:v}),o.jsx(Me,{children:"grams"})]})]}),o.jsxs(Ge,{children:[o.jsx(_e,{children:"Calories:"}),o.jsx(Ye,{children:h})]}),o.jsxs(qe,{children:[o.jsx(He,{type:"submit",children:"Add to diary"}),o.jsx(Ke,{type:"button",onClick:r,children:"Cancel"})]})]})}),w&&o.jsx(Le,{calories:h,isOpen:w,onClose:()=>f(!1)})]})},Qe=({item:{title:i,calories:r,category:d,weight:p,groupBloodNotAllowed:a,_id:c},bloodGroup:x})=>{const[h,m]=s.useState(!1),u=a[x],$=u?"Not recommended":"Recommended";return o.jsxs(o.Fragment,{children:[o.jsxs(xe,{children:[o.jsxs(we,{children:[o.jsx(he,{children:"Diet"}),o.jsxs(fe,{children:[o.jsxs(ge,{children:[o.jsx(me,{$notAllowed:u}),$]}),o.jsxs(ue,{type:"button",onClick:()=>m(!0),children:["Add",o.jsx(be,{children:o.jsx("use",{href:`${g}#arrow`})})]})]})]}),o.jsx(pe,{titleName:i}),o.jsxs(G,{children:[o.jsx(S,{text:"Calories: ",val:r}),o.jsx(S,{text:"Category: ",val:d}),o.jsx(S,{text:"Weight: ",val:p})]})]}),o.jsx(Je,{isOpen:h,id:c,title:i,calories:r,onClose:()=>m(!1)})]})},Ue=t.div`
+`,_e=({isOpen:i,onClose:n,title:s,calories:l,id:p})=>{const[d,x]=a.useState(""),[h,m]=a.useState("0"),[u,k]=a.useState(l),[w,f]=a.useState(!1),v=$=>{const b=$.currentTarget.value;x(b);const C=Math.round(b*u/100);m(C)},j=$=>{$.preventDefault(),f(!0);const b={exercise:p,grams:+d};console.log(b),x("")};return o.jsxs(q,{isOpen:i,onClose:n,children:[o.jsx(Re,{onClick:n,children:o.jsx(Ae,{children:o.jsx(Le,{href:`${g}#x-modal`})})}),!w&&o.jsx(Pe,{children:o.jsxs("form",{onSubmit:j,children:[o.jsxs(Oe,{children:[o.jsx(Ee,{children:o.jsx(Te,{children:s})}),o.jsxs(Ne,{children:[o.jsx(De,{name:"number",required:!0,value:d,onChange:v}),o.jsx(We,{children:"grams"})]})]}),o.jsxs(Me,{children:[o.jsx(He,{children:"Calories:"}),o.jsx(Ve,{children:h})]}),o.jsxs(Ge,{children:[o.jsx(Ye,{type:"submit",children:"Add to diary"}),o.jsx(qe,{type:"button",onClick:n,children:"Cancel"})]})]})}),w&&o.jsx(Be,{calories:h,isOpen:w,onClose:()=>f(!1)})]})},Je=({item:{title:i,calories:n,category:s,weight:l,groupBloodNotAllowed:p,_id:d},bloodGroup:x})=>{const[h,m]=a.useState(!1),u=p[x],k=u?"Not recommended":"Recommended";return o.jsxs(o.Fragment,{children:[o.jsxs(he,{children:[o.jsxs(fe,{children:[o.jsx(me,{children:"Diet"}),o.jsxs($e,{children:[o.jsxs(ue,{children:[o.jsx(ge,{$notAllowed:u}),k]}),o.jsxs(be,{type:"button",onClick:()=>m(!0),children:["Add",o.jsx(we,{children:o.jsx("use",{href:`${g}#arrow`})})]})]})]}),o.jsx(le,{titleName:i}),o.jsxs(H,{children:[o.jsx(S,{text:"Calories: ",val:n}),o.jsx(S,{text:"Category: ",val:s}),o.jsx(S,{text:"Weight: ",val:l})]})]}),o.jsx(_e,{isOpen:h,id:d,title:i,calories:n,onClose:()=>m(!1)})]})},Ke=t.div`
  max-width: 335px;
  margin: 0 auto;
  @media (min-width: ${e.breakpoint.md}) {
@@ -699,7 +672,7 @@ stroke: ${e.color.orange};
     height: 153px;
     }
  }
-`,Xe=t.ul`
+`,Qe=t.ul`
  display: flex;
  flex-direction: column;
  gap: 20px;
@@ -709,7 +682,7 @@ stroke: ${e.color.orange};
   gap: 16px;
   row-gap: 32px;
   }
-`,Ze=t.section`
+`,Ue=t.section`
  @media (min-width: ${e.breakpoint.xl}) {
   height: 100vh;
   width: 100%;
@@ -723,7 +696,7 @@ stroke: ${e.color.orange};
       background-image: url(../../../public/img/side-view-products-2x-desk.jpg); 
       }
   }
-`,D=i=>i.products.items,eo=i=>i.products.isLoading,oo=i=>i.products.error,to=()=>{const i=j(D),r="1";return o.jsx(Ue,{children:o.jsx(Xe,{children:i.map(d=>o.jsx("li",{children:o.jsx(Qe,{item:d,bloodGroup:r})},d._id))})})},io=t.section`
+`,T=i=>i.products.items,Xe=i=>i.products.isLoading,Ze=i=>i.products.error,eo=()=>{const i=y(T),n="1";return o.jsx(Ke,{children:o.jsx(Qe,{children:i.map(s=>o.jsx("li",{children:o.jsx(Je,{item:s,bloodGroup:n})},s._id))})})},oo=t.section`
   position: fixed;
   top: 0;
   left: 0;
@@ -741,18 +714,18 @@ stroke: ${e.color.orange};
   display: flex;
   align-items: center;
   justify-content: center;
-`,ro=Y`
+`,to=G`
   to {
     transform: rotate(360deg);
   }
-`,no=t.div`
+`,io=t.div`
   border: 8px solid ${e.color.grey};
   border-top-color: ${e.color.orange};
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: ${ro} 1s ease-in-out infinite;
-`,ao=()=>o.jsx(io,{id:"preloader",children:o.jsx(no,{})}),so=t.div`
+  animation: ${to} 1s ease-in-out infinite;
+`,ro=()=>o.jsx(oo,{id:"preloader",children:o.jsx(io,{})}),no=t.div`
  max-width: 335px;
  margin: 0 auto;
  margin-top: 64px;
@@ -761,7 +734,7 @@ stroke: ${e.color.orange};
  margin: 0;
  margin-top: 132px;   
  }
-`,co=t.p`
+`,ao=t.p`
 font-size: 14px;
 line-height: 1.29;
 color: ${e.color.grey};
@@ -770,7 +743,7 @@ margin-bottom: 16px;
  font-size: 16px;
  line-height: 1.5;    
  }
-`,E=t.span`
+`,A=t.span`
 font-size: 14px;
 line-height: 1.29;
 color: ${e.color.orange};
@@ -778,4 +751,4 @@ color: ${e.color.orange};
  font-size: 16px;
  line-height: 1.5;    
  }
-`,po=()=>o.jsxs(so,{children:[o.jsxs(co,{children:[o.jsx(E,{children:" Sorry, no results were found "}),"for the product filters you selected. You may want to consider other search options to find the product you want. Our range is wide and you have the opportunity to find more options that suit your needs."]}),o.jsx(E,{children:"Try changing the search parameters."})]});function ho(){const i=j(D),r=j(eo),d=j(oo),p=A(),a=c=>{p(T(c))};return o.jsx(o.Fragment,{children:o.jsx(Ze,{children:o.jsxs("div",{className:"container",children:[o.jsxs(H,{children:[o.jsx(K,{children:"Products"}),o.jsx(de,{onFilterChange:a})]}),r&&o.jsx(ao,{}),i.length>0&&o.jsx(to,{}),d&&o.jsx(po,{})]})})})}export{ho as default};
+`,so=()=>o.jsxs(no,{children:[o.jsxs(ao,{children:[o.jsx(A,{children:" Sorry, no results were found "}),"for the product filters you selected. You may want to consider other search options to find the product you want. Our range is wide and you have the opportunity to find more options that suit your needs."]}),o.jsx(A,{children:"Try changing the search parameters."})]});function xo(){const i=y(T),n=y(Xe),s=y(Ze),l=O(),p=d=>{l(E(d))};return o.jsx(o.Fragment,{children:o.jsx(Ue,{children:o.jsxs("div",{className:"container",children:[o.jsxs(_,{children:[o.jsx(J,{children:"Products"}),o.jsx(se,{onFilterChange:p})]}),n&&o.jsx(ro,{}),i.length>0&&o.jsx(eo,{}),s&&o.jsx(so,{})]})})})}export{xo as default};
