@@ -23,8 +23,8 @@ export default function ProductsPage() {
   const error = useSelector(selectError);
   const dispatch = useDispatch();
 
-  const handleFilterChange = (filters) => {
-    dispatch(fetchProducts(filters));
+  const handleFilterChange = (params) => {
+    dispatch(fetchProducts(params));
   };
 
   return (
