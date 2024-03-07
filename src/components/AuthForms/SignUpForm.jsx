@@ -14,19 +14,15 @@ const schema = Yup.object().shape({
 export const SignUpForm = () => {
     const dispatch = useDispatch();
     const handleRegistration = (values) => {
-        dispatch(register(values))
+      dispatch(register(values))
     }
 
     return (
-        <>
-
-            <StyledDiv>
-                <StyledTitle>Sign Up</StyledTitle>
-                <StyledGreetings>Thank you for your interest in our platform. To complete the registration process, please provide us with the following information.</StyledGreetings>
-                <AuthForm schema={schema} handleSubmit={handleRegistration} register btnContent="Sign Up" />
-                <StyledSecondaryText>Already have an account? <StyledLink to="/signin">Sign In</StyledLink></StyledSecondaryText>
-            </StyledDiv>
-
-        </>
+        <StyledDiv>
+            <StyledTitle>Sign Up</StyledTitle>
+            <StyledGreetings>Thank you for your interest in our platform. To complete the registration process, please provide us with the following information.</StyledGreetings>
+            <AuthForm schema={schema} handleSubmit={handleRegistration} register btnContent="Sign Up" />
+            <StyledSecondaryText>Already have an account? <StyledLink to="/signin">Sign In</StyledLink></StyledSecondaryText>
+        </StyledDiv>
     )
 }

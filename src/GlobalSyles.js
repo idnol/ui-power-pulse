@@ -90,4 +90,12 @@ export const GlobalStyle = createGlobalStyle`
     .disable-scroll {
         overflow: hidden;
     }
+    
+    .row {
+        display: flex;
+        align-items: center;
+        @media (min-width: ${theme.breakpoint.md}) {
+            min-height: 100vh;
+        }
+    }
 `;
