@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 
 
 export const StyledDiv = styled.div`
-    margin-top: 127px;
+    //margin-top: 127px;
     max-width: 335px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 178px;
+    //margin-left: auto;
+    //margin-right: auto;
     @media (min-width: ${theme.breakpoint.md}) {
         max-width: 496px;
-        margin-left: 0px;
+        //margin-left: 0px;
     }
 `;
 
