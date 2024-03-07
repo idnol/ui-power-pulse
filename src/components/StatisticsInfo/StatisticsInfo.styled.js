@@ -1,12 +1,14 @@
 import { styled } from 'styled-components';
 import { theme } from '../../vars.js';
 
-export const StyledStatisticsInfoWrapper = styled.div`
+export const StatisticsInfoWrapper = styled.div`
 display: flex;
 flex-direction: column;
+gap: 20px;
 width: 234px;
 height: 212px;
 margin-left: auto;
+transition-duration: 300ms;
 
   @media screen and (min-width: ${theme.breakpoint.md}) {
   width: 405px;
@@ -17,9 +19,9 @@ margin-left: auto;
   height: 245px;
 } `;
 
-/* ---   StyledVideoWrapper   --- */
+/* ---   FirstElement styled   --- */
 
-export const StyledVideoWrapper = styled.div`
+export const FirstElementWrapper = styled.div`
 display: flex;
 align-items: center;
 gap: 8px;
@@ -43,7 +45,7 @@ transition-duration: 300ms;
   padding-right: 23px; 
 } `;
 
-export const StyledVideoIconWrapper = styled.div`
+export const FirstElementIconWrapper = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
@@ -57,7 +59,7 @@ background-color: ${theme.color.orangeSecond};
   height: 40px;
 } `;
 
-export const StyledVideoSvgWrapper = styled.div`
+export const SvgVideoWrapper = styled.div`
 display: flex;
 justify-content: end;
 align-items: center;
@@ -69,7 +71,19 @@ height: 12px;
   height: 20px;
 } `;
 
-export const StyledVideoSvg = styled.svg`
+export const SvgWrapper = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 12px;
+height: 12px;
+
+  @media screen and (min-width: ${theme.breakpoint.md}) {
+  width: 20px;
+  height: 20px;
+} `;
+
+export const SvgVideo = styled.svg`
 width: 9px;
 height: 12px;
 fill: ${theme.color.white};
@@ -79,7 +93,17 @@ fill: ${theme.color.white};
   height: 18px;
 } `;
 
-export const StyledVideoNumber = styled.p`
+export const SvgStyledFirst = styled.svg`
+width: 12px;
+height: 12px;
+fill: ${theme.color.white};
+
+  @media screen and (min-width: ${theme.breakpoint.md}) {
+  width: 20px;
+  height: 20px;
+} `;
+
+export const FirstElementNumber = styled.p`
 font-weight: 700;
 font-size: 16px;
 line-height: 1.12;
@@ -91,7 +115,7 @@ margin-bottom: 4px;
   margin-bottom: 8px;
 } `;
 
-export const StyledVideoText = styled.p`
+export const FirstElementText = styled.p`
 font-weight: 400;
 font-size: 12px;
 line-height: 1.33;
@@ -104,9 +128,9 @@ white-space: nowrap;
   color: rgba(239, 237, 232, 0.65);
 }  `;
 
-/* ---   StyledCaloriesWrapper   --- */
+/* ---   SecondElement styled   --- */
 
-export const StyledCaloriesWrapper = styled.div`
+export const SecondElementWrapper = styled.div`
 width: 119px;
 height: 76px;
 border-radius: 12px;
@@ -126,7 +150,7 @@ margin-top: auto;
   padding-right: 28px;
 }  `;
 
-export const StyledCaloriesSvg = styled.svg`
+export const SvgStyledSecond = styled.svg`
 width: 20px;
 height: 20px;
 margin-bottom: 4px;
@@ -137,7 +161,7 @@ margin-bottom: 4px;
   margin-bottom: 8px;
 }  `;
 
-export const StyledCalorieDataWrapper = styled.div`
+export const SecondElementDataWrapper = styled.div`
 display: flex;
 gap: 8px;
 align-items: baseline;
@@ -146,7 +170,7 @@ align-items: baseline;
   gap: 11px;
 } `;
 
-export const StyledCaloriesNumber = styled.p`
+export const SecondElementNumber = styled.p`
 font-weight: 700;
 font-size: 24px;
 line-height: 1;
@@ -159,7 +183,7 @@ text-transform: uppercase;
   letter-spacing: -0.02em;
 }  `;
 
-export const StyledCaloriesText = styled.p`
+export const SecondElementText = styled.p`
 font-weight: 700;
 font-size: 12px;
 line-height: 1.33;
