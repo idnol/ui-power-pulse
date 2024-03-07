@@ -69,9 +69,7 @@ export const StyledSignUpNavLink = styled(NavLink)`
   transition-duration: 300ms;
 
   &:hover {
-    background: transparent;
-    border: 1px solid rgba(239, 237, 232, 0.3);
-    //box-shadow: 0px 2px 5px 1px #b7b7b7;
+    background: ${theme.color.orangeSecond};
     transition-duration: 300ms;
   }
 
@@ -95,9 +93,7 @@ export const StyledSignInNavLink = styled(NavLink)`
   transition-duration: 300ms;
 
   &:hover {
-    background: ${theme.color.orange};
-    border: 1px solid transparent;
-    //box-shadow: 0px 2px 5px 1px #b7b7b7;
+    border: ${theme.border.orange};
     transition-duration: 300ms;
   }
 

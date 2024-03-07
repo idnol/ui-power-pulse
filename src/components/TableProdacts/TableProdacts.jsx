@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
 import {
   CaloriesItem,
   CategoryItem,
   DeleteBtn,
   DeleteItem,
-  // HeaderRow,
   RecommendItem,
   RowItem,
   ScrollContainer,
@@ -23,20 +21,15 @@ import {
 } from './TableProdacts.styled';
 
 export const TableProdacts = ({ prodacts, onDeleteProdact }) => {
-  // const numb = nanoid();
-  // key = { num };
-
   return (
     <>
       <Header>
-        {/* <HeaderRow> */}
         <HeaderTitle>Title</HeaderTitle>
         <HeaderCategory>Category</HeaderCategory>
         <HeaderCalories>Calories</HeaderCalories>
         <HeaderWeight>Weight</HeaderWeight>
         <HeaderRecommend>Recommend</HeaderRecommend>
         <p> </p>
-        {/* </HeaderRow> */}
       </Header>
       <ScrollContainer>
         <Table>
