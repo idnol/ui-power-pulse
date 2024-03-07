@@ -3,7 +3,7 @@ import { theme } from '../../vars.js';
 
 export const ScrollContainer = styled.div`
   min-height: 234px;
-  max-height: 750px;
+  max-height: 990px;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
@@ -41,6 +41,7 @@ export const ScrollContainer = styled.div`
       height: 90px;
     }
   }
+
   @media (min-width: ${theme.breakpoint.xl}) {
     max-width: 826px;
     min-height: 138px;
@@ -69,43 +70,54 @@ export const Header = styled.div`
   }
 `;
 
-export const HeaderTitle = styled.p`
-  width: 204px;
+export const HeaderBodyPart = styled.p`
+  width: 90px;
 
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 212px;
+    width: 115px;
   }
 `;
 
-export const HeaderCategory = styled.p`
+export const HeaderEquipment = styled.p`
+  width: 132px;
+
+  @media (min-width: ${theme.breakpoint.xl}) {
+    width: 157px;
+  }
+`;
+
+export const HeaderName = styled.p`
   width: 128px;
 
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 166px;
+    width: 131px;
   }
 `;
 
-export const HeaderCalories = styled.p`
-  width: 90px;
+export const HeaderTarget = styled.p`
+  width: 84px;
 
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 105px;
+    width: 106px;
   }
 `;
 
-export const HeaderWeight = styled.p`
-  width: 90px;
+export const HeaderBurnedCalories = styled.p`
+  width: 78px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 105px;
+    width: 91px;
   }
 `;
 
-export const HeaderRecommend = styled.p`
-  width: 80px;
+export const HeaderTime = styled.p`
+  width: 72px;
 
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 105px;
+    width: 82px;
   }
 `;
 
@@ -158,7 +170,7 @@ export const RowItem = styled.tr`
   }
 `;
 
-export const TitleItem = styled.td`
+export const BodyPartItem = styled.td`
   position: relative;
   border: ${theme.border.grey3};
   border-radius: 12px;
@@ -172,7 +184,95 @@ export const TitleItem = styled.td`
   text-align: left;
 
   &::before {
-    content: 'Title';
+    content: 'Body Part';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    color: ${theme.color.orangeSecond};
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: ${theme.breakpoint.md}) {
+    width: 90px;
+    height: 40px;
+    margin-bottom: 0;
+    padding: 8px 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &::before {
+      display: none;
+    }
+  }
+  @media (min-width: ${theme.breakpoint.xl}) {
+    width: 115px;
+  }
+`;
+
+export const EquipmentItem = styled.td`
+  position: relative;
+  border: ${theme.border.grey3};
+  border-radius: 12px;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 42px;
+  padding: 10px 14px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+
+  &::before {
+    content: 'Equipment';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    color: ${theme.color.orangeSecond};
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: ${theme.breakpoint.md}) {
+    width: 132px;
+    height: 40px;
+    padding: 8px 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+  @media (min-width: ${theme.breakpoint.xl}) {
+    width: 157px;
+  }
+`;
+
+export const NameItem = styled.td`
+  position: relative;
+  border: ${theme.border.grey3};
+  border-radius: 12px;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 42px;
+  padding: 10px 14px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+
+  &::before {
+    content: 'Name';
     position: absolute;
     top: -25px;
     left: 0;
@@ -185,54 +285,10 @@ export const TitleItem = styled.td`
   @media (min-width: ${theme.breakpoint.md}) {
     margin-bottom: 0;
     padding: 8px 14px;
-    width: 204px;
-    height: 40px;
-    font-size: 16px;
-    line-height: 1.5;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    &::before {
-      display: none;
-    }
-  }
-  @media (min-width: ${theme.breakpoint.xl}) {
-    width: 212px;
-  }
-`;
-
-export const CategoryItem = styled.td`
-  position: relative;
-  border: ${theme.border.grey3};
-  border-radius: 12px;
-  width: 100%;
-  height: 38px;
-  margin-bottom: 42px;
-  padding: 10px 14px;
-  text-align: left;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.29;
-
-  &::before {
-    content: 'Category';
-    position: absolute;
-    top: -25px;
-    left: 0;
-    color: ${theme.color.orangeSecond};
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  @media (min-width: ${theme.breakpoint.md}) {
     width: 128px;
     height: 40px;
-    padding: 8px 14px;
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -242,11 +298,11 @@ export const CategoryItem = styled.td`
     }
   }
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 166px;
+    width: 131px;
   }
 `;
 
-export const CaloriesItem = styled.td`
+export const TargetItem = styled.td`
   position: relative;
   border: ${theme.border.grey3};
   border-radius: 12px;
@@ -260,7 +316,7 @@ export const CaloriesItem = styled.td`
   line-height: 1.29;
 
   &::before {
-    content: 'Calories';
+    content: 'Target';
     position: absolute;
     top: -25px;
     left: 0;
@@ -276,23 +332,26 @@ export const CaloriesItem = styled.td`
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
-    width: 90px;
+    width: 84px;
     height: 40px;
     padding: 8px 14px;
     font-size: 16px;
     line-height: 1.5;
     margin-right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &::before {
       display: none;
     }
   }
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 105px;
+    width: 106px;
   }
 `;
 
-export const WeightItem = styled.td`
+export const BurnedCaloriesItem = styled.td`
   position: relative;
   border: ${theme.border.grey3};
   border-radius: 12px;
@@ -306,7 +365,7 @@ export const WeightItem = styled.td`
   line-height: 1.29;
 
   &::before {
-    content: 'Weight';
+    content: 'Burned Calories';
     position: absolute;
     top: -25px;
     left: 0;
@@ -314,6 +373,10 @@ export const WeightItem = styled.td`
     font-weight: 400;
     font-size: 12px;
     line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
   }
 
   @media (max-width: 375px) {
@@ -322,43 +385,31 @@ export const WeightItem = styled.td`
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
-    width: 90px;
+    width: 78px;
     height: 40px;
     padding: 8px 14px;
     font-size: 16px;
     line-height: 1.5;
     margin-right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &::before {
       display: none;
     }
   }
+
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 105px;
+    width: 91px;
   }
 `;
 
-export const SvgCircle = styled.svg`
-  width: 14px;
-  height: 14px;
-  margin-right: 8px;
-
-  @media (max-width: 375px) {
-    display: none;
-  }
-
-  @media (min-width: ${theme.breakpoint.md}) {
-    display: flex;
-    width: 14px;
-    height: 14px;
-  }
-`;
-
-export const RecommendItem = styled.td`
+export const TimeItem = styled.td`
   position: relative;
   display: flex;
   align-items: center;
-  border: ${theme.border.grey3};
+  border: 1px solid rgba(239, 237, 232, 0.3);
   border-radius: 12px;
   width: 76px;
   height: 38px;
@@ -369,7 +420,7 @@ export const RecommendItem = styled.td`
   line-height: 1.29;
 
   &::before {
-    content: 'Recommend';
+    content: 'Time';
     position: absolute;
     top: -25px;
     left: 0;
@@ -384,7 +435,7 @@ export const RecommendItem = styled.td`
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
-    width: 80px;
+    width: 72px;
     height: 40px;
     padding: 8px 14px 8px 14px;
     font-size: 16px;
@@ -395,7 +446,7 @@ export const RecommendItem = styled.td`
     }
   }
   @media (min-width: ${theme.breakpoint.xl}) {
-    width: 105px;
+    width: 82px;
   }
 `;
 
