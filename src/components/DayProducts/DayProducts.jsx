@@ -7,9 +7,9 @@ import {
   BoxDayDiary,
   TextNoFound,
 } from './DayProducts.styled.jsx';
-import { TableProdacts } from '../TableProdacts/TableProdacts.jsx';
+import { TableProducts } from '../TableProducts/TableProducts.jsx';
 
-const listOfProdacts = [
+const listOfProducts = [
   {
     id: '1',
     title: 'Rice semolina Garnets glute',
@@ -221,12 +221,12 @@ const listOfProdacts = [
 ];
 
 export const DayProducts = () => {
-  const [prodacts, setProdacts] = useState(listOfProdacts);
-  console.log(prodacts);
+  const [products, setProducts] = useState(listOfProducts);
+  console.log(products);
 
-  const handleDeleteProdact = (id) => {
-    setProdacts((prevProdacts) =>
-      prevProdacts.filter((prodact) => prodact.id !== id)
+  const handleDeleteProduct = (id) => {
+    setProducts((prevProducts) =>
+      prevProducts.filter((product) => product.id !== id)
     );
   };
 
@@ -243,12 +243,12 @@ export const DayProducts = () => {
           </StyledAddNavLink>
         </WrapperAdd>
 
-        {!prodacts.length ? (
+        {!products.length ? (
           <TextNoFound>Not found products</TextNoFound>
         ) : (
-          <TableProdacts
-            prodacts={prodacts}
-            onDeleteProdact={handleDeleteProdact}
+          <TableProducts
+            products={products}
+            onDeleteProduct={handleDeleteProduct}
           />
         )}
       </BoxDayDiary>

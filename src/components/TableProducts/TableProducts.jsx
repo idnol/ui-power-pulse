@@ -18,9 +18,9 @@ import {
   HeaderRecommend,
   Thead,
   Header,
-} from './TableProdacts.styled';
+} from './TableProducts.styled';
 
-export const TableProdacts = ({ prodacts, onDeleteProdact }) => {
+export const TableProducts = ({ products, onDeleteProduct }) => {
   return (
     <>
       <Header>
@@ -44,13 +44,13 @@ export const TableProdacts = ({ prodacts, onDeleteProdact }) => {
             </tr>
           </Thead>
           <tbody>
-            {prodacts.map((prodact) => (
-              <RowItem key={prodact.id}>
-                <TitleItem>{prodact.title}</TitleItem>
-                <CategoryItem>{prodact.category}</CategoryItem>
-                <CaloriesItem>{prodact.calories}</CaloriesItem>
-                <WeightItem>{prodact.weight}</WeightItem>
-                {prodact.recommended ? (
+            {products.map((product) => (
+              <RowItem key={product.id}>
+                <TitleItem>{product.title}</TitleItem>
+                <CategoryItem>{product.category}</CategoryItem>
+                <CaloriesItem>{product.calories}</CaloriesItem>
+                <WeightItem>{product.weight}</WeightItem>
+                {product.recommended ? (
                   <RecommendItem>
                     <SvgCircle>
                       <use href="/img/sprait.svg#circle" fill="#419B09" />
@@ -66,7 +66,7 @@ export const TableProdacts = ({ prodacts, onDeleteProdact }) => {
                   </RecommendItem>
                 )}
                 <DeleteItem>
-                  <DeleteBtn onClick={() => onDeleteProdact(prodact.id)}>
+                  <DeleteBtn onClick={() => onDeleteProduct(product.id)}>
                     <SvgBasket>
                       <use href="/img/sprait.svg#trash" />
                     </SvgBasket>
