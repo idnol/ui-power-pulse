@@ -15,16 +15,17 @@ import {
 import { Loader } from '../../components/parts/Loader/Loader';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
 
-
-
 export default function ProductsPage() {
   const products = useSelector(selectProducts);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+   // const bloodGroup = useSelector(state=> state.user.blood)
+  const bloodGroup = "1"
   const dispatch = useDispatch();
 
-  const handleFilterChange = (filters) => {
-    dispatch(fetchProducts(filters));
+
+  const handleFilterChange = (params) => {
+    dispatch(fetchProducts(params));
   };
 
   return (
@@ -33,11 +34,11 @@ export default function ProductsPage() {
         <div className="container">
           <FilterWrapper>
             <ProductsTitle>Products</ProductsTitle>
-            <ProductsFilter onFilterChange={handleFilterChange} />
+            <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup}/>
           </FilterWrapper>
           {isLoading && <Loader />}
-          {products.length > 0 && <ProductsList />}
-          {error && <ProductsError />}
+          {products.length > 0 && <ProductsList bloodGroup={bloodGroup}/>}
+          {error || products.length === 0 && <ProductsError />}
         </div>
       </ProductsSection>
     </>

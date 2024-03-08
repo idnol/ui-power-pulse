@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../vars";
 
 const getRecomendedColor = props => {
- return props.$notAllowed? theme.color.red : theme.color.green;
+ return props.$isAllowed? theme.color.green : theme.color.red;
   };
 
 export const ProductCard = styled.div`

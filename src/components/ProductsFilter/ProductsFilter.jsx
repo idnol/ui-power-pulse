@@ -1,66 +1,53 @@
 import { useDispatch } from "react-redux";
-import { Form, SearchBtn, RecommendedField, FieldTitle, StyledOption, FiltersContainer, SelectWrapper, CategoryField, InputGroup, IconSearch, CleanBtn, IconClean, SelectHeader, OptionsContainer } from "./ProductsFilter.styled";
-import sprite from 'assets/sprite-2.svg';
-import { useEffect, useRef, useState } from "react";
-import { IconDown } from "./ProductsFilter.styled";
-import { fetchCategories, fetchProducts } from "../../redux/products/api";
-import { toast } from "react-toastify";
+import { Form,   FiltersContainer, SelectWrapper } from "./ProductsFilter.styled";
 
-const initialFilters = {
-  title: '',
-  category: '',
-  recommended: 'all',
-};
+import { useEffect, useMemo, useRef, useState } from "react";
+import { fetchProducts } from "../../redux/products/api";
+import { useSearchParams } from "react-router-dom";
+import { QueryFilter } from "./QueryFilter/QueryFilter";
+import { CategoryFilter } from "./CategoryFilter/CategoryFilter";
+import { RecommendedFilter } from "./RecommendedFilter/RecommendedFilter";
 
-export const ProductsFilter = ({onFilterChange}) => {
-  const [filters, setFilters] = useState(initialFilters);
+export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
+const [searchParams, setParams] = useSearchParams();
+const params = useMemo(
+  () => Object.fromEntries([...searchParams]),
+  [searchParams]
+);
+const { query = "", category = "", recommended = "all" } = params;
 
-  const [isOpenCategory, setIsOpenCategory] = useState(false);
+const [isOpenCategory, setIsOpenCategory] = useState(false);
+const categoryRef = useRef(null);
   const [isOpenRecommend, setIsOpenRecommend] = useState(false);
-  const categoryRef = useRef(null);
   const recommendRef = useRef(null);
-  const [categories, setCategories] = useState([]);
-  const [error, setError] = useState(null);
-
-  const recommendOptions =["all", "recommend", "not recommend"];
   const dispatch = useDispatch();
   
-  useEffect(()=> {
-    async function getCategories() {
-      try {
-        setError(null);
-        const categories = await fetchCategories();
-        setCategories(categories);
-      } catch (error) {
-        setError(true);
-      } 
-    }
-    getCategories();
-  },[]);
-
   useEffect(() => {
-    dispatch(fetchProducts(filters))
-  }, [filters, dispatch]);
+    dispatch(fetchProducts(params))
+  }, [dispatch, params]);
 
   const handleDropdownCategory = () => {
     setIsOpenCategory(!isOpenCategory);
   };
-
   const handleDropdownRecommend = () => {
     setIsOpenRecommend(!isOpenRecommend);
   };
 
   const handleTitleChange = (event) => {
-    setFilters((prevFilters) => ({ ...prevFilters, title: event.target.value }));
+    searchParams.set('query', event.target.value);
+    setParams(searchParams);
   };
 
   const handleSelectCategory = (option) => {
-    setFilters((prevFilters) => ({ ...prevFilters, category: option }));
+    searchParams.set('category', option);
+    setParams(searchParams);
     setIsOpenCategory(false);
   };
 
   const handleSelectRecommended = (option) => {
-    setFilters((prevFilters) => ({ ...prevFilters, recommended: option }));
+    searchParams.set('recommended', option);
+    searchParams.set('blood', bloodGroup);
+    setParams(searchParams);
     setIsOpenRecommend(false);
   };
 
@@ -88,76 +75,37 @@ export const ProductsFilter = ({onFilterChange}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onFilterChange(filters);
+    onFilterChange(params);
   };
 
   const handleCleanForm = () => {
-    setFilters((prevFilters) => ({ ...prevFilters, title: ""}));
+    searchParams.set('query', "");
+    setParams(searchParams);
   };
 
     return (
       <>
         <FiltersContainer>
           <Form onSubmit={handleSubmit}>
-            <InputGroup>
-               
-               <FieldTitle type="text" name="title" placeholder="Search" value={filters.title } onChange={handleTitleChange} />
-               <CleanBtn type="button" className="cleanBtn" onClick={handleCleanForm}>
-                <IconClean>
-                 <use href={`${sprite}#x`} />
-                </IconClean>
-               </CleanBtn>
-              
-
-             <SearchBtn type="submit" onSubmit={handleSubmit}>
-             <IconSearch>
-              <use href={`${sprite}#search`} />
-             </IconSearch>
-             </SearchBtn>
-           </InputGroup>
+          <QueryFilter query={query} onTitleChange={handleTitleChange} onCleanForm={handleCleanForm} onSubmit={handleSubmit}/>
             
   
-            <SelectWrapper>
-
-             <CategoryField>
-               <SelectHeader onClick={handleDropdownCategory}>
-               {filters.category || 'Category'}
-               </SelectHeader>
-               <IconDown>
-               <use href={`${sprite}#arrow-down`} />
-               </IconDown>
-        
-                <OptionsContainer ref={categoryRef} $isopen={isOpenCategory}>
-                {categories.map((option, index) => (
-                  <StyledOption key={index} onClick={() => handleSelectCategory(option)}>
-                  {option}
-                 </StyledOption>
-                ))}
-               </OptionsContainer>
-              </CategoryField>
-            
-              <RecommendedField>
-               <SelectHeader onClick={handleDropdownRecommend}>
-                {filters.recommended  || 'All'}
-               </SelectHeader>
-               <IconDown>
-               <use href={`${sprite}#arrow-down`} />
-               </IconDown>
-               <OptionsContainer ref={recommendRef} $isopen={isOpenRecommend}>
-                {recommendOptions.map((recOption, index) => (
-                 <StyledOption key={index} onClick={() => handleSelectRecommended(recOption)}>
-                 {recOption}
-                 </StyledOption>
-                 ))}
-               </OptionsContainer>
-              </RecommendedField>
+             <SelectWrapper>
+             <CategoryFilter label={category || 'Category'} 
+              onToggle={handleDropdownCategory} 
+              onSelect={handleSelectCategory}
+              isOpen={isOpenCategory}/>
+          
+             <RecommendedFilter
+             label={recommended || 'All'} 
+             isOpen={isOpenRecommend}
+             onToggle={handleDropdownRecommend}
+             onSelect={handleSelectRecommended}/>
             
             </SelectWrapper>
           </Form>
        </FiltersContainer>
-       {error && toast.error(
-          'Something went wrong! Please try again.'
-        )}
+  
     </>
     )
   }
