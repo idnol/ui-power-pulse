@@ -3,8 +3,6 @@ import sprite from 'assets/sprite-2.svg';
 import { useLocation } from 'react-router-dom';
 import { theme } from '../../vars';
 
-import { BasicModalWindow } from '../BasicModalWindow/BasicModalWindow';
-
 import {
   BtnSuccess,
   CaloriesText,
@@ -21,18 +19,18 @@ import {
   Wrapper,
 } from './AddExerciseSuccess.styled';
 
-export const AddExerciseSuccess = ({ isOpen, onClose }) => {
+export const AddExerciseSuccess = ({ isOpen, onClose, calorise, time }) => {
   const location = useLocation();
   const backLinkRef = useRef(location);
 
   return (
     <>
-      <BasicModalWindow isOpen={isOpen} onClose={onClose}>
-        <ModalClBtn onClick={onClose}>
-          <ModalSvg>
-            <use href={`${sprite}#x-modal`} />
-          </ModalSvg>
-        </ModalClBtn>
+      <ModalClBtn onClick={onClose}>
+        <ModalSvg>
+          <use href={`${sprite}#x-modal`} />
+        </ModalSvg>
+      </ModalClBtn>
+      {isOpen && (
         <Wrapper>
           <SuccessBox>
             <picture>
@@ -43,9 +41,9 @@ export const AddExerciseSuccess = ({ isOpen, onClose }) => {
             <TitleSuccess>Well done</TitleSuccess>
             <Counts>
               <TimeText>Your time:</TimeText>
-              <ValueMin>3 minutes</ValueMin>
+              <ValueMin>{time} minutes</ValueMin>
               <CaloriesText>Burned calories:</CaloriesText>
-              <ValueClr>150</ValueClr>
+              <ValueClr>{calorise}</ValueClr>
             </Counts>
             <BtnSuccess type="button" onClick={onClose}>
               Next exercise
@@ -59,7 +57,7 @@ export const AddExerciseSuccess = ({ isOpen, onClose }) => {
             </StyledLink>
           </SuccessBox>
         </Wrapper>
-      </BasicModalWindow>
+      )}
     </>
   );
 };
