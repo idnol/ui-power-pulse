@@ -65,13 +65,9 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
     }
   };
 
-<<<<<<< HEAD
   const comboModal = () => {
     onClose();
     setIsOpenSuccess(false);
-=======
-    setIsInputValue('');
->>>>>>> main
   };
 
   return (
