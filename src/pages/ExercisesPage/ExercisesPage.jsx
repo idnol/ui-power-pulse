@@ -1,22 +1,27 @@
-import { NavLink, Outlet } from 'react-router-dom';
-import { Exercises } from '../../components/ExercisesPageList/ExercisesPageList';
+import { useState } from 'react';
+import useFetchCategories from './ExercisesHelper/useFetchCategories';
+import ExercisesCategories from './Categories/ExercisesCategories';
+import ExercisesSubcategoriesList from './SubCategories/ExercisesSubcategoriesList';
+import { Wrapper } from './ExercisesPage.styled.js';
 
 export default function ExercisesPage() {
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const categories = useFetchCategories(selectedCategory);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <>
-      <ul>
-        <li>
-          <NavLink to="bodyparts">Body parts</NavLink>
-        </li>
-        <li>
-          <NavLink to="muscles">Muscles</NavLink>
-        </li>
-        <li>
-          <NavLink to="equipment">Equipment</NavLink>
-        </li>
-      </ul>
-      <Exercises />
-      <Outlet />
-    </>
+    <section>
+      <div className="container">
+        <div className="row">
+          <Wrapper>
+            <ExercisesCategories onClick={handleCategoryClick} />
+            <ExercisesSubcategoriesList categories={categories} selectedCategory={selectedCategory} />
+          </Wrapper>
+        </div>
+      </div>
+    </section>
   );
 }
