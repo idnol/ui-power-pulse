@@ -4,12 +4,12 @@ export const SliderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
   @media (min-width: 768px) {
-    margin-bottom: 32px;
-  }
-  @media (min-width: 1440px) {
-    margin-bottom: 46px;
+      bottom: -32px;
   }
 `;
 

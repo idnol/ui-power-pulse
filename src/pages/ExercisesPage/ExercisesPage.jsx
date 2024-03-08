@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useFetchCategories from './ExercisesHelper/useFetchCategories';
 import ExercisesCategories from './Categories/ExercisesCategories';
 import ExercisesSubcategoriesList from './SubCategories/ExercisesSubcategoriesList';
+import { Wrapper } from './ExercisesPage.styled.js';
 
 export default function ExercisesPage() {
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -12,9 +13,15 @@ export default function ExercisesPage() {
   };
 
   return (
-    <div>
-      <ExercisesCategories onClick={handleCategoryClick} />
-      <ExercisesSubcategoriesList categories={categories} selectedCategory={selectedCategory} />
-    </div>
+    <section>
+      <div className="container">
+        <div className="row">
+          <Wrapper>
+            <ExercisesCategories onClick={handleCategoryClick} />
+            <ExercisesSubcategoriesList categories={categories} selectedCategory={selectedCategory} />
+          </Wrapper>
+        </div>
+      </div>
+    </section>
   );
 }
