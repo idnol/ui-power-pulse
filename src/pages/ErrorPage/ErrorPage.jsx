@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import {
   OrangePart,
   StyledImagePart,
@@ -7,9 +7,10 @@ import {
   StyledTitle,
   StyledText,
 } from './ErrorPage.styled';
+import { selectIsAuthenticated } from '../../redux/auth/selectors';
 
 export default function ErrorPage() {
-  // Link веде на WelcomePage/Diary залежить від авторизації
+  const isLoggedIn = useSelector(selectIsAuthenticated);
   return (
     <section>
       <OrangePart>
@@ -22,7 +23,7 @@ export default function ErrorPage() {
             another dimension. We apologize for this inconvenience.
           </StyledText>
 
-          <StyledLink to={'/'}>Go Home</StyledLink>
+          <StyledLink to={`${isLoggedIn ? '/diary' : '/'}`}>Go Home</StyledLink>
         </ContentContainer>
       </OrangePart>
       <StyledImagePart />

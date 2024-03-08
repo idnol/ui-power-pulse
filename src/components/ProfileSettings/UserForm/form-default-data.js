@@ -1,16 +1,3 @@
-export const defaultValues = {
-    name: '',
-    email: 'test@user.co.k',
-    height: '',
-    currentWeight: '',
-    desiredWeight: '',
-    birthday: '',
-    blood: '',
-    sex: '',
-    levelActivity: '',
-};
-
-
 export const bloodOptions = [
     { id: '1', value: '1', label: '1' },
     { id: '2', value: '2', label: '2' },
