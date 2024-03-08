@@ -1,4 +1,4 @@
-import sprite from '../../../../../public/img/sprait.svg';
+import sprite from 'assets/sprite-2.svg';
 import { DailyItem, DayliNumber, TextWrapper,DailyWrapper } from './DayliInfoItem.styled';
 
 export const DailyInfoItem = ({ svg, text, number }) => {

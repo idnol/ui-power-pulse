@@ -1,6 +1,11 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import { useState } from 'react';
-// import axios from 'axios';
-import sprite from '../../../../../public/img/sprait.svg';
+
+
+import { updateAvatar} from '../../../../redux/profile/api';
+import { selectProfile} from '../../../../redux/profile/selectors';
+import sprite from 'assets/sprite-2.svg';
 import {
   Avatar,
   Button,
@@ -14,58 +19,54 @@ import {
 } from './UserImage.styled';
 
 export const UserImage = () => {
-  const [avatar, setAvatar] = useState(null);
+  const dispatch = useDispatch();
+  const user = useSelector(selectProfile);
+  const [localAvatar, setLocalAvatar] = useState(null);
+  const avatarSrc = localAvatar || (user.bodyData && user.bodyData.avatar) || null;
+
 
   const avatarLogo = (
     <SvgLogoUser>
-      <use href={avatar ? avatar : `${sprite}#icon-user`}></use>
+      <use href={avatarSrc ? avatarSrc : `${sprite}#icon-user`}></use>
     </SvgLogoUser>
   );
+
+  
+
   const handleAvatarChange = async (event) => {
     const file = event.target.files[0];
   
     if (file) {
       try {
-        // const formData = new FormData();
-        // formData.append('file', file);
+        setLocalAvatar(URL.createObjectURL(file));
   
-        // await axios.post('/api/profile', formData, {
-        //   headers: {
-        //     'Content-Type': 'multipart/form-data',
-        //   },
-        // });
+        const response = await dispatch(updateAvatar(file));
   
-        const objectURL = await readFileAsync(file);
-        setAvatar(objectURL);
-        console.log('File uploaded successfully');
+        if (updateAvatar.fulfilled.match(response)) {
+          toast.success('File uploaded successfully');
+        } else {
+          toast.error('Error uploading file: Server response not successful');
+        }
+  
+        return response.data;
       } catch (error) {
-        console.error('Error uploading file:', error);
+        toast.error('Error uploading file:', error);
+  
+        setLocalAvatar(null);
       }
     }
   };
-
-  const readFileAsync = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        resolve(event.target.result);
-      };
-      reader.onerror = (error) => {
-        reject(error);
-      };
-      reader.readAsDataURL(file);
-    });
-  };
+  
 
   return (
     <Wrapper>
       <div style={{ position: 'relative' }}>
         <Avatar>
-          {avatar ? (
-            <Image src={avatar} alt="User Avatar" />
-          ) : (
-            avatarLogo
-          )}
+        {avatarSrc && avatarSrc !== 'undefined' ? (
+          <Image src={avatarSrc} alt="User Avatar" />
+        ) : (
+          avatarLogo
+        )}
         </Avatar>
         <FormWrapper>
           <input
@@ -85,7 +86,7 @@ export const UserImage = () => {
           </label>
         </FormWrapper>
       </div>
-      <TitleName>Anna Rybachok</TitleName>
+      <TitleName>{user.name}</TitleName>
       <Subtitle>User</Subtitle>
     </Wrapper>
   );

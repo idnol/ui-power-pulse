@@ -4,9 +4,22 @@ import { current, updateAvatar, updateProfile } from './api.js';
 const profileSlice = createSlice({
   name: 'profile',
   initialState: {
-    items: [],
+    items: {},
     isLoading: false,
     error: null
+  },
+  reducers: {
+    addUserInfo: (state, action) => {
+      const payloadData = action.payload;
+
+      if (payloadData) {
+        state.items = { ...action.payload };
+      }
+    },
+
+    setLoading: (state, action) => {
+      state.isLoading = action.payload;
+    },
   },
   extraReducers: builder => {
     builder
@@ -45,5 +58,6 @@ const profileSlice = createSlice({
       });
   }
 })
+export const { addUserInfo, setLoading } = profileSlice.actions;
 
 export const profileReducer = profileSlice.reducer;
