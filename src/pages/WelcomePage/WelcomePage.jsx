@@ -9,7 +9,7 @@ export default function WelcomePage() {
         <div className="row">
           <Wrapper>
             <Welcome />
-            <StatisticsInfo/>
+            <StatisticsInfo />
           </Wrapper>
         </div>
       </div>

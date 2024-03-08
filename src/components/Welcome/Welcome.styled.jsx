@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-    position: relative;
+  position: relative;
 `;
 
 export const MainTitle = styled.h1`
@@ -69,9 +69,7 @@ export const StyledSignUpNavLink = styled(NavLink)`
   transition-duration: 300ms;
 
   &:hover {
-    background: transparent;
-    border: 1px solid rgba(239, 237, 232, 0.3);
-    //box-shadow: 0px 2px 5px 1px #b7b7b7;
+    background: ${theme.color.orangeSecond};
     transition-duration: 300ms;
   }
 
@@ -80,7 +78,7 @@ export const StyledSignUpNavLink = styled(NavLink)`
     height: 56px;
     font-size: 20px;
     line-height: 1.2;
-   }
+  }
 `;
 
 export const StyledSignInNavLink = styled(NavLink)`
@@ -93,11 +91,9 @@ export const StyledSignInNavLink = styled(NavLink)`
   height: 42px;
   color: ${theme.color.white};
   transition-duration: 300ms;
-  
+
   &:hover {
-    background: ${theme.color.orange};
-    border: 1px solid transparent;
-    //box-shadow: 0px 2px 5px 1px #b7b7b7;
+    border: ${theme.border.orange};
     transition-duration: 300ms;
   }
 
@@ -106,7 +102,7 @@ export const StyledSignInNavLink = styled(NavLink)`
     height: 56px;
     font-size: 20px;
     line-height: 1.2;
-   }
+  }
 `;
 
 export const SvgLine = styled.svg`
@@ -123,7 +119,4 @@ export const SvgLine = styled.svg`
     width: 185px;
     height: 67px;
   }
-  `;
-
-
-
+`;
