@@ -43,26 +43,22 @@ export const UserForm = () => {
     currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || '35',
     desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || '35',
     birthday: '2006-01-02',
-    blood: parseInt(profileData.bodyData?.blood || profileData.bodyData?.blood || 1, 10),
-    sex: profileData.bodyData?.sex || profileData.bodyData?.sex || 'male',
-    levelActivity: parseInt(profileData.bodyData?.levelActivity || profileData.bodyData?.levelActivity || 1, 10),
+    blood: (profileData.bodyData.blood).toString() || '1',
+    sex: profileData.bodyData.sex || 'male',
+    levelActivity: parseInt(profileData.bodyData?.levelActivity, 10) || 1,
   };
 
 
   const handleSubmit = async (values) => {
-  
     if (profileData.bodyData) {
       if (JSON.stringify(values) === JSON.stringify(initialValues)) {
         toast.error('Nothing to change');
         return;
       }
-  
       try {
         const { email, ...bodyData } = values;
         console.log('Before API call:', { email, bodyData });
-  
         const response = await axios.patch('/users/profile', bodyData);
-  
         toast.success("User data updated successfully");
         dispatch(updateProfile(bodyData));
         return response.data
@@ -73,7 +69,6 @@ export const UserForm = () => {
       toast.warning('User bodyData is missing or not fully populated. Form not submitted.');
     }
   };
-  
 
 
   return (
@@ -83,8 +78,6 @@ export const UserForm = () => {
       onSubmit={handleSubmit}
     >
       {formikProps => {
-        {/* console.log(formikProps); */}
-
         return (
           <StyledFormik onSubmit={formikProps.handleSubmit}>
             <UserInfo>
@@ -128,8 +121,9 @@ export const UserForm = () => {
                       key={option.id}
                       id={option.id}
                       name="blood"
-                      value={initialValues.blood}
                       label={option.label}
+                      onChange={() => formikProps.setFieldValue('blood', option.id)}
+                      checked={formikProps.values.blood === option.id}
                     />
                   ))}
                 </RadioContainer>
@@ -142,7 +136,7 @@ export const UserForm = () => {
                     key={option.id}
                     id={option.id}
                     name="sex"
-                    value={initialValues.sex}
+                    value={option.value}
                     label={option.label}
                   />
                 ))}
@@ -156,13 +150,14 @@ export const UserForm = () => {
                   key={option.id}
                   id={option.id}
                   name="levelActivity"
-                  value={initialValues.levelActivity}
                   label={option.label}
+                  onChange={() => formikProps.setFieldValue('levelActivity', option.value)}
+                  checked={formikProps.values.levelActivity === option.value}
                 />
               ))}
               <ToastError name="levelActivity" />
             </ActivityLabel>
-            <Button   type="submit" disabled={!formikProps.dirty} >Save</Button>
+            <Button type="submit" disabled={!formikProps.dirty} >Save</Button>
             <ToastContainer />
           </StyledFormik>
         );
