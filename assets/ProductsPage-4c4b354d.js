@@ -1,4 +1,4 @@
-import{s as t,t as e,r as a,u as O,m as E,j as o,a as g,o as D,L as M,p as V,d as y,q as G}from"./index-4fc11676.js";import{B as q}from"./react-toastify.esm-ef683554.js";import{e as Y,S as H,b as S}from"./BasicModalWindow-912de25f.js";const _=t.div`
+import{s as t,t as e,r as a,u as O,v as E,j as o,a as g,w as D,L as M,y as V,d as y,z as G}from"./index-94a99226.js";import{B as Y}from"./react-toastify.esm-cb89cbfd.js";import{e as q,S as H,b as S}from"./BasicModalWindow-3d5f7d1c.js";const _=t.div`
   padding-top: 40px;
   padding-bottom: 40px;
   @media (min-width: ${e.breakpoint.md}) {
@@ -210,7 +210,7 @@ import{s as t,t as e,r as a,u as O,m as E,j as o,a as g,o as D,L as M,p as V,d a
 `,ne=t.div`
  display: flex;
  gap: 16px;
-`,ae={title:"",category:"",recommended:"all"},de=({onFilterChange:i})=>{const[n,d]=a.useState(ae),[l,p]=a.useState(!1),[s,x]=a.useState(!1),h=a.useRef(null),m=a.useRef(null),[u,k]=a.useState([]),[w,f]=a.useState(null),v=["all","recommend","not recommend"],j=O();a.useEffect(()=>{async function r(){try{f(null);const c=await D();k(c)}catch{f(!0)}}r()},[]),a.useEffect(()=>{j(E(n))},[n,j]);const $=()=>{p(!l)},b=()=>{x(!s)},z=r=>{d(c=>({...c,title:r.target.value}))},C=r=>{d(c=>({...c,category:r})),p(!1)},N=r=>{d(c=>({...c,recommended:r})),x(!1)},F=r=>{h.current&&!h.current.contains(r.target)&&p(!1),m.current&&!m.current.contains(r.target)&&x(!1)};a.useEffect(()=>(document.addEventListener("mousedown",F),()=>{document.removeEventListener("mousedown",F)}),[]);const I=r=>{r.preventDefault(),i(n)},W=()=>{d(r=>({...r,title:""}))};return o.jsxs(o.Fragment,{children:[o.jsx(K,{children:o.jsxs(Q,{onSubmit:I,children:[o.jsxs(U,{children:[o.jsx(X,{type:"text",name:"title",placeholder:"Search",value:n.title,onChange:z}),o.jsx(Z,{type:"button",className:"cleanBtn",onClick:W,children:o.jsx(ee,{children:o.jsx("use",{href:`${g}#x`})})}),o.jsx(oe,{type:"submit",onSubmit:I,children:o.jsx(te,{children:o.jsx("use",{href:`${g}#search`})})})]}),o.jsxs(ne,{children:[o.jsxs(ie,{children:[o.jsx(B,{onClick:$,children:n.category||"Category"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(R,{ref:h,$isopen:l,children:u.map((r,c)=>o.jsx(L,{onClick:()=>C(r),children:r},c))})]}),o.jsxs(re,{children:[o.jsx(B,{onClick:b,children:n.recommended||"All"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(R,{ref:m,$isopen:s,children:v.map((r,c)=>o.jsx(L,{onClick:()=>N(r),children:r},c))})]})]})]})}),w&&q.error("Something went wrong! Please try again.")]})},se=t.div`
+`,ae={title:"",category:"",recommended:"all"},de=({onFilterChange:i})=>{const[n,d]=a.useState(ae),[l,p]=a.useState(!1),[s,x]=a.useState(!1),h=a.useRef(null),m=a.useRef(null),[u,k]=a.useState([]),[w,f]=a.useState(null),v=["all","recommend","not recommend"],j=O();a.useEffect(()=>{async function r(){try{f(null);const c=await D();k(c)}catch{f(!0)}}r()},[]),a.useEffect(()=>{j(E(n))},[n,j]);const $=()=>{p(!l)},b=()=>{x(!s)},z=r=>{d(c=>({...c,title:r.target.value}))},C=r=>{d(c=>({...c,category:r})),p(!1)},N=r=>{d(c=>({...c,recommended:r})),x(!1)},F=r=>{h.current&&!h.current.contains(r.target)&&p(!1),m.current&&!m.current.contains(r.target)&&x(!1)};a.useEffect(()=>(document.addEventListener("mousedown",F),()=>{document.removeEventListener("mousedown",F)}),[]);const I=r=>{r.preventDefault(),i(n)},W=()=>{d(r=>({...r,title:""}))};return o.jsxs(o.Fragment,{children:[o.jsx(K,{children:o.jsxs(Q,{onSubmit:I,children:[o.jsxs(U,{children:[o.jsx(X,{type:"text",name:"title",placeholder:"Search",value:n.title,onChange:z}),o.jsx(Z,{type:"button",className:"cleanBtn",onClick:W,children:o.jsx(ee,{children:o.jsx("use",{href:`${g}#x`})})}),o.jsx(oe,{type:"submit",onSubmit:I,children:o.jsx(te,{children:o.jsx("use",{href:`${g}#search`})})})]}),o.jsxs(ne,{children:[o.jsxs(ie,{children:[o.jsx(B,{onClick:$,children:n.category||"Category"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(R,{ref:h,$isopen:l,children:u.map((r,c)=>o.jsx(L,{onClick:()=>C(r),children:r},c))})]}),o.jsxs(re,{children:[o.jsx(B,{onClick:b,children:n.recommended||"All"}),o.jsx(P,{children:o.jsx("use",{href:`${g}#arrow-down`})}),o.jsx(R,{ref:m,$isopen:s,children:v.map((r,c)=>o.jsx(L,{onClick:()=>N(r),children:r},c))})]})]})]})}),w&&Y.error("Something went wrong! Please try again.")]})},se=t.div`
   display: flex;
   gap: 16px;
   margin-bottom: 8px;
@@ -595,7 +595,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     max-width: 309px;
   }
-`,qe=t.button`
+`,Ye=t.button`
   min-width: 151px;
   padding: 12px 32px;
   border-radius: 12px;
@@ -613,7 +613,7 @@ stroke: ${e.color.orange};
     min-width: 151px;
     padding: 14px 32px;
   }
-`,Ye=t.button`
+`,qe=t.button`
   min-width: 121px;
   padding: 12px 36px;
   border-radius: 12px;
@@ -640,7 +640,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 64px;
   }
-`,_e=({isOpen:i,onClose:n,title:d,calories:l,id:p})=>{const[s,x]=a.useState(""),[h,m]=a.useState("0"),[u,k]=a.useState(l),[w,f]=a.useState(!1),v=$=>{const b=$.currentTarget.value;x(b);const C=Math.round(b*u/100);m(C)},j=$=>{$.preventDefault(),f(!0);const b={exercise:p,grams:+s};console.log(b),x("")};return o.jsxs(Y,{isOpen:i,onClose:n,children:[o.jsx(Re,{onClick:n,children:o.jsx(Ae,{children:o.jsx(Le,{href:`${g}#x-modal`})})}),!w&&o.jsx(Pe,{children:o.jsxs("form",{onSubmit:j,children:[o.jsxs(Oe,{children:[o.jsx(Ee,{children:o.jsx(Te,{children:d})}),o.jsxs(Ne,{children:[o.jsx(De,{name:"number",required:!0,value:s,onChange:v}),o.jsx(We,{children:"grams"})]})]}),o.jsxs(Me,{children:[o.jsx(He,{children:"Calories:"}),o.jsx(Ve,{children:h})]}),o.jsxs(Ge,{children:[o.jsx(qe,{type:"submit",children:"Add to diary"}),o.jsx(Ye,{type:"button",onClick:n,children:"Cancel"})]})]})}),w&&o.jsx(Be,{calories:h,isOpen:w,onClose:()=>f(!1)})]})},Je=({item:{title:i,calories:n,category:d,weight:l,groupBloodNotAllowed:p,_id:s},bloodGroup:x})=>{const[h,m]=a.useState(!1),u=p[x],k=u?"Not recommended":"Recommended";return o.jsxs(o.Fragment,{children:[o.jsxs(he,{children:[o.jsxs(fe,{children:[o.jsx(me,{children:"Diet"}),o.jsxs($e,{children:[o.jsxs(ue,{children:[o.jsx(ge,{$notAllowed:u}),k]}),o.jsxs(be,{type:"button",onClick:()=>m(!0),children:["Add",o.jsx(we,{children:o.jsx("use",{href:`${g}#arrow`})})]})]})]}),o.jsx(le,{titleName:i}),o.jsxs(H,{children:[o.jsx(S,{text:"Calories: ",val:n}),o.jsx(S,{text:"Category: ",val:d}),o.jsx(S,{text:"Weight: ",val:l})]})]}),o.jsx(_e,{isOpen:h,id:s,title:i,calories:n,onClose:()=>m(!1)})]})},Ke=t.div`
+`,_e=({isOpen:i,onClose:n,title:d,calories:l,id:p})=>{const[s,x]=a.useState(""),[h,m]=a.useState("0"),[u,k]=a.useState(l),[w,f]=a.useState(!1),v=$=>{const b=$.currentTarget.value;x(b);const C=Math.round(b*u/100);m(C)},j=$=>{$.preventDefault(),f(!0);const b={exercise:p,grams:+s};console.log(b),x("")};return o.jsxs(q,{isOpen:i,onClose:n,children:[o.jsx(Re,{onClick:n,children:o.jsx(Ae,{children:o.jsx(Le,{href:`${g}#x-modal`})})}),!w&&o.jsx(Pe,{children:o.jsxs("form",{onSubmit:j,children:[o.jsxs(Oe,{children:[o.jsx(Ee,{children:o.jsx(Te,{children:d})}),o.jsxs(Ne,{children:[o.jsx(De,{name:"number",required:!0,value:s,onChange:v}),o.jsx(We,{children:"grams"})]})]}),o.jsxs(Me,{children:[o.jsx(He,{children:"Calories:"}),o.jsx(Ve,{children:h})]}),o.jsxs(Ge,{children:[o.jsx(Ye,{type:"submit",children:"Add to diary"}),o.jsx(qe,{type:"button",onClick:n,children:"Cancel"})]})]})}),w&&o.jsx(Be,{calories:h,isOpen:w,onClose:()=>f(!1)})]})},Je=({item:{title:i,calories:n,category:d,weight:l,groupBloodNotAllowed:p,_id:s},bloodGroup:x})=>{const[h,m]=a.useState(!1),u=p[x],k=u?"Not recommended":"Recommended";return o.jsxs(o.Fragment,{children:[o.jsxs(he,{children:[o.jsxs(fe,{children:[o.jsx(me,{children:"Diet"}),o.jsxs($e,{children:[o.jsxs(ue,{children:[o.jsx(ge,{$notAllowed:u}),k]}),o.jsxs(be,{type:"button",onClick:()=>m(!0),children:["Add",o.jsx(we,{children:o.jsx("use",{href:`${g}#arrow`})})]})]})]}),o.jsx(le,{titleName:i}),o.jsxs(H,{children:[o.jsx(S,{text:"Calories: ",val:n}),o.jsx(S,{text:"Category: ",val:d}),o.jsx(S,{text:"Weight: ",val:l})]})]}),o.jsx(_e,{isOpen:h,id:s,title:i,calories:n,onClose:()=>m(!1)})]})},Ke=t.div`
  max-width: 335px;
  margin: 0 auto;
  @media (min-width: ${e.breakpoint.md}) {
