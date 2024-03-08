@@ -1,5 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-
+import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -12,9 +11,12 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice.js';
-import { exercisesReducer } from './exercises/productSlice.js';
+import { exerciseReducer } from './exercises/exerciseSlice.js';
 import { productsReducer } from './products/productSlice.js';
 import { profileReducer } from './profile/profileSlice.js';
+import { diaryReducer } from './diary/diarySlice.js';
+import { statisticsReducer } from './statistics/statisticsSlice.js';
+
 
 const authPersistConfig = {
   key: 'auth',
@@ -22,17 +24,14 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const contactsReducer = combineReducers({
-  auth: authReducer,
-  exercises: exercisesReducer,
-  products: productsReducer,
-  profile: profileReducer
-});
-
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    contacts: contactsReducer,
+    exercises: exerciseReducer,
+    products: productsReducer,
+    profile: profileReducer,
+    diary: diaryReducer,
+    statistics: statisticsReducer
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
@@ -43,5 +42,3 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
-
