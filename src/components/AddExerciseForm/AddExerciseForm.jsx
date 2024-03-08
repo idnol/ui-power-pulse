@@ -100,8 +100,6 @@ export const AddExerciseForm = ({
 
     dispatch(addExercise(data));
     error && toast.error('Oops, something went wrong');
-
-    console.log(data); //delete later
   };
 
   return (

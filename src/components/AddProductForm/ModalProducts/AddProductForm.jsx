@@ -48,8 +48,6 @@ export const AddProductForm = ({ isOpen, onClose, title, calories, id }) => {
       grams: +isInputValue,
     };
 
-    console.log(data);
-
     setIsInputValue('');
   };
 

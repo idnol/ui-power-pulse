@@ -248,7 +248,6 @@ const listOfExercises = [
 
 export const DayExercises = () => {
   const [exercises, setExercises] = useState(listOfExercises);
-  console.log(exercises);
 
   const handleDeleteExercise = (id) => {
     setExercises((prevExercises) =>

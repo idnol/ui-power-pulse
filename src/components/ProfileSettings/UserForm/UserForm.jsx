@@ -24,9 +24,7 @@ import {
 import { RadioInput } from './RadioInput/RadioInput.jsx';
 import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
 import { DatePickerItem } from './DatePicker/DatePicker.jsx';
-import { useDispatch } from 'react-redux';
 import { getCurrent } from '../../../redux/auth/api.js';
-import { store } from '../../../redux/store.js';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
 
@@ -40,7 +38,6 @@ export const UserForm = () => {
   }
 
   const user = getUserInfo();
-  console.log(user);
 
  let defaultValues = {
     name: user.name,
@@ -78,8 +75,6 @@ export const UserForm = () => {
   
       try {
         const { email, ...bodyData } = values;
-        console.log('Before API call:', { email, bodyData });
-  
         const response = await axios.patch('/users/profile', bodyData);
   
         toast.success("User data updated successfully");
