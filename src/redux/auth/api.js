@@ -31,6 +31,7 @@ export const login = createAsyncThunk(
     try {
       const result = await axios.post('/users/login', data);
       setAuthHeader(result.data.token);
+      console.log(result.data);
       return result.data;
     } catch (error) {
         toast.error(error.message);
@@ -71,4 +72,25 @@ export const refreshUser = createAsyncThunk(
             return thunkAPI.rejectWithValue(error.message);
         }
     }
+);
+
+export const getCurrent = createAsyncThunk(
+  'auth/current',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+    if (persistedToken === null) {
+      toast.error('Unable to fetch user');
+      return thunkAPI.rejectWithValue('Unable to fetch user');
+    }
+
+    try {
+      setAuthHeader(persistedToken);
+      const result = await axios.get('/users/current');
+      return result.data;
+    } catch (error) {
+      toast.error('Unable to fetch user');
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
 );

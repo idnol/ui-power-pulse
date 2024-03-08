@@ -1,4 +1,3 @@
-
 export const defaultValues = {
     name: '',
     email: 'test@user.co.k',
@@ -9,7 +8,7 @@ export const defaultValues = {
     blood: '',
     sex: '',
     levelActivity: '',
-  };
+};
 
 
 export const bloodOptions = [
