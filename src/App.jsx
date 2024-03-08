@@ -37,13 +37,9 @@ function App() {
           <Route index element={<RestrictedRoute component={<WelcomePage />} redirectTo={redirectUser} />} />
           <Route path="signin" element={<RestrictedRoute component={<SigninPage />} redirectTo={redirectUser} />} />
           <Route path="signup" element={<RestrictedRoute component={<SignupPage />} redirectTo="/profile" />} />
-
           <Route path="profile" element={<PrivateRoute component={<ProfilePage/>} redirectTo = "/signin"/>} />
           <Route path="diary" element={<PrivateRoute component={<DiaryPage/>} redirectTo = "/signin"/>} />
           <Route path="exercises/" element={<PrivateRoute component={<ExercisesPage/>} redirectTo = "/signin"/>} >
-            <Route path="bodyparts" element={<div>Body parts</div>} />
-            <Route path="muscles" element={<div>Muscles</div>} />
-            <Route path="equipment" element={<div>Equipment</div>} />
           </Route>
           <Route path="products" element={<PrivateRoute component={<ProductsPage/>} redirectTo = "/signin"/>} />
           <Route path="*" element={<ErrorPage />} />
