@@ -1,9 +1,7 @@
-
 import { Formik } from 'formik';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-
 import {bloodOptions,sexOptions,levelOptions,bodyInfo} from './form-default-data.js'
 import { userSchema } from './user-validation-yup.js';
 import { ToastContainer} from 'react-toastify';
@@ -26,14 +24,32 @@ import {
 import { RadioInput } from './RadioInput/RadioInput.jsx';
 import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
 import { DatePickerItem } from './DatePicker/DatePicker.jsx';
+import { getCurrent } from '../../../redux/auth/api.js';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
-
-
 
 export const UserForm = () => {
   const dispatch = useDispatch();
   const profileData = useSelector(selectProfile);
+
+  const getUserInfo = async () => {
+    const user = await dispatch(getCurrent())
+    return user;
+  }
+
+  const user = getUserInfo();
+
+ let defaultValues = {
+    name: user.name,
+    email: user.email,
+    height: '',
+    currentWeight: '',
+    desiredWeight: '',
+    birthday: '',
+    blood: '',
+    sex: '',
+    levelActivity: '',
+  };
 
   // const formattedDate = parseISO(profileData.bodyData.birthday);
   const initialValues = {
@@ -59,8 +75,6 @@ export const UserForm = () => {
   
       try {
         const { email, ...bodyData } = values;
-        console.log('Before API call:', { email, bodyData });
-  
         const response = await axios.patch('/users/profile', bodyData);
   
         toast.success("User data updated successfully");
@@ -73,8 +87,6 @@ export const UserForm = () => {
       toast.warning('User bodyData is missing or not fully populated. Form not submitted.');
     }
   };
-  
-
 
   return (
     <Formik
