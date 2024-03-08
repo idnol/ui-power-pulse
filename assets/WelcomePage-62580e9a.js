@@ -1,4 +1,4 @@
-import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}from"./WelcomePage.styled-6ad6192a.js";const p=e.div`
+import{s as e,t,N as n,j as i}from"./index-3a973a52.js";import{W as r,S as o}from"./WelcomePage.styled-1b54ac5b.js";const s=e.div`
   position: relative;
   margin-right: 72px;
   //height: 202px;
@@ -6,9 +6,9 @@ import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}fro
   // @media (min-width: ${t.breakpoint.md}) {
   //   height: 354px;
   //  }
-`,s=e.div`
-    position: relative;
-`,a=e.h1`
+`,a=e.div`
+  position: relative;
+`,p=e.h1`
   //margin-top: 127px;
   margin-bottom: 0px;
   font-weight: 500;
@@ -27,7 +27,7 @@ import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}fro
   @media (min-width: ${t.breakpoint.xl}) {
     //margin-top: 200px;
   }
-`,x=e.nav`
+`,h=e.nav`
   display: flex;
   gap: 14px;
   margin-top: 40px;
@@ -57,9 +57,7 @@ import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}fro
   transition-duration: 300ms;
 
   &:hover {
-    background: transparent;
-    border: 1px solid rgba(239, 237, 232, 0.3);
-    //box-shadow: 0px 2px 5px 1px #b7b7b7;
+    background: ${t.color.orangeSecond};
     transition-duration: 300ms;
   }
 
@@ -68,8 +66,8 @@ import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}fro
     height: 56px;
     font-size: 20px;
     line-height: 1.2;
-   }
-`,h=e(n)`
+  }
+`,x=e(n)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,11 +77,9 @@ import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}fro
   height: 42px;
   color: ${t.color.white};
   transition-duration: 300ms;
-  
+
   &:hover {
-    background: ${t.color.orange};
-    border: 1px solid transparent;
-    //box-shadow: 0px 2px 5px 1px #b7b7b7;
+    border: ${t.border.orange};
     transition-duration: 300ms;
   }
 
@@ -92,7 +88,7 @@ import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}fro
     height: 56px;
     font-size: 20px;
     line-height: 1.2;
-   }
+  }
 `,l=e.svg`
   position: absolute;
   top: 43px;
@@ -107,4 +103,4 @@ import{s as e,t,N as n,j as i}from"./index-770d63a8.js";import{W as r,S as o}fro
     width: 185px;
     height: 67px;
   }
-  `,g=()=>i.jsx(i.Fragment,{children:i.jsxs(p,{children:[i.jsxs(s,{children:[i.jsx(l,{children:i.jsx("use",{href:"/img/sprait.svg#icon-Line"})}),i.jsx(a,{children:"Transforming your body shape with Power Pulse"})]}),i.jsxs(x,{children:[i.jsx(d,{to:"/signup",children:"Sign Up"}),i.jsx(h,{to:"/signin",children:"Sign In"})]})]})});function b(){return i.jsx("section",{children:i.jsx("div",{className:"container",children:i.jsx("div",{className:"row",children:i.jsxs(r,{children:[i.jsx(g,{}),i.jsx(o,{})]})})})})}export{b as default};
+`,g=()=>i.jsx(i.Fragment,{children:i.jsxs(s,{children:[i.jsxs(a,{children:[i.jsx(l,{children:i.jsx("use",{href:"/img/sprait.svg#icon-Line"})}),i.jsx(p,{children:"Transforming your body shape with Power Pulse"})]}),i.jsxs(h,{children:[i.jsx(d,{to:"/signup",children:"Sign Up"}),i.jsx(x,{to:"/signin",children:"Sign In"})]})]})});function w(){return i.jsx("section",{children:i.jsx("div",{className:"container",children:i.jsx("div",{className:"row",children:i.jsxs(r,{children:[i.jsx(g,{}),i.jsx(o,{})]})})})})}export{w as default};
