@@ -1,4 +1,4 @@
-import{r as a,m as b,s as i,j as t}from"./index-7f35c2fc.js";function w(e){const[n,c]=a.useState([]);return a.useEffect(()=>{(async()=>{try{const r=await b.get(`http://localhost:3333/api/exercises/filters?filter=${e}`);c(r.data)}catch(r){console.error("Error fetching categories:",r)}})()},[e]),n}const v=i.div`
+import{r as a,m as b,s as i,j as t}from"./index-f012eb28.js";function w(e){const[n,c]=a.useState([]);return a.useEffect(()=>{(async()=>{try{const r=await b.get(`http://localhost:3333/api/exercises/filters?filter=${e}`);c(r.data)}catch(r){console.error("Error fetching categories:",r)}})()},[e]),n}const v=i.div`
     @media (min-width: 768px){
         display: flex;
         align-items: baseline;

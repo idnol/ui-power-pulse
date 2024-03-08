@@ -1,1 +1,0 @@
-import{j as s}from"./index-7f35c2fc.js";import{e as r}from"./SignUpForm-ad4d62ec.js";import{W as i,S as e}from"./WelcomePage.styled-ed89715e.js";import"./formik.esm-bd4ed41b.js";function m(){return s.jsx("section",{children:s.jsx("div",{className:"container",children:s.jsx("div",{className:"row",children:s.jsxs(i,{children:[s.jsx(r,{}),s.jsx(e,{})]})})})})}export{m as default};
