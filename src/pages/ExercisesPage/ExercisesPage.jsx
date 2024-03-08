@@ -4,7 +4,6 @@ import { Exercises } from '../../components/ExercisesPageList/ExercisesPageList'
 export default function ExercisesPage() {
   return (
     <>
-      <h1>exercises</h1>
       <ul>
         <li>
           <NavLink to="bodyparts">Body parts</NavLink>
