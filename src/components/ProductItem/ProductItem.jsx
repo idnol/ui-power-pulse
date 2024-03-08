@@ -8,15 +8,15 @@ import sprite from 'assets/sprite-2.svg';
 
 export const ProductItem = ({item:{title, calories, category, weight, groupBloodNotAllowed, _id}, bloodGroup}) => {
   const [isModalOpen, setIsModal] = useState(false);
-  const notAllowed = groupBloodNotAllowed[bloodGroup];
-  const isRecomended = notAllowed ? "Not recommended" : "Recommended";
+  const isAllowed = groupBloodNotAllowed[bloodGroup];
+  const isRecomended = isAllowed ? "Recommended" : "Not recommended";
   return (
   <>
   <ProductCard>
     <BtnContainer>
       <DietBox>Diet</DietBox>
       <BtnWrapper>
-      <RecomendedText><RecomendSwitch $notAllowed={notAllowed}/>{isRecomended}</RecomendedText>
+      <RecomendedText><RecomendSwitch $isAllowed={isAllowed}/>{isRecomended}</RecomendedText>
         <AddBtn type="button" onClick={() => setIsModal(true)}>Add
           <IconSvg >
            <use href={`${sprite}#arrow`} />
