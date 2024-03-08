@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const ContainerSubcategories = styled.div`
-    
 `;
 
 export const ContainerSubcategoriesUl = styled.ul`
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 40px;
 
     @media (min-width: 768px) {
-        margin-right: -16px; 
+        margin-right: -16px;
+        margin-bottom: 32px;
     }
 
     @media (min-width: 1440px) {

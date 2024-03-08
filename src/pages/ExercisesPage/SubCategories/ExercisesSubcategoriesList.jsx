@@ -2,22 +2,28 @@ import { useState, useEffect } from 'react';
 import ExercisesSubcategoriesItem from './SubItem/ExercisesSubcategoriesItem';
 import { SliderContainer, SliderButton } from '../Slider/slider.styled';
 import { ContainerSubcategoriesUl } from './SubItem/ExercisesSubcategoriesItem.styled';
+
 export default function ExercisesSubcategoriesList({ categories, selectedCategory }) {
   const filteredCategories = categories.filter(category => category.filter === selectedCategory);
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 10;
-
+  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const tabletWidth = 768; 
   const totalPages = Math.ceil(filteredCategories.length / itemsPerPage);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth" // Плавна прокрутка
+      behavior: "smooth"
     });
   };
 
   useEffect(() => {
     const handleResize = () => {
+      if (window.innerWidth >= tabletWidth && window.innerWidth <= 1439) {
+        setItemsPerPage(9); 
+      } else {
+        setItemsPerPage(10); 
+      }
       setCurrentPage(0);
     };
 
@@ -30,8 +36,13 @@ export default function ExercisesSubcategoriesList({ categories, selectedCategor
 
   useEffect(() => {
     setCurrentPage(0);
-    scrollToTop(); 
+    scrollToTop();
   }, [selectedCategory]);
+
+  const handleSliderButtonClick = (page) => {
+    setCurrentPage(page);
+    scrollToTop();
+  };
 
   return (
     <div>
@@ -44,8 +55,12 @@ export default function ExercisesSubcategoriesList({ categories, selectedCategor
         <SliderContainer>
           <div>
             {Array.from({ length: totalPages }, (_, i) => (
-              <SliderButton key={i} active={i === currentPage} onClick={() => setCurrentPage(i)}>
-                {i + 1}
+              <SliderButton
+                key={i}
+                active={i === currentPage}
+                onClick={() => handleSliderButtonClick(i)}
+              >
+                {""}
               </SliderButton>
             ))}
           </div>

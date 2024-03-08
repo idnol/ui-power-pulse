@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ExercisesUl, ExercisesLi, StyledSpanCategories, ExercisesTitle, ExercisesContainer } from './ExercisesCategories.styled';
 
 export default function ExercisesCategories({ onClick }) {
   const [activeCategory, setActiveCategory] = useState("Body parts");
+
+  useEffect(() => {
+    onClick(activeCategory);
+  }, [onClick, activeCategory]);
 
   const handleClick = (category) => {
     onClick(category);
