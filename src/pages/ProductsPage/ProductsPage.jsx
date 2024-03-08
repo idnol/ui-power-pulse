@@ -14,6 +14,7 @@ import {
 } from '../../redux/products/selectors';
 import { Loader } from '../../components/parts/Loader/Loader';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
+import { Wrapper } from './ProductsPage.styled.js';
 
 export default function ProductsPage() {
   const products = useSelector(selectProducts);
@@ -30,17 +31,23 @@ export default function ProductsPage() {
 
   return (
     <>
+
       <ProductsSection>
         <div className="container">
-          <FilterWrapper>
-            <ProductsTitle>Products</ProductsTitle>
-            <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup}/>
-          </FilterWrapper>
-          {isLoading && <Loader />}
-          {products.length > 0 && <ProductsList bloodGroup={bloodGroup}/>}
-          {error || products.length === 0 && <ProductsError />}
+          <div className="row">
+            <Wrapper>
+            <FilterWrapper>
+              <ProductsTitle>Products</ProductsTitle>
+              <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup} />
+            </FilterWrapper>
+            {isLoading && <Loader />}
+            {products.length > 0 && <ProductsList bloodGroup={bloodGroup} />}
+            {error || products.length === 0 && <ProductsError />}
+            </Wrapper>
+          </div>
         </div>
       </ProductsSection>
+
     </>
   );
 }

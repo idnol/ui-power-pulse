@@ -4,7 +4,7 @@ import { StatisticsInfo } from '../../components/StatisticsInfo/StatisticsInfo.j
 
 export default function SigninPage() {
   return (
-        <section>
+      <section>
         <div className="container">
           <div className="row">
             <Wrapper>
