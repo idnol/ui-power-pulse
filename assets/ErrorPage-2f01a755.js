@@ -1,4 +1,4 @@
-import{s as t,t as i,L as o,j as e}from"./index-29830be9.js";const n=t.div`
+import{s as t,t as i,L as n,d as r,B as d,j as e}from"./index-bfeb4fee.js";const a=t.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@ import{s as t,t as i,L as o,j as e}from"./index-29830be9.js";const n=t.div`
   @media (min-width: ${i.breakpoint.xl}) {
     width: 700px;
   }
-`,r=t.div`
+`,s=t.div`
   height: 100vh;
   // background-image: url(${"/public/img/side-view-1x-desk.jpg"});
   background-image: url(${"/public/img/side-view-1x-mob.jpg"});
@@ -33,13 +33,13 @@ import{s as t,t as i,L as o,j as e}from"./index-29830be9.js";const n=t.div`
       background-image: url(${"/public/img/side-view-2x-desk.jpg"});
     }
   }
-`,d=t.div`
+`,p=t.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 
   padding: 0 20px;
-`,a=t.h1`
+`,g=t.h1`
   font-weight: 500;
   font-size: 66px;
   line-height: 100%;
@@ -50,7 +50,7 @@ import{s as t,t as i,L as o,j as e}from"./index-29830be9.js";const n=t.div`
     font-size: 160px;
     line-height: 94%;
   }
-`,s=t.p`
+`,m=t.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
@@ -59,7 +59,7 @@ import{s as t,t as i,L as o,j as e}from"./index-29830be9.js";const n=t.div`
     font-size: 16px;
     line-height: 150%;
   }
-`,p=t(o)`
+`,l=t(n)`
   border: ${i.border.grey3};
   border-radius: 12px;
   padding: 12px 40px;
@@ -75,4 +75,4 @@ import{s as t,t as i,L as o,j as e}from"./index-29830be9.js";const n=t.div`
     border-radius: 12px;
     padding: 16px 60px;
   }
-`;function g(){return e.jsxs("section",{children:[e.jsx(n,{children:e.jsxs(d,{children:[e.jsx(a,{children:"404"}),e.jsx(s,{children:"Sorry, you have reached a page that we could not find. It seems that you are lost among the numbers and letters of our virtual space. Perhaps this page went on vacation or decided to disappear into another dimension. We apologize for this inconvenience."}),e.jsx(p,{to:"/",children:"Go Home"})]})}),e.jsx(r,{})]})}export{g as default};
+`;function h(){const o=r(d);return e.jsxs("section",{children:[e.jsx(a,{children:e.jsxs(p,{children:[e.jsx(g,{children:"404"}),e.jsx(m,{children:"Sorry, you have reached a page that we could not find. It seems that you are lost among the numbers and letters of our virtual space. Perhaps this page went on vacation or decided to disappear into another dimension. We apologize for this inconvenience."}),e.jsx(l,{to:`${o?"/diary":"/"}`,children:"Go Home"})]})}),e.jsx(s,{})]})}export{h as default};
