@@ -33,10 +33,12 @@ export const diarySlice = createSlice({
             })
             .addCase(addProduct.fulfilled, (state, action) => {
                 state.isLoading = false;  
+                state.isSuccess = true;
                 state.error = null;
             })
             .addCase(addProduct.rejected, (state, action) => {
                 state.isLoading = false;
+                state.isSuccess = false;
                 state.error = action.payload;
             })
 
