@@ -98,4 +98,8 @@ export const GlobalStyle = createGlobalStyle`
             min-height: 100vh;
         }
     }
+
+    .green-border {
+  border: 1px solid ${theme.color.green};
+}
 `;

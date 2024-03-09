@@ -18,7 +18,7 @@ import { DayDashboardData } from './DayDashboardData';
 export const DayDashboard = () => {
   const data = DayDashboardData();
 
-  console.log(data[5]);
+  // console.log(data);
 
   return (
     <DashboardContainer>
@@ -27,7 +27,7 @@ export const DayDashboard = () => {
           <DashboardItem
             className={item.background}
             key={index}
-            count={item.count}
+            // count={item.count}
           >
             <DashboardItemBox>
               <DashboardIcon>
@@ -45,7 +45,6 @@ export const DayDashboard = () => {
       </DashboardList>
       <AttentionBox>
         <AttentionIcon>
-          {/* <use href="../../../../public/img/sprait.svg#attention-icon"></use> */}
           <use href={`${sprite}#attention-icon`}></use>
         </AttentionIcon>
         <AttentionText>

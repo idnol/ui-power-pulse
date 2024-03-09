@@ -62,9 +62,9 @@ export const DashboardItem = styled.li`
 
   &:nth-child(6) {
     order: 6;
-    border: 1px solid
+    /* border: 1px solid
       ${(props) =>
-        props.count > 0 ? `${theme.color.green}` : `${theme.border.grey2}`};
+      props.count > 0 ? `${theme.color.green}` : `${theme.border.grey2}`}; */
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
