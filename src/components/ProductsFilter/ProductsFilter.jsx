@@ -23,9 +23,6 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
    dispatch(fetchProducts(params))
  }, [dispatch, params]);
 
-//  const handleDropdownCategory = () => {
-//   setIsOpenCategory(!isOpenCategory);
-//  };
  const handleDropdownCategory = () => {
   setIsOpenCategory(!isOpenCategory);
 };
