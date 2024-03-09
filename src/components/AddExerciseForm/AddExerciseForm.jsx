@@ -93,9 +93,11 @@ export const AddExerciseForm = ({
     return { shouldRepeat: false };
   };
 
+
+
   const onSubmit = (e) => {
     e.preventDefault();
-
+   
     const data = {
       exercise: id,
       time: duration - remainingTimeRef.current,
