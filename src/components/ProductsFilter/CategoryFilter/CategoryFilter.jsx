@@ -50,6 +50,9 @@ export const CategoryFilter = ({ label, onSelect, onToggle, isOpen, onCloseCateg
      </IconDown>
 
      <OptionsContainer ref={categoryRef} $isopen={isOpen}>
+       <StyledOption onClick={() => onSelect("")}>
+          {"All"}
+        </StyledOption>
        {categories.map((option, index) => (
          <StyledOption key={index} onClick={() => onSelect(option)}>
           {option}
