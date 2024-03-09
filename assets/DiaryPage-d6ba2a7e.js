@@ -1,4 +1,4 @@
-import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js";import{f as u,i as O,s as U,a as J}from"./index-3ca30416.js";const Q=i.div`
+import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,v as U,w as J,b as h,h as Q}from"./index-6f921082.js";import{f as B,i as X,s as Z,a as ee}from"./index-de14ecbc.js";const te=i.div`
   min-height: 234px;
   max-height: 990px;
   overflow-y: auto;
@@ -44,7 +44,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     min-height: 138px;
     max-height: 138px;
   }
-`,X=i.div`
+`,ie=i.div`
   display: none;
 
   @media (min-width: ${e.breakpoint.md}) {
@@ -63,31 +63,31 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     width: 762px;
     padding-left: 16px;
   }
-`,Z=i.p`
+`,oe=i.p`
   width: 90px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 115px;
   }
-`,ee=i.p`
+`,re=i.p`
   width: 132px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 157px;
   }
-`,te=i.p`
+`,ne=i.p`
   width: 128px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 131px;
   }
-`,ie=i.p`
+`,ae=i.p`
   width: 84px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 106px;
   }
-`,oe=i.p`
+`,de=i.p`
   width: 78px;
   white-space: nowrap;
   overflow: hidden;
@@ -96,22 +96,22 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 91px;
   }
-`,ne=i.p`
+`,se=i.p`
   width: 72px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 82px;
   }
-`,re=i.table`
+`,le=i.table`
   max-width: 335px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 826px;
     padding-left: 16px;
   }
-`,ae=i.thead`
+`,pe=i.thead`
   display: none;
-`,de=i.tr`
+`,he=i.tr`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -145,7 +145,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     max-width: 762px;
     width: 826px;
   }
-`,se=i.td`
+`,ce=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -187,7 +187,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 115px;
   }
-`,le=i.td`
+`,xe=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -229,7 +229,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 157px;
   }
-`,pe=i.td`
+`,me=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -271,7 +271,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 131px;
   }
-`,he=i.td`
+`,ge=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -318,7 +318,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 106px;
   }
-`,ce=i.td`
+`,we=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -370,7 +370,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 91px;
   }
-`,xe=i.td`
+`,be=i.td`
   position: relative;
   display: flex;
   align-items: center;
@@ -413,19 +413,19 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 82px;
   }
-`,me=i.td`
+`,fe=i.td`
   width: 20px;
 
   @media (min-width: ${e.breakpoint.md}) {
     width: 30px;
   }
-`,ge=i.button`
+`,ue=i.button`
   display: inline;
   padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
-`,we=i.svg`
+`,ye=i.svg`
   width: 20px;
   height: 20px;
   stroke: ${e.color.orangeSecond};
@@ -440,7 +440,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (max-width: 375px) {
     margin-left: 4px;
   }
-`,be=({exercises:n,onDeleteExercise:a})=>t.jsxs(t.Fragment,{children:[t.jsxs(X,{children:[t.jsx(Z,{children:"Body Part"}),t.jsx(ee,{children:"Equipment"}),t.jsx(te,{children:"Name"}),t.jsx(ie,{children:"Target"}),t.jsx(oe,{children:"Burned Calories"}),t.jsx(ne,{children:"Time"}),t.jsx("p",{children:" "})]}),t.jsx(Q,{children:t.jsxs(re,{children:[t.jsx(ae,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Body Part"}),t.jsx("th",{children:"Equipment"}),t.jsx("th",{children:"Name"}),t.jsx("th",{children:"Target"}),t.jsx("th",{children:"Burned Calories"}),t.jsx("th",{children:"Time"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:n.map(o=>t.jsxs(de,{children:[t.jsx(se,{children:o.bodyPart}),t.jsx(le,{children:o.equipment}),t.jsx(pe,{children:o.name}),t.jsx(he,{children:o.target}),t.jsx(ce,{children:o.burnedCalories}),t.jsx(xe,{children:o.time}),t.jsx(me,{children:t.jsx(ge,{onClick:()=>a(o.id),children:t.jsx(we,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},o.id))})]})})]}),fe=i.div`
+`,ke=({exercises:r,onDeleteExercise:a})=>t.jsxs(t.Fragment,{children:[t.jsxs(ie,{children:[t.jsx(oe,{children:"Body Part"}),t.jsx(re,{children:"Equipment"}),t.jsx(ne,{children:"Name"}),t.jsx(ae,{children:"Target"}),t.jsx(de,{children:"Burned Calories"}),t.jsx(se,{children:"Time"}),t.jsx("p",{children:" "})]}),t.jsx(te,{children:t.jsxs(le,{children:[t.jsx(pe,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Body Part"}),t.jsx("th",{children:"Equipment"}),t.jsx("th",{children:"Name"}),t.jsx("th",{children:"Target"}),t.jsx("th",{children:"Burned Calories"}),t.jsx("th",{children:"Time"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:r.map(o=>t.jsxs(he,{children:[t.jsx(ce,{children:o.bodyPart}),t.jsx(xe,{children:o.equipment}),t.jsx(me,{children:o.name}),t.jsx(ge,{children:o.target}),t.jsx(we,{children:o.burnedCalories}),t.jsx(be,{children:o.time}),t.jsx(fe,{children:t.jsx(ue,{onClick:()=>a(o.id),children:t.jsx(ye,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},o.id))})]})})]}),$e=i.div`
   border: ${e.border.grey2};
   border-radius: 12px;
   padding: 16px 8px 16px 16px;
@@ -461,7 +461,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     max-width: 826px;
   }
-`,ue=i.div`
+`,je=i.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -471,12 +471,12 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 16px;
   }
-`,ye=i.h3`
+`,ve=i.h3`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
   color: ${e.color.greyThird};
-`,ke=i(R)`
+`,Ce=i(Y)`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -495,11 +495,11 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     font-size: 16px;
     line-height: 1.5;
   }
-`,$e=i.svg`
+`,De=i.svg`
   stroke: ${e.color.orange};
   width: 16px;
   height: 16px;
-`,je=i.p`
+`,Se=i.p`
   margin-top: 125px;
   font-weight: 400;
   font-size: 14px;
@@ -510,7 +510,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 65px;
   }
-`,ve=[{id:"1",bodyPart:"Upper arms",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"2",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"3",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"4",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"5",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"6",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"7",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"8",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"9",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"10",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"11",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"12",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"13",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"14",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"15",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"16",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"17",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"18",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"19",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"20",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"21",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"22",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"23",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"24",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"25",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"26",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60}],Ce=()=>{const[n,a]=s.useState(ve),o=l=>{a(g=>g.filter(w=>w.id!==l))};return t.jsx(t.Fragment,{children:t.jsxs(fe,{children:[t.jsxs(ue,{children:[t.jsx(ye,{children:"Execrcises"}),t.jsxs(ke,{children:["Add product",t.jsx($e,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),n.length?t.jsx(be,{exercises:n,onDeleteExercise:o}):t.jsx(je,{children:"Not found products"})]})})},Se=i.div`
+`,Be=[{id:"1",bodyPart:"Upper arms",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"2",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"3",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"4",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"5",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"6",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"7",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"8",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"9",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"10",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"11",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"12",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"13",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"14",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"15",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"16",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"17",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"18",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"19",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"20",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"21",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"22",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"23",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"24",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"25",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"26",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60}],ze=()=>{const[r,a]=l.useState(Be),o=d=>{a(w=>w.filter(b=>b.id!==d))};return t.jsx(t.Fragment,{children:t.jsxs($e,{children:[t.jsxs(je,{children:[t.jsx(ve,{children:"Execrcises"}),t.jsxs(Ce,{children:["Add product",t.jsx(De,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),r.length?t.jsx(ke,{exercises:r,onDeleteExercise:o}):t.jsx(Se,{children:"Not found products"})]})})},Ae=i.div`
   border: ${e.border.grey2};
   border-radius: 12px;
   padding: 16px 8px 16px 16px;
@@ -531,7 +531,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     max-width: 826px;
   }
-`,De=i.div`
+`,Te=i.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -541,12 +541,12 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 16px;
   }
-`,ze=i.h3`
+`,_e=i.h3`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
   color: ${e.color.greyThird};
-`,Ae=i(R)`
+`,Pe=i(Y)`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -565,11 +565,11 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     font-size: 16px;
     line-height: 1.5;
   }
-`,Be=i.svg`
+`,We=i.svg`
   stroke: ${e.color.orange};
   width: 16px;
   height: 16px;
-`,_e=i.p`
+`,Ne=i.p`
   margin-top: 125px;
   font-weight: 400;
   font-size: 14px;
@@ -580,7 +580,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 65px;
   }
-`,Pe=i.div`
+`,qe=i.div`
   min-height: 234px;
   max-height: 750px;
   overflow-y: auto;
@@ -625,7 +625,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     min-height: 138px;
     max-height: 138px;
   }
-`,Te=i.div`
+`,Re=i.div`
   display: none;
 
   @media (min-width: ${e.breakpoint.md}) {
@@ -644,46 +644,46 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     width: 762px;
     padding-left: 16px;
   }
-`,We=i.p`
+`,Ie=i.p`
   width: 204px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 212px;
   }
-`,Ne=i.p`
+`,Me=i.p`
   width: 128px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 166px;
   }
-`,qe=i.p`
+`,Ee=i.p`
   width: 90px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 105px;
   }
-`,Re=i.p`
+`,He=i.p`
   width: 90px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 105px;
   }
-`,Ie=i.p`
+`,Fe=i.p`
   width: 80px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 105px;
   }
-`,Me=i.table`
+`,Ve=i.table`
   max-width: 335px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 826px;
     padding-left: 16px;
   }
-`,He=i.thead`
+`,Le=i.thead`
   display: none;
-`,Ee=i.tr`
+`,Ge=i.tr`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -717,7 +717,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     max-width: 762px;
     width: 826px;
   }
-`,Fe=i.td`
+`,Ye=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -759,7 +759,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 212px;
   }
-`,Ve=i.td`
+`,Ke=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -801,7 +801,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 166px;
   }
-`,Le=i.td`
+`,Oe=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -845,7 +845,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 105px;
   }
-`,Ge=i.td`
+`,Ue=i.td`
   position: relative;
   border: ${e.border.grey3};
   border-radius: 12px;
@@ -889,7 +889,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 105px;
   }
-`,P=i.svg`
+`,H=i.svg`
   width: 14px;
   height: 14px;
   margin-right: 8px;
@@ -903,7 +903,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     width: 14px;
     height: 14px;
   }
-`,T=i.td`
+`,F=i.td`
   position: relative;
   display: flex;
   align-items: center;
@@ -946,19 +946,19 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     width: 105px;
   }
-`,Ye=i.td`
+`,Je=i.td`
   width: 20px;
 
   @media (min-width: ${e.breakpoint.md}) {
     width: 30px;
   }
-`,Ke=i.button`
+`,Qe=i.button`
   display: inline;
   padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
-`,Oe=i.svg`
+`,Xe=i.svg`
   width: 20px;
   height: 20px;
   stroke: ${e.color.orangeSecond};
@@ -973,7 +973,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (max-width: 375px) {
     margin-left: 4px;
   }
-`,Ue=({products:n,onDeleteProduct:a})=>t.jsxs(t.Fragment,{children:[t.jsxs(Te,{children:[t.jsx(We,{children:"Title"}),t.jsx(Ne,{children:"Category"}),t.jsx(qe,{children:"Calories"}),t.jsx(Re,{children:"Weight"}),t.jsx(Ie,{children:"Recommend"}),t.jsx("p",{children:" "})]}),t.jsx(Pe,{children:t.jsxs(Me,{children:[t.jsx(He,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Title"}),t.jsx("th",{children:"Category"}),t.jsx("th",{children:"Calories"}),t.jsx("th",{children:"Weight"}),t.jsx("th",{children:"Recommend"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:n.map(o=>t.jsxs(Ee,{children:[t.jsx(Fe,{children:o.title}),t.jsx(Ve,{children:o.category}),t.jsx(Le,{children:o.calories}),t.jsx(Ge,{children:o.weight}),o.recommended?t.jsxs(T,{children:[t.jsx(P,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#419B09"})}),"Yes"]}):t.jsxs(T,{children:[t.jsx(P,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#e9101d"})}),"No"]}),t.jsx(Ye,{children:t.jsx(Ke,{onClick:()=>a(o.id),children:t.jsx(Oe,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},o.id))})]})})]}),Je=[{id:"1",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"2",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1},{id:"3",title:"Bread Hercules grain",category:"Flour",calories:"289",weight:"100",recommended:!0},{id:"4",title:"Banana juice",category:"Soft drinks",calories:"48",weight:"100",recommended:!1},{id:"5",title:"Spikachki",category:"Sausage",calories:"337",weight:"100",recommended:!1},{id:"6",title:"Coffee drink",category:"Soft Drinks",calories:"337",weight:"100",recommended:!1},{id:"7",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"8",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0},{id:"9",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"10",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1},{id:"11",title:"Bread Hercules grain",category:"Flour",calories:"289",weight:"100",recommended:!0},{id:"12",title:"Banana juice",category:"Soft drinks",calories:"48",weight:"100",recommended:!1},{id:"13",title:"Spikachki",category:"Sausage",calories:"337",weight:"100",recommended:!1},{id:"14",title:"Coffee drink",category:"Soft Drinks",calories:"337",weight:"100",recommended:!1},{id:"15",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"16",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0},{id:"17",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"18",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0},{id:"19",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"20",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1},{id:"21",title:"Bread Hercules grain",category:"Flour",calories:"289",weight:"100",recommended:!0},{id:"22",title:"Banana juice",category:"Soft drinks",calories:"48",weight:"100",recommended:!1},{id:"23",title:"Spikachki",category:"Sausage",calories:"337",weight:"100",recommended:!1},{id:"24",title:"Coffee drink",category:"Soft Drinks",calories:"337",weight:"100",recommended:!1},{id:"25",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"26",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0}],Qe=()=>{const[n,a]=s.useState(Je),o=l=>{a(g=>g.filter(w=>w.id!==l))};return t.jsx(t.Fragment,{children:t.jsxs(Se,{children:[t.jsxs(De,{children:[t.jsx(ze,{children:"Products"}),t.jsxs(Ae,{to:"/products",children:["Add product",t.jsx(Be,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),n.length?t.jsx(Ue,{products:n,onDeleteProduct:o}):t.jsx(_e,{children:"Not found products"})]})})},Xe=i.div`
+`,Ze=({products:r,onDeleteProduct:a})=>t.jsxs(t.Fragment,{children:[t.jsxs(Re,{children:[t.jsx(Ie,{children:"Title"}),t.jsx(Me,{children:"Category"}),t.jsx(Ee,{children:"Calories"}),t.jsx(He,{children:"Weight"}),t.jsx(Fe,{children:"Recommend"}),t.jsx("p",{children:" "})]}),t.jsx(qe,{children:t.jsxs(Ve,{children:[t.jsx(Le,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Title"}),t.jsx("th",{children:"Category"}),t.jsx("th",{children:"Calories"}),t.jsx("th",{children:"Weight"}),t.jsx("th",{children:"Recommend"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:r.map(o=>t.jsxs(Ge,{children:[t.jsx(Ye,{children:o.title}),t.jsx(Ke,{children:o.category}),t.jsx(Oe,{children:o.calories}),t.jsx(Ue,{children:o.weight}),o.recommended?t.jsxs(F,{children:[t.jsx(H,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#419B09"})}),"Yes"]}):t.jsxs(F,{children:[t.jsx(H,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#e9101d"})}),"No"]}),t.jsx(Je,{children:t.jsx(Qe,{onClick:()=>a(o.id),children:t.jsx(Xe,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},o.id))})]})})]}),et=[{id:"1",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"2",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1},{id:"3",title:"Bread Hercules grain",category:"Flour",calories:"289",weight:"100",recommended:!0},{id:"4",title:"Banana juice",category:"Soft drinks",calories:"48",weight:"100",recommended:!1},{id:"5",title:"Spikachki",category:"Sausage",calories:"337",weight:"100",recommended:!1},{id:"6",title:"Coffee drink",category:"Soft Drinks",calories:"337",weight:"100",recommended:!1},{id:"7",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"8",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0},{id:"9",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"10",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1},{id:"11",title:"Bread Hercules grain",category:"Flour",calories:"289",weight:"100",recommended:!0},{id:"12",title:"Banana juice",category:"Soft drinks",calories:"48",weight:"100",recommended:!1},{id:"13",title:"Spikachki",category:"Sausage",calories:"337",weight:"100",recommended:!1},{id:"14",title:"Coffee drink",category:"Soft Drinks",calories:"337",weight:"100",recommended:!1},{id:"15",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"16",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0},{id:"17",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"18",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0},{id:"19",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"20",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1},{id:"21",title:"Bread Hercules grain",category:"Flour",calories:"289",weight:"100",recommended:!0},{id:"22",title:"Banana juice",category:"Soft drinks",calories:"48",weight:"100",recommended:!1},{id:"23",title:"Spikachki",category:"Sausage",calories:"337",weight:"100",recommended:!1},{id:"24",title:"Coffee drink",category:"Soft Drinks",calories:"337",weight:"100",recommended:!1},{id:"25",title:"Red onion",category:"Vegetables and herbs",calories:"42",weight:"100",recommended:!1},{id:"26",title:"Homemade noodles",category:"Flour",calories:"332",weight:"100",recommended:!0}],tt=()=>{const[r,a]=l.useState(et),o=d=>{a(w=>w.filter(b=>b.id!==d))};return t.jsx(t.Fragment,{children:t.jsxs(Ae,{children:[t.jsxs(Te,{children:[t.jsx(_e,{children:"Products"}),t.jsxs(Pe,{to:"/products",children:["Add product",t.jsx(We,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),r.length?t.jsx(Ze,{products:r,onDeleteProduct:o}):t.jsx(Ne,{children:"Not found products"})]})})},it=i.div`
   max-width: 335px;
   width: 100%;
   margin: 0 auto;
@@ -987,7 +987,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     max-width: 390px;
     margin-left: auto;
   }
-`,Ze=i.ul`
+`,ot=i.ul`
   display: grid;
   grid-row-gap: 20px;
   grid-column-gap: 13px;
@@ -1014,7 +1014,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
 
     margin: 0 auto 48px auto;
   }
-`,et=i.li`
+`,rt=i.li`
   position: relative;
 
   padding: 14px;
@@ -1025,14 +1025,14 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   height: 96px;
 
   &:nth-child(5) {
-    border: 1px solid
-      ${n=>n.count<0?`${e.color.red}`:`${e.border.grey2}`};
+    /* border: 1px solid
+      ${r=>r.count<0?`${e.color.red}`:`${e.border.grey2}`}; */
   }
 
   &:nth-child(6) {
     order: 6;
-    border: 1px solid
-      ${n=>n.count>0?`${e.color.green}`:`${e.border.grey2}`};
+    /* border: 1px solid
+      ${r=>r.count>0?`${e.color.green}`:`${e.border.grey2}`}; */
   }
 
   @media (min-width: ${e.breakpoint.md}) {
@@ -1080,14 +1080,14 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
       order: 6;
     }
   }
-`,tt=i.div`
+`,nt=i.div`
   display: flex;
   align-items: center;
   gap: 8px;
-`,it=i.svg`
+`,at=i.svg`
   width: 20px;
   height: 20px;
-`,ot=i.p`
+`,dt=i.p`
   font-feature-settings:
     'clig' off,
     'liga' off;
@@ -1102,7 +1102,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.md}) {
     line-height: 18px;
   }
-`,nt=i.p`
+`,st=i.p`
   position: absolute;
   left: 14px;
   bottom: 14px;
@@ -1126,14 +1126,14 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     font-size: 24px;
     line-height: 32px;
   }
-`,rt=i.div`
+`,lt=i.div`
   display: flex;
   align-items: flex-start;
   gap: 8px;
-`,at=i.svg`
+`,pt=i.svg`
   width: 24px;
   height: 24px;
-`,dt=i.p`
+`,ht=i.p`
   color: ${e.color.grey};
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -1154,7 +1154,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media (min-width: ${e.breakpoint.xl}) {
     max-width: 358px;
   }
-`,st=[{icon:"../../../../public/img/sprait.svg#calorie-intake",title:"Daily calorie intake",count:2200,countType:"cal",background:"accent",textColor:"whiteTextColor"},{icon:"../../../../public/img/sprait.svg#physical-activity",title:"Daily physical activity",count:110,countType:"time",background:"accent",textColor:"whiteTextColor"},{icon:"../../../../public/img/sprait.svg#calories-consumed",title:"Сalories consumed",count:707,countType:"cal",background:"default",textColor:"greyTextColor"},{icon:"../../../../public/img/sprait.svg#calories-burned",title:"Сalories burned",count:855,countType:"cal",background:"default",textColor:"greyTextColor"},{icon:"../../../../public/img/sprait.svg#calories-remaining",title:"Calories remaining",count:-100,countType:"cal",background:"default",textColor:"greyTextColor"},{icon:"../../../../public/img/sprait.svg#sports-remaining",title:"Sports remaining",count:85,countType:"time",background:"default",textColor:"greyTextColor"}],lt=()=>{const n=st;return t.jsxs(Xe,{children:[t.jsx(Ze,{children:n.map((a,o)=>t.jsxs(et,{className:a.background,count:a.count,children:[t.jsxs(tt,{children:[t.jsx(it,{children:t.jsx("use",{href:a.icon})}),t.jsx(ot,{className:a.textColor,children:a.title})]}),t.jsxs(nt,{children:[a.count," ",a.countType==="time"?"min":""]})]},o))}),t.jsxs(rt,{children:[t.jsx(at,{children:t.jsx("use",{href:"../../../../public/img/sprait.svg#attention-icon"})}),t.jsx(dt,{children:"Record all your meals in the calorie diary every day. This will help you be aware of your nutrition and make informed choices."})]})]})},pt=i.div`
+`,ct=()=>{var A,$,j,v,C,n,y,T,_,x,m,P,W,N,q,D,R,p,s,c;const r=E(g=>g.auth.user)||{},a=E(g=>g.diary.items)||0,o=O();l.useEffect(()=>{o(U()),o(J())},[o]);const d=[{userData:r},{diaryData:a}],w=(((j=($=(A=d[1])==null?void 0:A.diaryData)==null?void 0:$.statistic)==null?void 0:j.sportTime)??0)/60,b=(C=(v=d[0])==null?void 0:v.userData)==null?void 0:C.dailyExerciseTime;let f=w-b;const z=((T=(y=(n=d[1])==null?void 0:n.diaryData)==null?void 0:y.statistic)==null?void 0:T.calories)||0,k=((x=(_=d[0])==null?void 0:_.userData)==null?void 0:x.dailyCalorie)-z;return[{icon:`${h}#calorie-intake`,title:"Daily calorie intake",count:((P=(m=d[0])==null?void 0:m.userData)==null?void 0:P.dailyCalorie)??0,countType:"cal",background:"accent",textColor:"whiteTextColor",border:"accent"},{icon:`${h}#physical-activity`,title:"Daily physical activity",count:((N=(W=d[0])==null?void 0:W.userData)==null?void 0:N.dailyExerciseTime)??0,countType:"time",background:"accent",textColor:"whiteTextColor",border:"accent"},{icon:`${h}#calories-consumed`,title:"Сalories consumed",count:((R=(D=(q=d[1])==null?void 0:q.diaryData)==null?void 0:D.statistic)==null?void 0:R.calories)??0,countType:"cal",background:"default",textColor:"greyTextColor",border:"defaultBorder"},{icon:`${h}#calories-burned`,title:"Сalories burned",count:((c=(s=(p=d[1])==null?void 0:p.diaryData)==null?void 0:s.statistic)==null?void 0:c.burnedCalories)??0,countType:"cal",background:"default",textColor:"greyTextColor",border:"defaultBorder"},{icon:`${h}#calories-remaining`,title:"Calories remaining",count:k,countType:"cal",background:"default",textColor:"greyTextColor",border:k<0?"redBorder":"defaultBorder"},{icon:`${h}#sports-remaining`,title:"Sports remaining",count:f>0?`+${Math.round(f)}`:Math.abs(Math.round(f)),countType:"time",background:"default",textColor:"greyTextColor",border:f>0?"greenBorder":"defaultBorder"}]},xt=()=>{const r=ct();return t.jsxs(it,{children:[t.jsx(ot,{children:r.map((a,o)=>t.jsxs(rt,{className:`${a.background} ${a.border}`,children:[t.jsxs(nt,{children:[t.jsx(at,{children:t.jsx("use",{href:a.icon})}),t.jsx(dt,{className:a.textColor,children:a.title})]}),t.jsxs(st,{children:[a.count," ",a.countType==="time"?"min":""]})]},o))}),t.jsxs(lt,{children:[t.jsx(pt,{children:t.jsx("use",{href:`${h}#attention-icon`})}),t.jsx(ht,{children:"Record all your meals in the calorie diary every day. This will help you be aware of your nutrition and make informed choices."})]})]})},mt=i.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -1162,10 +1162,10 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     @media (min-width: ${e.breakpoint.md}) {
         gap: 32px;
     }
-`,ht=i.div`
+`,gt=i.div`
     display: flex;
     justify-content: space-between;
-`,ct=i.h2`
+`,wt=i.h2`
   margin-top: 61px;
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 84px;
@@ -1174,15 +1174,15 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     margin-top: 0;
     display: block;
   }
-`,xt=i.div`
+`,bt=i.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
     width: 100%;
-`,mt=i.div`
+`,ft=i.div`
     display: flex;
     align-items: start;
-`,gt=K`
+`,ut=Q`
   .react-datepicker__wrapper {
     width: 183px;
     height: 20px;
@@ -1324,7 +1324,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   .react-datepicker__day--outside-month{
     color: rgba(239, 237, 232, 0.2);
     opacity: 1;
-  } `,wt=i.div`
+  } `,yt=i.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1337,7 +1337,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   text-align: center;
   color: ${e.color.white};
   margin-bottom: 14px;
-`,bt=i.input`
+`,kt=i.input`
   width: 97px;
   height: 20px;
   background-color: ${e.color.black};
@@ -1346,7 +1346,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media screen and (min-width: ${e.breakpoint.md}) {
     width: 129px;
     height: 32px;
-  } `,W=i.button`
+  } `,V=i.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1355,7 +1355,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   padding: 0;
   background-color: transparent;
   border: none;
-`,N=i.svg`
+`,L=i.svg`
   width: 6px;
   height: 10px;
   stroke: ${e.color.white};
@@ -1366,18 +1366,18 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   cursor: pointer;
 
   &.active {
-    stroke: ${n=>n.isActive?"":`${e.color.white}`};
-    stroke-opacity: ${n=>n.isActive?"0.2":"1"};
-    fill: ${n=>n.isActive?"":`${e.color.white}`};
-    fill-opacity: ${n=>n.isActive?"0.2":"1"};
-  } `,ft=i.span`
+    stroke: ${r=>r.isActive?"":`${e.color.white}`};
+    stroke-opacity: ${r=>r.isActive?"0.2":"1"};
+    fill: ${r=>r.isActive?"":`${e.color.white}`};
+    fill-opacity: ${r=>r.isActive?"0.2":"1"};
+  } `,$t=i.span`
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
   text-align: center;
   color: ${e.color.white};
-`,ut=i.div`
+`,jt=i.div`
   display: flex;
   align-items: center;
   width: 183px;
@@ -1398,7 +1398,7 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
     line-height: 1.33;
     width: 239px;
     height: 32px;
-  } `,q=i.svg`
+  } `,G=i.svg`
   width: 16px;
   height: 16px;
   fill: ${e.color.white};
@@ -1406,9 +1406,9 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   cursor: pointer;
 
   &.active {
-    fill: ${n=>n.isActive?"":`${e.color.white}`};
-    fill-opacity: ${n=>n.isActive?"0.2":"1"};
-  } `,yt=i.svg`
+    fill: ${r=>r.isActive?"":`${e.color.white}`};
+    fill-opacity: ${r=>r.isActive?"0.2":"1"};
+  } `,vt=i.svg`
   width: 20px;
   height: 20px;
   stroke: ${e.color.orangeSecond};
@@ -1420,4 +1420,4 @@ import{s as i,t as e,j as t,N as R,a as s,h as K,b as f}from"./index-3db971f1.js
   @media screen and (min-width: ${e.breakpoint.md}) {
     width: 24px;
     height: 24px;
-  } `;const I=s.forwardRef((n,a)=>{const[o,l]=s.useState(Date.now()),[g,w]=s.useState(""),[j,v]=s.useState(""),[C,S]=s.useState("active"),M=s.useRef(null);s.useEffect(()=>{w(u(o,"MMMM yyyy"))},[o]);const D=()=>{v("active"),S("");const r=U(o,1);l(r)},z=()=>{v(""),S("active");const r=J(o,1);l(r)},A=r=>{l(r)},B=s.forwardRef(({value:r,onClick:$,onKeyDown:H},E)=>{const[x,m]=s.useState(""),[F,V]=s.useState("");s.useEffect(()=>{m(r),V(r)},[r]);const L=p=>{const d=p.target.value.replace(/\D/g,"");let h=d;if(d.length>2&&d.length<5?h=d.slice(0,2)+"/"+d.slice(2):d.length>=5&&(h=d.slice(0,2)+"/"+d.slice(2,4)+"/"+d.slice(4,8)),m(h),p.target.value.length===10){const[y,k,c]=h.split("/"),b=new Date(`${c}-${k}-${y}`);isNaN(b.getTime())||(l(b),A(b))}},G=()=>{(!_(x)||x.trim()==="")&&m(F),(!_(x)||x.trim()==="")&&m(u(o,"dd/MM/yyyy"))},_=p=>/^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/.test(p),Y=p=>{if(p.key==="Enter"){p.preventDefault();const d=x.replace(/\//g,""),h=d.substring(0,2),y=d.substring(2,4),k=d.substring(4,8);let c;if(k.length<4){const b=new Date().getFullYear();c=new Date(`${b}-${y}-${h}`)}else c=new Date(`${k}-${y}-${h}`);if(!isNaN(c.getTime())){l(c),m(u(c,"dd/MM/yyyy"));return}m(u(o,"dd/MM/yyyy"))}};return t.jsxs(ut,{children:[t.jsx(bt,{type:"text",value:x,onChange:L,onBlur:G,onKeyDown:p=>{Y(p),H(p)},ref:E}),t.jsx(yt,{onClick:$,children:t.jsx("use",{href:`${f}#calendar`})}),t.jsx(q,{className:j,onClick:D,children:t.jsx("use",{href:`${f}#arrow-left`})}),t.jsx(q,{className:C,onClick:z,children:t.jsx("use",{href:`${f}#arrow-right`})})]})});return B.displayName="CustomInput",t.jsxs(t.Fragment,{children:[t.jsx(O,{ref:r=>{M.current=r,a&&(a.current=r)},...n,selected:o,onChange:A,dateFormat:"dd/MM/yyyy",calendarStartDay:1,formatWeekDay:r=>r.substr(0,2),customInput:t.jsx(B,{value:u(o,"dd/MM/yyyy"),onChange:l,onKeyDown:r=>{r.key==="Enter"&&r.preventDefault()}}),renderCustomHeader:({decreaseMonth:r,increaseMonth:$})=>t.jsxs(wt,{children:[t.jsx(W,{type:"button",className:"react-datepicker__navigation--previous","aria-label":"Previous Month",onClick:r,children:t.jsx(N,{className:j,onClick:D,children:t.jsx("use",{href:`${f}#arrow-left`})})}),t.jsx(ft,{className:"react-datepicker__current-month",children:g}),t.jsx(W,{type:"button",className:"react-datepicker__navigation--next","aria-label":"Next Month",onClick:$,children:t.jsx(N,{className:C,onClick:z,children:t.jsx("use",{href:`${f}#arrow-right`})})})]})}),t.jsx(gt,{})]})});I.displayName="StyledDatepicker";const kt=I;function vt(){return t.jsx("section",{children:t.jsx("div",{className:"container",children:t.jsx("div",{className:"row",children:t.jsxs(xt,{children:[t.jsxs(ht,{children:[t.jsx(ct,{children:"Diary"}),t.jsx(kt,{})]}),t.jsxs(mt,{children:[t.jsxs(pt,{children:[t.jsx(Qe,{}),t.jsx(Ce,{})]}),t.jsx(lt,{})]})]})})})})}export{vt as default};
+  } `;const K=l.forwardRef((r,a)=>{const[o,d]=l.useState(Date.now()),[w,b]=l.useState(""),[f,z]=l.useState(""),[k,M]=l.useState("active"),A=l.useRef(null);l.useEffect(()=>{b(B(o,"MMMM yyyy"))},[o]);const $=()=>{z("active"),M("");const n=Z(o,1);d(n)},j=()=>{z(""),M("active");const n=ee(o,1);d(n)},v=n=>{d(n)},C=l.forwardRef(({value:n,onClick:y,onKeyDown:T},_)=>{const[x,m]=l.useState(""),[P,W]=l.useState("");l.useEffect(()=>{m(n),W(n)},[n]);const N=p=>{const s=p.target.value.replace(/\D/g,"");let c=s;if(s.length>2&&s.length<5?c=s.slice(0,2)+"/"+s.slice(2):s.length>=5&&(c=s.slice(0,2)+"/"+s.slice(2,4)+"/"+s.slice(4,8)),m(c),p.target.value.length===10){const[g,I,u]=c.split("/"),S=new Date(`${u}-${I}-${g}`);isNaN(S.getTime())||(d(S),v(S))}},q=()=>{(!D(x)||x.trim()==="")&&m(P),(!D(x)||x.trim()==="")&&m(B(o,"dd/MM/yyyy"))},D=p=>/^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/.test(p),R=p=>{if(p.key==="Enter"){p.preventDefault();const s=x.replace(/\//g,""),c=s.substring(0,2),g=s.substring(2,4),I=s.substring(4,8);let u;if(I.length<4){const S=new Date().getFullYear();u=new Date(`${S}-${g}-${c}`)}else u=new Date(`${I}-${g}-${c}`);if(!isNaN(u.getTime())){d(u),m(B(u,"dd/MM/yyyy"));return}m(B(o,"dd/MM/yyyy"))}};return t.jsxs(jt,{children:[t.jsx(kt,{type:"text",value:x,onChange:N,onBlur:q,onKeyDown:p=>{R(p),T(p)},ref:_}),t.jsx(vt,{onClick:y,children:t.jsx("use",{href:`${h}#calendar`})}),t.jsx(G,{className:f,onClick:$,children:t.jsx("use",{href:`${h}#arrow-left`})}),t.jsx(G,{className:k,onClick:j,children:t.jsx("use",{href:`${h}#arrow-right`})})]})});return C.displayName="CustomInput",t.jsxs(t.Fragment,{children:[t.jsx(X,{ref:n=>{A.current=n,a&&(a.current=n)},...r,selected:o,onChange:v,dateFormat:"dd/MM/yyyy",calendarStartDay:1,formatWeekDay:n=>n.substr(0,2),customInput:t.jsx(C,{value:B(o,"dd/MM/yyyy"),onChange:d,onKeyDown:n=>{n.key==="Enter"&&n.preventDefault()}}),renderCustomHeader:({decreaseMonth:n,increaseMonth:y})=>t.jsxs(yt,{children:[t.jsx(V,{type:"button",className:"react-datepicker__navigation--previous","aria-label":"Previous Month",onClick:n,children:t.jsx(L,{className:f,onClick:$,children:t.jsx("use",{href:`${h}#arrow-left`})})}),t.jsx($t,{className:"react-datepicker__current-month",children:w}),t.jsx(V,{type:"button",className:"react-datepicker__navigation--next","aria-label":"Next Month",onClick:y,children:t.jsx(L,{className:k,onClick:j,children:t.jsx("use",{href:`${h}#arrow-right`})})})]})}),t.jsx(ut,{})]})});K.displayName="StyledDatepicker";const Ct=K;function Bt(){return t.jsx("section",{children:t.jsx("div",{className:"container",children:t.jsx("div",{className:"row",children:t.jsxs(bt,{children:[t.jsxs(gt,{children:[t.jsx(wt,{children:"Diary"}),t.jsx(Ct,{})]}),t.jsxs(ft,{children:[t.jsxs(mt,{children:[t.jsx(tt,{}),t.jsx(ze,{})]}),t.jsx(xt,{})]})]})})})})}export{Bt as default};
