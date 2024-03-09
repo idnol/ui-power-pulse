@@ -15,6 +15,8 @@ import {
 import { Loader } from '../../components/parts/Loader/Loader';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
 import { Wrapper } from './ProductsPage.styled.js';
+import { useEffect, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 export default function ProductsPage() {
   const products = useSelector(selectProducts);
@@ -23,8 +25,19 @@ export default function ProductsPage() {
   const bloodGroup = useSelector(state=> state.profile.items.bodyData.blood);
   const dispatch = useDispatch();
 
-  const handleFilterChange = (params) => {
-    dispatch(fetchProducts(params));
+  const [searchParams] = useSearchParams();
+  const params = useMemo(
+   () => Object.fromEntries([...searchParams]),
+   [searchParams]
+  );
+  const { query = "", category = "", recommended = "all" } = params;
+  
+   useEffect(() => {
+   dispatch(fetchProducts(params))
+ }, [dispatch, params]);
+
+  const handleFilterChange = (newParams) => {
+    dispatch(fetchProducts(newParams));
   };
 
   return (
@@ -35,10 +48,19 @@ export default function ProductsPage() {
             <Wrapper>
              <FilterWrapper>
                <ProductsTitle>Products</ProductsTitle>
-               <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup} />
+
+               <ProductsFilter 
+               query={query}
+               category={category}
+               recommended={recommended}
+               onFilterChange={handleFilterChange}
+               bloodGroup={bloodGroup} />
              </FilterWrapper>
+
              {isLoading && <Loader />}
-             {products.length > 0 && <ProductsList bloodGroup={bloodGroup} />}
+
+             {products.length > 0 && <ProductsList items={products} bloodGroup={bloodGroup} />}
+             
              {error || products.length === 0 && <ProductsError />}
             </Wrapper>
           </div>

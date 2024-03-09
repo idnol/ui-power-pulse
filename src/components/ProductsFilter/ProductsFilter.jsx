@@ -1,27 +1,14 @@
-import { useDispatch } from "react-redux";
 import { Form,   FiltersContainer, SelectWrapper } from "./ProductsFilter.styled";
-import { useEffect, useMemo, useState } from "react";
-import { fetchProducts } from "../../redux/products/api";
+import {  useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { QueryFilter } from "./QueryFilter/QueryFilter";
 import { CategoryFilter } from "./CategoryFilter/CategoryFilter";
 import { RecommendedFilter } from "./RecommendedFilter/RecommendedFilter";
 
-export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
- const dispatch = useDispatch();
+export const ProductsFilter = ({query, category, recommended, onFilterChange, bloodGroup}) => {
  const [searchParams, setParams] = useSearchParams();
- const params = useMemo(
-  () => Object.fromEntries([...searchParams]),
-  [searchParams]
- );
- const { query = "", category = "", recommended = "all" } = params;
-
  const [isOpenCategory, setIsOpenCategory] = useState(false);
  const [isOpenRecommend, setIsOpenRecommend] = useState(false);
-
- useEffect(() => {
-   dispatch(fetchProducts(params))
- }, [dispatch, params]);
 
  const handleDropdownCategory = () => {
   setIsOpenCategory(!isOpenCategory);
@@ -32,7 +19,8 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
  };
 
  const handleTitleChange = (event) => {
-  searchParams.set('query', event.target.value);
+  event.preventDefault();
+  searchParams.set('query',  event.target.value);
   setParams(searchParams);
  };
 
@@ -51,7 +39,7 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
 
  const handleSubmit = (event) => {
    event.preventDefault();
-   onFilterChange(params);
+   onFilterChange(searchParams);
  };
 
  const handleCleanForm = () => {
@@ -67,8 +55,8 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
          query={query} 
          onTitleChange={handleTitleChange} 
          onCleanForm={handleCleanForm} 
-         onSubmit={handleSubmit}/>
-            
+         />
+        
          <SelectWrapper>
            <CategoryFilter 
              label={category || 'Category'} 
@@ -84,7 +72,7 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
              onSelect={handleSelectRecommended}
             />
          </SelectWrapper>
-       </Form>
+        </Form>
      </FiltersContainer>
  </>
  )
