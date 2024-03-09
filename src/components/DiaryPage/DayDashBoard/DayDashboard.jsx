@@ -18,8 +18,6 @@ import { DayDashboardData } from './DayDashboardData';
 export const DayDashboard = () => {
   const data = DayDashboardData();
 
-  // console.log(data);
-
   return (
     <DashboardContainer>
       <DashboardList>
