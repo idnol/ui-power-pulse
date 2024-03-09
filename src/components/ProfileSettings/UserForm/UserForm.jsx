@@ -59,7 +59,7 @@ export const UserForm = () => {
     currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || '35',
     desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || '35',
     birthday: '2006-01-02',
-    blood: (profileData.bodyData.blood).toString() || '1',
+    blood: profileData.bodyData.blood || 1,
     sex: profileData.bodyData.sex || 'male',
     levelActivity: parseInt(profileData.bodyData?.levelActivity, 10) || 1,
   };

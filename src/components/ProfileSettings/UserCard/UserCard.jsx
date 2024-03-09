@@ -1,8 +1,8 @@
 import { DailyInfoItem } from "./DailyInfo/DailyInfoItem";
-import { DailyWrapper, UserCardWrapper } from "./UserCard.styled";
+import { DailyWrapper, UserCardWrapper,LogOutItemWrapper } from "./UserCard.styled";
 import { UserImage } from "./UserImage/UserImage";
 import { WarningMessage } from "./WarningMessage/WarningMessage";
-
+import {LogOut} from '../../parts/LogOut/LogOut'
 
 export const UserCard = () => {
 
@@ -14,6 +14,9 @@ export const UserCard = () => {
             <DailyInfoItem style={{ flex: '1.1' }} svg='dumbbell' text="Daily physical activity" number="0 min"/>
         </DailyWrapper>
         <WarningMessage/>
+      <LogOutItemWrapper>
+        <LogOut/>
+      </LogOutItemWrapper>
     </UserCardWrapper>
 
   );
