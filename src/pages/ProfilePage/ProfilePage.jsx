@@ -1,6 +1,7 @@
 import { UserCard } from '../../components/ProfileSettings/UserCard/UserCard';
 import { UserForm } from '../../components/ProfileSettings/UserForm/UserForm';
 import { PageWrapper } from './ProfilePage.styled';
+import { Wrapper } from '../WelcomePage/WelcomePage.styled.js';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,8 +12,6 @@ export default function ProfilePage() {
   const dispatch = useDispatch();
   const token = useSelector(state => state.auth.token);
   const [dataLoaded, setDataLoaded] = useState(false);
-
-
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -33,16 +32,25 @@ export default function ProfilePage() {
         toast.error('Error fetching user data:', error);
       }
     };
-
     fetchUserData();
   }, [dispatch, token]);
+
   if (!dataLoaded) {
     return <div>Loading...</div>;
   }
+
   return (
-    <PageWrapper>
-      <UserCard />
-      <UserForm />
-    </PageWrapper>
+    <section>
+      <div className="container">
+        <div className="row">
+          <Wrapper>
+            <PageWrapper>
+              <UserCard />
+              <UserForm />
+            </PageWrapper>
+          </Wrapper>
+        </div>
+      </div>
+    </section>
   );
 }

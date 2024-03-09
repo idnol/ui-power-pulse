@@ -222,7 +222,6 @@ const listOfProducts = [
 
 export const DayProducts = () => {
   const [products, setProducts] = useState(listOfProducts);
-  console.log(products);
 
   const handleDeleteProduct = (id) => {
     setProducts((prevProducts) =>

@@ -8,10 +8,12 @@ export const DashboardContainer = styled.div`
 
   @media (min-width: ${theme.breakpoint.md}) {
     max-width: 593px;
+    margin: unset;
   }
 
   @media (min-width: ${theme.breakpoint.xl}) {
     max-width: 390px;
+    margin-left: auto;
   }
 `;
 
