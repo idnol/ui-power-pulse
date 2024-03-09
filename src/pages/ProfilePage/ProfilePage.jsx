@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUserInfo } from '../../redux/profile/profileSlice'
 import { toast } from 'react-toastify';
+import { Loader } from '../../components/parts/Loader/Loader.jsx';
 
 export default function ProfilePage() {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ export default function ProfilePage() {
   }, [dispatch, token]);
 
   if (!dataLoaded) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
