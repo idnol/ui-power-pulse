@@ -6,6 +6,7 @@ import { refreshUser } from './redux/auth/api.js';
 import { RestrictedRoute } from './components/Routes/RestrictedRoute.jsx';
 import { PrivateRoute } from './components/Routes/PrivateRoute.jsx';
 import { selectProfileItems } from './redux/profile/profileSelectors.js';
+import { Loader } from './components/parts/Loader/Loader.jsx';
 // import {useAuth} from "./components/hooks/index.js";
 
 const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage.jsx'));
@@ -31,16 +32,16 @@ function App() {
     dispatch(refreshUser());
   }, [dispatch]);
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<RestrictedRoute component={<WelcomePage />} redirectTo={redirectUser} />} />
           <Route path="signin" element={<RestrictedRoute component={<SigninPage />} redirectTo={redirectUser} />} />
           <Route path="signup" element={<RestrictedRoute component={<SignupPage />} redirectTo="/profile" />} />
-          <Route path="profile" element={<PrivateRoute component={<ProfilePage/>} redirectTo = "/signin"/>} />
-          <Route path="diary" element={<PrivateRoute component={<DiaryPage/>} redirectTo = "/signin"/>} />
-          <Route path="exercises" element={<PrivateRoute component={<ExercisesPage/>} redirectTo = "/signin"/>} />
-          <Route path="products" element={<PrivateRoute component={<ProductsPage/>} redirectTo = "/signin"/>} />
+          <Route path="profile" element={<PrivateRoute component={<ProfilePage/>} redirectTo = "/"/>} />
+          <Route path="diary" element={<PrivateRoute component={<DiaryPage/>} redirectTo = "/"/>} />
+          <Route path="exercises" element={<PrivateRoute component={<ExercisesPage/>} redirectTo = "/"/>} />
+          <Route path="products" element={<PrivateRoute component={<ProductsPage/>} redirectTo = "/"/>} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

@@ -34,8 +34,8 @@ export const AddExerciseSuccess = ({ isOpen, onClose, calorise, time }) => {
         <Wrapper>
           <SuccessBox>
             <picture>
-              <source media={theme.breakpoint.sm} srcset="/img/like-1x.png" />
-              <source media={theme.breakpoint.md} srcset="/img/like-2x.png" />
+              <source media={theme.breakpoint.sm} srcSet="/img/like-1x.png" />
+              <source media={theme.breakpoint.md} srcSet="/img/like-2x.png" />
               <img src="/img/like-1x.png" alt="Like" loading="lazy"></img>
             </picture>
             <TitleSuccess>Well done</TitleSuccess>
