@@ -6,7 +6,7 @@ import sprite from 'assets/sprite-2.svg';
 import { toast } from "react-toastify";
 
 
-export const CategoryFilter = ({ label, onSelect, onToggle, isOpen, onCloseCategory}) => {
+export const CategoryFilter = ({ label, onSelect, onToggle, isOpen}) => {
  const [categories, setCategories] = useState([]);
  const [error, setError] = useState(null);
  const categoryRef = useRef(null);
@@ -29,7 +29,7 @@ export const CategoryFilter = ({ label, onSelect, onToggle, isOpen, onCloseCateg
     categoryRef.current &&
     !categoryRef.current.contains(event.target)
   ) {
-    onCloseCategory();
+    onToggle();
    }
   };
 
@@ -49,7 +49,7 @@ export const CategoryFilter = ({ label, onSelect, onToggle, isOpen, onCloseCateg
        <use href={`${sprite}#arrow-down`} />
      </IconDown>
 
-     <OptionsContainer ref={categoryRef} $isopen={isOpen}>
+    {isOpen && <OptionsContainer ref={categoryRef}>
        <StyledOption onClick={() => onSelect("")}>
           {"All"}
         </StyledOption>
@@ -58,7 +58,7 @@ export const CategoryFilter = ({ label, onSelect, onToggle, isOpen, onCloseCateg
           {option}
          </StyledOption>
         ))}
-     </OptionsContainer>
+     </OptionsContainer>}
    </CategoryField>
 
    {error && toast.error(

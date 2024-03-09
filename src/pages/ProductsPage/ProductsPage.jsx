@@ -29,18 +29,17 @@ export default function ProductsPage() {
 
   return (
     <>
-
       <ProductsSection>
         <div className="container">
           <div className="row">
             <Wrapper>
-            <FilterWrapper>
-              <ProductsTitle>Products</ProductsTitle>
-              <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup} />
-            </FilterWrapper>
-            {isLoading && <Loader />}
-            {products.length > 0 && <ProductsList bloodGroup={bloodGroup} />}
-            {error || products.length === 0 && <ProductsError />}
+             <FilterWrapper>
+               <ProductsTitle>Products</ProductsTitle>
+               <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup} />
+             </FilterWrapper>
+             {isLoading && <Loader />}
+             {products.length > 0 && <ProductsList bloodGroup={bloodGroup} />}
+             {error || products.length === 0 && <ProductsError />}
             </Wrapper>
           </div>
         </div>

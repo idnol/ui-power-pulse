@@ -90,7 +90,6 @@ export const OptionsContainer = styled.ul`
   border-radius: 12px;
   background-color: ${theme.color.darkGreySecond};
   z-index: 100;
-  display: ${({ $isopen }) => ($isopen ? 'block' : 'none')};
   &::-webkit-scrollbar {
     width: 6px;
   }

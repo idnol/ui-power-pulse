@@ -3,7 +3,7 @@ import { IconDown, OptionsContainer, SelectHeader, StyledOption } from "../Produ
 import { RecommendedField } from "./RecommendedFilter.styled"
 import sprite from 'assets/sprite-2.svg';
 
-export const RecommendedFilter = ({label, isOpen, onToggle, onSelect, onCloseRecommended}) => {
+export const RecommendedFilter = ({label, isOpen, onToggle, onSelect}) => {
  const recommendOptions =["All", "recommended", "not recommended"];
  const recommendRef = useRef(null);
 
@@ -12,7 +12,7 @@ export const RecommendedFilter = ({label, isOpen, onToggle, onSelect, onCloseRec
      recommendRef.current &&
      !recommendRef.current.contains(event.target)
     ) {
-     onCloseRecommended();
+      onToggle();
     }
  };
 
@@ -32,13 +32,13 @@ export const RecommendedFilter = ({label, isOpen, onToggle, onSelect, onCloseRec
        <use href={`${sprite}#arrow-down`} />
      </IconDown>
 
-     <OptionsContainer ref={recommendRef} $isopen={isOpen}>
+     {isOpen && <OptionsContainer ref={recommendRef}>
         {recommendOptions.map((recOption, index) => (
           <StyledOption key={index} onClick={() => onSelect(recOption)}>
             {recOption}
           </StyledOption>
         ))}
-     </OptionsContainer>
+     </OptionsContainer>}
    </RecommendedField>
   )
 }

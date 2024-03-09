@@ -23,9 +23,12 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
    dispatch(fetchProducts(params))
  }, [dispatch, params]);
 
+//  const handleDropdownCategory = () => {
+//   setIsOpenCategory(!isOpenCategory);
+//  };
  const handleDropdownCategory = () => {
   setIsOpenCategory(!isOpenCategory);
- };
+};
 
  const handleDropdownRecommend = () => {
    setIsOpenRecommend(!isOpenRecommend);
@@ -47,14 +50,6 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
   searchParams.set('blood', bloodGroup);
   setParams(searchParams);
   setIsOpenRecommend(false);
- };
-
- const handleCloseCategory = () => {
-   setIsOpenCategory(false);
- };
-
- const handleCloseRecommended = () => {
-   setIsOpenRecommend(false);
  };
 
  const handleSubmit = (event) => {
@@ -83,14 +78,14 @@ export const ProductsFilter = ({onFilterChange, bloodGroup}) => {
              isOpen={isOpenCategory}
              onToggle={handleDropdownCategory} 
              onSelect={handleSelectCategory}
-             onCloseCategory={handleCloseCategory}/>
+             />
           
            <RecommendedFilter
              label={recommended || 'All'} 
              isOpen={isOpenRecommend}
              onToggle={handleDropdownRecommend}
              onSelect={handleSelectRecommended}
-             onCloseRecommended={handleCloseRecommended}/>
+            />
          </SelectWrapper>
        </Form>
      </FiltersContainer>
