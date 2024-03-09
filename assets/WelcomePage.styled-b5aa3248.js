@@ -1,4 +1,4 @@
-import{s}from"./index-23270db7.js";const e=s.div`
+import{s}from"./index-d8bfe312.js";const e=s.div`
     display: flex;
     align-items: end;
 `;export{e as W};
