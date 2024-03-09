@@ -25,9 +25,8 @@ export const DayDashboard = () => {
       <DashboardList>
         {data.map((item, index) => (
           <DashboardItem
-            className={item.background}
+            className={`${item.background} ${item.border}`}
             key={index}
-            // count={item.count}
           >
             <DashboardItemBox>
               <DashboardIcon>

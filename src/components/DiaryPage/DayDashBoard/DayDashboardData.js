@@ -6,11 +6,10 @@ import { current } from '../../../redux/profile/api';
 import sprite from 'assets/sprite-2.svg';
 
 export const DayDashboardData = () => {
-  // const responseDiary = useSelector((state) => state.diary.items) || {};
   const responseUser = useSelector((state) => state.auth.user) || {};
   console.log('🚀 ~ DayDashboardData ~ responseUser:', responseUser);
 
-  const responseDiary = useSelector((state) => state.diary.items) || {};
+  const responseDiary = useSelector((state) => state.diary.items) || 0;
   console.log('🚀 ~ DayDashboardData ~ responseDiary:', responseDiary);
 
   const dispatch = useDispatch();
@@ -22,23 +21,16 @@ export const DayDashboardData = () => {
 
   const beData = [{ userData: responseUser }, { diaryData: responseDiary }];
 
-  let remaingTime =
-    (beData[1]?.diaryData?.statistic?.sportTime !== undefined
-      ? beData[1]?.diaryData?.statistic?.sportTime / 60
-      : 0) -
-    (beData[0]?.userData?.dailyExerciseTime !== undefined
-      ? beData[0]?.userData?.dailyExerciseTime
-      : 0);
+  const physicalActivity =
+    (beData[1]?.diaryData?.statistic?.sportTime ?? 0) / 60;
 
-  console.log(remaingTime);
+  const physicalGoal = beData[0]?.userData?.dailyExerciseTime;
 
-  if (remaingTime > 0) {
-    remaingTime = `+${Math.abs(Math.round(remaingTime))}`;
-  } else {
-    remaingTime = Math.abs(Math.round(remaingTime));
-  }
+  let remaningTime = physicalActivity - physicalGoal;
 
-  console.log(beData[1]);
+  const consumedCalories = beData[1]?.diaryData?.statistic?.calories || 0;
+  const remainingCalories =
+    beData[0]?.userData?.dailyCalorie - consumedCalories;
 
   const dashboardData = [
     {
@@ -48,6 +40,7 @@ export const DayDashboardData = () => {
       countType: 'cal',
       background: 'accent',
       textColor: 'whiteTextColor',
+      border: 'accent',
     },
     {
       icon: `${sprite}#physical-activity`,
@@ -56,15 +49,16 @@ export const DayDashboardData = () => {
       countType: 'time',
       background: 'accent',
       textColor: 'whiteTextColor',
+      border: 'accent',
     },
     {
       icon: `${sprite}#calories-consumed`,
       title: 'Сalories consumed',
-
       count: beData[1]?.diaryData?.statistic?.calories ?? 0,
       countType: 'cal',
       background: 'default',
       textColor: 'greyTextColor',
+      border: 'defaultBorder',
     },
     {
       icon: `${sprite}#calories-burned`,
@@ -73,27 +67,28 @@ export const DayDashboardData = () => {
       countType: 'cal',
       background: 'default',
       textColor: 'greyTextColor',
+      border: 'defaultBorder',
     },
     {
       icon: `${sprite}#calories-remaining`,
       title: 'Calories remaining',
-      count:
-        beData[0]?.userData?.dailyCalorie -
-          beData[1]?.diaryData?.statistic?.calories ?? 0,
+      count: remainingCalories,
       countType: 'cal',
       background: 'default',
       textColor: 'greyTextColor',
+      border: remainingCalories < 0 ? 'redBorder' : 'defaultBorder',
     },
     {
       icon: `${sprite}#sports-remaining`,
       title: 'Sports remaining',
-      count: remaingTime,
-      // count:
-      //   beData[1]?.diaryData?.statistic?.sportTime / 60 -
-      //   beData[0]?.userData?.dailyExerciseTime,
+      count:
+        remaningTime > 0
+          ? `+${Math.round(remaningTime)}`
+          : Math.abs(Math.round(remaningTime)),
       countType: 'time',
       background: 'default',
       textColor: 'greyTextColor',
+      border: remaningTime > 0 ? 'greenBorder' : 'defaultBorder',
     },
   ];
 

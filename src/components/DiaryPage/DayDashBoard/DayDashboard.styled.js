@@ -57,9 +57,9 @@ export const DashboardItem = styled.li`
   height: 96px;
 
   &:nth-child(5) {
-    border: 1px solid
+    /* border: 1px solid
       ${(props) =>
-        props.count < 0 ? `${theme.color.red}` : `${theme.border.grey2}`};
+      props.count < 0 ? `${theme.color.red}` : `${theme.border.grey2}`}; */
   }
 
   &:nth-child(6) {

@@ -75,7 +75,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .default{
-        border: ${theme.border.grey2};
         background: ${theme.color.greySeven};
     }
 
@@ -99,7 +98,15 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    .green-border {
-  border: 1px solid ${theme.color.green};
-}
+    .greenBorder {
+    border: 1px solid ${theme.color.green};
+    }
+
+    .redBorder {
+        border: 1px solid ${theme.color.red}
+    }
+
+    .defaultBorder{
+         border: ${theme.border.grey2};
+    }
 `;
