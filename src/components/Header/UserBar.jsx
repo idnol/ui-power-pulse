@@ -4,12 +4,16 @@ import {
   User,
   SettingsIcon,
   BurgerIcon,
+  UserAvatar,
   UserIcon,
   LogOutWrapDesktop,
 } from './Header.styled.jsx';
 import sprite from 'assets/sprite-2.svg';
 import { theme } from '../../vars.js';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
+import { useSelector } from 'react-redux';
+import { selectIsAuthenticated } from '../../redux/auth/selectors.js';
+import { selectProfile } from '../../redux/profile/selectors.js';
 
 export const UserBar = () => {
   const openSidebar = () => {
@@ -22,6 +26,10 @@ export const UserBar = () => {
     menu.style.opacity = 1;
     menu.style.display = 'block';
   };
+
+  const isLoggedIn = useSelector(selectIsAuthenticated);
+  const { bodyData } = useSelector(selectProfile);
+
   return (
     <>
       <StyledUserBar>
@@ -36,17 +44,22 @@ export const UserBar = () => {
           </SettingsIcon>
         </LinkWrapper>
         <User>
-          <UserIcon>
-            <use href={`${sprite}#avatar-header`} />
-          </UserIcon>
+          {isLoggedIn && bodyData?.avatar ? (
+            <UserAvatar
+              src={bodyData.avatar}
+              alt="Avatar"
+            />
+          ) : (
+            <UserIcon>
+              <use href={`${sprite}#avatar-header`} />
+            </UserIcon>
+          )}
         </User>
         <BurgerIcon onClick={openSidebar}>
           <use href={`${sprite}#burger-menu`} />
         </BurgerIcon>
         <LogOutWrapDesktop>
-          <LogOut
-            stroke={`${theme.color.orange}`}
-          />
+          <LogOut stroke={`${theme.color.orange}`} />
         </LogOutWrapDesktop>
       </StyledUserBar>
     </>

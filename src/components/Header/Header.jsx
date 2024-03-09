@@ -15,7 +15,6 @@ import sprite from 'assets/logo/logo-sprite.svg';
 
 export const Header = () => {
   const { pathname } = useLocation();
-  //На ErrorPage робити перевірку логінізації для відображення навігації юзера
   const isLoggedIn = useSelector(selectIsAuthenticated);
 
   const isNotCustomRoute = ![

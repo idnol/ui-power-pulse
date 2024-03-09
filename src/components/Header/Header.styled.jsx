@@ -96,6 +96,12 @@ export const User = styled.div`
   height: 37px;
   border-radius: 50%;
   border: 1px solid ${theme.color.orange};
+  overflow: hidden;
+`;
+
+export const UserAvatar = styled.img`
+  width: 37px;
+  height: 37px;
 `;
 
 export const UserIcon = styled.svg`
