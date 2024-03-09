@@ -1,4 +1,4 @@
-import{s as a,t as i,j as e,b,u as v,d as j,a as f,e as k,f as z,g as U,h as A,i as W,k as L,m as E,o as C}from"./index-35b6f392.js";import{B as d,Q as O}from"./react-toastify.esm-bbf62e2e.js";import{c as R,a as _,e as u,f as q,u as N,d as B,F as I,b as T}from"./formik.esm-342955b6.js";import{i as M}from"./index-470f9187.js";import{W as P}from"./WelcomePage.styled-bfc1cfe2.js";const V=a.div`
+import{s as a,t as i,j as e,b,u as v,d as j,e as W,a as f,f as k,g as z,h as U,i as A,k as I,m as L,o as E,p as C}from"./index-3db971f1.js";import{B as d,Q as O}from"./react-toastify.esm-a2c6dd13.js";import{c as R,a as _,e as u,f as q,u as N,d as B,F as S,b as T}from"./formik.esm-0f5fe7eb.js";import{i as M}from"./index-3ca30416.js";import{W as P}from"./WelcomePage.styled-9f1f14ae.js";const V=a.div`
   display: flex;
   justify-content:space-between;
   flex-direction: column;
@@ -62,7 +62,7 @@ gap:8px;
     justify-content:flex-end;
     padding-right: 32px;
     margin-top:32px;
-`,S=n=>n.profile.items,K=a.div`
+`,K=a.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +148,7 @@ gap:8px;
         height:150px;
   }
 
-`,se=()=>{const n=v(),t=j(S),[c,l]=f.useState(null),o=c||t.bodyData&&t.bodyData.avatar||null,p=e.jsx(ie,{children:e.jsx("use",{href:o||`${b}#icon-user`})}),x=async s=>{const r=s.target.files[0];if(r)try{l(URL.createObjectURL(r));const h=await n(k(r));return k.fulfilled.match(h)?d.success("File uploaded successfully"):d.error("Error uploading file: Server response not successful"),h.data}catch(h){d.error("Error uploading file:",h),l(null)}};return e.jsxs(K,{children:[e.jsxs("div",{style:{position:"relative"},children:[e.jsx(ee,{children:o&&o!=="undefined"?e.jsx(oe,{src:o,alt:"User Avatar"}):p}),e.jsxs(Z,{children:[e.jsx("input",{type:"file",id:"file-input",name:"file",style:{display:"none"},onChange:x,accept:"image/*"}),e.jsx("label",{htmlFor:"file-input",children:e.jsx(te,{children:e.jsx(ae,{children:e.jsx("use",{href:`${b}#icon-check-mark`})})})})]})]}),e.jsx(re,{children:t.name}),e.jsx(ne,{children:"User"})]})},de=a.p`
+`,se=()=>{const n=v(),t=j(W),[c,l]=f.useState(null),o=c||t.bodyData&&t.bodyData.avatar||null,p=e.jsx(ie,{children:e.jsx("use",{href:o||`${b}#icon-user`})}),x=async s=>{const r=s.target.files[0];if(r)try{l(URL.createObjectURL(r));const h=await n(k(r));return k.fulfilled.match(h)?d.success("File uploaded successfully"):d.error("Error uploading file: Server response not successful"),h.data}catch(h){d.error("Error uploading file:",h),l(null)}};return e.jsxs(K,{children:[e.jsxs("div",{style:{position:"relative"},children:[e.jsx(ee,{children:o&&o!=="undefined"?e.jsx(oe,{src:o,alt:"User Avatar"}):p}),e.jsxs(Z,{children:[e.jsx("input",{type:"file",id:"file-input",name:"file",style:{display:"none"},onChange:x,accept:"image/*"}),e.jsx("label",{htmlFor:"file-input",children:e.jsx(te,{children:e.jsx(ae,{children:e.jsx("use",{href:`${b}#icon-check-mark`})})})})]})]}),e.jsx(re,{children:t.name}),e.jsx(ne,{children:"User"})]})},de=a.p`
     width:85%;
     font-weight: 400;
     font-size: 14px;
@@ -213,7 +213,7 @@ gap:8px;
     align-items:end;
     flex-wrap:wrap;
     gap:25px;
-`,w=a(I)`
+`,w=a(S)`
     outline: none;
     border: 1px solid rgba(239, 237, 232, 0.3);
     background: transparent;
@@ -249,7 +249,7 @@ gap:8px;
     @media screen and (min-width:theme.breakpoint.xl){
         font-size: 14px;
     }
-`,je=a(I)`
+`,je=a(S)`
     background: transparent;
     position: relative;
     appearance: none;
@@ -475,11 +475,11 @@ gap:8px;
   font-size: 14px;
   line-height: 129%;
   color: ${i.color.white};
-`,Fe="/ui-power-pulse/assets/sprait-112b8185.svg",ze=({number:n})=>e.jsxs(e.Fragment,{children:[e.jsx(Ie,{width:"18",height:"18",children:e.jsx("use",{href:`${Fe}#icon-calendar`})}),e.jsx(M,{showYearDropdown:!0,scrollableYearDropdown:!0,maxDate:new Date,value:n,customInput:e.jsx(Se,{}),dateFormat:"dd.MM.yyyy",calendarStartDay:1,formatWeekDay:t=>t.substring(0,1),showMonthDropdown:!0}),e.jsx(We,{})]}),Ue=()=>{var x;const n=v(),t=j(S),l=(async()=>await n(A()))();l.name,l.email;const o={name:t.name||"Name",email:t.email,height:t.bodyData&&t.bodyData.height||"150",currentWeight:t.bodyData&&t.bodyData.currentWeight||"35",desiredWeight:t.bodyData&&t.bodyData.desiredWeight||"35",birthday:"2006-01-02",blood:t.bodyData.blood||1,sex:t.bodyData.sex||"male",levelActivity:parseInt((x=t.bodyData)==null?void 0:x.levelActivity,10)||1},p=async s=>{if(t.bodyData){if(JSON.stringify(s)===JSON.stringify(o)){d.error("Nothing to change");return}try{const{email:r,...h}=s;console.log("Before API call:",{email:r,bodyData:h});const F=await W.patch("/users/profile",h);return d.success("User data updated successfully"),n(L(h)),F.data}catch(r){d.error("Error updating user data:",r)}}else d.warning("User bodyData is missing or not fully populated. Form not submitted.")};return e.jsx(T,{initialValues:o,validationSchema:ge,onSubmit:p,children:s=>e.jsxs(fe,{onSubmit:s.handleSubmit,children:[e.jsxs(ye,{children:[e.jsxs("div",{children:[e.jsx(g,{children:"Name"}),e.jsx(w,{type:"text",name:"name"}),e.jsx(m,{name:"name"})]}),e.jsxs("div",{children:[e.jsx(g,{children:"Email"}),e.jsx(w,{type:"email",name:"email",disabled:!0}),e.jsx(m,{name:"email"})]})]}),e.jsxs(we,{children:[ue.map(r=>e.jsx(De,{id:r.id,name:r.name,label:r.label},r.id)),e.jsxs("div",{children:[e.jsx(g,{children:"Day of Birth"}),e.jsxs("div",{style:{position:"relative"},children:[" ",e.jsx(ze,{number:o.birthday})]})]})]}),e.jsxs(ve,{children:[e.jsxs("div",{children:[e.jsx(g,{children:"Blood"}),e.jsx(D,{children:he.map(r=>e.jsx(y,{id:r.id,name:"blood",label:r.label,onChange:()=>s.setFieldValue("blood",r.id),checked:s.values.blood===r.id},r.id))}),e.jsx(m,{name:"blood"})]}),e.jsxs(D,{children:[xe.map(r=>e.jsx(y,{id:r.id,name:"sex",value:r.value,label:r.label},r.id)),e.jsx(m,{name:"sex"})]})]}),e.jsxs(_e,{children:[me.map(r=>e.jsx(y,{id:r.id,name:"levelActivity",label:r.label,onChange:()=>s.setFieldValue("levelActivity",r.value),checked:s.values.levelActivity===r.value},r.id)),e.jsx(m,{name:"levelActivity"})]}),e.jsx($e,{type:"submit",disabled:!s.dirty,children:"Save"}),e.jsx(O,{})]})})},Ae=a.div`
+`,Fe="/ui-power-pulse/assets/sprait-112b8185.svg",ze=({number:n})=>e.jsxs(e.Fragment,{children:[e.jsx(Ie,{width:"18",height:"18",children:e.jsx("use",{href:`${Fe}#icon-calendar`})}),e.jsx(M,{showYearDropdown:!0,scrollableYearDropdown:!0,maxDate:new Date,value:n,customInput:e.jsx(Se,{}),dateFormat:"dd.MM.yyyy",calendarStartDay:1,formatWeekDay:t=>t.substring(0,1),showMonthDropdown:!0}),e.jsx(We,{})]}),Ue=()=>{var x;const n=v(),t=j(W),l=(async()=>await n(A()))();l.name,l.email;const o={name:t.name||"Name",email:t.email,height:t.bodyData&&t.bodyData.height||"150",currentWeight:t.bodyData&&t.bodyData.currentWeight||"35",desiredWeight:t.bodyData&&t.bodyData.desiredWeight||"35",birthday:"2006-01-02",blood:t.bodyData.blood||1,sex:t.bodyData.sex||"male",levelActivity:parseInt((x=t.bodyData)==null?void 0:x.levelActivity,10)||1},p=async s=>{if(t.bodyData){if(JSON.stringify(s)===JSON.stringify(o)){d.error("Nothing to change");return}try{const{email:r,...h}=s;console.log("Before API call:",{email:r,bodyData:h});const F=await I.patch("/users/profile",h);return d.success("User data updated successfully"),n(L(h)),F.data}catch(r){d.error("Error updating user data:",r)}}else d.warning("User bodyData is missing or not fully populated. Form not submitted.")};return e.jsx(T,{initialValues:o,validationSchema:ge,onSubmit:p,children:s=>e.jsxs(fe,{onSubmit:s.handleSubmit,children:[e.jsxs(ye,{children:[e.jsxs("div",{children:[e.jsx(g,{children:"Name"}),e.jsx(w,{type:"text",name:"name"}),e.jsx(m,{name:"name"})]}),e.jsxs("div",{children:[e.jsx(g,{children:"Email"}),e.jsx(w,{type:"email",name:"email",disabled:!0}),e.jsx(m,{name:"email"})]})]}),e.jsxs(we,{children:[ue.map(r=>e.jsx(De,{id:r.id,name:r.name,label:r.label},r.id)),e.jsxs("div",{children:[e.jsx(g,{children:"Day of Birth"}),e.jsxs("div",{style:{position:"relative"},children:[" ",e.jsx(ze,{number:o.birthday})]})]})]}),e.jsxs(ve,{children:[e.jsxs("div",{children:[e.jsx(g,{children:"Blood"}),e.jsx(D,{children:he.map(r=>e.jsx(y,{id:r.id,name:"blood",label:r.label,onChange:()=>s.setFieldValue("blood",r.id),checked:s.values.blood===r.id},r.id))}),e.jsx(m,{name:"blood"})]}),e.jsxs(D,{children:[xe.map(r=>e.jsx(y,{id:r.id,name:"sex",value:r.value,label:r.label},r.id)),e.jsx(m,{name:"sex"})]})]}),e.jsxs(_e,{children:[me.map(r=>e.jsx(y,{id:r.id,name:"levelActivity",label:r.label,onChange:()=>s.setFieldValue("levelActivity",r.value),checked:s.values.levelActivity===r.value},r.id)),e.jsx(m,{name:"levelActivity"})]}),e.jsx($e,{type:"submit",disabled:!s.dirty,children:"Save"}),e.jsx(O,{})]})})},Ae=a.div`
     @media screen and (min-width:${i.breakpoint.xl}){
         display:flex;
         flex-direction:row-reverse;
         gap:64px;
     }
 
-`;function qe(){const n=v(),t=j(o=>o.auth.token),[c,l]=f.useState(!1);return f.useEffect(()=>{(async()=>{try{if(t){const x=(await W.get("/users/current",{headers:{Authorization:`Bearer ${t}`}})).data;n(C(x)),l(!0)}else d.error("Token not available. Unable to fetch user data.")}catch(p){d.error("Error fetching user data:",p)}})()},[n,t]),c?e.jsx("section",{children:e.jsx("div",{className:"container",children:e.jsx("div",{className:"row",children:e.jsx(P,{children:e.jsxs(Ae,{children:[e.jsx(pe,{}),e.jsx(Ue,{})]})})})})}):e.jsx(E,{})}export{qe as default};
+`;function qe(){const n=v(),t=j(o=>o.auth.token),[c,l]=f.useState(!1);return f.useEffect(()=>{(async()=>{try{if(t){const x=(await I.get("/users/current",{headers:{Authorization:`Bearer ${t}`}})).data;n(C(x)),l(!0)}else d.error("Token not available. Unable to fetch user data.")}catch(p){d.error("Error fetching user data:",p)}})()},[n,t]),c?e.jsx("section",{children:e.jsx("div",{className:"container",children:e.jsx("div",{className:"row",children:e.jsx(P,{children:e.jsxs(Ae,{children:[e.jsx(pe,{}),e.jsx(Ue,{})]})})})})}):e.jsx(E,{})}export{qe as default};
