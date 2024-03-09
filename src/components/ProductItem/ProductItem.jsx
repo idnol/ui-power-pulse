@@ -10,28 +10,32 @@ export const ProductItem = ({item:{title, calories, category, weight, groupBlood
   const [isModalOpen, setIsModal] = useState(false);
   const isAllowed = groupBloodNotAllowed[bloodGroup];
   const isRecomended = isAllowed ? "Recommended" : "Not recommended";
+
   return (
   <>
-  <ProductCard>
-    <BtnContainer>
-      <DietBox>Diet</DietBox>
-      <BtnWrapper>
-      <RecomendedText><RecomendSwitch $isAllowed={isAllowed}/>{isRecomended}</RecomendedText>
-        <AddBtn type="button" onClick={() => setIsModal(true)}>Add
-          <IconSvg >
-           <use href={`${sprite}#arrow`} />
-          </IconSvg>
-        </AddBtn>
-      </BtnWrapper>
-    </BtnContainer>
-    <ListItemName titleName={title}/>
-    <StatsList>
-      <StatItem text="Calories: " val={calories}/>
-      <StatItem text="Category: " val={category}/>
-      <StatItem text="Weight: " val={weight}/>
-    </StatsList>
-  </ProductCard>
-  <AddProductForm isOpen={isModalOpen} id={_id} title={title} calories={calories} onClose={() => setIsModal(false)} />
+    <ProductCard>
+      <BtnContainer>
+        <DietBox>Diet</DietBox>
+        <BtnWrapper>
+        <RecomendedText><RecomendSwitch $isAllowed={isAllowed}/>{isRecomended}</RecomendedText>
+          <AddBtn type="button" onClick={() => setIsModal(true)}>Add
+            <IconSvg >
+             <use href={`${sprite}#arrow`} />
+            </IconSvg>
+          </AddBtn>
+        </BtnWrapper>
+      </BtnContainer>
+
+      <ListItemName titleName={title}/>
+
+      <StatsList>
+        <StatItem text="Calories: " val={calories}/>
+        <StatItem text="Category: " val={category}/>
+        <StatItem text="Weight: " val={weight}/>
+      </StatsList>
+    </ProductCard>
+
+    <AddProductForm isOpen={isModalOpen} id={_id} title={title} calories={calories} onClose={() => setIsModal(false)} />
   </>
   ) 
 }

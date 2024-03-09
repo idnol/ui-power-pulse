@@ -19,10 +19,8 @@ export default function ProductsPage() {
   const products = useSelector(selectProducts);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-   // const bloodGroup = useSelector(state=> state.user.blood)
-  const bloodGroup = "1"
+  const bloodGroup = useSelector(state=> state.auth.user.bodyData.blood);
   const dispatch = useDispatch();
-
 
   const handleFilterChange = (params) => {
     dispatch(fetchProducts(params));
