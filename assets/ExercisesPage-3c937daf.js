@@ -1,4 +1,4 @@
-import{a,h as b,s as i,j as e}from"./index-d8bfe312.js";function w(t){const[r,c]=a.useState([]);return a.useEffect(()=>{(async()=>{try{const n=await b.get(`http://localhost:3333/api/exercises/filters?filter=${t}`);c(n.data)}catch(n){console.error("Error fetching categories:",n)}})()},[t]),r}const v=i.div`
+import{a,i as b,s as i,j as e}from"./index-752b329e.js";function w(t){const[r,c]=a.useState([]);return a.useEffect(()=>{(async()=>{try{const n=await b.get(`http://localhost:3333/api/exercises/filters?filter=${t}`);c(n.data)}catch(n){console.error("Error fetching categories:",n)}})()},[t]),r}const v=i.div`
     @media (min-width: 768px){
         display: flex;
         align-items: baseline;
@@ -39,7 +39,7 @@ import{a,h as b,s as i,j as e}from"./index-d8bfe312.js";function w(t){const[r,c]
         height: 24px;
         font-size: 16px;
     }
-`,h=i.span`
+`,x=i.span`
     text-decoration: none;
     position: relative;
     color: rgba(239, 237, 232, 0.4);
@@ -57,7 +57,7 @@ import{a,h as b,s as i,j as e}from"./index-d8bfe312.js";function w(t){const[r,c]
             border-radius: 2px;
         }
     }
-`;function C({onClick:t}){const[r,c]=a.useState("Body parts");a.useEffect(()=>{t(r)},[t,r]);const s=n=>{t(n),c(n)};return e.jsxs(v,{children:[e.jsx(j,{children:"Exercises"}),e.jsxs(E,{children:[e.jsx(p,{children:e.jsx(h,{className:r==="Body parts"?"active":"","data-target":"Body parts",onClick:()=>s("Body parts"),children:"Body parts"})}),e.jsx(p,{children:e.jsx(h,{className:r==="Muscles"?"active":"","data-target":"Muscles",onClick:()=>s("Muscles"),children:"Muscles"})}),e.jsx(p,{children:e.jsx(h,{className:r==="Equipment"?"active":"","data-target":"Equipment",onClick:()=>s("Equipment"),children:"Equipment"})})]})]})}i.div`
+`;function C({onClick:t}){const[r,c]=a.useState("Body parts");a.useEffect(()=>{t(r)},[t,r]);const s=n=>{t(n),c(n)};return e.jsxs(v,{children:[e.jsx(j,{children:"Exercises"}),e.jsxs(E,{children:[e.jsx(p,{children:e.jsx(x,{className:r==="Body parts"?"active":"","data-target":"Body parts",onClick:()=>s("Body parts"),children:"Body parts"})}),e.jsx(p,{children:e.jsx(x,{className:r==="Muscles"?"active":"","data-target":"Muscles",onClick:()=>s("Muscles"),children:"Muscles"})}),e.jsx(p,{children:e.jsx(x,{className:r==="Equipment"?"active":"","data-target":"Equipment",onClick:()=>s("Equipment"),children:"Equipment"})})]})]})}i.div`
 `;const S=i.ul`
     display: flex;
     flex-wrap: wrap;
@@ -183,4 +183,4 @@ import{a,h as b,s as i,j as e}from"./index-d8bfe312.js";function w(t){const[r,c]
     width: 100%;
 `,W=i.div`
     position: relative;
-`;function $({categories:t,selectedCategory:r}){const c=t.filter(o=>o.filter===r),[s,n]=a.useState(0),[d,x]=a.useState(10),u=768,g=Math.ceil(c.length/d),m=()=>{window.scrollTo({top:0,behavior:"smooth"})};a.useEffect(()=>{const o=()=>{window.innerWidth>=u&&window.innerWidth<=1439?x(9):x(10),n(0)};return window.addEventListener("resize",o),()=>{window.removeEventListener("resize",o)}},[]),a.useEffect(()=>{n(0),m()},[r]);const f=o=>{n(o),m()};return e.jsxs(W,{children:[e.jsx(S,{children:c.slice(s*d,(s+1)*d).map((o,l)=>e.jsx(L,{subcategory:o},l))}),g>1&&e.jsx(M,{children:e.jsx("div",{children:Array.from({length:g},(o,l)=>e.jsx(N,{active:l===s,onClick:()=>f(l),children:""},l))})})]})}function F(){const[t,r]=a.useState(""),c=w(t),s=n=>{r(n)};return e.jsx("section",{children:e.jsx("div",{className:"container",children:e.jsx("div",{className:"row",children:e.jsxs(T,{children:[e.jsx(C,{onClick:s}),e.jsx($,{categories:c,selectedCategory:t})]})})})})}export{F as default};
+`;function $({categories:t,selectedCategory:r}){const c=t.filter(o=>o.filter===r),[s,n]=a.useState(0),[d,h]=a.useState(10),u=768,g=Math.ceil(c.length/d),m=()=>{window.scrollTo({top:0,behavior:"smooth"})};a.useEffect(()=>{const o=()=>{window.innerWidth>=u&&window.innerWidth<=1439?h(9):h(10),n(0)};return window.addEventListener("resize",o),()=>{window.removeEventListener("resize",o)}},[]),a.useEffect(()=>{n(0),m()},[r]);const f=o=>{n(o),m()};return e.jsxs(W,{children:[e.jsx(S,{children:c.slice(s*d,(s+1)*d).map((o,l)=>e.jsx(L,{subcategory:o},l))}),g>1&&e.jsx(M,{children:e.jsx("div",{children:Array.from({length:g},(o,l)=>e.jsx(N,{active:l===s,onClick:()=>f(l),children:""},l))})})]})}function F(){const[t,r]=a.useState(""),c=w(t),s=n=>{r(n)};return e.jsx("section",{children:e.jsx("div",{className:"container",children:e.jsx("div",{className:"row",children:e.jsxs(T,{children:[e.jsx(C,{onClick:s}),e.jsx($,{categories:c,selectedCategory:t})]})})})})}export{F as default};
