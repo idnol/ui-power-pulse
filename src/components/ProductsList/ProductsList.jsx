@@ -3,11 +3,9 @@ import {ListProducts, ProductsContainer} from "./ProductsList.styled"
 import { useSelector } from "react-redux";
 import { selectProducts } from "../../redux/products/selectors";
 
-export const ProductsList = () => {
+export const ProductsList = ({bloodGroup}) => {
   const items = useSelector(selectProducts);
-  // const bloodGroup = useSelector(state=> state.user.blood)
-  const bloodGroup = "1"
- 
+
   return (
     <ProductsContainer>
     <ListProducts>

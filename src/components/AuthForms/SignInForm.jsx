@@ -4,7 +4,6 @@ import { AuthForm } from './AuthForm';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/api.js';
 
-
 const schema = Yup.object().shape({
     email: Yup.string().matches(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, "It must be valid email").required('Required'),
     password: Yup.string().min(6, "password must be at least 6 characters").required('Required')

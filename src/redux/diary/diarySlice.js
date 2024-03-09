@@ -29,10 +29,10 @@ export const diarySlice = createSlice({
     
             .addCase(addProduct.pending, (state) => {
                 state.isLoading = true;
+
             })
             .addCase(addProduct.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.items.products.push(action.payload);    
+                state.isLoading = false;  
                 state.error = null;
             })
             .addCase(addProduct.rejected, (state, action) => {
@@ -45,7 +45,6 @@ export const diarySlice = createSlice({
             })
             .addCase(addExercise.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.items.exercises.push(action.payload);
                 state.error = null;
             })
             .addCase(addExercise.rejected, (state, action) => {

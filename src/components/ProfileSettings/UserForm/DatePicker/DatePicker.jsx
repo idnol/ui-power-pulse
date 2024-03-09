@@ -2,7 +2,7 @@ import DatePicker from 'react-datepicker';
 import { CalendarGlobalStyles, CalendarInput,SvgIcon } from './DatePicker.styled';
 import sprite from '../../../../../public/img/sprait.svg'
 
-export const DatePickerItem = () => {
+export const DatePickerItem = ({number}) => {
     return (
    <>
     <SvgIcon width="18" height="18">
@@ -12,7 +12,7 @@ export const DatePickerItem = () => {
         showYearDropdown
         scrollableYearDropdown
         maxDate={new Date()}
-        value='00.00.000'
+        value={number}
         customInput={<CalendarInput />}
         dateFormat={'dd.MM.yyyy'}
         calendarStartDay={1}

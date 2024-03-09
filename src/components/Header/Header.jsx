@@ -8,24 +8,14 @@ import { UserBar } from './UserBar.jsx';
 import { Menu } from './Menu.jsx';
 import { useLocation } from 'react-router';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectIsAuthenticated } from '../../redux/auth/selectors.js';
 
 export const Header = () => {
   const { pathname } = useLocation();
   //Тимчасове рішення + додати перевірку чи залогінений юзер через useSelector
   //На ErrorPage робити перевірку логінізації для відображення навігації юзера
-
-  // ADD CONTAINER
-  //         width: 100%;
-  // padding: 0 20px;
-  // margin: 0 auto;
-  // @media (min-width: ${theme.breakpoint.md}) {
-  //     width: ${theme.breakpoint.md};
-  //     padding: 0 32px;
-  // }
-  // @media (min-width: ${theme.breakpoint.xl}) {
-  //     width: ${theme.breakpoint.xl};
-  //     padding: 0 96px;
-  // }
+  const isLoggedIn = useSelector(selectIsAuthenticated);
 
   const isNotCustomRoute = ![
     '/',
@@ -36,11 +26,11 @@ export const Header = () => {
     '/products',
     '/exercises',
   ].includes(pathname);
-  const isNotAuthenticatedUser = ['/', '/signup', '/signin'].includes(pathname);
+  // const isNotAuthenticatedUser = ['/', '/signup', '/signin'].includes(pathname);
 
   useEffect(() => {
     const headerLayout = document.getElementById('hdr-layout');
-    if (isNotCustomRoute || isNotAuthenticatedUser) {
+    if (isNotCustomRoute || !isLoggedIn) {
       headerLayout.style.borderBottom = 'none';
     }
   });
@@ -51,14 +41,14 @@ export const Header = () => {
         {isNotCustomRoute ? (
           <StyledLink
             to="/"
-            errsm="../../../public/img/logo/logo-sm-white.svg"
-            errbig="../../../public/img/logo/logo-white.svg"
+            errsm="../../assets/logo/logo-sm-white.svg"
+            errbig="../../assets/logo/logo-white.svg"
           ></StyledLink>
-        ) : isNotAuthenticatedUser ? (
+        ) : !isLoggedIn ? (
           <StyledLink to="/"></StyledLink>
         ) : (
           <>
-            <StyledLink to="/"></StyledLink>
+            <StyledLink to="/diary"></StyledLink>
             <NavigationWrap>
               <UserNav />
               <UserBar />

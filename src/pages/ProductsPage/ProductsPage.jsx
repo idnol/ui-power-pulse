@@ -14,32 +14,40 @@ import {
 } from '../../redux/products/selectors';
 import { Loader } from '../../components/parts/Loader/Loader';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
-
-
+import { Wrapper } from './ProductsPage.styled.js';
 
 export default function ProductsPage() {
   const products = useSelector(selectProducts);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+   // const bloodGroup = useSelector(state=> state.user.blood)
+  const bloodGroup = "1"
   const dispatch = useDispatch();
 
-  const handleFilterChange = (filters) => {
-    dispatch(fetchProducts(filters));
+
+  const handleFilterChange = (params) => {
+    dispatch(fetchProducts(params));
   };
 
   return (
     <>
+
       <ProductsSection>
         <div className="container">
-          <FilterWrapper>
-            <ProductsTitle>Products</ProductsTitle>
-            <ProductsFilter onFilterChange={handleFilterChange} />
-          </FilterWrapper>
-          {isLoading && <Loader />}
-          {products.length > 0 && <ProductsList />}
-          {error && <ProductsError />}
+          <div className="row">
+            <Wrapper>
+            <FilterWrapper>
+              <ProductsTitle>Products</ProductsTitle>
+              <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup} />
+            </FilterWrapper>
+            {isLoading && <Loader />}
+            {products.length > 0 && <ProductsList bloodGroup={bloodGroup} />}
+            {error || products.length === 0 && <ProductsError />}
+            </Wrapper>
+          </div>
         </div>
       </ProductsSection>
+
     </>
   );
 }

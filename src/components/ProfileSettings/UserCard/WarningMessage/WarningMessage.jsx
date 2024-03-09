@@ -1,4 +1,4 @@
-import sprite from '../../../../../public/img/sprait.svg';
+import sprite from 'assets/sprite-2.svg';
 
 import { WarningText, WarningWrapper } from './WarningMessage.styled';
 export const WarningMessage = () => {

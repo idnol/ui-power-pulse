@@ -44,7 +44,7 @@ export const ListItem = ({ item }) => {
           isOpen={isModalOpen}
           onClose={() => setIsModal(false)}
         >
-          <AddExerciseForm />
+          <AddExerciseForm item={item} onClose={() => setIsModal(false)} />
         </BasicModalWindow>
       )}
     </>
