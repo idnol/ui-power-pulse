@@ -29,11 +29,11 @@ export const AddProductSuccess = ({ isOpen, onClose, calories }) => {
             <picture>
               <source
                 media={`${theme.breakpoint.sm}`}
-                srcset="/img/avocado-1x.png"
+                srcSet="/img/avocado-1x.png"
               />
               <source
                 media={`${theme.breakpoint.md}`}
-                srcset="/img/avocado-2x.png"
+                srcSet="/img/avocado-2x.png"
               />
               <img src="/img/avocado-1x.png" alt="Avocado" loading="lazy"></img>
             </picture>
