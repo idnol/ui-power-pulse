@@ -1,15 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addExercise, addProduct, getDiary, removeExercise, removeProduct } from "./api";
+import {getDate} from "../../components/parts/handleData.js";
 
 
 export const diarySlice = createSlice({
     name: "diary",
     initialState: {
         items: [],
+        selectedDate: getDate(),
         isLoading: false,
         error: null,
         isSuccess: false
         },
+    reducers: {
+        changeDate: (state, action) => {
+            state.selectedDate = action.payload;
+        },
+
+    },
 
         extraReducers: (builder) => {
             builder
@@ -80,4 +88,5 @@ export const diarySlice = createSlice({
         },
 })
 
+export const { changeDate } = diarySlice.actions;
 export const diaryReducer = diarySlice.reducer;
