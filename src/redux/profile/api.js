@@ -47,6 +47,8 @@ export const updateAvatar = createAsyncThunk(
       const res = await axios.post('/users/avatar', formData, {
         headers: { 'content-type': 'multipart/form-data' },
       });
+      setAuthHeader(res.data.token);
+
 
       return res.data;
     } catch (error) {
