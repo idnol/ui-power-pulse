@@ -1,5 +1,4 @@
 import { Formik } from 'formik';
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import {bloodOptions,sexOptions,levelOptions,bodyInfo} from './form-default-data.js'
@@ -7,7 +6,6 @@ import { userSchema } from './user-validation-yup.js';
 import { ToastContainer} from 'react-toastify';
 import ToastError from './helpers/ToastError.js';
 import 'react-toastify/dist/ReactToastify.css';
-// import { parseISO } from 'date-fns';
 
 import {
   StyledFormik,
@@ -24,7 +22,6 @@ import {
 import { RadioInput } from './RadioInput/RadioInput.jsx';
 import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
 import { DatePickerItem } from './DatePicker/DatePicker.jsx';
-import { getCurrent } from '../../../redux/auth/api.js';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
 
@@ -32,32 +29,12 @@ export const UserForm = () => {
   const dispatch = useDispatch();
   const profileData = useSelector(selectProfile);
 
-  const getUserInfo = async () => {
-    const user = await dispatch(getCurrent())
-    return user;
-  }
-
-  const user = getUserInfo();
-
- let defaultValues = {
-    name: user.name,
-    email: user.email,
-    height: '',
-    currentWeight: '',
-    desiredWeight: '',
-    birthday: '',
-    blood: '',
-    sex: '',
-    levelActivity: '',
-  };
-
-  // const formattedDate = parseISO(profileData.bodyData.birthday);
   const initialValues = {
     name: profileData.name || 'Name',
     email:profileData.email,
-    height: (profileData.bodyData && profileData.bodyData.height) || '150',
-    currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || '35',
-    desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || '35',
+    height: (profileData.bodyData && profileData.bodyData.height) || 150,
+    currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || 35,
+    desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || 35,
     birthday: '2006-01-02',
     blood: profileData.bodyData.blood || 1,
     sex: profileData.bodyData.sex || 'male',
@@ -66,20 +43,21 @@ export const UserForm = () => {
 
 
   const handleSubmit = async (values) => {
+
     if (profileData.bodyData) {
       if (JSON.stringify(values) === JSON.stringify(initialValues)) {
         toast.error('Nothing to change');
         return;
       }
       try {
-        const { email, ...bodyData } = values;
-
-        console.log('Before API call:', { email, bodyData });
-
-        const response = await axios.patch('/users/profile', bodyData);
-        toast.success("User data updated successfully");
-        dispatch(updateProfile(bodyData));
-        return response.data
+        // const userData = { ...profileData, ...values }
+        const { _id, ...restData } = profileData;
+        const userData = { _id, ...values,blood: parseInt(values.blood, 10) };
+        
+        console.log(userData);
+        dispatch(updateProfile({_id,...restData.bodyData,...userData}));
+        // console.log(userData)
+        // dispatch(updateProfile(userData));
       } catch (error) {
         toast.error('Error updating user data:', error);
       }
@@ -96,7 +74,7 @@ export const UserForm = () => {
     >
       {formikProps => {
         return (
-          <StyledFormik onSubmit={formikProps.handleSubmit}>
+          <StyledFormik>
             <UserInfo>
               <div>
                 <FormLabel>Name</FormLabel>
@@ -140,7 +118,7 @@ export const UserForm = () => {
                       name="blood"
                       label={option.label}
                       onChange={() => formikProps.setFieldValue('blood', option.id)}
-                      checked={formikProps.values.blood === option.id}
+                      checked={formikProps.values.blood == option.id}
                     />
                   ))}
                 </RadioContainer>

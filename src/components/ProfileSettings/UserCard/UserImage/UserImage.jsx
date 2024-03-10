@@ -35,23 +35,28 @@ export const UserImage = () => {
 
   const handleAvatarChange = async (event) => {
     const file = event.target.files[0];
-  
+
     if (file) {
       try {
-        setLocalAvatar(URL.createObjectURL(file));
+        const avatarURL = URL.createObjectURL(file);
+        setLocalAvatar(avatarURL);
   
-        const response = await dispatch(updateAvatar(file));
-  
-        if (updateAvatar.fulfilled.match(response)) {
-          toast.success('File uploaded successfully');
-        } else {
-          toast.error('Error uploading file: Server response not successful');
-        }
-  
-        return response.data;
+        dispatch(updateAvatar(file))
+          .then((response) => {
+            if (updateAvatar.fulfilled.match(response)) {
+              toast.success('File uploaded successfully');
+            } else {
+              toast.error('Error uploading file: Server response not successful');
+            }
+          })
+          .catch((error) => {
+            toast.error('Error uploading file:', error);
+          })
+          .finally(() => {
+            setLocalAvatar(null);
+          });
       } catch (error) {
-        toast.error('Error uploading file:', error);
-  
+        toast.error('Error creating URL for file:', error);
         setLocalAvatar(null);
       }
     }

@@ -1,6 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import {setAuthHeader} from '../auth/api'
+import { toast } from 'react-toastify';
+
+
+
 
 export const current = createAsyncThunk(
   'users/current',
@@ -20,14 +24,17 @@ export const updateProfile = createAsyncThunk(
   'users/profile',
   async (requestData, thunkAPI) => {
     try {
-
+      console.log(requestData)
       const response = await axios.patch('/users/profile', requestData);
-
       setAuthHeader(response.data.token);
-
-      const updatedProfileData = response.data;
-      return updatedProfileData;
+      if (response.status !== 200) {
+        toast.error('Error');
+      } else {
+        return response.data;
+      }
     } catch (error) {
+      toast.error('Error updating user data: ' + error.message);
+
       return thunkAPI.rejectWithValue(error.message);
     }
   }
