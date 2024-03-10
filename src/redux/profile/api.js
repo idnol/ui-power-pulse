@@ -24,7 +24,6 @@ export const updateProfile = createAsyncThunk(
     try {
       const response = await axios.patch('/users/profile', requestData);
       // setAuthHeader(response.data.token);
-      // console.log(response);
       if (response.status !== 200) {
         toast.error('Error');
       } else {
