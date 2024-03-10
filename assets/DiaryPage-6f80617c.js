@@ -1,7 +1,8 @@
-import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,q as U,v as J,b as h,h as Q}from"./index-a3a6e4cd.js";import{f as B,i as X,s as Z,a as ee}from"./index-0b1d6698.js";const te=i.div`
+import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,q as U,v as J,b as h,h as Q}from"./index-545fbc5f.js";import{f as B,i as X,s as Z,a as ee}from"./index-e0bfbd02.js";const te=i.div`
   min-height: 234px;
   max-height: 990px;
   overflow-y: auto;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -22,6 +23,7 @@ import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,q as U,v as J,b as h,h a
     max-width: 704px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar {
       width: 6px;
@@ -43,6 +45,7 @@ import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,q as U,v as J,b as h,h a
     max-width: 826px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
   }
 `,ie=i.div`
   display: none;
@@ -584,14 +587,15 @@ import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,q as U,v as J,b as h,h a
   min-height: 234px;
   max-height: 750px;
   overflow-y: auto;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 12px;
+   width: 6px;
+   border-radius: 12px;
   }
 
   &::-webkit-scrollbar-track {
-    margin-block: 1.45em;
+   margin-block: 1.45em;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -604,12 +608,13 @@ import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,q as U,v as J,b as h,h a
     max-width: 704px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
 
-    &::-webkit-scrollbar {
-      width: 6px;
-      border-radius: 12px;
-    }
-
+     &::-webkit-scrollbar {
+       width: 6px;
+       border-radius: 12px;
+     }
+    //
     &::-webkit-scrollbar-track {
       margin-block: 0.3em;
     }
@@ -624,6 +629,7 @@ import{s as i,t as e,j as t,N as Y,a as l,d as E,u as O,q as U,v as J,b as h,h a
     max-width: 826px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
   }
 `,Re=i.div`
   display: none;
