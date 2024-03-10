@@ -7,42 +7,63 @@ import { toast } from "react-toastify";
 
 
 export const CategoryFilter = ({ label, onSelect, onToggle, isOpen}) => {
-  const [categories, setCategories] = useState([]);
-  const [error, setError] = useState(null);
-  const categoryRef = useRef(null);
+ const [categories, setCategories] = useState([]);
+ const [error, setError] = useState(null);
+ const categoryRef = useRef(null);
 
-  useEffect(()=> {
-    async function getCategories() {
-      try {
-        setError(null);
-        const categories = await fetchCategories();
-        setCategories(categories);
-      } catch (error) {
-        setError(true);
-      } 
-    }
-    getCategories();
-  },[]);
+ useEffect(()=> {
+  async function getCategories() {
+    try {
+      setError(null);
+      const categories = await fetchCategories();
+      setCategories(categories);
+    } catch (error) {
+      setError(true);
+    } 
+  }
+  getCategories();
+ },[]);
+
+  const handleClickOutside = (event) => {
+   if (
+    categoryRef.current &&
+    !categoryRef.current.contains(event.target)
+  ) {
+    onToggle();
+   }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  });
 
   return ( <>
-    <CategoryField>
-    <SelectHeader onClick={onToggle}>
-     {label}
-    </SelectHeader>
-    <IconDown>
-     <use href={`${sprite}#arrow-down`} />
-    </IconDown>
-    <OptionsContainer ref={categoryRef} $isopen={isOpen}>
-     {categories.map((option, index) => (
-      <StyledOption key={index} onClick={() => onSelect(option)}>
-       {option}
-      </StyledOption>
-       ))}
-   </OptionsContainer>
-  </CategoryField>
-  {error && toast.error(
+   <CategoryField>
+     <SelectHeader onClick={onToggle}>
+       {label}
+     </SelectHeader>
+     <IconDown>
+       <use href={`${sprite}#arrow-down`} />
+     </IconDown>
+
+    {isOpen && <OptionsContainer ref={categoryRef}>
+       <StyledOption onClick={() => onSelect("")}>
+          {"All"}
+        </StyledOption>
+       {categories.map((option, index) => (
+         <StyledOption key={index} onClick={() => onSelect(option)}>
+          {option}
+         </StyledOption>
+        ))}
+     </OptionsContainer>}
+   </CategoryField>
+
+   {error && toast.error(
     'Something went wrong! Please try again.'
-  )}
-  </>
+   )}
+ </>
   )
 }

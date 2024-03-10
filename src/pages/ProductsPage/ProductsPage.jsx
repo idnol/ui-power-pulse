@@ -15,34 +15,53 @@ import {
 import { Loader } from '../../components/parts/Loader/Loader';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
 import { Wrapper } from './ProductsPage.styled.js';
+import { useEffect, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 export default function ProductsPage() {
   const products = useSelector(selectProducts);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-   // const bloodGroup = useSelector(state=> state.user.blood)
-  const bloodGroup = "1"
+  const bloodGroup = useSelector(state=> state.profile.items.bodyData.blood);
   const dispatch = useDispatch();
 
+  const [searchParams] = useSearchParams();
+  const params = useMemo(
+   () => Object.fromEntries([...searchParams]),
+   [searchParams]
+  );
+  const { query = "", category = "", recommended = "all" } = params;
+  
+   useEffect(() => {
+   dispatch(fetchProducts(params))
+ }, [dispatch, params]);
 
-  const handleFilterChange = (params) => {
-    dispatch(fetchProducts(params));
+  const handleFilterChange = (newParams) => {
+    dispatch(fetchProducts(newParams));
   };
 
   return (
     <>
-
       <ProductsSection>
         <div className="container">
           <div className="row">
             <Wrapper>
-            <FilterWrapper>
-              <ProductsTitle>Products</ProductsTitle>
-              <ProductsFilter onFilterChange={handleFilterChange} bloodGroup={bloodGroup} />
-            </FilterWrapper>
-            {isLoading && <Loader />}
-            {products.length > 0 && <ProductsList bloodGroup={bloodGroup} />}
-            {error || products.length === 0 && <ProductsError />}
+             <FilterWrapper>
+               <ProductsTitle>Products</ProductsTitle>
+
+               <ProductsFilter 
+               query={query}
+               category={category}
+               recommended={recommended}
+               onFilterChange={handleFilterChange}
+               bloodGroup={bloodGroup} />
+             </FilterWrapper>
+
+             {isLoading && <Loader />}
+
+             {products.length > 0 && <ProductsList items={products} bloodGroup={bloodGroup} />}
+             
+             {error || products.length === 0 && <ProductsError />}
             </Wrapper>
           </div>
         </div>
