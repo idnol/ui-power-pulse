@@ -1,17 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axios from '../../axios.js';
 import {setAuthHeader} from '../auth/api'
 import { toast } from 'react-toastify';
-
-
-
 
 export const current = createAsyncThunk(
   'users/current',
   async (_, thunkAPI) => {
     try {
       const res = await axios('/users/current');
-      setAuthHeader(res.data.token);
+      // setAuthHeader(res.data.token);
 
       return res.data;
     } catch (error) {
@@ -23,10 +20,11 @@ export const current = createAsyncThunk(
 export const updateProfile = createAsyncThunk(
   'users/profile',
   async (requestData, thunkAPI) => {
+
     try {
-      console.log(requestData)
       const response = await axios.patch('/users/profile', requestData);
-      setAuthHeader(response.data.token);
+      // setAuthHeader(response.data.token);
+      // console.log(response);
       if (response.status !== 200) {
         toast.error('Error');
       } else {

@@ -54,7 +54,7 @@ export const UserForm = () => {
         const { _id, ...restData } = profileData;
         const userData = { _id, ...values,blood: parseInt(values.blood, 10) };
         
-        console.log(userData);
+        // console.log(userData);
         dispatch(updateProfile({_id,...restData.bodyData,...userData}));
         // console.log(userData)
         // dispatch(updateProfile(userData));
