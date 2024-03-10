@@ -24,7 +24,7 @@ import {
 import { RadioInput } from './RadioInput/RadioInput.jsx';
 import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
 import { DatePickerItem } from './DatePicker/DatePicker.jsx';
-import { getCurrent } from '../../../redux/auth/api.js';
+// import { getCurrent } from '../../../redux/auth/api.js';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
 
@@ -32,24 +32,24 @@ export const UserForm = () => {
   const dispatch = useDispatch();
   const profileData = useSelector(selectProfile);
 
-  const getUserInfo = async () => {
-    const user = await dispatch(getCurrent())
-    return user;
-  }
+  // const getUserInfo = async () => {
+  //   const user = await dispatch(getCurrent())
+  //   return user;
+  // }
 
-  const user = getUserInfo();
+  // const user = getUserInfo();
 
- let defaultValues = {
-    name: user.name,
-    email: user.email,
-    height: '',
-    currentWeight: '',
-    desiredWeight: '',
-    birthday: '',
-    blood: '',
-    sex: '',
-    levelActivity: '',
-  };
+//  let defaultValues = {
+//     name: user.name,
+//     email: user.email,
+//     height: '',
+//     currentWeight: '',
+//     desiredWeight: '',
+//     birthday: '',
+//     blood: '',
+//     sex: '',
+//     levelActivity: '',
+//   };
 
   // const formattedDate = parseISO(profileData.bodyData.birthday);
   const initialValues = {
