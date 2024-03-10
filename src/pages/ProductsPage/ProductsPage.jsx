@@ -54,14 +54,7 @@ export default function ProductsPage() {
                onFilterChange={handleFilterChange}
                bloodGroup={bloodGroup} />
 
-               {/* <Filter2
-               query={query}
-               category={category}
-               recommended={recommended}
-               onFilterChange={handleFilterChange}
-               bloodGroup={bloodGroup}/> */}
-
-             </FilterWrapper>
+              </FilterWrapper>
 
              {isLoading && <LoaderTransparent />}
 
