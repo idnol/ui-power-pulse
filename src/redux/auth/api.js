@@ -42,12 +42,14 @@ export const login = createAsyncThunk(
 export const logout = createAsyncThunk(
   'users/logout',
   async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    setAuthHeader(state.auth.token);
     try {
       await axios.post('/users/logout');
-        clearAuthHeader();
+      clearAuthHeader();
     } catch (error) {
-        toast.error(error.message);
-        return thunkAPI.rejectWithValue(error.message);
+      toast.error(error.message);
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
