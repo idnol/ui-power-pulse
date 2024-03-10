@@ -1,4 +1,4 @@
-import{s as t,t as e,j as o,b,a as d,A as W,B as V,u as P,C as E,L as q,D as G,d as $,E as I,o as Q}from"./index-6f921082.js";import{B as R,Q as Y}from"./react-toastify.esm-80f3c7de.js";const H=t.div`
+import{s as t,t as e,j as o,b,a as d,A as W,B as V,u as R,C as E,L as q,D as G,E as I,d as v,o as Q}from"./index-251844ee.js";import{B as F,Q as Y}from"./react-toastify.esm-8e20e479.js";const H=t.div`
   padding-top: 40px;
   padding-bottom: 40px;
   @media (min-width: ${e.breakpoint.md}) {
@@ -194,7 +194,7 @@ import{s as t,t as e,j as o,b,a as d,A as W,B as V,u as P,C as E,L as q,D as G,d
   font-size: 16px;
   line-height: 1.5;
   }
-`,se=({label:i,onSelect:r,onToggle:n,isOpen:a})=>{const[s,c]=d.useState([]),[l,p]=d.useState(null),m=d.useRef(null);return d.useEffect(()=>{async function h(){try{p(null);const x=await W();c(x)}catch{p(!0)}}h()},[]),o.jsxs(o.Fragment,{children:[o.jsxs(re,{children:[o.jsx(A,{onClick:n,children:i}),o.jsx(T,{children:o.jsx("use",{href:`${b}#arrow-down`})}),o.jsx(O,{ref:m,$isopen:a,children:s.map((h,x)=>o.jsx(D,{onClick:()=>r(h),children:h},x))})]}),l&&R.error("Something went wrong! Please try again.")]})},ae=t.div`
+`,se=({label:i,onSelect:r,onToggle:n,isOpen:a})=>{const[s,l]=d.useState([]),[c,p]=d.useState(null),m=d.useRef(null);return d.useEffect(()=>{async function h(){try{p(null);const x=await W();l(x)}catch{p(!0)}}h()},[]),o.jsxs(o.Fragment,{children:[o.jsxs(re,{children:[o.jsx(A,{onClick:n,children:i}),o.jsx(T,{children:o.jsx("use",{href:`${b}#arrow-down`})}),o.jsx(O,{ref:m,$isopen:a,children:s.map((h,x)=>o.jsx(D,{onClick:()=>r(h),children:h},x))})]}),c&&F.error("Something went wrong! Please try again.")]})},ae=t.div`
  border: ${e.border.grey3};
  border-radius: 12px;
  width: 173px;
@@ -210,7 +210,7 @@ import{s as t,t as e,j as o,b,a as d,A as W,B as V,u as P,C as E,L as q,D as G,d
   font-size: 16px;
   line-height: 1.5;
   }
-`,de=({label:i,isOpen:r,onToggle:n,onSelect:a})=>{const s=["All","recommended","not recommended"],c=d.useRef(null);return o.jsxs(ae,{children:[o.jsx(A,{onClick:n,children:i}),o.jsx(T,{children:o.jsx("use",{href:`${b}#arrow-down`})}),o.jsx(O,{ref:c,$isopen:r,children:s.map((l,p)=>o.jsx(D,{onClick:()=>a(l),children:l},p))})]})},ce=({onFilterChange:i,bloodGroup:r})=>{const[n,a]=V(),s=d.useMemo(()=>Object.fromEntries([...n]),[n]),{query:c="",category:l="",recommended:p="all"}=s,[m,h]=d.useState(!1),x=d.useRef(null),[f,w]=d.useState(!1),y=d.useRef(null),j=P();d.useEffect(()=>{j(E(s))},[j,s]);const C=()=>{h(!m)},z=()=>{w(!f)},k=g=>{n.set("query",g.target.value),a(n)},u=g=>{n.set("category",g),a(n),h(!1)},v=g=>{n.set("recommended",g),n.set("blood",r),a(n),w(!1)},S=g=>{x.current&&!x.current.contains(g.target)&&h(!1),y.current&&!y.current.contains(g.target)&&w(!1)};d.useEffect(()=>(document.addEventListener("mousedown",S),()=>{document.removeEventListener("mousedown",S)}),[]);const B=g=>{g.preventDefault(),i(s)},M=()=>{n.set("query",""),a(n)};return o.jsx(o.Fragment,{children:o.jsx(_,{children:o.jsxs(J,{onSubmit:B,children:[o.jsx(ne,{query:c,onTitleChange:k,onCleanForm:M,onSubmit:B}),o.jsxs(U,{children:[o.jsx(se,{label:l||"Category",onToggle:C,onSelect:u,isOpen:m}),o.jsx(de,{label:p||"All",isOpen:f,onToggle:z,onSelect:v})]})]})})})};t.p`
+`,de=({label:i,isOpen:r,onToggle:n,onSelect:a})=>{const s=["All","recommended","not recommended"],l=d.useRef(null);return o.jsxs(ae,{children:[o.jsx(A,{onClick:n,children:i}),o.jsx(T,{children:o.jsx("use",{href:`${b}#arrow-down`})}),o.jsx(O,{ref:l,$isopen:r,children:s.map((c,p)=>o.jsx(D,{onClick:()=>a(c),children:c},p))})]})},le=({onFilterChange:i,bloodGroup:r})=>{const[n,a]=V(),s=d.useMemo(()=>Object.fromEntries([...n]),[n]),{query:l="",category:c="",recommended:p="all"}=s,[m,h]=d.useState(!1),x=d.useRef(null),[u,w]=d.useState(!1),$=d.useRef(null),y=R();d.useEffect(()=>{y(E(s))},[y,s]);const C=()=>{h(!m)},k=()=>{w(!u)},f=g=>{n.set("query",g.target.value),a(n)},j=g=>{n.set("category",g),a(n),h(!1)},z=g=>{n.set("recommended",g),n.set("blood",r),a(n),w(!1)},P=g=>{x.current&&!x.current.contains(g.target)&&h(!1),$.current&&!$.current.contains(g.target)&&w(!1)};d.useEffect(()=>(document.addEventListener("mousedown",P),()=>{document.removeEventListener("mousedown",P)}),[]);const B=g=>{g.preventDefault(),i(s)},M=()=>{n.set("query",""),a(n)};return o.jsx(o.Fragment,{children:o.jsx(_,{children:o.jsxs(J,{onSubmit:B,children:[o.jsx(ne,{query:l,onTitleChange:f,onCleanForm:M,onSubmit:B}),o.jsxs(U,{children:[o.jsx(se,{label:c||"Category",onToggle:C,onSelect:j,isOpen:m}),o.jsx(de,{label:p||"All",isOpen:u,onToggle:k,onSelect:z})]})]})})})};t.p`
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
@@ -252,7 +252,7 @@ import{s as t,t as e,j as o,b,a as d,A as W,B as V,u as P,C as E,L as q,D as G,d
     font-size: 24px;
     line-height: 32px;
   }
-`;const le=t.ul`
+`;const ce=t.ul`
   display: flex;
   flex-wrap: wrap;
 `;t.button`
@@ -341,7 +341,7 @@ import{s as t,t as e,j as o,b,a as d,A as W,B as V,u as P,C as E,L as q,D as G,d
  white-space: nowrap;
  overflow: hidden;
  text-overflow: ellipsis;
-`,F=({text:i,val:r})=>o.jsxs(ge,{children:[i,o.jsx(ue,{children:r})]}),fe=i=>i.$isAllowed?e.color.green:e.color.red,be=t.div`
+`,S=({text:i,val:r})=>o.jsxs(ge,{children:[i,o.jsx(ue,{children:r})]}),fe=i=>i.$isAllowed?e.color.green:e.color.red,be=t.div`
  border: ${e.border.grey3};
  border-radius: 12px;
  padding: 16px;
@@ -402,7 +402,7 @@ stroke: ${e.color.orange};
  @media (min-width: ${e.breakpoint.md}) {
   margin-bottom: 27px;
   }
-`,Se=t.div`
+`,Ce=t.div`
  display: flex;
  gap: 16px;
 `;t.div`
@@ -447,7 +447,7 @@ stroke: ${e.color.orange};
     width: 26px;
     height: 26px;
   }
-`;const Ce=t.div`
+`;const ze=t.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -459,7 +459,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 32px;
   }
-`;const ze=t.div`
+`;const Se=t.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -588,7 +588,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     padding: 14px 32px;
   }
-`,Ae=({isOpen:i,onClose:r,calories:n})=>{var c;const a=G(),s=d.useRef(a);return o.jsx(o.Fragment,{children:i&&o.jsx(Pe,{children:o.jsxs(Ce,{children:[o.jsxs("picture",{children:[o.jsx("source",{media:`${e.breakpoint.sm}`,srcSet:"/img/avocado-1x.png"}),o.jsx("source",{media:`${e.breakpoint.md}`,srcSet:"/img/avocado-2x.png"}),o.jsx("img",{src:"/img/avocado-1x.png",alt:"Avocado",loading:"lazy"})]}),o.jsx(Be,{children:"Well done"}),o.jsxs(ze,{children:[o.jsx(Ie,{children:"Calories:"}),o.jsx(Le,{children:n})]}),o.jsx(Ee,{type:"button",onClick:r,children:"Next product"}),o.jsxs(Re,{to:((c=s.current.state)==null?void 0:c.from)??"/diary",children:["To the diary",o.jsx(Fe,{children:o.jsx("use",{href:`${b}#arrow`})})]})]})})})},Te=t.div`
+`,Ae=({isOpen:i,onClose:r,calories:n})=>{var l;const a=G(),s=d.useRef(a);return o.jsx(o.Fragment,{children:i&&o.jsx(Pe,{children:o.jsxs(ze,{children:[o.jsxs("picture",{children:[o.jsx("source",{media:`${e.breakpoint.sm}`,srcSet:"/img/avocado-1x.png"}),o.jsx("source",{media:`${e.breakpoint.md}`,srcSet:"/img/avocado-2x.png"}),o.jsx("img",{src:"/img/avocado-1x.png",alt:"Avocado",loading:"lazy"})]}),o.jsx(Be,{children:"Well done"}),o.jsxs(Se,{children:[o.jsx(Ie,{children:"Calories:"}),o.jsx(Le,{children:n})]}),o.jsx(Ee,{type:"button",onClick:r,children:"Next product"}),o.jsxs(Re,{to:((l=s.current.state)==null?void 0:l.from)??"/diary",children:["To the diary",o.jsx(Fe,{children:o.jsx("use",{href:`${b}#arrow`})})]})]})})})},Te=t.div`
   padding: 48px 24px;
   max-width: 335px;
 
@@ -746,7 +746,7 @@ stroke: ${e.color.orange};
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 64px;
   }
-`,Xe=i=>i.diary.isSuccess,Ze=({onClose:i,title:r,calories:n,id:a})=>{const[s,c]=d.useState(""),[l,p]=d.useState("0"),[m,h]=d.useState(n),[x,f]=d.useState(!1),w=$(Xe),y=P(),j=k=>{const u=k.currentTarget.value;c(u);const S=Math.round(u*m/100);p(S)},C=async k=>{k.preventDefault();try{const u={product:a,weight:+s},v=await y(I(u));I.fulfilled.match(v)?(console.log(u),c(""),f(!0),console.log("Success ",w)):(f(!1),p("0"),R.error("Oops, something went wrong"),console.log("Success ",w))}catch{f(!1),p("0"),R.error("Oops, something went wrong")}},z=()=>{i(),f(!1)};return o.jsxs(o.Fragment,{children:[o.jsx(Oe,{onClick:i,children:o.jsx(Ne,{children:o.jsx(De,{href:`${b}#x-modal`})})}),!x&&o.jsx(Te,{children:o.jsxs("form",{onSubmit:C,children:[o.jsxs(Me,{children:[o.jsx(We,{children:o.jsx(Ve,{children:r})}),o.jsxs(qe,{children:[o.jsx(Qe,{name:"number",required:!0,value:s,onChange:j}),o.jsx(Ge,{children:"grams"})]})]}),o.jsxs(Ye,{children:[o.jsx(Ue,{children:"Calories:"}),o.jsx(He,{children:l})]}),o.jsxs(Ke,{children:[o.jsx(_e,{type:"submit",children:"Add to diary"}),o.jsx(Je,{type:"button",onClick:i,children:"Cancel"})]})]})}),x&&o.jsx(Ae,{calories:l,isOpen:x,onClose:()=>z()}),o.jsx(Y,{})]})},eo=t.div`
+`,Xe=({onClose:i,title:r,calories:n,id:a})=>{const[s,l]=d.useState(""),[c,p]=d.useState("0"),[m,h]=d.useState(n),[x,u]=d.useState(!1),w=R(),$=k=>{const f=k.currentTarget.value;l(f);const z=Math.round(f*m/100);p(z)},y=async k=>{k.preventDefault();try{const f={product:a,weight:+s},j=await w(I(f));I.fulfilled.match(j)?(l(""),u(!0)):(u(!1),p("0"),F.error("Oops, something went wrong"))}catch{u(!1),p("0"),F.error("Oops, something went wrong")}},C=()=>{i(),u(!1)};return o.jsxs(o.Fragment,{children:[o.jsx(Oe,{onClick:i,children:o.jsx(Ne,{children:o.jsx(De,{href:`${b}#x-modal`})})}),!x&&o.jsx(Te,{children:o.jsxs("form",{onSubmit:y,children:[o.jsxs(Me,{children:[o.jsx(We,{children:o.jsx(Ve,{children:r})}),o.jsxs(qe,{children:[o.jsx(Qe,{name:"number",required:!0,value:s,onChange:$}),o.jsx(Ge,{children:"grams"})]})]}),o.jsxs(Ye,{children:[o.jsx(Ue,{children:"Calories:"}),o.jsx(He,{children:c})]}),o.jsxs(Ke,{children:[o.jsx(_e,{type:"submit",children:"Add to diary"}),o.jsx(Je,{type:"button",onClick:i,children:"Cancel"})]})]})}),x&&o.jsx(Ae,{calories:c,isOpen:x,onClose:()=>C()}),o.jsx(Y,{position:"bottom-right",limit:2,autoClose:3e3})]})},Ze=t.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -757,7 +757,7 @@ stroke: ${e.color.orange};
   align-items: center;
   background-color: rgba(0, 0, 0, 0);
   z-index: 1200;
-`,oo=t.div`
+`,eo=t.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -770,7 +770,7 @@ stroke: ${e.color.orange};
   border-radius: 12px;
   border: none;
   overflow: hidden;
-`,to=({isOpen:i,onClose:r,children:n})=>{const a=s=>{s.currentTarget===s.target&&r()};return d.useEffect(()=>{const s=c=>{c.keyCode===27&&r()};return i&&(document.addEventListener("keydown",s),document.body.classList.add("disable-scroll")),()=>{document.removeEventListener("keydown",s),document.body.classList.remove("disable-scroll")}},[i,r]),i?o.jsx(o.Fragment,{children:i&&o.jsx(eo,{onClick:a,children:o.jsx(oo,{children:n})})}):null},io=({item:{title:i,calories:r,category:n,weight:a,groupBloodNotAllowed:s,_id:c},bloodGroup:l})=>{const[p,m]=d.useState(!1),h=s[l],x=h?"Recommended":"Not recommended";return o.jsxs(o.Fragment,{children:[o.jsxs(be,{children:[o.jsxs(ve,{children:[o.jsx(we,{children:"Diet"}),o.jsxs(Se,{children:[o.jsxs($e,{children:[o.jsx(ke,{$isAllowed:h}),x]}),o.jsxs(ye,{type:"button",onClick:()=>m(!0),children:["Add",o.jsx(je,{children:o.jsx("use",{href:`${b}#arrow`})})]})]})]}),o.jsx(me,{titleName:i}),o.jsxs(le,{children:[o.jsx(F,{text:"Calories: ",val:r}),o.jsx(F,{text:"Category: ",val:n}),o.jsx(F,{text:"Weight: ",val:a})]})]}),p&&o.jsx(to,{isOpen:p,onClose:()=>m(!1),children:o.jsx(Ze,{onClose:()=>m(!1),id:c,title:i,calories:r})})]})},no=t.div`
+`,oo=({isOpen:i,onClose:r,children:n})=>{const a=s=>{s.currentTarget===s.target&&r()};return d.useEffect(()=>{const s=l=>{l.keyCode===27&&r()};return i&&(document.addEventListener("keydown",s),document.body.classList.add("disable-scroll")),()=>{document.removeEventListener("keydown",s),document.body.classList.remove("disable-scroll")}},[i,r]),i?o.jsx(o.Fragment,{children:i&&o.jsx(Ze,{onClick:a,children:o.jsx(eo,{children:n})})}):null},to=({item:{title:i,calories:r,category:n,weight:a,groupBloodNotAllowed:s,_id:l},bloodGroup:c})=>{const[p,m]=d.useState(!1),h=s[c],x=h?"Recommended":"Not recommended";return o.jsxs(o.Fragment,{children:[o.jsxs(be,{children:[o.jsxs(ve,{children:[o.jsx(we,{children:"Diet"}),o.jsxs(Ce,{children:[o.jsxs($e,{children:[o.jsx(ke,{$isAllowed:h}),x]}),o.jsxs(ye,{type:"button",onClick:()=>m(!0),children:["Add",o.jsx(je,{children:o.jsx("use",{href:`${b}#arrow`})})]})]})]}),o.jsx(me,{titleName:i}),o.jsxs(ce,{children:[o.jsx(S,{text:"Calories: ",val:r}),o.jsx(S,{text:"Category: ",val:n}),o.jsx(S,{text:"Weight: ",val:a})]})]}),p&&o.jsx(oo,{isOpen:p,onClose:()=>m(!1),children:o.jsx(Xe,{onClose:()=>m(!1),id:l,title:i,calories:r})})]})},io=t.div`
  max-width: 335px;
  margin: 0 auto;
  @media (min-width: ${e.breakpoint.md}) {
@@ -802,7 +802,7 @@ stroke: ${e.color.orange};
     height: 153px;
     }
  }
-`,ro=t.ul`
+`,no=t.ul`
  display: flex;
  flex-direction: column;
  gap: 20px;
@@ -812,7 +812,7 @@ stroke: ${e.color.orange};
   gap: 16px;
   row-gap: 32px;
   }
-`,so=t.section`
+`,ro=t.section`
  @media (min-width: ${e.breakpoint.xl}) {
   height: 100vh;
   width: 100%;
@@ -826,7 +826,7 @@ stroke: ${e.color.orange};
       background-image: url(../../../public/img/side-view-products-2x-desk.jpg); 
       }
   }
-`,N=i=>i.products.items,ao=i=>i.products.isLoading,co=i=>i.products.error,lo=({bloodGroup:i})=>{const r=$(N);return o.jsx(no,{children:o.jsx(ro,{children:r.map(n=>o.jsx("li",{children:o.jsx(io,{item:n,bloodGroup:i})},n._id))})})},po=t.div`
+`,N=i=>i.products.items,so=i=>i.products.isLoading,ao=i=>i.products.error,lo=({bloodGroup:i})=>{const r=v(N);return o.jsx(io,{children:o.jsx(no,{children:r.map(n=>o.jsx("li",{children:o.jsx(to,{item:n,bloodGroup:i})},n._id))})})},co=t.div`
  max-width: 335px;
  margin: 0 auto;
  margin-top: 64px;
@@ -835,7 +835,7 @@ stroke: ${e.color.orange};
  margin: 0;
  margin-top: 132px;   
  }
-`,xo=t.p`
+`,po=t.p`
 font-size: 14px;
 line-height: 1.29;
 color: ${e.color.grey};
@@ -852,8 +852,8 @@ color: ${e.color.orange};
  font-size: 16px;
  line-height: 1.5;    
  }
-`,ho=()=>o.jsxs(po,{children:[o.jsxs(xo,{children:[o.jsx(L,{children:" Sorry, no results were found "}),"for the product filters you selected. You may want to consider other search options to find the product you want. Our range is wide and you have the opportunity to find more options that suit your needs."]}),o.jsx(L,{children:"Try changing the search parameters."})]}),mo=t.div`
+`,xo=()=>o.jsxs(co,{children:[o.jsxs(po,{children:[o.jsx(L,{children:" Sorry, no results were found "}),"for the product filters you selected. You may want to consider other search options to find the product you want. Our range is wide and you have the opportunity to find more options that suit your needs."]}),o.jsx(L,{children:"Try changing the search parameters."})]}),ho=t.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-`;function fo(){const i=$(N),r=$(ao),n=$(co),a="1",s=P(),c=l=>{s(E(l))};return o.jsx(o.Fragment,{children:o.jsx(so,{children:o.jsx("div",{className:"container",children:o.jsx("div",{className:"row",children:o.jsxs(mo,{children:[o.jsxs(H,{children:[o.jsx(K,{children:"Products"}),o.jsx(ce,{onFilterChange:c,bloodGroup:a})]}),r&&o.jsx(Q,{}),i.length>0&&o.jsx(lo,{bloodGroup:a}),n||i.length===0&&o.jsx(ho,{})]})})})})})}export{fo as default};
+`;function uo(){const i=v(N),r=v(so),n=v(ao),a="1",s=R(),l=c=>{s(E(c))};return o.jsx(o.Fragment,{children:o.jsx(ro,{children:o.jsx("div",{className:"container",children:o.jsx("div",{className:"row",children:o.jsxs(ho,{children:[o.jsxs(H,{children:[o.jsx(K,{children:"Products"}),o.jsx(le,{onFilterChange:l,bloodGroup:a})]}),r&&o.jsx(Q,{}),i.length>0&&o.jsx(lo,{bloodGroup:a}),n||i.length===0&&o.jsx(xo,{})]})})})})})}export{uo as default};
