@@ -2,11 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../redux/products/api';
 import { ProductsFilter } from '../../components/ProductsFilter/ProductsFilter';
 import { ProductsList } from '../../components/ProductsList/ProductsList';
-import { ProductsSection } from '../../components/ProductsList/ProductsList.styled';
-import {
-  FilterWrapper,
-  ProductsTitle,
-} from '../../components/ProductsFilter/ProductsFilter.styled';
+import {FilterWrapper} from '../../components/ProductsFilter/ProductsFilter.styled';
 import {
   selectError,
   selectIsLoading,
@@ -14,7 +10,7 @@ import {
 } from '../../redux/products/selectors';
 import { Loader } from '../../components/parts/Loader/Loader';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
-import { Wrapper } from './ProductsPage.styled.js';
+import { ProductsTitle, Wrapper, ProductsSection, HeaderInner } from './ProductsPage.styled.js';
 import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
@@ -43,8 +39,8 @@ export default function ProductsPage() {
   return (
     <>
       <ProductsSection>
+        <HeaderInner/>
         <div className="container">
-          <div className="row">
             <Wrapper>
              <FilterWrapper>
                <ProductsTitle>Products</ProductsTitle>
@@ -63,7 +59,6 @@ export default function ProductsPage() {
              
              {error || products.length === 0 && <ProductsError />}
             </Wrapper>
-          </div>
         </div>
       </ProductsSection>
 
