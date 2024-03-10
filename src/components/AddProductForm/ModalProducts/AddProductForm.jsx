@@ -21,8 +21,7 @@ import {
   Name,
 } from './AddProductForm.styled';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectSuccess } from '../../../redux/diary/diarySelectors.js';
+import { useDispatch } from 'react-redux';
 import { addProduct } from '../../../redux/diary/api.js';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -31,7 +30,6 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
   const [isCaloriesValue, setIsCaloriesValue] = useState('0');
   const [isCalories, setIsCalories] = useState(calories);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
-  const success = useSelector(selectSuccess);
 
   const dispatch = useDispatch();
 
@@ -53,20 +51,15 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
         weight: +isInputValue,
       };
 
-      // Wait for the completion of the addProduct async action
       const resultAction = await dispatch(addProduct(data));
 
-      // Check if the action was successful
       if (addProduct.fulfilled.match(resultAction)) {
-        console.log(data);
         setIsInputValue('');
         setIsOpenSuccess(true);
-        console.log('Success ', success);
       } else {
         setIsOpenSuccess(false);
         setIsCaloriesValue('0');
         toast.error('Oops, something went wrong');
-        console.log('Success ', success);
       }
     } catch (error) {
       setIsOpenSuccess(false);
@@ -127,7 +120,7 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
           onClose={() => comboModal()}
         />
       )}
-      <ToastContainer />
+      <ToastContainer position="bottom-right" limit={2} autoClose={3000} />
     </>
   );
 };
