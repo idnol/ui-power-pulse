@@ -12,7 +12,7 @@ export default function ExercisesPage() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <ExercisesCategories onClick={handleCategoryClick} />
       <ExercisesSubcategoriesList categories={categories} selectedCategory={selectedCategory} />
     </div>
