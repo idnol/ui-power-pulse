@@ -10,9 +10,10 @@ import {
 } from '../../redux/products/selectors';
 import { Loader } from '../../components/parts/Loader/Loader';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
-import { ProductsTitle, Wrapper, ProductsSection, HeaderInner } from './ProductsPage.styled.js';
+import { Wrapper, ProductsSection, HeaderInner } from './ProductsPage.styled.js';
 import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { TitlePage } from '../../components/parts/TitlePage/TitlePage.jsx';
 
 export default function ProductsPage() {
   const products = useSelector(selectProducts);
@@ -43,7 +44,7 @@ export default function ProductsPage() {
         <div className="container">
             <Wrapper>
              <FilterWrapper>
-               <ProductsTitle>Products</ProductsTitle>
+               <TitlePage>Products</TitlePage>
 
                <ProductsFilter 
                query={query}

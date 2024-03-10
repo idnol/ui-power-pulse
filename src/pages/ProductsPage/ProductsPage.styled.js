@@ -36,18 +36,3 @@ export const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
 `;
-
-export const ProductsTitle = styled.h2`
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.17;
-  color: ${theme.color.white};
-  @media (min-width: ${theme.breakpoint.md}) {
-    font-size: 32px;
-    line-height: 1.37;
-  }
-  @media (min-width: ${theme.breakpoint.xl}) {
-    margin-top: 0;
-    display: block;
-  }
-`;
