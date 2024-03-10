@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../redux/products/api';
 import { ProductsFilter } from '../../components/ProductsFilter/ProductsFilter';
+// import { Filter2 } from '../../components/ProductsFilter/Filter2.jsx';
 import { ProductsList } from '../../components/ProductsList/ProductsList';
 import {FilterWrapper} from '../../components/ProductsFilter/ProductsFilter.styled';
 import {
@@ -8,7 +9,7 @@ import {
   selectIsLoading,
   selectProducts,
 } from '../../redux/products/selectors';
-import { Loader } from '../../components/parts/Loader/Loader';
+import { LoaderTransparent } from '../../components/parts/LoaderTransparent/LoaderTransparent.jsx';
 import { ProductsError } from '../../components/ProductsError/ProductsError';
 import { Wrapper, ProductsSection, HeaderInner } from './ProductsPage.styled.js';
 import { useEffect, useMemo } from 'react';
@@ -52,9 +53,17 @@ export default function ProductsPage() {
                recommended={recommended}
                onFilterChange={handleFilterChange}
                bloodGroup={bloodGroup} />
+
+               {/* <Filter2
+               query={query}
+               category={category}
+               recommended={recommended}
+               onFilterChange={handleFilterChange}
+               bloodGroup={bloodGroup}/> */}
+
              </FilterWrapper>
 
-             {isLoading && <Loader />}
+             {isLoading && <LoaderTransparent />}
 
              {products.length > 0 && <ProductsList items={products} bloodGroup={bloodGroup} />}
              
