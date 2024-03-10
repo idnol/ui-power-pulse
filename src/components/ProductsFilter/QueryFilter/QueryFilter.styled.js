@@ -38,6 +38,7 @@ export const FieldTitle = styled.input`
  @media (min-width: ${theme.breakpoint.md}) {
    width: 236px;
    font-size: 16px;
+   line-height: 1.5;
   }
 `;
 
@@ -58,6 +59,7 @@ export const IconClean = styled.svg`
   width: 18px;
   height: 18px;
   stroke: ${theme.color.orange};
+  fill: ${theme.color.orange};
 `;
 
 export const SearchBtn = styled.button`

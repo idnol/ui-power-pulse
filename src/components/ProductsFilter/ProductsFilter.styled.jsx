@@ -2,33 +2,25 @@ import styled from "styled-components";
 import {theme} from "../../vars";
 
 export const FilterWrapper = styled.div`
+  max-width: 335px;
+  margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 40px;
   @media (min-width: ${theme.breakpoint.md}) {
+    max-width: 668px;
+    margin: 0;
     padding-top: 72px;
     padding-bottom: 32px;
   }
   @media (min-width: ${theme.breakpoint.xl}) {
+    max-width: 1248px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 `;
 
-export const ProductsTitle = styled.h2`
-  margin-top: 61px;
-  @media (min-width: ${theme.breakpoint.md}) {
-    margin-top: 84px;
-  }
-  @media (min-width: ${theme.breakpoint.xl}) {
-    margin-top: 0;
-    display: block;
-  }
-`;
-
 export const FiltersContainer = styled.div`
-  max-width: 335px;
-  margin: 0 auto;
   margin-top: 40px;
   @media (min-width: ${theme.breakpoint.md}) {
     max-width: 664px;
