@@ -7,6 +7,7 @@ import { userSchema } from './user-validation-yup.js';
 import { ToastContainer} from 'react-toastify';
 import ToastError from './helpers/ToastError.js';
 import 'react-toastify/dist/ReactToastify.css';
+// import {StyledDataPicker from '../../DatePicker/StyledDatePicker.jsx'
 // import { parseISO } from 'date-fns';
 
 import {
@@ -52,6 +53,7 @@ export const UserForm = () => {
 //   };
 
   // const formattedDate = parseISO(profileData.bodyData.birthday);
+
   const initialValues = {
     name: profileData.name || 'Name',
     email:profileData.email,
@@ -66,20 +68,28 @@ export const UserForm = () => {
 
 
   const handleSubmit = async (values) => {
+
     if (profileData.bodyData) {
       if (JSON.stringify(values) === JSON.stringify(initialValues)) {
         toast.error('Nothing to change');
         return;
       }
       try {
-        const { email, ...bodyData } = values;
+        // const { email, ...bodyData } = values;
+        const { name,bodyData,dailyCalorie} = profileData;
+            console.log(name)
+            console.log(bodyData)
+            console.log(dailyCalorie)
 
-        console.log('Before API call:', { email, bodyData });
+        // const response = await axios.patch('/users/profile', bodyData);
+      
+        // console.log(bodyData)
+        // console.log(profileData)
+        // dispatch(updateProfile({ name , bodyData, dailyCalorie }));
+        dispatch(updateProfile(profileData.bodyData));
 
-        const response = await axios.patch('/users/profile', bodyData);
         toast.success("User data updated successfully");
-        dispatch(updateProfile(bodyData));
-        return response.data
+        // return response.data
       } catch (error) {
         toast.error('Error updating user data:', error);
       }
@@ -140,7 +150,7 @@ export const UserForm = () => {
                       name="blood"
                       label={option.label}
                       onChange={() => formikProps.setFieldValue('blood', option.id)}
-                      checked={formikProps.values.blood === option.id}
+                      checked={formikProps.values.blood == option.id}
                     />
                   ))}
                 </RadioContainer>
