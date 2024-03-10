@@ -49,7 +49,6 @@ export const AddExerciseForm = ({
   } = item;
   const duration = 180;
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
 
   useEffect(() => {
     let interval = null;
@@ -93,21 +92,24 @@ export const AddExerciseForm = ({
     return { shouldRepeat: false };
   };
 
-
-
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-   
-    const data = {
-      exercise: id,
-      time: duration - remainingTimeRef.current,
-    };
 
-    dispatch(addExercise(data));
-    setIsOpenSuccess(true);
-    console.log(data); //delete later
+    try {
+      const data = {
+        exercise: id,
+        time: duration - remainingTimeRef.current,
+      };
 
-    if (error) {
+      const resultAction = dispatch(addExercise(data));
+
+      if (addExercise.fulfilled.match(resultAction)) {
+        setIsOpenSuccess(true);
+      } else {
+        setIsOpenSuccess(false);
+        toast.error('Oops, something went wrong');
+      }
+    } catch (error) {
       setIsOpenSuccess(false);
       toast.error('Oops, something went wrong');
     }
@@ -185,7 +187,7 @@ export const AddExerciseForm = ({
           onClose={() => comboModal()}
         />
       )}
-      <ToastContainer />
+      <ToastContainer position="bottom-right" limit={2} autoClose={3000} />
     </>
   );
 };

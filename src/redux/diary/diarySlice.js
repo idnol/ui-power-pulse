@@ -47,10 +47,12 @@ export const diarySlice = createSlice({
             })
             .addCase(addExercise.fulfilled, (state, action) => {
                 state.isLoading = false;
+                state.isSuccess = true;
                 state.error = null;
             })
             .addCase(addExercise.rejected, (state, action) => {
                 state.isLoading = false;
+                state.isSuccess = false;
                 state.error = action.payload;
             })
 
