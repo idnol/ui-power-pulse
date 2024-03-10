@@ -46,19 +46,3 @@ export const ListProducts = styled.ul`
     row-gap: 32px;
   }
 `;
-
-export const ProductsSection = styled.section`
-  @media (min-width: ${theme.breakpoint.xl}) {
-    height: 100vh;
-    width: 100%;
-    background-image: url(../../../public/img/side-view-products-1x-desk.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-       background-image: url(../../../public/img/side-view-products-2x-desk.jpg); 
-       }
-  }
-`;

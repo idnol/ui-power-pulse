@@ -52,8 +52,6 @@ export const UserForm = () => {
       try {
         const { _id, ...restData } = profileData;
         const userData = { _id, ...values,blood: parseInt(values.blood, 10) };
-        
-        console.log(userData);
         dispatch(updateProfile({_id,...restData.bodyData,...userData}));
       } catch (error) {
         toast.error('Error updating user data:', error);

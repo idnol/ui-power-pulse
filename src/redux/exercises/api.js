@@ -13,9 +13,9 @@ export const exercisesGetAll = createAsyncThunk(
 )
 
 export const exercisesGetFilters = createAsyncThunk(
-  'exercises/filters', (_, thunkAPI)=>{
+  'exercises/filters', async (_, thunkAPI)=>{
     try {
-      const result = axios('/exercises/filters');
+      const result = await axios('/exercises/filters');
       return result.data
     } catch (error){
       return thunkAPI.rejectWithValue(error.message);
