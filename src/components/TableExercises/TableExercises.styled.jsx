@@ -5,6 +5,7 @@ export const ScrollContainer = styled.div`
   min-height: 234px;
   max-height: 990px;
   overflow-y: auto;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -25,6 +26,7 @@ export const ScrollContainer = styled.div`
     max-width: 704px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar {
       width: 6px;
@@ -46,6 +48,7 @@ export const ScrollContainer = styled.div`
     max-width: 826px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
   }
 `;
 
