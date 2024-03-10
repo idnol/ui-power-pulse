@@ -2,6 +2,7 @@ import {
   HeaderContainer,
   StyledLink,
   NavigationWrap,
+  StyledSvg
 } from './Header.styled.jsx';
 import { UserNav } from './UserNav.jsx';
 import { UserBar } from './UserBar.jsx';
@@ -10,11 +11,10 @@ import { useLocation } from 'react-router';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectIsAuthenticated } from '../../redux/auth/selectors.js';
+import sprite from 'assets/logo/logo-sprite.svg';
 
 export const Header = () => {
   const { pathname } = useLocation();
-  //Тимчасове рішення + додати перевірку чи залогінений юзер через useSelector
-  //На ErrorPage робити перевірку логінізації для відображення навігації юзера
   const isLoggedIn = useSelector(selectIsAuthenticated);
 
   const isNotCustomRoute = ![
@@ -26,7 +26,6 @@ export const Header = () => {
     '/products',
     '/exercises',
   ].includes(pathname);
-  // const isNotAuthenticatedUser = ['/', '/signup', '/signin'].includes(pathname);
 
   useEffect(() => {
     const headerLayout = document.getElementById('hdr-layout');
@@ -34,21 +33,28 @@ export const Header = () => {
       headerLayout.style.borderBottom = 'none';
     }
   });
-
   return (
     <>
       <HeaderContainer>
         {isNotCustomRoute ? (
-          <StyledLink
-            to="/"
-            errsm="../../assets/logo/logo-sm-white.svg"
-            errbig="../../assets/logo/logo-white.svg"
-          ></StyledLink>
+          <StyledLink to={`${isLoggedIn ? '/diary' : '/'}`}>
+            <StyledSvg>
+              <use href={`${sprite}#logo-sm-white`} />
+            </StyledSvg>
+          </StyledLink>
         ) : !isLoggedIn ? (
-          <StyledLink to="/"></StyledLink>
+          <StyledLink to="/">
+            <StyledSvg>
+              <use href={`${sprite}#logo-sm`}></use>
+            </StyledSvg>
+          </StyledLink>
         ) : (
           <>
-            <StyledLink to="/diary"></StyledLink>
+            <StyledLink to="/diary">
+              <StyledSvg>
+                <use href={`${sprite}#logo-sm`}></use>
+              </StyledSvg>
+            </StyledLink>
             <NavigationWrap>
               <UserNav />
               <UserBar />

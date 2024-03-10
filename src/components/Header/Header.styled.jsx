@@ -17,23 +17,18 @@ export const HeaderContainer = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  color: #ffffff;
+  // display: flex;
+  // align-items: center;
+  // color: #ffffff;
   cursor: pointer;
   width: 152px;
   height: 17px;
-  background-repeat: no-repeat;
-  background-image: ${(props) =>
-    props.errsm
-      ? `url(${props.errsm})`
-      : `url(${'../../assets/logo/logo-sm.svg'})`};
+}`;
 
+export const StyledSvg = styled.svg`
+  width: 126px;
+  height: 13px;
   @media (min-width: ${theme.breakpoint.md}) {
-    background-image: ${(props) =>
-      props.errbig
-        ? `url(${props.errbig})`
-        : `url(${'../../assets/logo/logo.svg'})`};
     width: 152px;
     height: 17px;
   }
@@ -101,6 +96,12 @@ export const User = styled.div`
   height: 37px;
   border-radius: 50%;
   border: 1px solid ${theme.color.orange};
+  overflow: hidden;
+`;
+
+export const UserAvatar = styled.img`
+  width: 37px;
+  height: 37px;
 `;
 
 export const UserIcon = styled.svg`

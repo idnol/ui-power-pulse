@@ -11,6 +11,7 @@ export const ProductItem = ({item:{title, calories, category, weight, groupBlood
   const [isModalOpen, setIsModal] = useState(false);
   const isAllowed = groupBloodNotAllowed[bloodGroup];
   const isRecomended = isAllowed ? "Recommended" : "Not recommended";
+
   return (
   <>
   <ProductCard>

@@ -21,11 +21,7 @@ import {
   Name,
 } from './AddProductForm.styled';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectError,
-  selectSuccess,
-} from '../../../redux/diary/diarySelectors.js';
+import { useDispatch } from 'react-redux';
 import { addProduct } from '../../../redux/diary/api.js';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -34,9 +30,9 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
   const [isCaloriesValue, setIsCaloriesValue] = useState('0');
   const [isCalories, setIsCalories] = useState(calories);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
-  //const success = useSelector(selectSuccess)
+
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
+
   const handleValue = (evt) => {
     const value = evt.currentTarget.value;
     setIsInputValue(value);
@@ -46,19 +42,26 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
     setIsCaloriesValue(calories);
   };
 
-  const onSubmit = (evt) => {
+  const onSubmit = async (evt) => {
     evt.preventDefault();
 
-    const data = {
-      product: id,
-      weight: +isInputValue,
-    };
-    dispatch(addProduct(data));
-    console.log(data);
-    setIsInputValue('');
-    setIsOpenSuccess(true);
+    try {
+      const data = {
+        product: id,
+        weight: +isInputValue,
+      };
 
-    if (error) {
+      const resultAction = await dispatch(addProduct(data));
+
+      if (addProduct.fulfilled.match(resultAction)) {
+        setIsInputValue('');
+        setIsOpenSuccess(true);
+      } else {
+        setIsOpenSuccess(false);
+        setIsCaloriesValue('0');
+        toast.error('Oops, something went wrong');
+      }
+    } catch (error) {
       setIsOpenSuccess(false);
       setIsCaloriesValue('0');
       toast.error('Oops, something went wrong');
@@ -117,7 +120,7 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
           onClose={() => comboModal()}
         />
       )}
-      <ToastContainer />
+      <ToastContainer position="bottom-right" limit={2} autoClose={3000} />
     </>
   );
 };

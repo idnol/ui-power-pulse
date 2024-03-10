@@ -31,24 +31,28 @@ export const diarySlice = createSlice({
                 state.isLoading = true;
 
             })
-            .addCase(addProduct.fulfilled, (state, action) => {
+            .addCase(addProduct.fulfilled, (state) => {
                 state.isLoading = false;  
+                state.isSuccess = true;
                 state.error = null;
             })
             .addCase(addProduct.rejected, (state, action) => {
                 state.isLoading = false;
+                state.isSuccess = false;
                 state.error = action.payload;
             })
 
             .addCase(addExercise.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(addExercise.fulfilled, (state, action) => {
+            .addCase(addExercise.fulfilled, (state) => {
                 state.isLoading = false;
+                state.isSuccess = true;
                 state.error = null;
             })
             .addCase(addExercise.rejected, (state, action) => {
                 state.isLoading = false;
+                state.isSuccess = false;
                 state.error = action.payload;
             })
 
