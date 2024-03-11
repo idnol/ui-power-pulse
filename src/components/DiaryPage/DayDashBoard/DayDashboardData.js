@@ -7,9 +7,9 @@ import sprite from 'assets/sprite-2.svg';
 
 export const DayDashboardData = () => {
   const responseUser = useSelector((state) => state.auth.user) || {};
-  console.log('🚀 ~ DayDashboardData ~ responseUser:', responseUser);
+  // console.log('🚀 ~ DayDashboardData ~ responseUser:', responseUser);
   const responseDiary = useSelector((state) => state.diary.items) || 0;
-  console.log('🚀 ~ DayDashboardData ~ responseDiary:', responseDiary);
+  // console.log('🚀 ~ DayDashboardData ~ responseDiary:', responseDiary);
   const dispatch = useDispatch();
 
   useEffect(() => {

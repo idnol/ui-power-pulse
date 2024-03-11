@@ -27,10 +27,10 @@ export const diarySlice = createSlice({
             })
             .addCase(getDiary.fulfilled, (state, action) => {
                 state.items = action.payload;
-                console.log(action.payload);
                 state.isLoading = false;
                 state.error = null;
                 state.products = action.payload.products;
+                state.exercises = action.payload.exercises;
             })
             .addCase(getDiary.rejected, (state, action) => {
                 state.isLoading = false;
@@ -67,9 +67,7 @@ export const diarySlice = createSlice({
             })
 
             .addCase(removeProduct.fulfilled, (state, action) => {
-                console.log(action.payload);
                 state.products = action.payload.products;
-                // state.items.products = state.items.products.filter(product => product._id !== productId);
                 state.isLoading = false;
                 state.error = null;
             })
@@ -79,8 +77,7 @@ export const diarySlice = createSlice({
             })
 
             .addCase(removeExercise.fulfilled, (state, action) => {
-                // const exerciseId = action.payload.id;
-                state.items.exercises = state.items.exercises.filter(exercise => exercise._id !== exerciseId);
+                state.exercises = action.payload.exercises;
                 state.isLoading = false;
                 state.error = null;
             })
