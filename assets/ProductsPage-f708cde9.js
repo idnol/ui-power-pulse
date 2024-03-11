@@ -1,4 +1,4 @@
-import{s as t,t as e,j as o,b,a as p,I as T,z as D,_ as M,A as R,L as N,C as W,u as B,Q as V,D as S,B as F,E as q,d as k,F as P}from"./index-cf26041d.js";const G=t.div`
+import{s as t,t as e,j as o,b,a as p,I as T,A as D,_ as M,C as R,L as N,D as W,u as B,Q as V,E as S,B as F,F as G,d as k,G as P}from"./index-39023706.js";const q=t.div`
   max-width: 335px;
   margin: 0 auto;
   padding-top: 40px;
@@ -680,7 +680,7 @@ import{s as t,t as e,j as o,b,a as p,I as T,z as D,_ as M,A as R,L as N,C as W,u
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-`,qe=t.p`
+`,Ge=t.p`
   margin-top: 16px;
   margin-bottom: 24px;
   color: ${e.color.white};
@@ -688,7 +688,7 @@ import{s as t,t as e,j as o,b,a as p,I as T,z as D,_ as M,A as R,L as N,C as W,u
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 32px;
   }
-`,Ge=t.div`
+`,qe=t.div`
   max-width: 286px;
   display: flex;
   gap: 14px;
@@ -741,7 +741,7 @@ import{s as t,t as e,j as o,b,a as p,I as T,z as D,_ as M,A as R,L as N,C as W,u
   @media (min-width: ${e.breakpoint.md}) {
     margin-bottom: 64px;
   }
-`,Ye=({onClose:i,title:r,calories:s,id:x})=>{const[a,n]=p.useState(""),[d,c]=p.useState("0"),[l,h]=p.useState(s),[g,u]=p.useState(!1),w=B(),y=$=>{const f=$.currentTarget.value;n(f);const O=Math.round(f*l/100);c(O)},j=async $=>{$.preventDefault();try{const f={product:x,weight:+a},m=await w(S(f));S.fulfilled.match(m)?(n(""),u(!0)):(u(!1),c("0"),F.error("Oops, something went wrong"))}catch{u(!1),c("0"),F.error("Oops, something went wrong")}},v=()=>{i(),u(!1)};return o.jsxs(o.Fragment,{children:[o.jsx(Le,{onClick:i,children:o.jsx(Ae,{children:o.jsx(Ee,{href:`${b}#x-modal`})})}),!g&&o.jsx(Be,{children:o.jsxs("form",{onSubmit:j,children:[o.jsxs(Oe,{children:[o.jsx(Te,{children:o.jsx(De,{children:r})}),o.jsxs(Me,{children:[o.jsx(We,{name:"number",required:!0,value:a,onChange:y}),o.jsx(Ne,{children:"grams"})]})]}),o.jsxs(Ve,{children:[o.jsx(Qe,{children:"Calories:"}),o.jsx(qe,{children:d})]}),o.jsxs(Ge,{children:[o.jsx(_e,{type:"submit",children:"Add to diary"}),o.jsx(He,{type:"button",onClick:i,children:"Cancel"})]})]})}),g&&o.jsx(Re,{calories:d,isOpen:g,onClose:()=>v()}),o.jsx(V,{position:"bottom-right",limit:2,autoClose:3e3})]})},Ke=t.div`
+`,Ye=({onClose:i,title:r,calories:s,id:x})=>{const[a,n]=p.useState(""),[d,c]=p.useState("0"),[l,h]=p.useState(s),[g,u]=p.useState(!1),w=B(),y=$=>{const f=$.currentTarget.value;n(f);const O=Math.round(f*l/100);c(O)},j=async $=>{$.preventDefault();try{const f={product:x,weight:+a},m=await w(S(f));S.fulfilled.match(m)?(n(""),u(!0)):(u(!1),c("0"),F.error("Oops, something went wrong"))}catch{u(!1),c("0"),F.error("Oops, something went wrong")}},v=()=>{i(),u(!1)};return o.jsxs(o.Fragment,{children:[o.jsx(Le,{onClick:i,children:o.jsx(Ae,{children:o.jsx(Ee,{href:`${b}#x-modal`})})}),!g&&o.jsx(Be,{children:o.jsxs("form",{onSubmit:j,children:[o.jsxs(Oe,{children:[o.jsx(Te,{children:o.jsx(De,{children:r})}),o.jsxs(Me,{children:[o.jsx(We,{name:"number",required:!0,value:a,onChange:y}),o.jsx(Ne,{children:"grams"})]})]}),o.jsxs(Ve,{children:[o.jsx(Qe,{children:"Calories:"}),o.jsx(Ge,{children:d})]}),o.jsxs(qe,{children:[o.jsx(_e,{type:"submit",children:"Add to diary"}),o.jsx(He,{type:"button",onClick:i,children:"Cancel"})]})]})}),g&&o.jsx(Re,{calories:d,isOpen:g,onClose:()=>v()}),o.jsx(V,{position:"bottom-right",limit:2,autoClose:3e3})]})},Ke=t.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -825,7 +825,7 @@ import{s as t,t as e,j as o,b,a as p,I as T,z as D,_ as M,A as R,L as N,C as W,u
   display: flex;
   align-items: center;
   justify-content: center;
-`,so=q`
+`,so=G`
   to {
     transform: rotate(360deg);
   }
@@ -903,4 +903,4 @@ import{s as t,t as e,j as o,b,a as p,I as T,z as D,_ as M,A as R,L as N,C as W,u
   }
   @media (min-width: ${e.breakpoint.xl}) {
   }
-`,fo=({children:i})=>o.jsx(uo,{children:i});function wo(){const i=k(oo),r=k(to),s=k(io),x=k(u=>{var w;return(w=u.auth.user.bodyData)==null?void 0:w.blood})??"1",a=B(),[n]=R(),d=p.useMemo(()=>Object.fromEntries([...n]),[n]),{query:c="",category:l="",recommended:h="all"}=d;p.useEffect(()=>{a(P(d))},[a,d]);const g=u=>{a(P(u))};return o.jsx(o.Fragment,{children:o.jsxs(ho,{children:[o.jsx(mo,{}),o.jsx("div",{className:"container",children:o.jsxs(go,{children:[o.jsxs(G,{children:[o.jsx(fo,{children:"Products"}),o.jsx(re,{query:c,category:l,recommended:h,onFilterChange:g,bloodGroup:x})]}),r&&o.jsx(co,{}),i.length>0&&o.jsx(no,{items:i,bloodGroup:x}),s||i.length===0&&o.jsx(xo,{})]})})]})})}export{wo as default};
+`,fo=({children:i})=>o.jsx(uo,{children:i});function wo(){const i=k(oo),r=k(to),s=k(io),x=k(u=>{var w;return(w=u.auth.user.bodyData)==null?void 0:w.blood})??"1",a=B(),[n]=R(),d=p.useMemo(()=>Object.fromEntries([...n]),[n]),{query:c="",category:l="",recommended:h="all"}=d;p.useEffect(()=>{a(P(d))},[a,d]);const g=u=>{a(P(u))};return o.jsx(o.Fragment,{children:o.jsxs(ho,{children:[o.jsx(mo,{}),o.jsx("div",{className:"container",children:o.jsxs(go,{children:[o.jsxs(q,{children:[o.jsx(fo,{children:"Products"}),o.jsx(re,{query:c,category:l,recommended:h,onFilterChange:g,bloodGroup:x})]}),r&&o.jsx(co,{}),i.length>0&&o.jsx(no,{items:i,bloodGroup:x}),s||i.length===0&&o.jsx(xo,{})]})})]})})}export{wo as default};
