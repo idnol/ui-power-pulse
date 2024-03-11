@@ -29,3 +29,5 @@ export const theme = {
     xl: '1440px',
   },
 };
+
+${theme.border.grey2}
