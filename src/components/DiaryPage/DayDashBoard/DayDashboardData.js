@@ -7,9 +7,9 @@ import sprite from 'assets/sprite-2.svg';
 
 export const DayDashboardData = () => {
   const responseUser = useSelector((state) => state.auth.user) || {};
-  console.log('🚀 ~ DayDashboardData ~ responseUser:', responseUser);
+  // console.log('🚀 ~ DayDashboardData ~ responseUser:', responseUser);
   const responseDiary = useSelector((state) => state.diary.items) || 0;
-  console.log('🚀 ~ DayDashboardData ~ responseDiary:', responseDiary);
+  // console.log('🚀 ~ DayDashboardData ~ responseDiary:', responseDiary);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,16 +19,18 @@ export const DayDashboardData = () => {
 
   const beData = [{ userData: responseUser }, { diaryData: responseDiary }];
 
-  const physicalActivity =
-    (beData[1]?.diaryData?.statistic?.sportTime ?? 0) / 60;
+  const sportTime = beData[1]?.diaryData?.statistic?.sportTime ?? 0;
 
-  const physicalGoal = beData[0]?.userData?.dailyExerciseTime;
+  const physicalActivity = sportTime / 60;
 
-  let remaningTime = physicalActivity - physicalGoal;
+  const physicalGoal = beData[0]?.userData?.dailyExerciseTime ?? 0;
 
-  const consumedCalories = beData[1]?.diaryData?.statistic?.calories || 0;
-  const remainingCalories =
-    beData[0]?.userData?.dailyCalorie - consumedCalories;
+  const remaningTime = physicalActivity - physicalGoal;
+
+  const consumedCalories = beData[1]?.diaryData?.statistic?.calories ?? 0;
+
+  const dailyCalories = beData[0]?.userData?.dailyCalorie ?? 0;
+  const remainingCalories = dailyCalories - consumedCalories;
 
   const dashboardData = [
     {
@@ -82,7 +84,7 @@ export const DayDashboardData = () => {
       count:
         remaningTime > 0
           ? `+${Math.round(remaningTime)}`
-          : Math.abs(Math.round(remaningTime)) ?? 0,
+          : Math.abs(Math.round(remaningTime)),
       countType: 'time',
       background: 'default',
       textColor: 'greyTextColor',

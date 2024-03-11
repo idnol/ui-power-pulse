@@ -23,14 +23,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from '../../redux/diary/diarySelectors.js';
 import { removeProduct } from '../../redux/diary/api.js';
 
-export const TableProducts = ({ products, onDeleteProduct }) => {
+export const TableProducts = () => {
   const productsItems = useSelector(selectProducts);
   const dispatch = useDispatch();
   const bloodGroup = useSelector(state=> state.auth.user.bodyData?.blood) ?? "1";
-
   return (
     <>
-      <Header>
+     <Header>        
         <HeaderTitle>Title</HeaderTitle>
         <HeaderCategory>Category</HeaderCategory>
         <HeaderCalories>Calories</HeaderCalories>
@@ -74,7 +73,6 @@ export const TableProducts = ({ products, onDeleteProduct }) => {
                 )}
                 <DeleteItem>
                   <DeleteBtn onClick={() => dispatch(removeProduct({ id: product._id, calories: product.calories }))}>
-                  {/*<DeleteBtn onClick={() => dispatch(removeProduct({ product._id, products.calories }))}>*/}
                     <SvgBasket>
                       <use href="/img/sprait.svg#trash" />
                     </SvgBasket>

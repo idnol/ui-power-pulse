@@ -1,3 +1,5 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { selectExercises } from '../../redux/diary/diarySelectors';
 import {
   BodyPartItem,
   BurnedCaloriesItem,
@@ -20,19 +22,22 @@ import {
   Thead,
   TimeItem,
 } from './TableExercises.styled';
+import { removeExercise } from '../../redux/diary/api';
 
-export const TableExercises = ({ exercises, onDeleteExercise }) => {
+export const TableExercises = () => {
+  const exercisesItems = useSelector(selectExercises);
+  const dispatch = useDispatch();
   return (
     <>
-      <Header>
-        <HeaderBodyPart>Body Part</HeaderBodyPart>
-        <HeaderEquipment>Equipment</HeaderEquipment>
-        <HeaderName>Name</HeaderName>
-        <HeaderTarget>Target</HeaderTarget>
-        <HeaderBurnedCalories>Burned Calories</HeaderBurnedCalories>
-        <HeaderTime>Time</HeaderTime>
-        <p> </p>
-      </Header>
+       <Header>
+          <HeaderBodyPart>Body Part</HeaderBodyPart>
+          <HeaderEquipment>Equipment</HeaderEquipment>
+          <HeaderName>Name</HeaderName>
+          <HeaderTarget>Target</HeaderTarget>
+          <HeaderBurnedCalories>Burned Calories</HeaderBurnedCalories>
+          <HeaderTime>Time</HeaderTime>
+          <p> </p>
+        </Header>
       <ScrollContainer>
         <Table>
           <Thead>
@@ -48,18 +53,18 @@ export const TableExercises = ({ exercises, onDeleteExercise }) => {
           </Thead>
 
           <tbody>
-            {exercises.map((exercise) => (
-              <RowItem key={exercise.id}>
-                <BodyPartItem>{exercise.bodyPart}</BodyPartItem>
-                <EquipmentItem>{exercise.equipment}</EquipmentItem>
-                <NameItem>{exercise.name}</NameItem>
-                <TargetItem>{exercise.target}</TargetItem>
+            {exercisesItems.map((exercise) => (
+              <RowItem key={exercise._id}>
+                <BodyPartItem>{exercise.exercise.bodyPart}</BodyPartItem>
+                <EquipmentItem>{exercise.exercise.equipment}</EquipmentItem>
+                <NameItem>{exercise.exercise.name}</NameItem>
+                <TargetItem>{exercise.exercise.target}</TargetItem>
                 <BurnedCaloriesItem>
-                  {exercise.burnedCalories}
+                  {exercise.exercise.burnedCalories}
                 </BurnedCaloriesItem>
-                <TimeItem>{exercise.time}</TimeItem>
+                <TimeItem>{exercise.exercise.time}</TimeItem>
                 <DeleteItem>
-                  <DeleteBtn onClick={() => onDeleteExercise(exercise.id)}>
+                  <DeleteBtn onClick={() => dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }))}>
                     <SvgBasket>
                       <use href="/img/sprait.svg#trash" />
                     </SvgBasket>

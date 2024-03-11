@@ -3,7 +3,7 @@ import { CategoryField } from "./CategoryFilter.styled"
 import { useEffect,  useRef,  useState } from "react";
 import { fetchCategories } from "../../../redux/products/api";
 import sprite from 'assets/sprite-2.svg';
-import toast, { Toaster } from 'react-hot-toast';
+import {toast} from 'react-hot-toast';
 
 export const CategoryFilter = ({ label, onSelect, onToggle, isOpen}) => {
  const [categories, setCategories] = useState([]);
@@ -57,7 +57,6 @@ export const CategoryFilter = ({ label, onSelect, onToggle, isOpen}) => {
         ))}
      </OptionsContainer>}
    </CategoryField>
-   <Toaster/>
  </>
   )
 }

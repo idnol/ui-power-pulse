@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../../vars";
 
-export const InputGroup = styled.div`
+export const InputGroup = styled.label`
   display: flex;
   align-items: center;
   width: 100%;
