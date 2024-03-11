@@ -6,6 +6,7 @@ import { Wrapper, Row, ExercisesSection, HeaderInner } from './ExercisesPage.sty
 import { useSelector } from 'react-redux';
 import { Exercises } from '../../components/ExercisesPageList/ExercisesPageList.jsx';
 
+
 export default function ExercisesPage() {
   const [isBackground, setIsBackground] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -26,7 +27,7 @@ export default function ExercisesPage() {
     <ExercisesSection $isbackground={isBackground}>
       <HeaderInner/>
       <div className="container">
-        <Row className="row">
+        <Row>
           <Wrapper>
             <ExercisesCategories onClick={handleCategoryClick} />
             {bodyPartFilter === '' ? (

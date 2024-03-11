@@ -2,17 +2,17 @@ import { Outlet } from 'react-router-dom';
 import { AppLayoutStyled, HeaderStyled } from './AppLayout.styled';
 import { GlobalStyle } from '../../GlobalSyles.js';
 import { Header } from '../Header/Header.jsx';
-
+import { closeMenu } from '../Header/closeMenu';
 export const AppLayout = () => {
   return (
-    <AppLayoutStyled>
+    <AppLayoutStyled >
       <GlobalStyle />
-      <HeaderStyled id='hdr-layout'>
+      <HeaderStyled id='hdr-layout' >
         <div className='container'>
           <Header />
         </div>
       </HeaderStyled>
-      <main>
+      <main onClick={closeMenu}>
             <Outlet />
       </main>
     </AppLayoutStyled>

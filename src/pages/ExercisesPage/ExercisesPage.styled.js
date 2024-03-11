@@ -50,14 +50,6 @@ export const ExercisesSection = styled.section`
   }
 `;
 
-// ${(props) =>
-//   props.$isbackground
-//     ? `background-image: url("url(../../../public/img/side-view-exercises-1x-desk.jpg)");
-//     background-repeat: no-repeat;
-//     background-position: right;
-//     background-size: contain;`
-//     : ''}
-
 export const SliderWrapper = styled.div`
   position: relative;
    max-width: 335px;
@@ -68,10 +60,4 @@ export const SliderWrapper = styled.div`
   @media (min-width: ${theme.breakpoint.xl}) {
     max-width: 1248px;
   }
-`;
-
-export const Button = styled.button`
-  position: absolute;
-  top: 71px;
-  left: 0;
 `;
