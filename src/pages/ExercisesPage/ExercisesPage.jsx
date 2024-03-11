@@ -6,6 +6,7 @@ import { Wrapper, Row } from './ExercisesPage.styled.js';
 import { useSelector } from 'react-redux';
 import { Exercises } from '../../components/ExercisesPageList/ExercisesPageList.jsx';
 
+
 export default function ExercisesPage() {
   const [selectedCategory, setSelectedCategory] = useState('');
   const categories = useFetchCategories(selectedCategory);
@@ -19,7 +20,7 @@ export default function ExercisesPage() {
   return (
     <section>
       <div className="container">
-        <Row className="row">
+        <Row>
           <Wrapper>
             <ExercisesCategories onClick={handleCategoryClick} />
             {bodyPartFilter === '' ? (

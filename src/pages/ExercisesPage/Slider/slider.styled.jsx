@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { theme } from '../../../vars';
+
 
 export const SliderContainer = styled.div`
   display: flex;
@@ -8,8 +10,8 @@ export const SliderContainer = styled.div`
   left: 50%;
   bottom: -40px;
   transform: translateX(-50%);
-  @media (min-width: 768px) {
-      bottom: -32px;
+  @media (min-width: ${theme.breakpoint.md}) {
+    bottom: -32px;
   }
 `;
 
@@ -18,19 +20,18 @@ export const SliderButton = styled.button`
   height: 14px;
   border-radius: 50%;
   margin: 0 5px;
-  background-color: ${props => (props.active ? '#040404;' : 'rgba(239, 237, 232, 0.1)')};
-  border: ${props => (props.active ? '1px solid #E6533C' : 'none')};
+  background-color: ${props => (props.active ? theme.color.black : theme.color.greySixth)};
+  border: ${props => (props.active ? theme.border.orange : 'none')};
   position: relative;
   cursor: pointer;
   outline: none;
   vertical-align: middle;
 
-
   &:after {
     content: '';
     width: 8px;
     height: 8px;
-    background-color: #E6533C; 
+    background-color: ${theme.color.orange}; 
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -39,5 +40,4 @@ export const SliderButton = styled.button`
     z-index: 1;
     display: ${props => (props.active ? 'block' : 'none')};
   }
-
 `;
