@@ -35,13 +35,14 @@ export const addExercise = createAsyncThunk(
 )
 
 export const removeProduct = createAsyncThunk(
-    'diary/deleteProduct', async (id, thunkAPI) =>{
-        try {
-            const deleted = await axios.delete(`/diaries/product/${id}`);
-            return deleted.data
-        } catch (error){
-            return thunkAPI.rejectWithValue(error.message);
-        }
+    'diary/deleteProduct', async (product, thunkAPI) =>{
+      try {
+          const deleted = await axios.delete(`/diaries/product`, { data: product });
+        // console.log(deleted);
+          return deleted.data
+      } catch (error){
+          return thunkAPI.rejectWithValue(error.message);
+      }
     }
 )
 
