@@ -260,8 +260,8 @@ export const DayExercises = () => {
       <BoxDayDiary>
         <WrapperAdd>
           <Title>Execrcises</Title>
-          <StyledAddNavLink>
-            Add product
+          <StyledAddNavLink to="/exercises">
+          Add exercise
             <SvgArrow>
               <use href="/img/sprait.svg#icon-Icon" />
             </SvgArrow>

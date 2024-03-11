@@ -4,8 +4,13 @@ import { DayDashboard } from '../../components/DiaryPage/DayDashBoard/DayDashboa
 // import { Wrapper } from '../WelcomePage/WelcomePage.styled.js';
 import { HeadWrapper, InfoWrapper, Title, Wrapper, DiaryWrapper } from './DiaryPage.styled.js';
 import StyledDatepicker from "../../components/DatePicker/StyledDatePicker.jsx";
+// import { useSelector } from 'react-redux';
+;
+
 
 export default function DiaryPage() {
+  // const products = useSelector(selectProducts);
+  const productList = {};
   return (
     <section>
       <div className="container">
@@ -17,7 +22,7 @@ export default function DiaryPage() {
             </HeadWrapper>
             <DiaryWrapper>
               <InfoWrapper>
-                <DayProducts />
+                <DayProducts productList={productList} />
                 <DayExercises />
               </InfoWrapper>
               <DayDashboard />
