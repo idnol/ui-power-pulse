@@ -12,7 +12,6 @@ export default function ExercisesSubcategoriesItem({ subcategory }) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    console.log('click', subcategory.name);
     dispatch(setExercisesFilter(subcategory.name));
   };
 
