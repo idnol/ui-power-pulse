@@ -68,7 +68,6 @@ export const StyledAddNavLink = styled(NavLink)`
 `;
 
 export const SvgArrow = styled.svg`
-  
   width: 16px;
   height: 16px;
 `;
