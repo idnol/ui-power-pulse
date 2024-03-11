@@ -1,13 +1,13 @@
 import { UserCard } from '../../components/ProfileSettings/UserCard/UserCard';
 import { UserForm } from '../../components/ProfileSettings/UserForm/UserForm';
 import { PageWrapper } from './ProfilePage.styled';
-import { Wrapper } from '../WelcomePage/WelcomePage.styled.js';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUserInfo } from '../../redux/profile/profileSlice'
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import { Loader } from '../../components/parts/Loader/Loader.jsx';
+import { StyledTitle } from '../../components/AuthForms/AuthForms.styled.js';
 
 export default function ProfilePage() {
   const dispatch = useDispatch();
@@ -43,13 +43,12 @@ export default function ProfilePage() {
   return (
     <section>
       <div className="container">
-        <div className="row">
-          <Wrapper>
+        <div>
+          <StyledTitle>Profile Setting</StyledTitle>
             <PageWrapper>
               <UserCard />
               <UserForm />
             </PageWrapper>
-          </Wrapper>
         </div>
       </div>
     </section>
