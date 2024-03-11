@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { theme } from '../../vars';
 
 export const ExercisesListContainer = styled.div`
-  @media (min-width: ${theme.breakpoint.xl}) {
-    max-width: 850px;
-    max-height: 487px;
+  @media (min-width: ${theme.breakpoint.md}) {
     overflow-y: scroll;
+    max-width: 704px;
+    max-height: 660px;
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -19,6 +19,10 @@ export const ExercisesListContainer = styled.div`
       border-radius: 12px;
       height: 153px;
     }
+  }
+  @media (min-width: ${theme.breakpoint.xl}) {
+    max-width: 850px;
+    max-height: 487px;
   }
 `;
 
@@ -54,7 +58,7 @@ export const ExercisesListItem = styled.li`
   background: rgba(239, 237, 232, 0.05);
 
   @media (min-width: ${theme.breakpoint.md}) {
-    max-width: 336px;
+    max-width: 335px;
   }
 
   @media (min-width: ${theme.breakpoint.xl}) {
