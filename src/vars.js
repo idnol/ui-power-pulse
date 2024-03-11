@@ -29,3 +29,4 @@ export const theme = {
     xl: '1440px',
   },
 };
+
