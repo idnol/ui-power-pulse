@@ -29,8 +29,8 @@ export const TableProducts = ({ products, onDeleteProduct }) => {
   const bloodGroup = useSelector(state => state.auth.user.bodyData?.blood) ?? "1";
   // console.log("****", typeof bloodGroup);
   // console.log("-----", typeof bloodGroup.toString());
-  console.log(bloodGroup);
-  console.log("///", productsItems);
+  // console.log(bloodGroup);
+  // console.log("///", productsItems);
 
   return (
     <>
@@ -78,7 +78,7 @@ export const TableProducts = ({ products, onDeleteProduct }) => {
                   </RecommendItem>
                 )}
                 <DeleteItem>
-                  <DeleteBtn onClick={() => {console.log("_id-del ", product._id), dispatch(removeProduct({ id: product._id, calories: product.calories }))}}>
+                  <DeleteBtn onClick={() => dispatch(removeProduct({ id: product._id, calories: product.calories }))}>
                   {/*<DeleteBtn onClick={() => dispatch(removeProduct({ product._id, products.calories }))}>*/}
                     <SvgBasket>
                       <use href="/img/sprait.svg#trash" />
