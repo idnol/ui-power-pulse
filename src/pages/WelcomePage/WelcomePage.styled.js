@@ -28,13 +28,13 @@ export const WelcomeSection = styled.section`
   }
 `;
 export const Wrapper = styled.div`
-    display: flex;
-    align-items: end;
     padding-top: 127px;
     @media (min-width: ${theme.breakpoint.md}) {
       padding-top: 189px;
     }
     @media (min-width: ${theme.breakpoint.xl}) {
       padding-top: 200px;
+      display: flex;
+      align-items: end;
     }
 `;
