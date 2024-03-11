@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .container {
-        width: 100%;
+        width: ${theme.breakpoint.sm};
         padding: 0 20px;
         margin: 0 auto;
         @media (min-width: ${theme.breakpoint.md}) {
