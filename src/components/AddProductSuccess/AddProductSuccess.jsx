@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import sprite from 'assets/sprite-2.svg';
 import { useLocation } from 'react-router-dom';
 import { theme } from '../../vars';

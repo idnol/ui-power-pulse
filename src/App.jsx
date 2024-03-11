@@ -8,6 +8,7 @@ import { PrivateRoute } from './components/Routes/PrivateRoute.jsx';
 import { Loader } from './components/parts/Loader/Loader.jsx';
 // import { selectUserBodyData } from './redux/auth/selectors.js';
 import {useAuth} from "./components/hooks/index.js";
+import { Toaster } from 'react-hot-toast';
 
 const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage.jsx'));
 const SigninPage = lazy(() => import('./pages/SigninPage/SigninPage.jsx'));
@@ -46,6 +47,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
+      <Toaster position='top-right'/>
     </Suspense>
   ));
 }
