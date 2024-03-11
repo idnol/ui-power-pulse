@@ -23,7 +23,7 @@ export const StyledLink = styled(Link)`
   cursor: pointer;
   width: 152px;
   height: 17px;
-}`;
+`;
 
 export const StyledSvg = styled.svg`
   width: 126px;
@@ -65,7 +65,7 @@ export const StyledNavLink = styled(NavLink)`
   color: ${theme.color.white};
 
   &:hover {
-    border: ${theme.color.orange};
+    border: ${theme.border.orange};
     background-color: ${theme.color.orange};
   }
   &.active {

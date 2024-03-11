@@ -8,6 +8,8 @@ export const diarySlice = createSlice({
     initialState: {
         items: [],
         selectedDate: getDate(),
+        products: [],
+        exercises: [],
         isLoading: false,
         error: null,
         isSuccess: false
@@ -16,9 +18,7 @@ export const diarySlice = createSlice({
         changeDate: (state, action) => {
             state.selectedDate = action.payload;
         },
-
     },
-
         extraReducers: (builder) => {
             builder
     
@@ -27,8 +27,10 @@ export const diarySlice = createSlice({
             })
             .addCase(getDiary.fulfilled, (state, action) => {
                 state.items = action.payload;
+                console.log(action.payload);
                 state.isLoading = false;
                 state.error = null;
+                state.products = action.payload.products;
             })
             .addCase(getDiary.rejected, (state, action) => {
                 state.isLoading = false;
@@ -65,8 +67,9 @@ export const diarySlice = createSlice({
             })
 
             .addCase(removeProduct.fulfilled, (state, action) => {
-                const productId = action.payload.id;
-                state.items.products = state.items.products.filter(product => product._id !== productId);
+                console.log(action.payload);
+                state.products = action.payload.products;
+                // state.items.products = state.items.products.filter(product => product._id !== productId);
                 state.isLoading = false;
                 state.error = null;
             })
@@ -76,7 +79,7 @@ export const diarySlice = createSlice({
             })
 
             .addCase(removeExercise.fulfilled, (state, action) => {
-                const exerciseId = action.payload.id;
+                // const exerciseId = action.payload.id;
                 state.items.exercises = state.items.exercises.filter(exercise => exercise._id !== exerciseId);
                 state.isLoading = false;
                 state.error = null;

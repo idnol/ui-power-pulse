@@ -3,22 +3,19 @@ import { CategoryField } from "./CategoryFilter.styled"
 import { useEffect,  useRef,  useState } from "react";
 import { fetchCategories } from "../../../redux/products/api";
 import sprite from 'assets/sprite-2.svg';
-import { toast } from "react-toastify";
-
+import {toast} from 'react-hot-toast';
 
 export const CategoryFilter = ({ label, onSelect, onToggle, isOpen}) => {
  const [categories, setCategories] = useState([]);
- const [error, setError] = useState(null);
  const categoryRef = useRef(null);
 
  useEffect(()=> {
   async function getCategories() {
     try {
-      setError(null);
       const categories = await fetchCategories();
       setCategories(categories);
     } catch (error) {
-      setError(true);
+      return toast.error(`Something went wrong! Please try again!`)
     } 
   }
   getCategories();
@@ -60,10 +57,6 @@ export const CategoryFilter = ({ label, onSelect, onToggle, isOpen}) => {
         ))}
      </OptionsContainer>}
    </CategoryField>
-
-   {error && toast.error(
-    'Something went wrong! Please try again.'
-   )}
  </>
   )
 }
