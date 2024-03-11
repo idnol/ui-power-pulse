@@ -36,5 +36,17 @@ export const Wrapper = styled.div`
 
 export const DiaryWrapper = styled.div`
     display: flex;
-    align-items: start;
+    gap: 40px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: ${theme.breakpoint.md}) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 64px;
+  }
+    @media (min-width: ${theme.breakpoint.xl}) {
+      flex-direction: row;
+      gap: 32px;
+  }
 `;

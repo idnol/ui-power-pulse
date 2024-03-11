@@ -16,7 +16,7 @@ import { productsReducer } from './products/productSlice.js';
 import { profileReducer } from './profile/profileSlice.js';
 import { diaryReducer } from './diary/diarySlice.js';
 import { statisticsReducer } from './statistics/statisticsSlice.js';
-
+import { filterReducer } from './exercises/filterSlice.js';
 
 const authPersistConfig = {
   key: 'auth',
@@ -31,14 +31,15 @@ export const store = configureStore({
     products: productsReducer,
     profile: profileReducer,
     diary: diaryReducer,
-    statistics: statisticsReducer
+    statistics: statisticsReducer,
+    filter: filterReducer,
   },
-  middleware: getDefaultMiddleware =>
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    })
+    }),
 });
 
 export const persistor = persistStore(store);

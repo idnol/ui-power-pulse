@@ -23,7 +23,8 @@ import {
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../../../redux/diary/api.js';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast, Toaster } from 'react-hot-toast';
+
 
 export const AddProductForm = ({ onClose, title, calories, id }) => {
   const [isInputValue, setIsInputValue] = useState('');
@@ -120,7 +121,7 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
           onClose={() => comboModal()}
         />
       )}
-      <ToastContainer position="bottom-right" limit={2} autoClose={3000} />
+    
     </>
   );
 };

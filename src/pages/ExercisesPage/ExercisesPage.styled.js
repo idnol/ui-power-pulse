@@ -1,9 +1,20 @@
 import styled from 'styled-components';
 
+export const Row = styled.div`
+  position: relative;
+`;
+
 export const Wrapper = styled.div`
-    width: 100%;
+  padding-top: 154px;
+  width: 100%;
 `;
 
 export const SliderWrapper = styled.div`
-    position: relative;
+  position: relative;
+`;
+
+export const Button = styled.button`
+  position: absolute;
+  top: 71px;
+  left: 0;
 `;

@@ -52,9 +52,11 @@ export const StyledAddNavLink = styled(NavLink)`
   font-size: 14px;
   line-height: 1.29;
   color: ${theme.color.orange};
+  stroke: ${theme.color.orange};
   transition-duration: 300ms;
 
   &:hover {
+    stroke: ${theme.color.white};
     color: ${theme.color.white};
     transition-duration: 300ms;
   }
@@ -66,7 +68,6 @@ export const StyledAddNavLink = styled(NavLink)`
 `;
 
 export const SvgArrow = styled.svg`
-  stroke: ${theme.color.orange};
   width: 16px;
   height: 16px;
 `;

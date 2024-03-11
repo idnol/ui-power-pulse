@@ -28,15 +28,11 @@ export default function ProductsPage() {
    () => Object.fromEntries([...searchParams]),
    [searchParams]
   );
-  const { query = "", category = "", recommended = "all" } = params;
+  const { category = "", recommended = "all" } = params;
   
    useEffect(() => {
    dispatch(fetchProducts(params))
  }, [dispatch, params]);
-
-  const handleFilterChange = (newParams) => {
-    dispatch(fetchProducts(newParams));
-  };
 
   return (
     <>
@@ -48,10 +44,8 @@ export default function ProductsPage() {
                <TitlePage>Products</TitlePage>
 
                <ProductsFilter 
-               query={query}
                category={category}
                recommended={recommended}
-               onFilterChange={handleFilterChange}
                bloodGroup={bloodGroup} />
 
               </FilterWrapper>
@@ -60,7 +54,7 @@ export default function ProductsPage() {
 
              {products.length > 0 && <ProductsList items={products} bloodGroup={bloodGroup} />}
              
-             {error || products.length === 0 && <ProductsError />}
+             { (error || (products.length === 0 && !isLoading)) && <ProductsError /> }
             </Wrapper>
         </div>
       </ProductsSection>

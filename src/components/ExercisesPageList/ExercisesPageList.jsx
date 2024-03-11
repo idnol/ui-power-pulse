@@ -8,18 +8,32 @@ import {
 } from './ExercisesPageList.styled';
 import { useEffect } from 'react';
 
-export const Exercises = () => {
-  const exercises = useSelector((state) => state.exercises.items);
+const getVisibleExercises = (exercises, filter) => {
+  return exercises.filter((item) => {
+    const bodyPart = item.bodyPart.toLowerCase();
+    const target = item.target.toLowerCase();
+    const equipment = item.equipment.toLowerCase();
+    const matchBodyPart = bodyPart.includes(filter.toLowerCase());
+    const matchTarget = target.includes(filter.toLowerCase());
+    const matchEquipment = equipment.includes(filter.toLowerCase());
+    return matchBodyPart || matchTarget || matchEquipment;
+  });
+};
+
+export const Exercises = ({ bodyPartFilter }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(exercisesGetAll());
   }, [dispatch]);
 
+  const exercises = useSelector((state) => state.exercises.items);
+  const visibleExercises = getVisibleExercises(exercises, bodyPartFilter);
+
   return (
     <ExercisesListContainer>
       <ExercisesList>
-        {exercises.map((item, index) => (
+        {visibleExercises.map((item, index) => (
           <ExercisesListItem key={index}>
             <ListItem item={item} />
           </ExercisesListItem>
