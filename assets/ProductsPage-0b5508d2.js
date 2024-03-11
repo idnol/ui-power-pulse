@@ -1,4 +1,4 @@
-import{s as t,t as o,j as e,b,a as x,G as E,n as S,H as I,D as T,u as B,J as P,K as D,d as j,M}from"./index-e029ae4d.js";import{S as N,C as W,e as V,f as G,i as q,j as C,n as H}from"./AddExerciseSuccess.styled-9659c89a.js";const Y=t.div`
+import{s as t,t as o,j as e,b,a as x,G as E,n as S,H as I,D as T,u as B,J as P,K as D,d as j,M}from"./index-44247cc4.js";import{S as N,C as W,e as V,f as G,i as q,j as C,n as H}from"./AddExerciseSuccess.styled-6f5df8cd.js";const Y=t.div`
   max-width: 335px;
   margin: 0 auto;
   padding-top: 40px;
