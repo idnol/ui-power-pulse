@@ -1,4 +1,4 @@
-import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u as O,Q as W,J as z,B as F,K as V,d as $,M as P}from"./index-2c988186.js";import{S as G,C as q,e as H,f as _,i as Q,j as C,n as Y}from"./AddExerciseSuccess.styled-4f794a15.js";const J=t.div`
+import{s as t,t as o,j as e,b,a as x,I as E,G as T,_ as D,H as F,D as M,u as B,Q as N,J as z,B as I,K as W,d as j,M as V}from"./index-054cf276.js";import{S as G,C as q,e as H,f as _,i as Q,j as C,n as Y}from"./AddExerciseSuccess.styled-ba210450.js";const J=t.div`
   max-width: 335px;
   margin: 0 auto;
   padding-top: 40px;
@@ -26,14 +26,14 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
     margin-bottom: 0;
     margin-top: 0;
   }
-`,U=t.form`
+`,U=t.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
   @media (min-width: ${o.breakpoint.md}) {
     flex-direction: row;
   }
-`,R=t.div` 
+`,O=t.div` 
   font-size: 14px;
   line-height: 1.29;
   padding: 14px;
@@ -47,7 +47,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
     font-size: 16px;
     line-height: 1.5;
   }
-`,A=t.svg`
+`,R=t.svg`
   width: 20px;
   height: 20px;
   stroke: ${o.color.white};
@@ -55,7 +55,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
   top: 14px;
   right: 14px;
   z-index: 1;
-`,L=t.ul`
+`,A=t.ul`
   list-style: none;
   padding: 14px 32px 14px 14px;
   margin: 0;
@@ -102,7 +102,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
 `,X=t.div`
   display: flex;
   gap: 16px;
-`,Z=t.div`
+`,Z=t.label`
   display: flex;
   align-items: center;
   width: 100%;
@@ -170,7 +170,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
   width: 18px;
   height: 18px;
   stroke: ${o.color.white};
-`,ne=({query:i,onTitleChange:a,onCleanForm:n})=>e.jsxs(Z,{children:[e.jsx(ee,{type:"text",name:"query",placeholder:"Search",value:i,onChange:a}),e.jsx(oe,{type:"button",className:"cleanBtn",onClick:n,children:e.jsx(te,{children:e.jsx("use",{href:`${w}#x`})})}),e.jsx(ie,{type:"submit",children:e.jsx(re,{children:e.jsx("use",{href:`${w}#search`})})})]}),se=t.div`
+`,ne=({onChange:i,inputValue:n,onCleanForm:s,onSubmit:r})=>e.jsx("form",{onSubmit:r,children:e.jsxs(Z,{children:[e.jsx(ee,{type:"text",name:"query",placeholder:"Search",value:n,onChange:i}),e.jsx(oe,{type:"button",className:"cleanBtn",onClick:s,children:e.jsx(te,{children:e.jsx("use",{href:`${b}#x`})})}),e.jsx(ie,{type:"submit",children:e.jsx(re,{children:e.jsx("use",{href:`${b}#search`})})})]})}),se=t.div`
   border: ${o.border.grey3};
   border-radius: 12px;
   width: 146px;
@@ -189,7 +189,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
     font-size: 16px;
     line-height: 1.5;
   }
-`,ae=({label:i,onSelect:a,onToggle:n,isOpen:x})=>{const[l,r]=p.useState([]),s=p.useRef(null);p.useEffect(()=>{async function c(){try{const h=await D();r(h)}catch{return M.error("Something went wrong! Please try again!")}}c()},[]);const d=c=>{s.current&&!s.current.contains(c.target)&&n()};return p.useEffect(()=>(document.addEventListener("mousedown",d),()=>{document.removeEventListener("mousedown",d)})),e.jsxs(e.Fragment,{children:[e.jsxs(se,{children:[e.jsx(R,{onClick:n,children:i}),e.jsx(A,{children:e.jsx("use",{href:`${w}#arrow-down`})}),x&&e.jsxs(L,{ref:s,children:[e.jsx(S,{onClick:()=>a(""),children:"All"}),l.map((c,h)=>e.jsx(S,{onClick:()=>a(c),children:c},h))]})]}),e.jsx(T,{})]})},de=t.div`
+`,ae=({label:i,onSelect:n,onToggle:s,isOpen:r})=>{const[l,a]=x.useState([]),p=x.useRef(null);x.useEffect(()=>{async function c(){try{const h=await T();a(h)}catch{return D.error("Something went wrong! Please try again!")}}c()},[]);const d=c=>{p.current&&!p.current.contains(c.target)&&s()};return x.useEffect(()=>(document.addEventListener("mousedown",d),()=>{document.removeEventListener("mousedown",d)})),e.jsxs(e.Fragment,{children:[e.jsxs(se,{children:[e.jsx(O,{onClick:s,children:i}),e.jsx(R,{children:e.jsx("use",{href:`${b}#arrow-down`})}),r&&e.jsxs(A,{ref:p,children:[e.jsx(S,{onClick:()=>n(""),children:"All"}),l.map((c,h)=>e.jsx(S,{onClick:()=>n(c),children:c},h))]})]}),e.jsx(E,{})]})},de=t.div`
   border: ${o.border.grey3};
   border-radius: 12px;
   width: 173px;
@@ -205,7 +205,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
     font-size: 16px;
     line-height: 1.5;
   }
-`,ce=({label:i,isOpen:a,onToggle:n,onSelect:x})=>{const l=["All","recommended","not recommended"],r=p.useRef(null),s=d=>{r.current&&!r.current.contains(d.target)&&n()};return p.useEffect(()=>(document.addEventListener("mousedown",s),()=>{document.removeEventListener("mousedown",s)})),e.jsxs(de,{children:[e.jsx(R,{onClick:n,children:i}),e.jsx(A,{children:e.jsx("use",{href:`${w}#arrow-down`})}),a&&e.jsx(L,{ref:r,children:l.map((d,c)=>e.jsx(S,{onClick:()=>x(d),children:d},c))})]})},le=({query:i,category:a,recommended:n,onFilterChange:x,bloodGroup:l})=>{const[r,s]=B(),[d,c]=p.useState(!1),[h,g]=p.useState(!1),u=()=>{c(!d)},f=()=>{g(!h)},k=m=>{m.preventDefault(),r.set("query",m.target.value),s(r)},y=m=>{r.set("category",m),s(r),c(!1)},v=m=>{r.set("recommended",m),r.set("blood",l),s(r),g(!1)},j=m=>{m.preventDefault(),x(r)},b=()=>{r.set("query",""),s(r)};return e.jsx(e.Fragment,{children:e.jsx(K,{children:e.jsxs(U,{onSubmit:j,children:[e.jsx(ne,{query:i,onTitleChange:k,onCleanForm:b}),e.jsxs(X,{children:[e.jsx(ae,{label:a||"Category",isOpen:d,onToggle:u,onSelect:y}),e.jsx(ce,{label:n||"All",isOpen:h,onToggle:f,onSelect:v})]})]})})})},pe=t.div`
+`,ce=({label:i,isOpen:n,onToggle:s,onSelect:r})=>{const l=["All","recommended","not recommended"],a=x.useRef(null),p=d=>{a.current&&!a.current.contains(d.target)&&s()};return x.useEffect(()=>(document.addEventListener("mousedown",p),()=>{document.removeEventListener("mousedown",p)})),e.jsxs(de,{children:[e.jsx(O,{onClick:s,children:i}),e.jsx(R,{children:e.jsx("use",{href:`${b}#arrow-down`})}),n&&e.jsx(A,{ref:a,children:l.map((d,c)=>e.jsx(S,{onClick:()=>r(d),children:d},c))})]})},le=({category:i,recommended:n,bloodGroup:s})=>{const[r,l]=F(),[a,p]=x.useState(!1),[d,c]=x.useState(!1),[h,m]=x.useState(""),w=g=>{m(g.target.value)},$=()=>{p(!a)},k=()=>{c(!d)},y=g=>{r.set("category",g),l(r),p(!1)},v=g=>{r.set("recommended",g),r.set("blood",s),l(r),c(!1)},f=g=>{g.preventDefault(),r.set("query",g.target[0].value),l(r)},u=()=>{r.set("query",""),l(r),m("")};return e.jsx(e.Fragment,{children:e.jsx(K,{children:e.jsxs(U,{children:[e.jsx(ne,{inputValue:h,onChange:w,onSubmit:f,onCleanForm:u}),e.jsxs(X,{children:[e.jsx(ae,{label:i||"Category",isOpen:a,onToggle:$,onSelect:y}),e.jsx(ce,{label:n||"All",isOpen:d,onToggle:k,onSelect:v})]})]})})})},pe=t.div`
   display: flex;
   gap: 16px;
   margin-bottom: 8px;
@@ -327,7 +327,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
   @media (min-width: ${o.breakpoint.md}) {
     margin-bottom: 32px;
   }
-`,Fe=t.button`
+`,Ie=t.button`
   min-width: 157px;
   padding: 12px 32px;
   border-radius: 12px;
@@ -344,7 +344,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
   @media (min-width: ${o.breakpoint.md}) {
     padding: 14px 32px;
   }
-`,Pe=({isOpen:i,onClose:a,calories:n})=>{var r;const x=N(),l=p.useRef(x);return e.jsx(e.Fragment,{children:i&&e.jsx(ve,{children:e.jsxs(G,{children:[e.jsxs("picture",{children:[e.jsx("source",{media:`${o.breakpoint.sm}`,srcSet:"/img/avocado-1x.png"}),e.jsx("source",{media:`${o.breakpoint.md}`,srcSet:"/img/avocado-2x.png"}),e.jsx("img",{src:"/img/avocado-1x.png",alt:"Avocado",loading:"lazy"})]}),e.jsx(Ce,{children:"Well done"}),e.jsxs(q,{children:[e.jsx(Se,{children:"Calories:"}),e.jsx(ze,{children:n})]}),e.jsx(Fe,{type:"button",onClick:a,children:"Next product"}),e.jsxs(H,{to:((r=l.current.state)==null?void 0:r.from)??"/diary",children:["To the diary",e.jsx(_,{children:e.jsx("use",{href:`${w}#arrow`})})]})]})})})},Ie=t.div`
+`,Pe=({isOpen:i,onClose:n,calories:s})=>{var a;const r=M(),l=x.useRef(r);return e.jsx(e.Fragment,{children:i&&e.jsx(ve,{children:e.jsxs(G,{children:[e.jsxs("picture",{children:[e.jsx("source",{media:`${o.breakpoint.sm}`,srcSet:"/img/avocado-1x.png"}),e.jsx("source",{media:`${o.breakpoint.md}`,srcSet:"/img/avocado-2x.png"}),e.jsx("img",{src:"/img/avocado-1x.png",alt:"Avocado",loading:"lazy"})]}),e.jsx(Ce,{children:"Well done"}),e.jsxs(q,{children:[e.jsx(Se,{children:"Calories:"}),e.jsx(ze,{children:s})]}),e.jsx(Ie,{type:"button",onClick:n,children:"Next product"}),e.jsxs(H,{to:((a=l.current.state)==null?void 0:a.from)??"/diary",children:["To the diary",e.jsx(_,{children:e.jsx("use",{href:`${b}#arrow`})})]})]})})})},Fe=t.div`
   padding: 48px 24px;
   max-width: 335px;
 
@@ -502,7 +502,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
   @media (min-width: ${o.breakpoint.md}) {
     margin-bottom: 64px;
   }
-`,_e=({onClose:i,title:a,calories:n,id:x})=>{const[l,r]=p.useState(""),[s,d]=p.useState("0"),[c,h]=p.useState(n),[g,u]=p.useState(!1),f=O(),k=j=>{const b=j.currentTarget.value;r(b);const E=Math.round(b*c/100);d(E)},y=async j=>{j.preventDefault();try{const b={product:x,weight:+l},m=await f(z(b));z.fulfilled.match(m)?(r(""),u(!0)):(u(!1),d("0"),F.error("Oops, something went wrong"))}catch{u(!1),d("0"),F.error("Oops, something went wrong")}},v=()=>{i(),u(!1)};return e.jsxs(e.Fragment,{children:[e.jsx(Be,{onClick:i,children:e.jsx(Re,{children:e.jsx(Oe,{href:`${w}#x-modal`})})}),!g&&e.jsx(Ie,{children:e.jsxs("form",{onSubmit:y,children:[e.jsxs(Ae,{children:[e.jsx(Le,{children:e.jsx(Ee,{children:a})}),e.jsxs(Te,{children:[e.jsx(Me,{name:"number",required:!0,value:l,onChange:k}),e.jsx(De,{children:"grams"})]})]}),e.jsxs(Ne,{children:[e.jsx(He,{children:"Calories:"}),e.jsx(We,{children:s})]}),e.jsxs(Ve,{children:[e.jsx(Ge,{type:"submit",children:"Add to diary"}),e.jsx(qe,{type:"button",onClick:i,children:"Cancel"})]})]})}),g&&e.jsx(Pe,{calories:s,isOpen:g,onClose:()=>v()}),e.jsx(W,{position:"bottom-right",limit:2,autoClose:3e3})]})},Qe=({item:{title:i,calories:a,category:n,weight:x,groupBloodNotAllowed:l,_id:r},bloodGroup:s})=>{const[d,c]=p.useState(!1),h=l[s],g=h?"Recommended":"Not recommended";return e.jsxs(e.Fragment,{children:[e.jsxs(ue,{children:[e.jsxs(ke,{children:[e.jsx(be,{children:"Diet"}),e.jsxs(ye,{children:[e.jsxs(fe,{children:[e.jsx(we,{$isAllowed:h}),g]}),e.jsxs(je,{type:"button",onClick:()=>c(!0),children:["Add",e.jsx($e,{children:e.jsx("use",{href:`${w}#arrow`})})]})]})]}),e.jsx(me,{titleName:i}),e.jsxs(Q,{children:[e.jsx(C,{text:"Calories: ",val:a}),e.jsx(C,{text:"Category: ",val:n}),e.jsx(C,{text:"Weight: ",val:x})]})]}),d&&e.jsx(Y,{isOpen:d,onClose:()=>c(!1),children:e.jsx(_e,{onClose:()=>c(!1),id:r,title:i,calories:a})})]})},Ye=t.div`
+`,_e=({onClose:i,title:n,calories:s,id:r})=>{const[l,a]=x.useState(""),[p,d]=x.useState("0"),[c,h]=x.useState(s),[m,w]=x.useState(!1),$=B(),k=f=>{const u=f.currentTarget.value;a(u);const L=Math.round(u*c/100);d(L)},y=async f=>{f.preventDefault();try{const u={product:r,weight:+l},g=await $(z(u));z.fulfilled.match(g)?(a(""),w(!0)):(w(!1),d("0"),I.error("Oops, something went wrong"))}catch{w(!1),d("0"),I.error("Oops, something went wrong")}},v=()=>{i(),w(!1)};return e.jsxs(e.Fragment,{children:[e.jsx(Be,{onClick:i,children:e.jsx(Re,{children:e.jsx(Oe,{href:`${b}#x-modal`})})}),!m&&e.jsx(Fe,{children:e.jsxs("form",{onSubmit:y,children:[e.jsxs(Ae,{children:[e.jsx(Le,{children:e.jsx(Ee,{children:n})}),e.jsxs(Te,{children:[e.jsx(Me,{name:"number",required:!0,value:l,onChange:k}),e.jsx(De,{children:"grams"})]})]}),e.jsxs(Ne,{children:[e.jsx(He,{children:"Calories:"}),e.jsx(We,{children:p})]}),e.jsxs(Ve,{children:[e.jsx(Ge,{type:"submit",children:"Add to diary"}),e.jsx(qe,{type:"button",onClick:i,children:"Cancel"})]})]})}),m&&e.jsx(Pe,{calories:p,isOpen:m,onClose:()=>v()}),e.jsx(N,{position:"bottom-right",limit:2,autoClose:3e3})]})},Qe=({item:{title:i,calories:n,category:s,weight:r,groupBloodNotAllowed:l,_id:a},bloodGroup:p})=>{const[d,c]=x.useState(!1),h=l[p],m=h?"Recommended":"Not recommended";return e.jsxs(e.Fragment,{children:[e.jsxs(ue,{children:[e.jsxs(ke,{children:[e.jsx(be,{children:"Diet"}),e.jsxs(ye,{children:[e.jsxs(fe,{children:[e.jsx(we,{$isAllowed:h}),m]}),e.jsxs(je,{type:"button",onClick:()=>c(!0),children:["Add",e.jsx($e,{children:e.jsx("use",{href:`${b}#arrow`})})]})]})]}),e.jsx(me,{titleName:i}),e.jsxs(Q,{children:[e.jsx(C,{text:"Calories: ",val:n}),e.jsx(C,{text:"Category: ",val:s}),e.jsx(C,{text:"Weight: ",val:r})]})]}),d&&e.jsx(Y,{isOpen:d,onClose:()=>c(!1),children:e.jsx(_e,{onClose:()=>c(!1),id:a,title:i,calories:n})})]})},Ye=t.div`
   max-width: 335px;
   margin: 0 auto;
   @media (min-width: ${o.breakpoint.md}) {
@@ -544,7 +544,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
     gap: 16px;
     row-gap: 32px;
   }
-`,Ke=i=>i.products.items,Ue=i=>i.products.isLoading,Xe=i=>i.products.error,Ze=({items:i,bloodGroup:a})=>e.jsx(Ye,{children:e.jsx(Je,{children:i.map(n=>e.jsx("li",{children:e.jsx(Qe,{item:n,bloodGroup:a})},n._id))})}),eo=t.section`
+`,Ke=i=>i.products.items,Ue=i=>i.products.isLoading,Xe=i=>i.products.error,Ze=({items:i,bloodGroup:n})=>e.jsx(Ye,{children:e.jsx(Je,{children:i.map(s=>e.jsx("li",{children:e.jsx(Qe,{item:s,bloodGroup:n})},s._id))})}),eo=t.section`
   position: fixed;
   top: 0;
   left: 0;
@@ -562,7 +562,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
   display: flex;
   align-items: center;
   justify-content: center;
-`,oo=V`
+`,oo=W`
   to {
     transform: rotate(360deg);
   }
@@ -591,7 +591,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
     font-size: 16px;
     line-height: 1.5;    
   }
-`,I=t.span`
+`,P=t.span`
   font-size: 14px;
   line-height: 1.29;
   color: ${o.color.orange};
@@ -599,7 +599,7 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
     font-size: 16px;
     line-height: 1.5;    
  }
-`,so=()=>e.jsxs(ro,{children:[e.jsxs(no,{children:[e.jsx(I,{children:" Sorry, no results were found "}),"for the product filters you selected. You may want to consider other search options to find the product you want. Our range is wide and you have the opportunity to find more options that suit your needs."]}),e.jsx(I,{children:"Try changing the search parameters."})]}),ao=t.section`
+`,so=()=>e.jsxs(ro,{children:[e.jsxs(no,{children:[e.jsx(P,{children:" Sorry, no results were found "}),"for the product filters you selected. You may want to consider other search options to find the product you want. Our range is wide and you have the opportunity to find more options that suit your needs."]}),e.jsx(P,{children:"Try changing the search parameters."})]}),ao=t.section`
   padding-top: 61px;
   @media (min-width: ${o.breakpoint.md}) {
     padding-top: 84px;
@@ -640,4 +640,4 @@ import{s as t,t as o,j as e,b as w,a as p,I as T,G as D,_ as M,H as B,D as N,u a
   }
   @media (min-width: ${o.breakpoint.xl}) {
   }
-`,xo=({children:i})=>e.jsx(po,{children:i});function go(){const i=$(Ke),a=$(Ue),n=$(Xe),x=$(u=>{var f;return(f=u.auth.user.bodyData)==null?void 0:f.blood})??"1",l=O(),[r]=B(),s=p.useMemo(()=>Object.fromEntries([...r]),[r]),{query:d="",category:c="",recommended:h="all"}=s;p.useEffect(()=>{l(P(s))},[l,s]);const g=u=>{l(P(u))};return e.jsx(e.Fragment,{children:e.jsxs(ao,{children:[e.jsx(co,{}),e.jsx("div",{className:"container",children:e.jsxs(lo,{children:[e.jsxs(J,{children:[e.jsx(xo,{children:"Products"}),e.jsx(le,{query:d,category:c,recommended:h,onFilterChange:g,bloodGroup:x})]}),a&&e.jsx(io,{}),i.length>0&&e.jsx(Ze,{items:i,bloodGroup:x}),n||i.length===0&&e.jsx(so,{})]})})]})})}export{go as default};
+`,xo=({children:i})=>e.jsx(po,{children:i});function go(){const i=j(Ke),n=j(Ue),s=j(Xe),r=j(h=>{var m;return(m=h.auth.user.bodyData)==null?void 0:m.blood})??"1",l=B(),[a]=F(),p=x.useMemo(()=>Object.fromEntries([...a]),[a]),{category:d="",recommended:c="all"}=p;return x.useEffect(()=>{l(V(p))},[l,p]),e.jsx(e.Fragment,{children:e.jsxs(ao,{children:[e.jsx(co,{}),e.jsx("div",{className:"container",children:e.jsxs(lo,{children:[e.jsxs(J,{children:[e.jsx(xo,{children:"Products"}),e.jsx(le,{category:d,recommended:c,bloodGroup:r})]}),n&&e.jsx(io,{}),i.length>0&&e.jsx(Ze,{items:i,bloodGroup:r}),(s||i.length===0&&!n)&&e.jsx(so,{})]})})]})})}export{go as default};
