@@ -1,18 +1,4 @@
-import{s as t,t as e,n as m,L as u,a as w,j as o,b as h}from"./index-fc4aa28e.js";import{F as f,E as y,b as $,d as S}from"./formik.esm-84ccd766.js";const k=t.h2`
-    line-height: 1.17;
-    @media (min-width: ${e.breakpoint.md}) {
-        font-size: 32px;
-        line-height: 1.38;
-    }
-`,j=t.p`
-    font-size: 14px;
-    line-height: 1.29;
-    color: ${e.color.grey};
-    @media (min-width: ${e.breakpoint.md}) {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-`,L=t.div`
+import{s as r,t as e,n as m,L as b,a as w,j as o,b as c}from"./index-e57da303.js";import{F as f,E as y,b as $,d as S}from"./formik.esm-06ae8036.js";import{S as j,a as k}from"./ReusableStyles.styled-4a2e27ed.js";const T=r.div`
     //margin-top: 127px;
     max-width: 335px;
     margin-right: 178px;
@@ -22,17 +8,17 @@ import{s as t,t as e,n as m,L as u,a as w,j as o,b as h}from"./index-fc4aa28e.js
         max-width: 496px;
         //margin-left: 0px;
     }
-`,T=t(k)`
+`,A=r(j)`
     margin-bottom: 14px;
     @media (min-width: ${e.breakpoint.md}) {
         margin-bottom: 16px;
     }
-`,A=t(j)`
+`,B=r(k)`
     margin-bottom: 28px;
     @media (min-width: ${e.breakpoint.md}) {
         margin-bottom: 32px;
     }
-`,p=t(f)`
+`,p=r(f)`
     display: block;
     width: 100%;
     height: 46px;
@@ -50,10 +36,10 @@ import{s as t,t as e,n as m,L as u,a as w,j as o,b as h}from"./index-fc4aa28e.js
     outline: none;
     border: ${e.border.orange};
 }
-    ${({error:n,touched:a})=>a==="true"&&n==="true"&&m`
+    ${({error:i,touched:n})=>n==="true"&&i==="true"&&m`
         border-color: red;
     `}
-    ${({error:n,touched:a,name:r})=>a==="true"&&n==="false"&&(r==="email"||r==="password"||r==="name")&&m`
+    ${({error:i,touched:n,name:t})=>n==="true"&&i==="false"&&(t==="email"||t==="password"||t==="name")&&m`
         border-color: green;
     `}
     @media (min-width: ${e.breakpoint.md}) {
@@ -62,13 +48,13 @@ import{s as t,t as e,n as m,L as u,a as w,j as o,b as h}from"./index-fc4aa28e.js
         font-size: 16px;
         line-height: 1.5;
     }
-`,l=t(y)`
+`,l=r(y)`
     color: ${e.color.red};
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.12px;
     margin: 4px;
-`,v=t.button`
+`,v=r.button`
     height: 42px;
     margin-top: 40px;
     padding: 12px 40px;
@@ -90,7 +76,7 @@ import{s as t,t as e,n as m,L as u,a as w,j as o,b as h}from"./index-fc4aa28e.js
         font-size: 20px;
         line-height: 1.2;
     }
-`,B=t.p`
+`,C=r.p`
     color: ${e.color.grey};
     margin-top: 12px;
     font-size: 12px;
@@ -99,10 +85,10 @@ import{s as t,t as e,n as m,L as u,a as w,j as o,b as h}from"./index-fc4aa28e.js
     @media (min-width: ${e.breakpoint.md}) {
         padding-left: 8px;
     }
-`,C=t(u)`
+`,W=r(b)`
     color: ${e.color.white};
     text-decoration: underline;
-`,z=t.button`
+`,E=r.button`
     position: absolute;
     top: 50%;
     right: 14px;
@@ -110,14 +96,14 @@ import{s as t,t as e,n as m,L as u,a as w,j as o,b as h}from"./index-fc4aa28e.js
     background-color: transparent;
     border: none;
     cursor: pointer;
-`,E=t.div`
+`,F=r.div`
     position: relative;
     display: inline-block;
-`,F=t.div`
+`,z=r.div`
     display: flex;
     flex-direction:column;
     gap: 18px;
     @media (min-width: ${e.breakpoint.md}) {
         width: max-content;
     }
-`,W=({schema:n,handleSubmit:a,register:r,btnContent:c})=>{const[d,x]=w.useState(!1),g=()=>d?"text":"password",b=r?{email:"",password:"",name:""}:{email:"",password:""};return o.jsx($,{initialValues:b,validationSchema:n,onSubmit:s=>{a(s)},children:({errors:s,touched:i})=>o.jsxs(S,{autoComplete:"off",children:[o.jsxs(F,{children:[r&&o.jsxs(o.Fragment,{children:[o.jsx(p,{type:"text",name:"name",placeholder:"Name",error:s.name&&i.name?"true":"false",touched:i.name?"true":"false"}),o.jsx(l,{name:"name",component:"p"})]}),o.jsx(p,{type:"email",name:"email",placeholder:"Email",error:s.email&&i.email?"true":"false",touched:i.email?"true":"false"}),o.jsx(l,{name:"email",component:"p"}),o.jsxs(E,{children:[o.jsx(p,{name:"password",type:g(),placeholder:"Password",error:s.password&&i.password?"true":"false",touched:i.password?"true":"false"}),o.jsx(z,{type:"button",onClick:()=>x(!d),children:o.jsx("svg",{width:"20",height:"20",stroke:`${e.color.white}`,viewBox:"0 0 20 20",children:d?o.jsx("use",{href:`${h}#eye-off`}):o.jsx("use",{href:`${h}#eye`})})})]}),o.jsx(l,{name:"password",component:"p"})]}),o.jsx(v,{type:"submit",children:c})]})})};export{W as A,L as S,T as a,A as b,B as c,C as d};
+`,D=({schema:i,handleSubmit:n,register:t,btnContent:x})=>{const[d,h]=w.useState(!1),g=()=>d?"text":"password",u=t?{email:"",password:"",name:""}:{email:"",password:""};return o.jsx($,{initialValues:u,validationSchema:i,onSubmit:s=>{n(s)},children:({errors:s,touched:a})=>o.jsxs(S,{autoComplete:"off",children:[o.jsxs(z,{children:[t&&o.jsxs(o.Fragment,{children:[o.jsx(p,{type:"text",name:"name",placeholder:"Name",error:s.name&&a.name?"true":"false",touched:a.name?"true":"false"}),o.jsx(l,{name:"name",component:"p"})]}),o.jsx(p,{type:"email",name:"email",placeholder:"Email",error:s.email&&a.email?"true":"false",touched:a.email?"true":"false"}),o.jsx(l,{name:"email",component:"p"}),o.jsxs(F,{children:[o.jsx(p,{name:"password",type:g(),placeholder:"Password",error:s.password&&a.password?"true":"false",touched:a.password?"true":"false"}),o.jsx(E,{type:"button",onClick:()=>h(!d),children:o.jsx("svg",{width:"20",height:"20",stroke:`${e.color.white}`,viewBox:"0 0 20 20",children:d?o.jsx("use",{href:`${c}#eye-off`}):o.jsx("use",{href:`${c}#eye`})})})]}),o.jsx(l,{name:"password",component:"p"})]}),o.jsx(v,{type:"submit",children:x})]})})};export{D as A,T as S,A as a,B as b,C as c,W as d};

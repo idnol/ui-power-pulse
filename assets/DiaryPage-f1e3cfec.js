@@ -1,4 +1,4 @@
-import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b as x,h as te}from"./index-fc4aa28e.js";import{f as S,i as ie,s as oe,a as ne,b as re,c as ae}from"./index-cf429e40.js";const de=i.div`
+import{s as i,t as e,j as t,N as O,a as l,d as z,u as L,q as J,v as Z,w as ee,b as x,h as te}from"./index-e57da303.js";import{f as S,i as ie,s as oe,a as ne,b as re,c as ae}from"./index-56e366a6.js";const de=i.div`
   min-height: 234px;
   max-height: 990px;
   overflow-y: auto;
@@ -422,13 +422,13 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media (min-width: ${e.breakpoint.md}) {
     width: 30px;
   }
-`,Ce=i.button`
+`,De=i.button`
   display: inline;
   padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
-`,De=i.svg`
+`,Ce=i.svg`
   width: 20px;
   height: 20px;
   stroke: ${e.color.orangeSecond};
@@ -443,7 +443,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media (max-width: 375px) {
     margin-left: 4px;
   }
-`,Se=({exercises:a,onDeleteExercise:d})=>t.jsxs(t.Fragment,{children:[t.jsxs(se,{children:[t.jsx(pe,{children:"Body Part"}),t.jsx(le,{children:"Equipment"}),t.jsx(he,{children:"Name"}),t.jsx(xe,{children:"Target"}),t.jsx(ce,{children:"Burned Calories"}),t.jsx(me,{children:"Time"}),t.jsx("p",{children:" "})]}),t.jsx(de,{children:t.jsxs(ge,{children:[t.jsx(we,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Body Part"}),t.jsx("th",{children:"Equipment"}),t.jsx("th",{children:"Name"}),t.jsx("th",{children:"Target"}),t.jsx("th",{children:"Burned Calories"}),t.jsx("th",{children:"Time"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:a.map(o=>t.jsxs(be,{children:[t.jsx(fe,{children:o.bodyPart}),t.jsx(ue,{children:o.equipment}),t.jsx(ye,{children:o.name}),t.jsx($e,{children:o.target}),t.jsx(ke,{children:o.burnedCalories}),t.jsx(je,{children:o.time}),t.jsx(ve,{children:t.jsx(Ce,{onClick:()=>d(o.id),children:t.jsx(De,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},o.id))})]})})]}),ze=i.div`
+`,Se=({exercises:r,onDeleteExercise:d})=>t.jsxs(t.Fragment,{children:[t.jsxs(se,{children:[t.jsx(pe,{children:"Body Part"}),t.jsx(le,{children:"Equipment"}),t.jsx(he,{children:"Name"}),t.jsx(xe,{children:"Target"}),t.jsx(ce,{children:"Burned Calories"}),t.jsx(me,{children:"Time"}),t.jsx("p",{children:" "})]}),t.jsx(de,{children:t.jsxs(ge,{children:[t.jsx(we,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Body Part"}),t.jsx("th",{children:"Equipment"}),t.jsx("th",{children:"Name"}),t.jsx("th",{children:"Target"}),t.jsx("th",{children:"Burned Calories"}),t.jsx("th",{children:"Time"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:r.map(o=>t.jsxs(be,{children:[t.jsx(fe,{children:o.bodyPart}),t.jsx(ue,{children:o.equipment}),t.jsx(ye,{children:o.name}),t.jsx($e,{children:o.target}),t.jsx(ke,{children:o.burnedCalories}),t.jsx(je,{children:o.time}),t.jsx(ve,{children:t.jsx(De,{onClick:()=>d(o.id),children:t.jsx(Ce,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},o.id))})]})})]}),ze=i.div`
   border: ${e.border.grey2};
   border-radius: 12px;
   padding: 16px 8px 16px 16px;
@@ -479,7 +479,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   font-size: 14px;
   line-height: 1.29;
   color: ${e.color.greyThird};
-`,Pe=i(U)`
+`,Pe=i(O)`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -514,7 +514,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 65px;
   }
-`,We=[{id:"1",bodyPart:"Upper arms",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"2",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"3",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"4",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"5",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"6",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"7",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"8",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"9",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"10",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"11",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"12",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"13",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"14",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"15",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"16",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"17",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"18",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"19",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"20",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"21",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"22",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"23",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"24",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"25",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"26",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60}],Ne=()=>{const[a,d]=l.useState(We),o=r=>{d(m=>m.filter(s=>s.id!==r))};return t.jsx(t.Fragment,{children:t.jsxs(ze,{children:[t.jsxs(Be,{children:[t.jsx(_e,{children:"Execrcises"}),t.jsxs(Pe,{to:"/exercises",children:["Add exercise",t.jsx(Te,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),a.length?t.jsx(Se,{exercises:a,onDeleteExercise:o}):t.jsx(Ae,{children:"Not found products"})]})})},qe=i.div`
+`,We=[{id:"1",bodyPart:"Upper arms",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"2",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"3",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"4",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"5",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"6",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"7",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"8",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"9",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"10",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"11",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"12",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"13",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"14",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"15",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"16",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"17",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"18",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"19",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"20",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"21",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"22",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"23",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"24",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"25",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"26",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60}],Ne=()=>{const[r,d]=l.useState(We),o=a=>{d(m=>m.filter(s=>s.id!==a))};return t.jsx(t.Fragment,{children:t.jsxs(ze,{children:[t.jsxs(Be,{children:[t.jsx(_e,{children:"Execrcises"}),t.jsxs(Pe,{to:"/exercises",children:["Add exercise",t.jsx(Te,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),r.length?t.jsx(Se,{exercises:r,onDeleteExercise:o}):t.jsx(Ae,{children:"Not found products"})]})})},qe=i.div`
   border: ${e.border.grey2};
   border-radius: 12px;
   padding: 16px 8px 16px 16px;
@@ -550,7 +550,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   font-size: 14px;
   line-height: 1.29;
   color: ${e.color.greyThird};
-`,Re=i(U)`
+`,Re=i(O)`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -664,6 +664,12 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 166px;
   }
+`,Ue=i.p`
+  width: 90px;
+
+  @media (min-width: ${e.breakpoint.xl}) {
+    width: 105px;
+  }
 `,Ye=i.p`
   width: 90px;
 
@@ -671,18 +677,12 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
     width: 105px;
   }
 `,Ke=i.p`
-  width: 90px;
-
-  @media (min-width: ${e.breakpoint.xl}) {
-    width: 105px;
-  }
-`,Oe=i.p`
   width: 80px;
 
   @media (min-width: ${e.breakpoint.xl}) {
     width: 105px;
   }
-`,Ue=i.table`
+`,Oe=i.table`
   max-width: 335px;
 
   @media (min-width: ${e.breakpoint.xl}) {
@@ -981,7 +981,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media (max-width: 375px) {
     margin-left: 4px;
   }
-`,Q=a=>a.diary.products,rt=({products:a,onDeleteProduct:d})=>{const o=z(Q),r=L(),m=z(s=>{var c;return(c=s.auth.user.bodyData)==null?void 0:c.blood})??"1";return t.jsxs(t.Fragment,{children:[t.jsxs(Le,{children:[t.jsx(Ve,{children:"Title"}),t.jsx(Ge,{children:"Category"}),t.jsx(Ye,{children:"Calories"}),t.jsx(Ke,{children:"Weight"}),t.jsx(Oe,{children:"Recommend"}),t.jsx("p",{children:" "})]}),t.jsx(Fe,{children:t.jsxs(Ue,{children:[t.jsx(Je,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Title"}),t.jsx("th",{children:"Category"}),t.jsx("th",{children:"Calories"}),t.jsx("th",{children:"Weight"}),t.jsx("th",{children:"Recommend"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:o.map(s=>t.jsxs(Qe,{children:[t.jsx(Xe,{children:s.product.title}),t.jsx(Ze,{children:s.product.category}),t.jsx(et,{children:s.calories}),t.jsx(tt,{children:s.weight}),s.product.groupBloodNotAllowed[m]?t.jsxs(G,{children:[t.jsx(V,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#419B09"})}),"Yes"]}):t.jsxs(G,{children:[t.jsx(V,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#e9101d"})}),"No"]}),t.jsx(it,{children:t.jsx(ot,{onClick:()=>r(J({id:s._id,calories:s.calories})),children:t.jsx(nt,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},s._id))})]})})]})},at=[{id:"1",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"2",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1}],dt=()=>{const[a,d]=l.useState(at);z(Q);const o=L(),r=(m,s)=>{o(J({id:m,calories:s}))};return t.jsx(t.Fragment,{children:t.jsxs(qe,{children:[t.jsxs(Ie,{children:[t.jsx(Me,{children:"Products"}),t.jsxs(Re,{to:"/products",children:["Add product",t.jsx(Ee,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),a.length?t.jsx(rt,{products:a,onDeleteProduct:r}):t.jsx(He,{children:"Not found products"})]})})},st=i.div`
+`,Q=r=>r.diary.products,rt=({products:r,onDeleteProduct:d})=>{const o=z(Q),a=L(),m=z(s=>{var c;return(c=s.auth.user.bodyData)==null?void 0:c.blood})??"1";return t.jsxs(t.Fragment,{children:[t.jsxs(Le,{children:[t.jsx(Ve,{children:"Title"}),t.jsx(Ge,{children:"Category"}),t.jsx(Ue,{children:"Calories"}),t.jsx(Ye,{children:"Weight"}),t.jsx(Ke,{children:"Recommend"}),t.jsx("p",{children:" "})]}),t.jsx(Fe,{children:t.jsxs(Oe,{children:[t.jsx(Je,{children:t.jsxs("tr",{children:[t.jsx("th",{children:"Title"}),t.jsx("th",{children:"Category"}),t.jsx("th",{children:"Calories"}),t.jsx("th",{children:"Weight"}),t.jsx("th",{children:"Recommend"}),t.jsx("th",{children:"Delete"})]})}),t.jsx("tbody",{children:o.map(s=>t.jsxs(Qe,{children:[t.jsx(Xe,{children:s.product.title}),t.jsx(Ze,{children:s.product.category}),t.jsx(et,{children:s.calories}),t.jsx(tt,{children:s.weight}),s.product.groupBloodNotAllowed[m]?t.jsxs(G,{children:[t.jsx(V,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#419B09"})}),"Yes"]}):t.jsxs(G,{children:[t.jsx(V,{children:t.jsx("use",{href:"/img/sprait.svg#circle",fill:"#e9101d"})}),"No"]}),t.jsx(it,{children:t.jsx(ot,{onClick:()=>a(J({id:s._id,calories:s.calories})),children:t.jsx(nt,{children:t.jsx("use",{href:"/img/sprait.svg#trash"})})})})]},s._id))})]})})]})},at=[{id:"1",title:"Rice semolina Garnets glute",category:"Cereals",calories:"340",weight:"100",recommended:!0},{id:"2",title:"Venison stew Special",category:"Meat",calories:"81",weight:"100",recommended:!1}],dt=()=>{const[r,d]=l.useState(at);z(Q);const o=L(),a=(m,s)=>{o(J({id:m,calories:s}))};return t.jsx(t.Fragment,{children:t.jsxs(qe,{children:[t.jsxs(Ie,{children:[t.jsx(Me,{children:"Products"}),t.jsxs(Re,{to:"/products",children:["Add product",t.jsx(Ee,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),r.length?t.jsx(rt,{products:r,onDeleteProduct:a}):t.jsx(He,{children:"Not found products"})]})})},st=i.div`
   max-width: 335px;
   width: 100%;
   margin: 0 auto;
@@ -1034,13 +1034,13 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
 
   &:nth-child(5) {
     /* border: 1px solid
-      ${a=>a.count<0?`${e.color.red}`:`${e.border.grey2}`}; */
+      ${r=>r.count<0?`${e.color.red}`:`${e.border.grey2}`}; */
   }
 
   &:nth-child(6) {
     order: 6;
     /* border: 1px solid
-      ${a=>a.count>0?`${e.color.green}`:`${e.border.grey2}`}; */
+      ${r=>r.count>0?`${e.color.green}`:`${e.border.grey2}`}; */
   }
 
   @media (min-width: ${e.breakpoint.md}) {
@@ -1162,7 +1162,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media (min-width: ${e.breakpoint.xl}) {
     max-width: 358px;
   }
-`,ft=()=>{var B,_,P,T,A,j,v,n,y,W,N,g,w,q,I,M,R,C,E,h;const a=z(p=>p.auth.user)||{},d=z(p=>p.diary.items)||0,o=L();l.useEffect(()=>{o(Z()),o(ee())},[o]);const r=[{userData:a},{diaryData:d}],m=(((P=(_=(B=r[1])==null?void 0:B.diaryData)==null?void 0:_.statistic)==null?void 0:P.sportTime)??0)/60,s=(A=(T=r[0])==null?void 0:T.userData)==null?void 0:A.dailyExerciseTime;let c=m-s;const u=((n=(v=(j=r[1])==null?void 0:j.diaryData)==null?void 0:v.statistic)==null?void 0:n.calories)||0,$=((W=(y=r[0])==null?void 0:y.userData)==null?void 0:W.dailyCalorie)-u;return[{icon:`${x}#calorie-intake`,title:"Daily calorie intake",count:((g=(N=r[0])==null?void 0:N.userData)==null?void 0:g.dailyCalorie)??0,countType:"cal",background:"accent",textColor:"whiteTextColor",border:"accent"},{icon:`${x}#physical-activity`,title:"Daily physical activity",count:((q=(w=r[0])==null?void 0:w.userData)==null?void 0:q.dailyExerciseTime)??0,countType:"time",background:"accent",textColor:"whiteTextColor",border:"accent"},{icon:`${x}#calories-consumed`,title:"Сalories consumed",count:((R=(M=(I=r[1])==null?void 0:I.diaryData)==null?void 0:M.statistic)==null?void 0:R.calories)??0,countType:"cal",background:"default",textColor:"greyTextColor",border:"defaultBorder"},{icon:`${x}#calories-burned`,title:"Сalories burned",count:((h=(E=(C=r[1])==null?void 0:C.diaryData)==null?void 0:E.statistic)==null?void 0:h.burnedCalories)??0,countType:"cal",background:"default",textColor:"greyTextColor",border:"defaultBorder"},{icon:`${x}#calories-remaining`,title:"Calories remaining",count:$,countType:"cal",background:"default",textColor:"greyTextColor",border:$<0?"redBorder":"defaultBorder"},{icon:`${x}#sports-remaining`,title:"Sports remaining",count:c>0?`+${Math.round(c)}`:Math.abs(Math.round(c)),countType:"time",background:"default",textColor:"greyTextColor",border:c>0?"greenBorder":"defaultBorder"}]},ut=()=>{const a=ft();return t.jsxs(st,{children:[t.jsx(pt,{children:a.map((d,o)=>t.jsxs(lt,{className:`${d.background} ${d.border}`,children:[t.jsxs(ht,{children:[t.jsx(xt,{children:t.jsx("use",{href:d.icon})}),t.jsx(ct,{className:d.textColor,children:d.title})]}),t.jsxs(mt,{children:[d.count," ",d.countType==="time"?"min":""]})]},o))}),t.jsxs(gt,{children:[t.jsx(wt,{children:t.jsx("use",{href:`${x}#attention-icon`})}),t.jsx(bt,{children:"Record all your meals in the calorie diary every day. This will help you be aware of your nutrition and make informed choices."})]})]})},yt=i.div`
+`,ft=()=>{var B,_,P,T,A,j,v,n,y,W,N,g,w,q,I,M,R,D,E,h;const r=z(p=>p.auth.user)||{};console.log("🚀 ~ DayDashboardData ~ responseUser:",r);const d=z(p=>p.diary.items)||0;console.log("🚀 ~ DayDashboardData ~ responseDiary:",d);const o=L();l.useEffect(()=>{o(Z()),o(ee())},[o]);const a=[{userData:r},{diaryData:d}],m=(((P=(_=(B=a[1])==null?void 0:B.diaryData)==null?void 0:_.statistic)==null?void 0:P.sportTime)??0)/60,s=(A=(T=a[0])==null?void 0:T.userData)==null?void 0:A.dailyExerciseTime;let c=m-s;const u=((n=(v=(j=a[1])==null?void 0:j.diaryData)==null?void 0:v.statistic)==null?void 0:n.calories)||0,$=((W=(y=a[0])==null?void 0:y.userData)==null?void 0:W.dailyCalorie)-u;return[{icon:`${x}#calorie-intake`,title:"Daily calorie intake",count:((g=(N=a[0])==null?void 0:N.userData)==null?void 0:g.dailyCalorie)??0,countType:"cal",background:"accent",textColor:"whiteTextColor",border:"accent"},{icon:`${x}#physical-activity`,title:"Daily physical activity",count:((q=(w=a[0])==null?void 0:w.userData)==null?void 0:q.dailyExerciseTime)??0,countType:"time",background:"accent",textColor:"whiteTextColor",border:"accent"},{icon:`${x}#calories-consumed`,title:"Сalories consumed",count:((R=(M=(I=a[1])==null?void 0:I.diaryData)==null?void 0:M.statistic)==null?void 0:R.calories)??0,countType:"cal",background:"default",textColor:"greyTextColor",border:"defaultBorder"},{icon:`${x}#calories-burned`,title:"Сalories burned",count:((h=(E=(D=a[1])==null?void 0:D.diaryData)==null?void 0:E.statistic)==null?void 0:h.burnedCalories)??0,countType:"cal",background:"default",textColor:"greyTextColor",border:"defaultBorder"},{icon:`${x}#calories-remaining`,title:"Calories remaining",count:$??0,countType:"cal",background:"default",textColor:"greyTextColor",border:$<0?"redBorder":"defaultBorder"},{icon:`${x}#sports-remaining`,title:"Sports remaining",count:c>0?`+${Math.round(c)}`:Math.abs(Math.round(c))??0,countType:"time",background:"default",textColor:"greyTextColor",border:c>0?"greenBorder":"defaultBorder"}]},ut=()=>{const r=ft();return t.jsxs(st,{children:[t.jsx(pt,{children:r.map((d,o)=>t.jsxs(lt,{className:`${d.background} ${d.border}`,children:[t.jsxs(ht,{children:[t.jsx(xt,{children:t.jsx("use",{href:d.icon})}),t.jsx(ct,{className:d.textColor,children:d.title})]}),t.jsxs(mt,{children:[d.count," ",d.countType==="time"?"min":""]})]},o))}),t.jsxs(gt,{children:[t.jsx(wt,{children:t.jsx("use",{href:`${x}#attention-icon`})}),t.jsx(bt,{children:"Record all your meals in the calorie diary every day. This will help you be aware of your nutrition and make informed choices."})]})]})},yt=i.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -1202,7 +1202,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
       flex-direction: row;
       gap: 32px;
   }
-`,Ct=te`
+`,Dt=te`
   .react-datepicker__wrapper {
     width: 183px;
     height: 20px;
@@ -1361,7 +1361,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
 .react-datepicker-popper {
   z-index: 9999; 
 }
-  `,Dt=i.div`
+  `,Ct=i.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1384,7 +1384,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media screen and (min-width: ${e.breakpoint.md}) {
     width: 129px;
     height: 32px;
-  } `,Y=i.button`
+  } `,U=i.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1393,7 +1393,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   padding: 0;
   background-color: transparent;
   border: none;
-`,K=i.svg`
+`,Y=i.svg`
   width: 6px;
   height: 10px;
   stroke: ${e.color.white};
@@ -1429,7 +1429,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
     line-height: 1.33;
     width: 239px;
     height: 32px;
-  } `,O=i.svg`
+  } `,K=i.svg`
   width: 16px;
   height: 16px;
   fill: ${e.color.white};
@@ -1452,4 +1452,4 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media screen and (min-width: ${e.breakpoint.md}) {
     width: 24px;
     height: 24px;
-  } `;const X=l.forwardRef((a,d)=>{const[o,r]=l.useState(Date.now()),[m,s]=l.useState(""),[c,u]=l.useState(""),[$,k]=l.useState("active"),B=l.useRef(null);l.useEffect(()=>{s(S(o,"MMMM yyyy"))},[o]);const _=()=>{u("active"),k("");const n=oe(o,1);r(n)},P=()=>{u("active"),k("");const n=ne(o,1);r(n)},T=()=>{u(""),k("active");const n=re(o,1);r(n)},A=()=>{u(""),k("active");const n=ae(o,1);r(n)},j=n=>{r(n)},v=l.forwardRef(({value:n,onClick:y,onKeyDown:W},N)=>{const[g,w]=l.useState(""),[q,I]=l.useState("");l.useEffect(()=>{w(n),I(n)},[n]);const M=h=>{const p=h.target.value.replace(/\D/g,"");let b=p;if(p.length>2&&p.length<5?b=p.slice(0,2)+"/"+p.slice(2):p.length>=5&&(b=p.slice(0,2)+"/"+p.slice(2,4)+"/"+p.slice(4,8)),w(b),h.target.value.length===10){const[H,F,f]=b.split("/"),D=new Date(`${f}-${F}-${H}`);isNaN(D.getTime())||(r(D),j(D))}},R=()=>{(!C(g)||g.trim()==="")&&w(q),(!C(g)||g.trim()==="")&&w(S(o,"dd/MM/yyyy"))},C=h=>/^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/.test(h),E=h=>{if(h.key==="Enter"){h.preventDefault();const p=g.replace(/\//g,""),b=p.substring(0,2),H=p.substring(2,4),F=p.substring(4,8);let f;if(F.length<4){const D=new Date().getFullYear();f=new Date(`${D}-${H}-${b}`)}else f=new Date(`${F}-${H}-${b}`);if(!isNaN(f.getTime())){r(f),w(S(f,"dd/MM/yyyy"));return}w(S(o,"dd/MM/yyyy"))}};return t.jsxs(Bt,{children:[t.jsx(St,{type:"text",value:g,onChange:M,onBlur:R,onKeyDown:h=>{E(h),W(h)},ref:N}),t.jsx(_t,{onClick:y,children:t.jsx("use",{href:`${x}#calendar`})}),t.jsx(O,{className:c,onClick:P,children:t.jsx("use",{href:`${x}#arrow-left`})}),t.jsx(O,{className:$,onClick:A,children:t.jsx("use",{href:`${x}#arrow-right`})})]})});return v.displayName="CustomInput",t.jsxs(t.Fragment,{children:[t.jsx(ie,{ref:n=>{B.current=n,d&&(d.current=n)},...a,selected:o,onChange:j,dateFormat:"dd/MM/yyyy",calendarStartDay:1,formatWeekDay:n=>n.substr(0,2),customInput:t.jsx(v,{value:S(o,"dd/MM/yyyy"),onChange:r,onKeyDown:n=>{n.key==="Enter"&&n.preventDefault()}}),renderCustomHeader:({decreaseMonth:n,increaseMonth:y})=>t.jsxs(Dt,{children:[t.jsx(Y,{type:"button",className:"react-datepicker__navigation--previous","aria-label":"Previous Month",onClick:n,children:t.jsx(K,{className:c,onClick:_,children:t.jsx("use",{href:`${x}#arrow-left`})})}),t.jsx(zt,{className:"react-datepicker__current-month",children:m}),t.jsx(Y,{type:"button",className:"react-datepicker__navigation--next","aria-label":"Next Month",onClick:y,children:t.jsx(K,{className:$,onClick:T,children:t.jsx("use",{href:`${x}#arrow-right`})})})]})}),t.jsx(Ct,{})]})});X.displayName="StyledDatepicker";const Pt=X;function Wt(){const a={};return t.jsx("section",{children:t.jsx("div",{className:"container",children:t.jsx("div",{className:"row",children:t.jsxs(jt,{children:[t.jsxs($t,{children:[t.jsx(kt,{children:"Diary"}),t.jsx(Pt,{})]}),t.jsxs(vt,{children:[t.jsxs(yt,{children:[t.jsx(dt,{productList:a}),t.jsx(Ne,{})]}),t.jsx(ut,{})]})]})})})})}export{Wt as default};
+  } `;const X=l.forwardRef((r,d)=>{const[o,a]=l.useState(Date.now()),[m,s]=l.useState(""),[c,u]=l.useState(""),[$,k]=l.useState("active"),B=l.useRef(null);l.useEffect(()=>{s(S(o,"MMMM yyyy"))},[o]);const _=()=>{u("active"),k("");const n=oe(o,1);a(n)},P=()=>{u("active"),k("");const n=ne(o,1);a(n)},T=()=>{u(""),k("active");const n=re(o,1);a(n)},A=()=>{u(""),k("active");const n=ae(o,1);a(n)},j=n=>{a(n)},v=l.forwardRef(({value:n,onClick:y,onKeyDown:W},N)=>{const[g,w]=l.useState(""),[q,I]=l.useState("");l.useEffect(()=>{w(n),I(n)},[n]);const M=h=>{const p=h.target.value.replace(/\D/g,"");let b=p;if(p.length>2&&p.length<5?b=p.slice(0,2)+"/"+p.slice(2):p.length>=5&&(b=p.slice(0,2)+"/"+p.slice(2,4)+"/"+p.slice(4,8)),w(b),h.target.value.length===10){const[H,F,f]=b.split("/"),C=new Date(`${f}-${F}-${H}`);isNaN(C.getTime())||(a(C),j(C))}},R=()=>{(!D(g)||g.trim()==="")&&w(q),(!D(g)||g.trim()==="")&&w(S(o,"dd/MM/yyyy"))},D=h=>/^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/.test(h),E=h=>{if(h.key==="Enter"){h.preventDefault();const p=g.replace(/\//g,""),b=p.substring(0,2),H=p.substring(2,4),F=p.substring(4,8);let f;if(F.length<4){const C=new Date().getFullYear();f=new Date(`${C}-${H}-${b}`)}else f=new Date(`${F}-${H}-${b}`);if(!isNaN(f.getTime())){a(f),w(S(f,"dd/MM/yyyy"));return}w(S(o,"dd/MM/yyyy"))}};return t.jsxs(Bt,{children:[t.jsx(St,{type:"text",value:g,onChange:M,onBlur:R,onKeyDown:h=>{E(h),W(h)},ref:N}),t.jsx(_t,{onClick:y,children:t.jsx("use",{href:`${x}#calendar`})}),t.jsx(K,{className:c,onClick:P,children:t.jsx("use",{href:`${x}#arrow-left`})}),t.jsx(K,{className:$,onClick:A,children:t.jsx("use",{href:`${x}#arrow-right`})})]})});return v.displayName="CustomInput",t.jsxs(t.Fragment,{children:[t.jsx(ie,{ref:n=>{B.current=n,d&&(d.current=n)},...r,selected:o,onChange:j,dateFormat:"dd/MM/yyyy",calendarStartDay:1,formatWeekDay:n=>n.substr(0,2),customInput:t.jsx(v,{value:S(o,"dd/MM/yyyy"),onChange:a,onKeyDown:n=>{n.key==="Enter"&&n.preventDefault()}}),renderCustomHeader:({decreaseMonth:n,increaseMonth:y})=>t.jsxs(Ct,{children:[t.jsx(U,{type:"button",className:"react-datepicker__navigation--previous","aria-label":"Previous Month",onClick:n,children:t.jsx(Y,{className:c,onClick:_,children:t.jsx("use",{href:`${x}#arrow-left`})})}),t.jsx(zt,{className:"react-datepicker__current-month",children:m}),t.jsx(U,{type:"button",className:"react-datepicker__navigation--next","aria-label":"Next Month",onClick:y,children:t.jsx(Y,{className:$,onClick:T,children:t.jsx("use",{href:`${x}#arrow-right`})})})]})}),t.jsx(Dt,{})]})});X.displayName="StyledDatepicker";const Pt=X;function Wt(){const r={};return t.jsx("section",{children:t.jsx("div",{className:"container",children:t.jsx("div",{className:"row",children:t.jsxs(jt,{children:[t.jsxs($t,{children:[t.jsx(kt,{children:"Diary"}),t.jsx(Pt,{})]}),t.jsxs(vt,{children:[t.jsxs(yt,{children:[t.jsx(dt,{productList:r}),t.jsx(Ne,{})]}),t.jsx(ut,{})]})]})})})})}export{Wt as default};
