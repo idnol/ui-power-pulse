@@ -14,6 +14,8 @@ import { LogOut } from '../parts/LogOut/LogOut.jsx';
 import { useSelector } from 'react-redux';
 import { selectIsAuthenticated } from '../../redux/auth/selectors.js';
 import { selectProfile } from '../../redux/profile/selectors.js';
+import { closeMenu } from './closeMenu.js';
+import { useEffect } from 'react';
 
 export const UserBar = () => {
   const openSidebar = () => {
@@ -26,6 +28,23 @@ export const UserBar = () => {
     menu.style.opacity = 1;
     menu.style.display = 'block';
   };
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.keyCode === 27) {
+        closeMenu();
+      }
+    };
+    if (openSidebar) {
+      document.addEventListener('keydown', handleKeyPress);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [openSidebar, closeMenu]);
+  if (!openSidebar) {
+    return null;
+  }
 
   const isLoggedIn = useSelector(selectIsAuthenticated);
   const { bodyData } = useSelector(selectProfile);
