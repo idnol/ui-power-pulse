@@ -8,6 +8,8 @@ import {
   Button,
   ButtonIcon,
   ButtonContainer,
+  ButtonText,
+  SupportContainerExercise,
 } from './ExercisesCategories.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearExercisesFilter } from '../../../redux/exercises/filterSlice';
@@ -30,19 +32,20 @@ export default function ExercisesCategories({ onClick }) {
   };
 
   const handleBackButtonClick = () => {
-    dispatch(clearExercisesFilter()); // Диспатчим действие для очистки фильтра
+    dispatch(clearExercisesFilter());
   };
 
   return (
     <ExercisesContainer>
-      <Button onClick={handleBackButtonClick}>
-        <ButtonContainer>
+      <ButtonContainer>
+        <Button onClick={handleBackButtonClick}>
           <ButtonIcon>
-            <use href={`${sprite}#arrow-left-ex`} />
+            <use href={`${sprite}#arrow-left-ex`} style={{ fill: 'rgba(239, 237, 232, 0.4)'}} />
           </ButtonIcon>
-          back
-        </ButtonContainer>
-      </Button>
+          <ButtonText>back</ButtonText>
+        </Button>
+      </ButtonContainer>
+      <SupportContainerExercise>
       <ExercisesTitle>
         {bodyPartFilter === '' ? 'Exercises' : bodyPartFilter}
       </ExercisesTitle>
@@ -75,6 +78,7 @@ export default function ExercisesCategories({ onClick }) {
           </StyledSpanCategories>
         </ExercisesLi>
       </ExercisesUl>
+    </SupportContainerExercise>
     </ExercisesContainer>
   );
 }
