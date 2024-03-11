@@ -7,7 +7,9 @@ import sprite from 'assets/sprite-2.svg';
 
 export const DayDashboardData = () => {
   const responseUser = useSelector((state) => state.auth.user) || {};
+  console.log('🚀 ~ DayDashboardData ~ responseUser:', responseUser);
   const responseDiary = useSelector((state) => state.diary.items) || 0;
+  console.log('🚀 ~ DayDashboardData ~ responseDiary:', responseDiary);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -68,7 +70,7 @@ export const DayDashboardData = () => {
     {
       icon: `${sprite}#calories-remaining`,
       title: 'Calories remaining',
-      count: remainingCalories,
+      count: remainingCalories ?? 0,
       countType: 'cal',
       background: 'default',
       textColor: 'greyTextColor',
@@ -80,7 +82,7 @@ export const DayDashboardData = () => {
       count:
         remaningTime > 0
           ? `+${Math.round(remaningTime)}`
-          : Math.abs(Math.round(remaningTime)),
+          : Math.abs(Math.round(remaningTime)) ?? 0,
       countType: 'time',
       background: 'default',
       textColor: 'greyTextColor',

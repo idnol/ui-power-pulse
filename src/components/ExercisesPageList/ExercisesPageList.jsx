@@ -8,18 +8,30 @@ import {
 } from './ExercisesPageList.styled';
 import { useEffect } from 'react';
 
-export const Exercises = () => {
-  const exercises = useSelector((state) => state.exercises.items);
+const getVisibleExercises = (exercises, bodyPartFilter) => {
+  return exercises.filter((item) => {
+    const hasContact = item.bodyPart
+      .toLowerCase()
+      .includes(bodyPartFilter.toLowerCase());
+
+    return hasContact;
+  });
+};
+
+export const Exercises = ({ bodyPartFilter }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(exercisesGetAll());
   }, [dispatch]);
 
+  const exercises = useSelector((state) => state.exercises.items);
+  const visibleExercises = getVisibleExercises(exercises, bodyPartFilter);
+
   return (
     <ExercisesListContainer>
       <ExercisesList>
-        {exercises.map((item, index) => (
+        {visibleExercises.map((item, index) => (
           <ExercisesListItem key={index}>
             <ListItem item={item} />
           </ExercisesListItem>
