@@ -30,4 +30,3 @@ export const theme = {
   },
 };
 
-${theme.border.grey2}
