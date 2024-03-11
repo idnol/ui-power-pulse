@@ -19,7 +19,6 @@ export default function ExercisesCategories({ onClick }) {
   const [activeCategory, setActiveCategory] = useState('Body parts');
 
   const bodyPartFilter = useSelector((state) => state.filter.exercisesFilter);
-  console.log('🚀 ~ ExercisesCategories ~ bodyPartFilter:', bodyPartFilter);
 
   useEffect(() => {
     onClick(activeCategory);
