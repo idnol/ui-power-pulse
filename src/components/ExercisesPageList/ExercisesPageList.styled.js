@@ -23,12 +23,10 @@ export const ExercisesListContainer = styled.div`
 `;
 
 export const ExercisesList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 335px));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   grid-row-gap: 20px;
-
-  max-width: 335px;
 
   margin: 0 auto;
 
@@ -36,12 +34,11 @@ export const ExercisesList = styled.ul`
     grid-row-gap: 32px;
     grid-column-gap: 16px;
 
-    max-width: 700px;
+    max-width: 704px;
   }
 
   @media (min-width: ${theme.breakpoint.xl}) {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 405px));
-    max-width: 826px;
+    max-width: 850px;
   }
 `;
 
@@ -50,7 +47,6 @@ export const ExercisesListItem = styled.li`
 
   padding: 18px 16px 16px 16px;
 
-  max-width: 335px;
   width: 100%;
 
   border-radius: 12px;
@@ -58,6 +54,7 @@ export const ExercisesListItem = styled.li`
   background: rgba(239, 237, 232, 0.05);
 
   @media (min-width: ${theme.breakpoint.md}) {
+    max-width: 336px;
   }
 
   @media (min-width: ${theme.breakpoint.xl}) {

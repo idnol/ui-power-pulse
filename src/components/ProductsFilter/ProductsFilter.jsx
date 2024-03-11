@@ -5,10 +5,15 @@ import { QueryFilter } from "./QueryFilter/QueryFilter";
 import { CategoryFilter } from "./CategoryFilter/CategoryFilter";
 import { RecommendedFilter } from "./RecommendedFilter/RecommendedFilter";
 
-export const ProductsFilter = ({query, category, recommended, onFilterChange, bloodGroup}) => {
+export const ProductsFilter = ({category, recommended, bloodGroup}) => {
  const [searchParams, setParams] = useSearchParams();
  const [isOpenCategory, setIsOpenCategory] = useState(false);
  const [isOpenRecommend, setIsOpenRecommend] = useState(false);
+ const [inputValue, setInputValue] = useState('');
+  
+ const handleInputChange = (e) => {
+   setInputValue(e.target.value);
+ };
 
  const handleDropdownCategory = () => {
   setIsOpenCategory(!isOpenCategory);
@@ -16,12 +21,6 @@ export const ProductsFilter = ({query, category, recommended, onFilterChange, bl
 
  const handleDropdownRecommend = () => {
    setIsOpenRecommend(!isOpenRecommend);
- };
-
- const handleTitleChange = (event) => {
-  event.preventDefault();
-  searchParams.set('query',  event.target.value);
-  setParams(searchParams);
  };
 
  const handleSelectCategory = (option) => {
@@ -39,21 +38,24 @@ export const ProductsFilter = ({query, category, recommended, onFilterChange, bl
 
  const handleSubmit = (event) => {
    event.preventDefault();
-   onFilterChange(searchParams);
+   searchParams.set('query', event.target[0].value);
+   setParams(searchParams);
  };
 
  const handleCleanForm = () => {
-  searchParams.set('query', "");
-  setParams(searchParams);
+   searchParams.set('query', "");
+   setParams(searchParams);
+   setInputValue('');
  };
 
   return (
    <>
      <FiltersContainer>
-       <Form onSubmit={handleSubmit}>
+       <Form>
          <QueryFilter 
-         query={query} 
-         onTitleChange={handleTitleChange} 
+         inputValue={inputValue}
+         onChange={handleInputChange}
+         onSubmit={handleSubmit} 
          onCleanForm={handleCleanForm} 
          />
         
