@@ -1,13 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axios from '../../axios.js';
 import {setAuthHeader} from '../auth/api'
+import { toast } from 'react-toastify';
 
 export const current = createAsyncThunk(
   'users/current',
   async (_, thunkAPI) => {
     try {
       const res = await axios('/users/current');
-      setAuthHeader(res.data.token);
+      // setAuthHeader(res.data.token);
 
       return res.data;
     } catch (error) {
@@ -19,15 +20,18 @@ export const current = createAsyncThunk(
 export const updateProfile = createAsyncThunk(
   'users/profile',
   async (requestData, thunkAPI) => {
+
     try {
-
       const response = await axios.patch('/users/profile', requestData);
-
-      setAuthHeader(response.data.token);
-
-      const updatedProfileData = response.data;
-      return updatedProfileData;
+      // setAuthHeader(response.data.token);
+      if (response.status !== 200) {
+        toast.error('Error');
+      } else {
+        return response.data;
+      }
     } catch (error) {
+      toast.error('Error updating user data: ' + error.message);
+
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -43,6 +47,8 @@ export const updateAvatar = createAsyncThunk(
       const res = await axios.post('/users/avatar', formData, {
         headers: { 'content-type': 'multipart/form-data' },
       });
+      setAuthHeader(res.data.token);
+
 
       return res.data;
     } catch (error) {

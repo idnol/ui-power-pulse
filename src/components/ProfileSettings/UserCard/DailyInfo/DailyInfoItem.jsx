@@ -1,7 +1,9 @@
 import sprite from 'assets/sprite-2.svg';
 import { DailyItem, DayliNumber, TextWrapper,DailyWrapper } from './DayliInfoItem.styled';
 
-export const DailyInfoItem = ({ svg, text, number }) => {
+export const DailyInfoItem = ({ svg, text, number,min }) => {
+  const displayNumber = min ? `${number} min` : number;
+
   return (
     <DailyItem>
       <DailyWrapper>
@@ -10,7 +12,7 @@ export const DailyInfoItem = ({ svg, text, number }) => {
         </svg>
         <TextWrapper>{text}</TextWrapper>
       </DailyWrapper>
-      <DayliNumber>{number}</DayliNumber>
+      <DayliNumber>{displayNumber}</DayliNumber>
     </DailyItem>
   );
 };

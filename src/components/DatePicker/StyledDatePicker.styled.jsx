@@ -143,7 +143,24 @@ export const CalendarGlobalStyles = createGlobalStyle`
   .react-datepicker__day--outside-month{
     color: rgba(239, 237, 232, 0.2);
     opacity: 1;
-  } `;
+  }
+
+ .react-datepicker-wrapper .react-datepicker__input-container {
+  display: inline-flex; 
+  position: relative; 
+}
+
+.react-datepicker__tab-loop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9998; 
+}
+
+.react-datepicker-popper {
+  z-index: 9999; 
+}
+  `;
 
 export const StyledMonthsWrapper = styled.div`
   display: flex;
@@ -166,6 +183,7 @@ export const StyledInputDate = styled.input`
   background-color: ${theme.color.black};
   color: ${theme.color.white};
   border: none;
+
   @media screen and (min-width: ${theme.breakpoint.md}) {
     width: 129px;
     height: 32px;
@@ -187,17 +205,10 @@ export const StyledSvgArrowCalendar = styled.svg`
   height: 10px;
   stroke: ${theme.color.white};
   stroke-width: 1.5;
-  stroke-opacity: 0.4;
   fill: ${theme.color.white};
-  fill-opacity: 0.2;
+  stroke: ${theme.color.white};
   cursor: pointer;
-
-  &.active {
-    stroke: ${(props) => (props.isActive ? '' : `${theme.color.white}`)};
-    stroke-opacity: ${(props) => (props.isActive ? '0.2' : '1')};
-    fill: ${(props) => (props.isActive ? '' : `${theme.color.white}`)};
-    fill-opacity: ${(props) => (props.isActive ? '0.2' : '1')};
-  } `;
+  `;
 
 export const StyledMonthsName = styled.span`
   font-family: 'Roboto', sans-serif;
@@ -235,13 +246,14 @@ export const StyledSvgArrow = styled.svg`
   width: 16px;
   height: 16px;
   fill: ${theme.color.white};
-  fill-opacity: 0.2;
+  stroke: ${theme.color.white};
   cursor: pointer;
 
-  &.active {
-    fill: ${(props) => (props.isActive ? '' : `${theme.color.white}`)};
-    fill-opacity: ${(props) => (props.isActive ? '0.2' : '1')};
-  } `;
+    &:hover, &:focus {
+    stroke: ${theme.color.orangeSecond};
+    fill: ${theme.color.orangeSecond} ;
+  }
+  `;
 
 export const StyledSvgCalendar = styled.svg`
   width: 20px;

@@ -5,14 +5,15 @@ export const ScrollContainer = styled.div`
   min-height: 234px;
   max-height: 750px;
   overflow-y: auto;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 12px;
+   width: 6px;
+   border-radius: 12px;
   }
 
   &::-webkit-scrollbar-track {
-    margin-block: 1.45em;
+   margin-block: 1.45em;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -25,12 +26,13 @@ export const ScrollContainer = styled.div`
     max-width: 704px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
 
-    &::-webkit-scrollbar {
-      width: 6px;
-      border-radius: 12px;
-    }
-
+     &::-webkit-scrollbar {
+       width: 6px;
+       border-radius: 12px;
+     }
+    //
     &::-webkit-scrollbar-track {
       margin-block: 0.3em;
     }
@@ -45,6 +47,7 @@ export const ScrollContainer = styled.div`
     max-width: 826px;
     min-height: 138px;
     max-height: 138px;
+    overflow-x: hidden;
   }
 `;
 

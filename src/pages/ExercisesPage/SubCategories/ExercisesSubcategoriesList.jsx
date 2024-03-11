@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import ExercisesSubcategoriesItem from './SubItem/ExercisesSubcategoriesItem';
 import { SliderContainer, SliderButton } from '../Slider/slider.styled';
 import { ContainerSubcategoriesUl } from './SubItem/ExercisesSubcategoriesItem.styled';
+import { SliderWrapper } from '../ExercisesPage.styled.js';
 
 export default function ExercisesSubcategoriesList({ categories, selectedCategory }) {
   const filteredCategories = categories.filter(category => category.filter === selectedCategory);
@@ -45,7 +46,7 @@ export default function ExercisesSubcategoriesList({ categories, selectedCategor
   };
 
   return (
-    <div>
+    <SliderWrapper>
       <ContainerSubcategoriesUl>
         {filteredCategories.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((subcategory, index) => (
           <ExercisesSubcategoriesItem key={index} subcategory={subcategory} />
@@ -66,6 +67,6 @@ export default function ExercisesSubcategoriesList({ categories, selectedCategor
           </div>
         </SliderContainer>
       )}
-    </div>
+    </SliderWrapper>
   );
 }

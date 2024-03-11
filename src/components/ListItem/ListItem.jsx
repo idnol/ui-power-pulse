@@ -12,6 +12,7 @@ import {
 } from './ListItem.styled';
 
 import sprite from 'assets/sprite-2.svg';
+
 import { BasicModalWindow } from '../BasicModalWindow/BasicModalWindow';
 import { AddExerciseForm } from '../AddExerciseForm/AddExerciseForm';
 
@@ -43,7 +44,7 @@ export const ListItem = ({ item }) => {
           isOpen={isModalOpen}
           onClose={() => setIsModal(false)}
         >
-          <AddExerciseForm />
+          <AddExerciseForm item={item} onClose={() => setIsModal(false)} />
         </BasicModalWindow>
       )}
     </>

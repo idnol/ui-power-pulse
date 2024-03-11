@@ -30,6 +30,7 @@ export const FormWrapper = styled.form`
 export const Avatar = styled.div`
     width: 90px;
     height: 90px;
+    position: relative;
     border-radius: 100px;
     border: 1px solid #e6533c;
     display: flex;
@@ -95,12 +96,10 @@ export const Subtitle = styled.p`
 `;
 
 export const Image = styled.img`
-    width: 90px;
-    height:90px;
     border-radius:50%;
-    @media screen and (min-width:${theme.breakpoint.md}) {
-        width: 150px;
-        height:150px;
-  }
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
 `

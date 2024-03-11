@@ -8,10 +8,12 @@ export const DashboardContainer = styled.div`
 
   @media (min-width: ${theme.breakpoint.md}) {
     max-width: 593px;
+    margin: unset;
   }
 
   @media (min-width: ${theme.breakpoint.xl}) {
     max-width: 390px;
+    margin-left: auto;
   }
 `;
 
@@ -55,16 +57,16 @@ export const DashboardItem = styled.li`
   height: 96px;
 
   &:nth-child(5) {
-    border: 1px solid
+    /* border: 1px solid
       ${(props) =>
-        props.count < 0 ? `${theme.color.red}` : `${theme.border.grey2}`};
+      props.count < 0 ? `${theme.color.red}` : `${theme.border.grey2}`}; */
   }
 
   &:nth-child(6) {
     order: 6;
-    border: 1px solid
+    /* border: 1px solid
       ${(props) =>
-        props.count > 0 ? `${theme.color.green}` : `${theme.border.grey2}`};
+      props.count > 0 ? `${theme.color.green}` : `${theme.border.grey2}`}; */
   }
 
   @media (min-width: ${theme.breakpoint.md}) {

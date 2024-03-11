@@ -1,4 +1,3 @@
-import { BasicModalWindow } from '../../BasicModalWindow/BasicModalWindow.jsx';
 import sprite from 'assets/sprite-2.svg';
 
 import { AddProductSuccess } from '../../AddProductSuccess/AddProductSuccess';
@@ -22,12 +21,17 @@ import {
   Name,
 } from './AddProductForm.styled';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../../redux/diary/api.js';
+import { ToastContainer, toast } from 'react-toastify';
 
-export const AddProductForm = ({ isOpen, onClose, title, calories, id }) => {
+export const AddProductForm = ({ onClose, title, calories, id }) => {
   const [isInputValue, setIsInputValue] = useState('');
   const [isCaloriesValue, setIsCaloriesValue] = useState('0');
   const [isCalories, setIsCalories] = useState(calories);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
+
+  const dispatch = useDispatch();
 
   const handleValue = (evt) => {
     const value = evt.currentTarget.value;
@@ -38,28 +42,45 @@ export const AddProductForm = ({ isOpen, onClose, title, calories, id }) => {
     setIsCaloriesValue(calories);
   };
 
-  const onSubmit = (evt) => {
+  const onSubmit = async (evt) => {
     evt.preventDefault();
 
-    setIsOpenSuccess(true);
+    try {
+      const data = {
+        product: id,
+        weight: +isInputValue,
+      };
 
-    const data = {
-      exercise: id,
-      grams: +isInputValue,
-    };
+      const resultAction = await dispatch(addProduct(data));
 
-    console.log(data);
+      if (addProduct.fulfilled.match(resultAction)) {
+        setIsInputValue('');
+        setIsOpenSuccess(true);
+      } else {
+        setIsOpenSuccess(false);
+        setIsCaloriesValue('0');
+        toast.error('Oops, something went wrong');
+      }
+    } catch (error) {
+      setIsOpenSuccess(false);
+      setIsCaloriesValue('0');
+      toast.error('Oops, something went wrong');
+    }
+  };
 
-    setIsInputValue('');
+  const comboModal = () => {
+    onClose();
+    setIsOpenSuccess(false);
   };
 
   return (
-    <BasicModalWindow isOpen={isOpen} onClose={onClose}>
+    <>
       <ModalCloseBtn onClick={onClose}>
         <ModalSvg>
           <Icon href={`${sprite}#x-modal`} />
         </ModalSvg>
       </ModalCloseBtn>
+
       {!isOpenSuccess && (
         <Wrapper>
           <form onSubmit={onSubmit}>
@@ -96,9 +117,10 @@ export const AddProductForm = ({ isOpen, onClose, title, calories, id }) => {
         <AddProductSuccess
           calories={isCaloriesValue}
           isOpen={isOpenSuccess}
-          onClose={() => setIsOpenSuccess(false)}
+          onClose={() => comboModal()}
         />
       )}
-    </BasicModalWindow>
+      <ToastContainer position="bottom-right" limit={2} autoClose={3000} />
+    </>
   );
 };

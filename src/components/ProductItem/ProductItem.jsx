@@ -5,11 +5,13 @@ import { StatItem } from "../StatsItem/StatsItem";
 import { AddBtn, BtnContainer, BtnWrapper, DietBox, ProductCard, RecomendedText, RecomendSwitch, IconSvg } from "./ProductItem.styled";
 import {AddProductForm} from "../AddProductForm/ModalProducts/AddProductForm";
 import sprite from 'assets/sprite-2.svg';
+import { BasicModalWindow } from "../BasicModalWindow/BasicModalWindow";
 
 export const ProductItem = ({item:{title, calories, category, weight, groupBloodNotAllowed, _id}, bloodGroup}) => {
   const [isModalOpen, setIsModal] = useState(false);
   const isAllowed = groupBloodNotAllowed[bloodGroup];
   const isRecomended = isAllowed ? "Recommended" : "Not recommended";
+
   return (
   <>
   <ProductCard>
@@ -31,7 +33,16 @@ export const ProductItem = ({item:{title, calories, category, weight, groupBlood
       <StatItem text="Weight: " val={weight}/>
     </StatsList>
   </ProductCard>
-  <AddProductForm isOpen={isModalOpen} id={_id} title={title} calories={calories} onClose={() => setIsModal(false)} />
+  {/* <AddProductForm isOpen={isModalOpen} id={_id} title={title} calories={calories} onClose={() => setIsModal(false)} /> */}
+   {isModalOpen && (
+     <BasicModalWindow
+       isOpen={isModalOpen}
+       onClose={() => setIsModal(false)}
+     >
+       <AddProductForm onClose={() => setIsModal(false)} id={_id} title={title} calories={calories} />
+     </BasicModalWindow>
+   )}
   </>
+
   ) 
 }

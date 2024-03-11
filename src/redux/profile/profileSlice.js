@@ -50,7 +50,9 @@ const profileSlice = createSlice({
       })
       .addCase(updateAvatar.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.items.avatar = action.payload.avatar;
+        if (state.items && state.items.bodyData) {
+          state.items.bodyData.avatar = action.payload.avatar;
+        }      
       })
       .addCase(updateAvatar.rejected, (state, action) => {
         state.isLoading = false;
