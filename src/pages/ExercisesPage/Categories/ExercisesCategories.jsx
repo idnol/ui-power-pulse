@@ -35,14 +35,16 @@ export default function ExercisesCategories({ onClick }) {
 
   return (
     <ExercisesContainer>
-      <Button onClick={handleBackButtonClick}>
-        <ButtonContainer>
-          <ButtonIcon>
-            <use href={`${sprite}#arrow-left-ex`} />
-          </ButtonIcon>
-          back
-        </ButtonContainer>
-      </Button>
+      {bodyPartFilter !== '' && (
+        <Button onClick={handleBackButtonClick}>
+          <ButtonContainer>
+            <ButtonIcon>
+              <use href={`${sprite}#arrow-left-ex`} />
+            </ButtonIcon>
+            back
+          </ButtonContainer>
+        </Button>
+      )}
       <ExercisesTitle>
         {bodyPartFilter === '' ? 'Exercises' : bodyPartFilter}
       </ExercisesTitle>
