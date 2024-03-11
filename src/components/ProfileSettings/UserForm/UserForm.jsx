@@ -20,9 +20,10 @@ import {
 
 import { RadioInput } from './RadioInput/RadioInput.jsx';
 import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
-import { DatePickerItem } from './DatePicker/DatePicker.jsx';
+// import { DatePickerItem } from './DatePicker/DatePicker.jsx';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
+import StyledDatepicker from '../../DatePicker/StyledDatePicker.jsx';
 
 export const UserForm = () => {
   const dispatch = useDispatch();
@@ -98,7 +99,8 @@ export const UserForm = () => {
               ))}
               <div>
                 <FormLabel>Day of Birth</FormLabel>
-                <div style={{ position: 'relative' }} > <DatePickerItem number={initialValues.birthday} /></div>
+                {/* <div style={{ position: 'relative' }} > <DatePickerItem number={initialValues.birthday} /></div> */}
+                <div style={{ position: 'relative' }} > <StyledDatepicker profile={true} /></div>
               </div>
             </UserPersonalInfo>
 

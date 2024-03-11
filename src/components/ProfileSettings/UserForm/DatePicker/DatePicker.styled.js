@@ -144,7 +144,7 @@ export const CalendarGlobalStyles = createGlobalStyle`
 
 `;
 export const SvgIcon = styled.svg`
-  position: absolute;
+  /* position: absolute; */
   right: 14px;
   top: 14px;
 `;
