@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import { useState } from 'react';
 
 
