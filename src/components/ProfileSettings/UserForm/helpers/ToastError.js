@@ -1,6 +1,6 @@
 import { useField } from 'formik';
 import { useEffect } from 'react';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 
 const showToastError = (errorMessage) => {
   toast.error(errorMessage);
