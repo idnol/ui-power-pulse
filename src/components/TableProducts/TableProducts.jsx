@@ -26,7 +26,11 @@ import { removeProduct } from '../../redux/diary/api.js';
 export const TableProducts = ({ products, onDeleteProduct }) => {
   const productsItems = useSelector(selectProducts);
   const dispatch = useDispatch();
-  const bloodGroup = useSelector(state=> state.auth.user.bodyData?.blood) ?? "1";
+  const bloodGroup = useSelector(state => state.auth.user.bodyData?.blood) ?? "1";
+  // console.log("****", typeof bloodGroup);
+  // console.log("-----", typeof bloodGroup.toString());
+  console.log(bloodGroup);
+  console.log("///", productsItems);
 
   return (
     <>
@@ -57,7 +61,8 @@ export const TableProducts = ({ products, onDeleteProduct }) => {
                 <CategoryItem>{product.product.category}</CategoryItem>
                 <CaloriesItem>{product.calories}</CaloriesItem>
                 <WeightItem>{product.weight}</WeightItem>
-                {product.product.groupBloodNotAllowed[bloodGroup] ? (
+                {/* {console.log("_id-del ", product._id)} */}
+                {product?.product?.groupBloodNotAllowed?.[bloodGroup.toString()] ? (
                   <RecommendItem>
                     <SvgCircle>
                       <use href="/img/sprait.svg#circle" fill="#419B09" />
@@ -73,7 +78,7 @@ export const TableProducts = ({ products, onDeleteProduct }) => {
                   </RecommendItem>
                 )}
                 <DeleteItem>
-                  <DeleteBtn onClick={() => dispatch(removeProduct({ id: product._id, calories: product.calories }))}>
+                  <DeleteBtn onClick={() => {console.log("_id-del ", product._id), dispatch(removeProduct({ id: product._id, calories: product.calories }))}}>
                   {/*<DeleteBtn onClick={() => dispatch(removeProduct({ product._id, products.calories }))}>*/}
                     <SvgBasket>
                       <use href="/img/sprait.svg#trash" />
