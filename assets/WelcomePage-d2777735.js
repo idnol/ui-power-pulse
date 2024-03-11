@@ -1,4 +1,4 @@
-import{s as e,t,N as n,j as i}from"./index-c4c0e754.js";import{S as r}from"./StatisticsInfo-6eb468cb.js";import{W as o}from"./WelcomePage.styled-58b43c48.js";const s=e.div`
+import{s as e,t,N as n,j as i}from"./index-e029ae4d.js";import{W as r,S as o}from"./WelcomePage.styled-af504cc9.js";const s=e.div`
   position: relative;
   margin-right: 72px;
   //height: 202px;
@@ -6,9 +6,9 @@ import{s as e,t,N as n,j as i}from"./index-c4c0e754.js";import{S as r}from"./Sta
   // @media (min-width: ${t.breakpoint.md}) {
   //   height: 354px;
   //  }
-`,p=e.div`
+`,a=e.div`
   position: relative;
-`,a=e.h1`
+`,p=e.h1`
   //margin-top: 127px;
   margin-bottom: 0px;
   font-weight: 500;
@@ -103,4 +103,4 @@ import{s as e,t,N as n,j as i}from"./index-c4c0e754.js";import{S as r}from"./Sta
     width: 185px;
     height: 67px;
   }
-`,g=()=>i.jsx(i.Fragment,{children:i.jsxs(s,{children:[i.jsxs(p,{children:[i.jsx(l,{children:i.jsx("use",{href:"/img/sprait.svg#icon-Line"})}),i.jsx(a,{children:"Transforming your body shape with Power Pulse"})]}),i.jsxs(h,{children:[i.jsx(d,{to:"/signup",children:"Sign Up"}),i.jsx(x,{to:"/signin",children:"Sign In"})]})]})});function f(){return i.jsx("section",{children:i.jsx("div",{className:"container",children:i.jsx("div",{className:"row",children:i.jsxs(o,{children:[i.jsx(g,{}),i.jsx(r,{})]})})})})}export{f as default};
+`,g=()=>i.jsx(i.Fragment,{children:i.jsxs(s,{children:[i.jsxs(a,{children:[i.jsx(l,{children:i.jsx("use",{href:"/img/sprait.svg#icon-Line"})}),i.jsx(p,{children:"Transforming your body shape with Power Pulse"})]}),i.jsxs(h,{children:[i.jsx(d,{to:"/signup",children:"Sign Up"}),i.jsx(x,{to:"/signin",children:"Sign In"})]})]})});function w(){return i.jsx("section",{children:i.jsx("div",{className:"container",children:i.jsx("div",{className:"row",children:i.jsxs(r,{children:[i.jsx(g,{}),i.jsx(o,{})]})})})})}export{w as default};

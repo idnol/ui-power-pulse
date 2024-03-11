@@ -1,4 +1,4 @@
-import{s as n,t as i,u as w,a as b,c as $,d as j,j as t,b as l}from"./index-c4c0e754.js";const k=n.div`
+import{s as n,t as i,u as w,a as b,c as $,d as j,j as t,b as l}from"./index-e029ae4d.js";const v=n.div`
 display: flex;
 flex-direction: column;
 gap: 20px;
@@ -14,7 +14,7 @@ transition-duration: 300ms;
   @media screen and (min-width: ${i.breakpoint.xl}) {
   width: 638px;
   height: 245px;
-} `,v=n.div`
+} `,k=n.div`
 display: flex;
 align-items: center;
 gap: 8px;
@@ -84,7 +84,7 @@ fill: ${i.color.white};
   @media screen and (min-width: ${i.breakpoint.md}) {
   width: 20px;
   height: 20px;
-} `,z=n.p`
+} `,W=n.p`
 font-weight: 700;
 font-size: 16px;
 line-height: 1.12;
@@ -94,7 +94,7 @@ margin-bottom: 4px;
   font-size: 24px;
   line-height: 1;
   margin-bottom: 8px;
-} `,F=n.p`
+} `,z=n.p`
 font-weight: 400;
 font-size: 12px;
 line-height: 1.33;
@@ -105,7 +105,7 @@ white-space: nowrap;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(239, 237, 232, 0.65);
-}  `,T=n.div`
+}  `,F=n.div`
 width: 119px;
 height: 76px;
 border-radius: 12px;
@@ -123,7 +123,7 @@ margin-top: auto;
   height: 110px;
   padding-left: 28px;
   padding-right: 28px;
-}  `,W=n.svg`
+}  `,T=n.svg`
 width: 20px;
 height: 20px;
 margin-bottom: 4px;
@@ -159,4 +159,7 @@ color: rgba(239, 237, 232, 0.65);
   @media screen and (min-width: ${i.breakpoint.md}) {
   font-size: 16px;
   line-height: 1.5;
-}  `,A=e=>e.statistics.items,p=e=>{if(e<1e4)return e;if(e>=1e4&&e<1e6)return`${(e/1e3).toFixed()}K`;if(e>=1e6&&e<1e9)return`${(e/1e6).toFixed()}M`;if(e>=1e9&&e<1e12)return`${(e/1e9).toFixed()}B`},h=(e,s)=>{var d;return((d=s.find(c=>c[e]))==null?void 0:d[e])??null},u=(e,s)=>Math.floor(Math.random()*(s-e+1))+e,I=()=>{const e=w();b.useEffect(()=>{e($())},[e]);const s=j(A),a=p(h("userQuantity",s)),d=p(h("exercisesQuantity",s)),c=p(h("burnedCaloriesUsersTotal",s)),g=p(h("sportTimeUsersTotal",s)),o=p(h("exercisesUsersTotal",s)),r=u(1,3),x=u(4,5);return t.jsxs(k,{children:[(d||a||o)&&t.jsxs(v,{children:[t.jsxs(S,{children:[d&&r===1&&t.jsx(y,{children:t.jsxs(E,{children:[" ",t.jsx("use",{href:`${l}#triangle`})," "]})}),a&&r===2&&t.jsx(m,{children:t.jsxs(f,{children:[" ",t.jsx("use",{href:`${l}#icon-user`})," "]})}),o&&r===3&&t.jsx(m,{children:t.jsxs(f,{children:[" ",t.jsx("use",{href:`${l}#dumbbell-stat`})," "]})})]}),t.jsxs("div",{children:[t.jsxs(z,{children:[r===1&&d&&d,r===2&&a&&a,r===3&&o&&o]}),t.jsxs(F,{children:[r===1&&d&&"Video tutorial",r===2&&a&&"Users",r===3&&o&&"Exercises"]})]})]}),(g||o)&&t.jsxs(T,{children:[t.jsxs(W,{children:[" ",t.jsx("use",{href:`${l}#run-man-circle`})," "]}),t.jsxs(B,{children:[t.jsxs(U,{children:[x===4&&c,x===5&&g]}),t.jsxs(V,{children:[x===4&&c&&"cal",x===5&&g&&"min"]})]})]})]})};export{I as S};
+}  `,A=e=>e.statistics.items,p=e=>{if(e<1e4)return e;if(e>=1e4&&e<1e6)return`${(e/1e3).toFixed()}K`;if(e>=1e6&&e<1e9)return`${(e/1e6).toFixed()}M`;if(e>=1e9&&e<1e12)return`${(e/1e9).toFixed()}B`},h=(e,s)=>{var d;return((d=s.find(c=>c[e]))==null?void 0:d[e])??null},u=(e,s)=>Math.floor(Math.random()*(s-e+1))+e,I=()=>{const e=w();b.useEffect(()=>{e($())},[e]);const s=j(A),a=p(h("userQuantity",s)),d=p(h("exercisesQuantity",s)),c=p(h("burnedCaloriesUsersTotal",s)),g=p(h("sportTimeUsersTotal",s)),o=p(h("exercisesUsersTotal",s)),r=u(1,3),x=u(4,5);return t.jsxs(v,{children:[(d||a||o)&&t.jsxs(k,{children:[t.jsxs(S,{children:[d&&r===1&&t.jsx(y,{children:t.jsxs(E,{children:[" ",t.jsx("use",{href:`${l}#triangle`})," "]})}),a&&r===2&&t.jsx(m,{children:t.jsxs(f,{children:[" ",t.jsx("use",{href:`${l}#icon-user`})," "]})}),o&&r===3&&t.jsx(m,{children:t.jsxs(f,{children:[" ",t.jsx("use",{href:`${l}#dumbbell-stat`})," "]})})]}),t.jsxs("div",{children:[t.jsxs(W,{children:[r===1&&d&&d,r===2&&a&&a,r===3&&o&&o]}),t.jsxs(z,{children:[r===1&&d&&"Video tutorial",r===2&&a&&"Users",r===3&&o&&"Exercises"]})]})]}),(g||o)&&t.jsxs(F,{children:[t.jsxs(T,{children:[" ",t.jsx("use",{href:`${l}#run-man-circle`})," "]}),t.jsxs(B,{children:[t.jsxs(U,{children:[x===4&&c,x===5&&g]}),t.jsxs(V,{children:[x===4&&c&&"cal",x===5&&g&&"min"]})]})]})]})},M=n.div`
+    display: flex;
+    align-items: end;
+`;export{I as S,M as W};
