@@ -17,8 +17,10 @@ import sprite from 'assets/sprite-2.svg';
 import { ExerciseDetailsItem } from '../ExerciseDetailsItem/ExerciseDetailsItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { addExercise } from '../../redux/diary/api';
-import { ToastContainer, toast } from 'react-toastify';
+
 import { selectError } from '../../redux/diary/diarySelectors';
+import { toast } from 'react-hot-toast';
+
 
 export const AddExerciseForm = ({
   item = {
@@ -101,7 +103,7 @@ export const AddExerciseForm = ({
         time: duration - remainingTimeRef.current,
       };
 
-      const resultAction = dispatch(addExercise(data));
+      const resultAction = await dispatch(addExercise(data));
 
       if (addExercise.fulfilled.match(resultAction)) {
         setIsOpenSuccess(true);
@@ -187,7 +189,6 @@ export const AddExerciseForm = ({
           onClose={() => comboModal()}
         />
       )}
-      <ToastContainer position="bottom-right" limit={2} autoClose={3000} />
     </>
   );
 };
