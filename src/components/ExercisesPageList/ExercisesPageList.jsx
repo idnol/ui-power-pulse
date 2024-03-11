@@ -8,13 +8,15 @@ import {
 } from './ExercisesPageList.styled';
 import { useEffect } from 'react';
 
-const getVisibleExercises = (exercises, bodyPartFilter) => {
+const getVisibleExercises = (exercises, filter) => {
   return exercises.filter((item) => {
-    const hasContact = item.bodyPart
-      .toLowerCase()
-      .includes(bodyPartFilter.toLowerCase());
-
-    return hasContact;
+    const bodyPart = item.bodyPart.toLowerCase();
+    const target = item.target.toLowerCase();
+    const equipment = item.equipment.toLowerCase();
+    const matchBodyPart = bodyPart.includes(filter.toLowerCase());
+    const matchTarget = target.includes(filter.toLowerCase());
+    const matchEquipment = equipment.includes(filter.toLowerCase());
+    return matchBodyPart || matchTarget || matchEquipment;
   });
 };
 
