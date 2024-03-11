@@ -1,4 +1,4 @@
-import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b as x,h as te}from"./index-39023706.js";import{f as S,i as ie,s as oe,a as ne,b as re,c as ae}from"./index-14cc7ceb.js";const de=i.div`
+import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b as x,h as te}from"./index-fc4aa28e.js";import{f as S,i as ie,s as oe,a as ne,b as re,c as ae}from"./index-cf429e40.js";const de=i.div`
   min-height: 234px;
   max-height: 990px;
   overflow-y: auto;
@@ -486,10 +486,12 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
+  stroke: ${e.color.orange};
   color: ${e.color.orange};
   transition-duration: 300ms;
 
   &:hover {
+    stroke: ${e.color.white};
     color: ${e.color.white};
     transition-duration: 300ms;
   }
@@ -499,7 +501,6 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
     line-height: 1.5;
   }
 `,Te=i.svg`
-  stroke: ${e.color.orange};
   width: 16px;
   height: 16px;
 `,Ae=i.p`
@@ -513,7 +514,7 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   @media (min-width: ${e.breakpoint.md}) {
     margin-top: 65px;
   }
-`,We=[{id:"1",bodyPart:"Upper arms",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"2",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"3",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"4",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"5",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"6",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"7",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"8",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"9",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"10",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"11",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"12",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"13",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"14",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"15",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"16",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"17",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"18",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"19",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"20",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"21",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"22",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"23",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"24",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"25",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"26",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60}],Ne=()=>{const[a,d]=l.useState(We),o=r=>{d(m=>m.filter(s=>s.id!==r))};return t.jsx(t.Fragment,{children:t.jsxs(ze,{children:[t.jsxs(Be,{children:[t.jsx(_e,{children:"Execrcises"}),t.jsxs(Pe,{children:["Add product",t.jsx(Te,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),a.length?t.jsx(Se,{exercises:a,onDeleteExercise:o}):t.jsx(Ae,{children:"Not found products"})]})})},qe=i.div`
+`,We=[{id:"1",bodyPart:"Upper arms",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"2",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"3",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"4",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"5",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"6",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"7",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"8",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"9",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"10",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"11",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"12",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"13",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"14",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"15",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"16",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"17",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"18",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"19",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"20",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"21",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"22",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"23",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"24",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"25",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60},{id:"26",bodyPart:"Waist",equipment:"Body weight",name:"45° side bend",target:"Abs",burnedCalories:323,time:60}],Ne=()=>{const[a,d]=l.useState(We),o=r=>{d(m=>m.filter(s=>s.id!==r))};return t.jsx(t.Fragment,{children:t.jsxs(ze,{children:[t.jsxs(Be,{children:[t.jsx(_e,{children:"Execrcises"}),t.jsxs(Pe,{to:"/exercises",children:["Add exercise",t.jsx(Te,{children:t.jsx("use",{href:"/img/sprait.svg#icon-Icon"})})]})]}),a.length?t.jsx(Se,{exercises:a,onDeleteExercise:o}):t.jsx(Ae,{children:"Not found products"})]})})},qe=i.div`
   border: ${e.border.grey2};
   border-radius: 12px;
   padding: 16px 8px 16px 16px;
@@ -557,9 +558,11 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
   font-size: 14px;
   line-height: 1.29;
   color: ${e.color.orange};
+  stroke: ${e.color.orange};
   transition-duration: 300ms;
 
   &:hover {
+    stroke: ${e.color.white};
     color: ${e.color.white};
     transition-duration: 300ms;
   }
@@ -569,7 +572,6 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
     line-height: 1.5;
   }
 `,Ee=i.svg`
-  stroke: ${e.color.orange};
   width: 16px;
   height: 16px;
 `,He=i.p`
@@ -1187,7 +1189,19 @@ import{s as i,t as e,j as t,N as U,a as l,d as z,u as L,q as J,v as Z,w as ee,b 
     width: 100%;
 `,vt=i.div`
     display: flex;
-    align-items: start;
+    gap: 40px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: ${e.breakpoint.md}) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 64px;
+  }
+    @media (min-width: ${e.breakpoint.xl}) {
+      flex-direction: row;
+      gap: 32px;
+  }
 `,Ct=te`
   .react-datepicker__wrapper {
     width: 183px;
