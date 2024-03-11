@@ -1,11 +1,10 @@
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import {bloodOptions,sexOptions,levelOptions,bodyInfo} from './form-default-data.js'
 import { userSchema } from './user-validation-yup.js';
-import { ToastContainer} from 'react-toastify';
+import { Toaster} from 'react-hot-toast';
 import ToastError from './helpers/ToastError.js';
-import 'react-toastify/dist/ReactToastify.css';
 
 import {
   StyledFormik,
@@ -35,7 +34,7 @@ export const UserForm = () => {
     height: (profileData.bodyData && profileData.bodyData.height) || 150,
     currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || 35,
     desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || 35,
-    birthday: '2006-01-02',
+    birthday: '2006.01.02',
     blood: profileData.bodyData.blood || 1,
     sex: profileData.bodyData.sex || 'male',
     levelActivity: parseInt(profileData.bodyData?.levelActivity, 10) || 1,
@@ -53,6 +52,7 @@ export const UserForm = () => {
         const { _id, ...restData } = profileData;
         const userData = { _id, ...values,blood: parseInt(values.blood, 10) };
         dispatch(updateProfile({_id,...restData.bodyData,...userData}));
+        toast.success('Profile updated successfully');
       } catch (error) {
         toast.error('Error updating user data:', error);
       }
@@ -148,7 +148,7 @@ export const UserForm = () => {
               <ToastError name="levelActivity" />
             </ActivityLabel>
             <Button type="submit" disabled={!formikProps.dirty} >Save</Button>
-            <ToastContainer />
+            <Toaster position='top-right' />
           </StyledFormik>
         );
       }}

@@ -1,11 +1,13 @@
 import sprite from 'assets/sprite-2.svg';
 import { CleanBtn, FieldTitle, IconClean, IconSearch, InputGroup, SearchBtn } from './QueryFilter.styled';
 
-export const QueryFilter = ({ query, onTitleChange, onCleanForm }) => {
+export const QueryFilter = ({onChange, inputValue, onCleanForm, onSubmit }) => {
+  
+
   return (
-    
+   <form onSubmit={onSubmit}>
       <InputGroup >      
-        <FieldTitle type="text" name="query" placeholder="Search" value={query} onChange={onTitleChange} />
+        <FieldTitle type="text" name="query" placeholder="Search" value={inputValue} onChange={onChange} />
         <CleanBtn type="button" className="cleanBtn" onClick={onCleanForm}>
             <IconClean>
               <use href={`${sprite}#x`} />
@@ -18,7 +20,7 @@ export const QueryFilter = ({ query, onTitleChange, onCleanForm }) => {
           </IconSearch>
         </SearchBtn>
       </InputGroup>
-      
+    </form>  
   )
 }
 

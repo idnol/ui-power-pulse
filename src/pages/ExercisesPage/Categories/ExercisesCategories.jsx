@@ -56,7 +56,10 @@ export default function ExercisesCategories({ onClick }) {
           <StyledSpanCategories
             className={activeCategory === 'Body parts' ? 'active' : ''}
             data-target="Body parts"
-            onClick={() => handleClick('Body parts')}
+            onClick={() => {
+              handleClick('Body parts');
+              handleBackButtonClick();
+            }}
           >
             Body parts
           </StyledSpanCategories>
@@ -65,7 +68,10 @@ export default function ExercisesCategories({ onClick }) {
           <StyledSpanCategories
             className={activeCategory === 'Muscles' ? 'active' : ''}
             data-target="Muscles"
-            onClick={() => handleClick('Muscles')}
+            onClick={() => {
+              handleClick('Muscles');
+              handleBackButtonClick();
+            }}
           >
             Muscles
           </StyledSpanCategories>
@@ -74,7 +80,10 @@ export default function ExercisesCategories({ onClick }) {
           <StyledSpanCategories
             className={activeCategory === 'Equipment' ? 'active' : ''}
             data-target="Equipment"
-            onClick={() => handleClick('Equipment')}
+            onClick={() => {
+              handleClick('Equipment');
+              handleBackButtonClick();
+            }}
           >
             Equipment
           </StyledSpanCategories>

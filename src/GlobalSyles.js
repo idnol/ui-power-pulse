@@ -92,10 +92,10 @@ export const GlobalStyle = createGlobalStyle`
     
     .row {
         display: flex;
-        align-items: center;
-        @media (min-width: ${theme.breakpoint.md}) {
-            min-height: 100vh;
-        }
+    }
+
+    main {
+        padding-top: 136px;
     }
 
     .greenBorder {
