@@ -58,7 +58,7 @@ export const AddExerciseForm = ({
         const elapsedSeconds = duration - (remainingTimeRef.current - 1);
         const caloriesPerTraining = burnedCalories;
         setCurrentBurnedCal(
-          Math.round((elapsedSeconds * caloriesPerTraining) / duration)
+          Math.floor((elapsedSeconds * caloriesPerTraining) / duration)
         );
       }
     };
