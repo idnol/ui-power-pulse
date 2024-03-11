@@ -15,10 +15,8 @@ import {
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import sprite from 'assets/sprite-2.svg';
 import { ExerciseDetailsItem } from '../ExerciseDetailsItem/ExerciseDetailsItem';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addExercise } from '../../redux/diary/api';
-
-import { selectError } from '../../redux/diary/diarySelectors';
 import { toast } from 'react-hot-toast';
 
 
@@ -60,7 +58,7 @@ export const AddExerciseForm = ({
         const elapsedSeconds = duration - (remainingTimeRef.current - 1);
         const caloriesPerTraining = burnedCalories;
         setCurrentBurnedCal(
-          Math.round((elapsedSeconds * caloriesPerTraining) / duration)
+          Math.floor((elapsedSeconds * caloriesPerTraining) / duration)
         );
       }
     };
