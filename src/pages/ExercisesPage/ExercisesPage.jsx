@@ -11,7 +11,6 @@ export default function ExercisesPage() {
   const categories = useFetchCategories(selectedCategory);
 
   const bodyPartFilter = useSelector((state) => state.filter.exercisesFilter);
-  console.log('🚀 ~ ExercisesPage ~ bodyPartFilter:', bodyPartFilter);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);

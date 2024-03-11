@@ -8,7 +8,6 @@ export const filterSlice = createSlice({
   reducers: {
     setExercisesFilter(state, action) {
       state.exercisesFilter = action.payload;
-      console.log(state.exercisesFilter);
     },
     clearExercisesFilter: (state) => {
       state.exercisesFilter = '';
