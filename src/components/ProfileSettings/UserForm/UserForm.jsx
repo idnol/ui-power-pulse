@@ -34,7 +34,7 @@ export const UserForm = () => {
     height: (profileData.bodyData && profileData.bodyData.height) || 150,
     currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || 35,
     desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || 35,
-    birthday: '2006.01.02',
+    birthday: '2006-01-02',
     blood: profileData.bodyData.blood || 1,
     sex: profileData.bodyData.sex || 'male',
     levelActivity: parseInt(profileData.bodyData?.levelActivity, 10) || 1,
@@ -101,7 +101,6 @@ export const UserForm = () => {
                 <div style={{ position: 'relative' }} > <DatePickerItem number={initialValues.birthday} /></div>
               </div>
             </UserPersonalInfo>
-
             <UserHealthlInfo>
               <div>
                 <FormLabel>Blood</FormLabel>
