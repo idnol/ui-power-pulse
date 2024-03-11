@@ -1,18 +1,16 @@
 import { SignInForm } from "../../components/AuthForms/SignInForm";
-import { Wrapper } from '../WelcomePage/WelcomePage.styled.js';
+import { WelcomeSection, Wrapper } from '../WelcomePage/WelcomePage.styled.js';
 import { StatisticsInfo } from '../../components/StatisticsInfo/StatisticsInfo.jsx';
 
 export default function SigninPage() {
   return (
-      <section>
+      <WelcomeSection>
         <div className="container">
-          <div className="row">
             <Wrapper>
               <SignInForm />
               <StatisticsInfo/>
             </Wrapper>
-          </div>
         </div>
-      </section>
+      </WelcomeSection>
     )
 }

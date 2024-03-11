@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import { theme } from '../../vars';
 
 export const ExercisesListContainer = styled.div`
+  max-width: 335px;
+  margin: 0 auto;
   @media (min-width: ${theme.breakpoint.md}) {
     overflow-y: scroll;
     max-width: 704px;
-    max-height: 660px;
+    max-height: 686px;
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -23,6 +25,7 @@ export const ExercisesListContainer = styled.div`
   @media (min-width: ${theme.breakpoint.xl}) {
     max-width: 850px;
     max-height: 487px;
+    margin: 0;
   }
 `;
 
