@@ -25,6 +25,9 @@ export const UserBar = () => {
       : (backdrop.style.left = '-100%');
   };
 
+  const isLoggedIn = useSelector(selectIsAuthenticated);
+  const { bodyData } = useSelector(selectProfile);
+
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.keyCode === 27) {
@@ -37,13 +40,11 @@ export const UserBar = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, [openSidebar, closeMenu]);
+  }, []);
   if (!openSidebar) {
     return null;
   }
 
-  const isLoggedIn = useSelector(selectIsAuthenticated);
-  const { bodyData } = useSelector(selectProfile);
 
   return (
     <>
