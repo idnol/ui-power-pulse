@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import sprite from 'assets/sprite-2.svg';
+import wellDone from "assets/logo/avocado-1x.png";
+import wellDone2x from "assets/logo/avocado-2x.png";
 import { useLocation } from 'react-router-dom';
 import { theme } from '../../vars';
 import {
@@ -29,13 +31,13 @@ export const AddProductSuccess = ({ isOpen, onClose, calories }) => {
             <picture>
               <source
                 media={`${theme.breakpoint.sm}`}
-                srcSet="/img/avocado-1x.png"
+                srcSet={wellDone}
               />
               <source
                 media={`${theme.breakpoint.md}`}
-                srcSet="/img/avocado-2x.png"
+                srcSet={wellDone2x}
               />
-              <img src="/img/avocado-1x.png" alt="Avocado" loading="lazy"></img>
+              <img src={wellDone} alt="Avocado" loading="lazy"></img>
             </picture>
 
             <Title>Well done</Title>
