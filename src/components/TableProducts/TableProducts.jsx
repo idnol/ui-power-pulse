@@ -87,7 +87,7 @@ export const TableProducts = () => {
                           }
                         }>
                           <SvgBasket>
-                            <use href="/img/sprait.svg#trash" />
+                            <use href={`${sprite}#trash`} />
                           </SvgBasket>
                         </DeleteBtn>
                       </DeleteItem>
