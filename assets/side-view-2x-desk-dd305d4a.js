@@ -1,0 +1,1 @@
+const e="/ui-power-pulse/assets/side-view-1x-mob-02eedf10.jpg",s="/ui-power-pulse/assets/side-view-2x-mob-ce899bb8.jpg",i="/ui-power-pulse/assets/side-view-1x-desk-e4720917.jpg",a="/ui-power-pulse/assets/side-view-2x-desk-04df8a4c.jpg";export{s as a,i as b,a as c,e as i};
