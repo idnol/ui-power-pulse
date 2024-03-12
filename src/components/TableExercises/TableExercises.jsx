@@ -26,6 +26,7 @@ import { removeExercise } from '../../redux/diary/api';
 
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
+  console.log(exercisesItems);
   const dispatch = useDispatch();
   return (
     <>
@@ -59,10 +60,8 @@ export const TableExercises = () => {
                 <EquipmentItem>{exercise.exercise.equipment}</EquipmentItem>
                 <NameItem>{exercise.exercise.name}</NameItem>
                 <TargetItem>{exercise.exercise.target}</TargetItem>
-                <BurnedCaloriesItem>
-                  {exercise.exercise.burnedCalories}
-                </BurnedCaloriesItem>
-                <TimeItem>{exercise.exercise.time}</TimeItem>
+                <BurnedCaloriesItem>{exercise.calories}</BurnedCaloriesItem>
+                <TimeItem>{exercise.time}</TimeItem>
                 <DeleteItem>
                   <DeleteBtn onClick={() => dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }))}>
                     <SvgBasket>
