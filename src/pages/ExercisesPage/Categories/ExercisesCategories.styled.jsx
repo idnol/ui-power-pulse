@@ -21,7 +21,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   background-color: transparent;
   position: absolute;
-  top: -50%;
+  top: -35%;
   left: 0;
   @media (min-width: ${theme.breakpoint.md}) {
     top: -30%;
@@ -31,14 +31,10 @@ export const ButtonContainer = styled.div`
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
   background-color: transparent;
   border: none;
   padding: 0;
   color: ${theme.color.greyFifth};
-  @media (min-width: ${theme.breakpoint.md}) {
-    margin-bottom: 16px;
-  }
 `;
 
 export const ButtonIcon = styled.svg`
