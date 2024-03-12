@@ -2,11 +2,9 @@ import styled from 'styled-components';
 import { theme } from '../../vars';
 
 const getBackground = props => {
-  console.log("props.$isbackground", props.$isbackground);
   return props.$isbackground ? "url(../../../public/img/side-view-exercises-1x-desk.jpg)" : "none";
  };
  const getBackground2x = props => {
-  console.log("props.$isbackground", props.$isbackground);
   return props.$isbackground ? "url(../../../public/img/side-view-exercises-2x-desk.jpg)" : "none";
  };
 
