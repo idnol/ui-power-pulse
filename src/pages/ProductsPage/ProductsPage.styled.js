@@ -3,6 +3,7 @@ import { theme } from '../../vars';
 
 export const ProductsSection = styled.section`
   padding-top: 61px;
+  padding-bottom: 40px;
   @media (min-width: ${theme.breakpoint.md}) {
     padding-top: 84px;
   }

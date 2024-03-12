@@ -17,6 +17,7 @@ export const DayDashboardData = () => {
 
   const consumedCalories = responseDiary?.statistic?.calories ?? 0;
   const dailyCalories = responseUser?.dailyCalorie ?? 0;
+
   const remainingCalories = dailyCalories - consumedCalories;
   const burnedCalories = responseDiary?.statistic?.burnedCalories;
 

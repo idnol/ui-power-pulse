@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
 export const ExercisesSection = styled.section`
   padding-top: 71px;
   @media (min-width: ${theme.breakpoint.md}) {
-    padding-top: 156px;
+    padding-top: 116px;
   }
   @media (min-width: ${theme.breakpoint.xl}) {
     height: 100vh;

@@ -87,6 +87,7 @@ export const ExercisesUl = styled.ul`
 export const ExercisesLi = styled.li`
   line-height: 1.285;
   font-size: 14px;
+  cursor: pointer;
 
   @media (min-width: ${theme.breakpoint.md}) {
     line-height: 1.5;
@@ -99,7 +100,8 @@ export const StyledSpanCategories = styled.span`
   text-decoration: none;
   position: relative;
   color: ${theme.color.greyFifth};
-  &.active {
+  cursor: pointer;
+  &.active, &:hover {
     color: ${theme.color.white};
     &:after {
       content: '';
