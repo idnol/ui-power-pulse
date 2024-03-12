@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { theme } from '../../vars';
+import image from "../../../public/img/side-view-exercises-1x-desk.jpg";
+import image2x from "../../../public/img/side-view-exercises-2x-desk.jpg";
 
 const getBackground = props => {
-  return props.$isbackground ? "url(../../../public/img/side-view-exercises-1x-desk.jpg)" : "none";
+  return props.$isbackground ? `url(${image})` : "none";
  };
  const getBackground2x = props => {
-  return props.$isbackground ? "url(../../../public/img/side-view-exercises-2x-desk.jpg)" : "none";
+  return props.$isbackground ? `url(${image2x})` : "none";
  };
 
  export const HeaderInner = styled.div`
@@ -22,13 +24,13 @@ export const Row = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100%; 
   @media (min-width: ${theme.breakpoint.xl}) {
     padding-top: 72px;
   }
 `;
 export const ExercisesSection = styled.section`
-  padding-top: 71px;
+  padding-top: 101px;
   @media (min-width: ${theme.breakpoint.md}) {
     padding-top: 116px;
   }
