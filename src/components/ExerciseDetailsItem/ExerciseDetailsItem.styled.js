@@ -27,6 +27,9 @@ export const SmallText = styled.p`
 `
 
 export const DetailsText = styled(StyledText)`
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: 700;
     color: ${theme.color.white}
 `

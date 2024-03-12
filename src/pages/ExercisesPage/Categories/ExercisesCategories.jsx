@@ -8,14 +8,21 @@ import {
   Button,
   ButtonIcon,
   ButtonContainer,
+  ButtonText,
+  SupportContainerExercise,
 } from './ExercisesCategories.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearExercisesFilter } from '../../../redux/exercises/filterSlice';
 
 import sprite from 'assets/sprite-2.svg';
 
-export default function ExercisesCategories({ onClick }) {
+export default function ExercisesCategories({ onClick, onRenderBackground }) {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    onRenderBackground();
+  });
+
   const [activeCategory, setActiveCategory] = useState('Body parts');
 
   const bodyPartFilter = useSelector((state) => state.filter.exercisesFilter);
@@ -35,14 +42,15 @@ export default function ExercisesCategories({ onClick }) {
 
   return (
     <ExercisesContainer>
-      <Button onClick={handleBackButtonClick}>
-        <ButtonContainer>
+      <ButtonContainer>
+        <Button onClick={handleBackButtonClick}>
           <ButtonIcon>
-            <use href={`${sprite}#arrow-left-ex`} />
+            <use href={`${sprite}#arrow-left-ex`} style={{ fill: 'rgba(239, 237, 232, 0.4)'}} />
           </ButtonIcon>
-          back
-        </ButtonContainer>
-      </Button>
+          <ButtonText>back</ButtonText>
+        </Button>
+      </ButtonContainer>
+      <SupportContainerExercise>
       <ExercisesTitle>
         {bodyPartFilter === '' ? 'Exercises' : bodyPartFilter}
       </ExercisesTitle>
@@ -84,6 +92,7 @@ export default function ExercisesCategories({ onClick }) {
           </StyledSpanCategories>
         </ExercisesLi>
       </ExercisesUl>
+    </SupportContainerExercise>
     </ExercisesContainer>
   );
 }

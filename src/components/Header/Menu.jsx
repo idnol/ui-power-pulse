@@ -12,7 +12,10 @@ import { theme } from '../../vars.js';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
 import { closeMenu } from './closeMenu.js';
 
+
+
 export const Menu = () => {
+  
   return (
     <div
       id="menu-wrapper"
@@ -21,8 +24,9 @@ export const Menu = () => {
         visibility: 'hidden',
         display: 'none',
       }}
+      
     >
-      <Backdrop id="backdrop">
+      <Backdrop id="backdrop" >
         <CloseButton id="close-btn" onClick={closeMenu}>
           <CloseIcon>
             <use href={`${sprite}#x-modal`} />

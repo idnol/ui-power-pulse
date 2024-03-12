@@ -9,6 +9,7 @@ export const BoxDayDiary = styled.div`
   background: ${theme.color.greySeven};
   //margin: 40px auto 40px auto;
   max-width: 335px;
+  width: 335px;
   min-height: 335px;
   max-height: 824px;
   overflow: hidden;
@@ -18,10 +19,12 @@ export const BoxDayDiary = styled.div`
     max-width: 704px;
     min-height: 234px;
     max-height: 234px;
+    width: 704px;
   }
 
   @media (min-width: ${theme.breakpoint.xl}) {
     max-width: 826px;
+    width: 826px;
   }
 `;
 

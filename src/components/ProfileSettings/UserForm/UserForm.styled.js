@@ -8,7 +8,7 @@ export const StyledFormik = styled(Form)`
     justify-content:center;
     flex-direction: column;
     gap: 20px;
-    @media screen and (min-width:theme.breakpoint.xl){
+    @media screen and (min-width: ${theme.breakpoint.xl}){
         margin-top: 0;
   }
 `;
@@ -28,7 +28,7 @@ export const UserInfo = styled.div`
     input {
         width: 335px;
     }
-    @media screen and (min-width:theme.breakpoint.xl){
+    @media screen and (min-width: ${theme.breakpoint.xl}){
         margin: 0;
     }
 `
@@ -36,7 +36,9 @@ export const UserPersonalInfo = styled.div`
     display:flex;
     flex-wrap:wrap;
     gap:14px;
-
+    @media screen and (min-width: ${theme.breakpoint.md}){
+        flex-wrap: nowrap;
+    }
     input {
         width: 160px;
     @media screen and (min-width: ${theme.breakpoint.md}) and (max-width: ${theme.breakpoint.xl}) {
@@ -86,7 +88,7 @@ export const FormLabel =styled.label`
     line-height: 150%;
     color: ${theme.color.greyThird};
     margin-bottom: 5px;
-    @media screen and (min-width:theme.breakpoint.xl){
+    @media screen and (min-width: ${theme.breakpoint.xl}){
         font-size: 14px;
     }
 `
@@ -129,7 +131,7 @@ export const LabelFlex = styled.label`
     line-height: 129%;
     color: var(--white);
     height: 36px;
-    @media screen and (min-width:theme.breakpoint.xl){
+    @media screen and (min-width: ${theme.breakpoint.xl}){
         font-size: 16px;
     }
 `
