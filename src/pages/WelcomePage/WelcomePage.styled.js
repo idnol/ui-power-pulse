@@ -1,29 +1,34 @@
 import styled from 'styled-components';
 import { theme } from '../../vars';
+import image from "../../../public/img/side-view-1x-mob.jpg";
+import image2x from "../../../public/img/side-view-2x-mob.jpg";
+import imagedesc from "../../../public/img/side-view-1x-desk.jpg";
+import imagedesc2x from "../../../public/img/side-view-2x-desk.jpg";
+
 
 export const WelcomeSection = styled.section`
   height: 100vh;
   width: 100%;
-  background-image: url(../../../public/img/side-view-1x-mob.jpg);
+  background-image: url(${image});
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../../public/img/side-view-2x-mob.jpg); 
+        background-image: url(${image2x});
       }
   @media (min-width: ${theme.breakpoint.xl}) {
     height: 100vh;
     width: 100%;
-    background-image: url(../../../public/img/side-view-1x-desk.jpg);
+    background-image: url(${imagedesc});
     background-repeat: no-repeat;
     background-position: right top;
     background-size: contain;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-       background-image: url(../../../public/img/side-view-2x-desk.jpg); 
+       background-image: url(${imagedesc2x}); 
        }
   }
 `;

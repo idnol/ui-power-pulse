@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { theme } from '../../vars';
+import image from "../../../public/img/side-view-exercises-1x-desk.jpg";
+import image2x from "../../../public/img/side-view-exercises-2x-desk.jpg";
 
 const getBackground = props => {
-  return props.$isbackground ? "url(../../../public/img/side-view-exercises-1x-desk.jpg)" : "none";
+  return props.$isbackground ? `url(${image})` : "none";
  };
  const getBackground2x = props => {
-  return props.$isbackground ? "url(../../../public/img/side-view-exercises-2x-desk.jpg)" : "none";
+  return props.$isbackground ? `url(${image2x})` : "none";
  };
 
  export const HeaderInner = styled.div`
