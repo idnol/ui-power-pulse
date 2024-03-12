@@ -1,13 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addExercise, addProduct, getDiary, removeExercise, removeProduct } from "./api";
-import {getDate} from "../../components/parts/handleData.js";
-
 
 export const diarySlice = createSlice({
     name: "diary",
     initialState: {
         items: [],
-        selectedDate: getDate(),
+        selectedDate: new Date(),
         products: [],
         exercises: [],
         isLoading: false,
@@ -29,10 +27,8 @@ export const diarySlice = createSlice({
                 state.items = action.payload;
                 state.isLoading = false;
                 state.error = null;
-                if (action.payload) {
-                    state.products = action.payload.products;
-                    state.exercises = action.payload.exercises;
-                }
+                state.products = action.payload ? action.payload.products : [];
+                state.exercises = action.payload ? action.payload.exercises : [];
             })
             .addCase(getDiary.rejected, (state, action) => {
                 state.isLoading = false;

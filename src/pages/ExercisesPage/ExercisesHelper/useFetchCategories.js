@@ -7,7 +7,7 @@ export default function useFetchCategories(filter) {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get(`http://localhost:3333/api/exercises/filters?filter=${filter}`);
+        const response = await axios.get(`/exercises/filters?filter=${filter}`);
         setCategories(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);

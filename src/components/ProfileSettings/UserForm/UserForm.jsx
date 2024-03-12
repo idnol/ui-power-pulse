@@ -45,7 +45,6 @@ export const UserForm = () => {
 
     if (profileData.bodyData) {
       if (JSON.stringify(values) === JSON.stringify(initialValues)) {
-        // toast.error('Nothing to change');
         return;
       }
       try {
@@ -98,6 +97,7 @@ export const UserForm = () => {
               ))}
               <div>
                 <FormLabel>Day of Birth</FormLabel>
+                {/* <StyledDatepicker profile={ true } /> */}
                 <div className='datePickerWrapper' style={{ position: 'relative' }} > <DatePickerItem formik={formikProps} /></div>
               </div>
             </UserPersonalInfo>

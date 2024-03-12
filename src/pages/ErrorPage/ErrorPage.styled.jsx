@@ -21,7 +21,6 @@ export const OrangePart = styled.div`
 
 export const StyledImagePart = styled.div`
   height: 100vh;
-  // background-image: url(${`/public/img/side-view-1x-desk.jpg`});
   background-image: url(${`/public/img/side-view-1x-mob.jpg`});
   background-position: right;
   background-repeat: no-repeat;
