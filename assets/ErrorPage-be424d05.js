@@ -1,4 +1,4 @@
-import{s as t,t as i,L as n,d as r,S as d,j as e}from"./index-87acafba.js";const a=t.div`
+import{s as t,t as i,L as n,d as r,S as d,j as e}from"./index-4e4e7167.js";const a=t.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +15,6 @@ import{s as t,t as i,L as n,d as r,S as d,j as e}from"./index-87acafba.js";const
   }
 `,s=t.div`
   height: 100vh;
-  // background-image: url(${"/public/img/side-view-1x-desk.jpg"});
   background-image: url(${"/public/img/side-view-1x-mob.jpg"});
   background-position: right;
   background-repeat: no-repeat;
@@ -39,7 +38,7 @@ import{s as t,t as i,L as n,d as r,S as d,j as e}from"./index-87acafba.js";const
   transform: translateY(-50%);
 
   padding: 0 20px;
-`,g=t.h1`
+`,m=t.h1`
   font-weight: 500;
   font-size: 66px;
   line-height: 100%;
@@ -50,7 +49,7 @@ import{s as t,t as i,L as n,d as r,S as d,j as e}from"./index-87acafba.js";const
     font-size: 160px;
     line-height: 94%;
   }
-`,m=t.p`
+`,h=t.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
@@ -59,7 +58,7 @@ import{s as t,t as i,L as n,d as r,S as d,j as e}from"./index-87acafba.js";const
     font-size: 16px;
     line-height: 150%;
   }
-`,l=t(n)`
+`,g=t(n)`
   border: ${i.border.grey3};
   border-radius: 12px;
   padding: 12px 40px;
@@ -75,4 +74,4 @@ import{s as t,t as i,L as n,d as r,S as d,j as e}from"./index-87acafba.js";const
     border-radius: 12px;
     padding: 16px 60px;
   }
-`;function h(){const o=r(d);return e.jsxs("section",{children:[e.jsx(a,{children:e.jsxs(p,{children:[e.jsx(g,{children:"404"}),e.jsx(m,{children:"Sorry, you have reached a page that we could not find. It seems that you are lost among the numbers and letters of our virtual space. Perhaps this page went on vacation or decided to disappear into another dimension. We apologize for this inconvenience."}),e.jsx(l,{to:`${o?"/diary":"/"}`,children:"Go Home"})]})}),e.jsx(s,{})]})}export{h as default};
+`;function c(){const o=r(d);return e.jsxs("section",{children:[e.jsx(a,{children:e.jsxs(p,{children:[e.jsx(m,{children:"404"}),e.jsx(h,{children:"Sorry, you have reached a page that we could not find. It seems that you are lost among the numbers and letters of our virtual space. Perhaps this page went on vacation or decided to disappear into another dimension. We apologize for this inconvenience."}),e.jsx(g,{to:`${o?"/diary":"/"}`,children:"Go Home"})]})}),e.jsx(s,{})]})}export{c as default};

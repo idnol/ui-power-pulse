@@ -1,12 +1,6 @@
-import{s as r,t as e,n as m,L as b,b as w,j as o,a as c}from"./index-87acafba.js";import{F as f,E as y,b as $,d as S}from"./formik.esm-4df2719e.js";import{S as j,a as k}from"./ReusableStyles.styled-ff4c06cd.js";const T=r.div`
-    //margin-top: 127px;
-    /* max-width: 335px;
-    margin-right: 178px; */
-    //margin-left: auto;
-    //margin-right: auto;
+import{s as r,t as e,n as m,L as u,b as w,j as o,a as c}from"./index-4e4e7167.js";import{F as f,E as y,b as $,d as S}from"./formik.esm-9b8679fa.js";import{S as j,a as k}from"./ReusableStyles.styled-e091bc7d.js";const T=r.div`
     @media (min-width: ${e.breakpoint.md}) {
         max-width: 496px;
-        //margin-left: 0px;
     }
 `,A=r(j)`
     margin-bottom: 14px;
@@ -18,7 +12,7 @@ import{s as r,t as e,n as m,L as b,b as w,j as o,a as c}from"./index-87acafba.js
     @media (min-width: ${e.breakpoint.md}) {
         margin-bottom: 32px;
     }
-`,p=r(f)`
+`,l=r(f)`
     display: block;
     width: 100%;
     height: 46px;
@@ -36,10 +30,10 @@ import{s as r,t as e,n as m,L as b,b as w,j as o,a as c}from"./index-87acafba.js
     outline: none;
     border: ${e.border.orange};
 }
-    ${({error:i,touched:n})=>n==="true"&&i==="true"&&m`
+    ${({error:a,touched:i})=>i==="true"&&a==="true"&&m`
         border-color: red;
     `}
-    ${({error:i,touched:n,name:t})=>n==="true"&&i==="false"&&(t==="email"||t==="password"||t==="name")&&m`
+    ${({error:a,touched:i,name:t})=>i==="true"&&a==="false"&&(t==="email"||t==="password"||t==="name")&&m`
         border-color: green;
     `}
     @media (min-width: ${e.breakpoint.md}) {
@@ -48,7 +42,7 @@ import{s as r,t as e,n as m,L as b,b as w,j as o,a as c}from"./index-87acafba.js
         font-size: 16px;
         line-height: 1.5;
     }
-`,l=r(y)`
+`,p=r(y)`
     color: ${e.color.red};
     font-size: 12px;
     line-height: 1.5;
@@ -85,7 +79,7 @@ import{s as r,t as e,n as m,L as b,b as w,j as o,a as c}from"./index-87acafba.js
     @media (min-width: ${e.breakpoint.md}) {
         padding-left: 8px;
     }
-`,W=r(b)`
+`,W=r(u)`
     color: ${e.color.white};
     text-decoration: underline;
 `,E=r.button`
@@ -106,4 +100,4 @@ import{s as r,t as e,n as m,L as b,b as w,j as o,a as c}from"./index-87acafba.js
     @media (min-width: ${e.breakpoint.md}) {
         width: max-content;
     }
-`,D=({schema:i,handleSubmit:n,register:t,btnContent:x})=>{const[d,h]=w.useState(!1),g=()=>d?"text":"password",u=t?{email:"",password:"",name:""}:{email:"",password:""};return o.jsx($,{initialValues:u,validationSchema:i,onSubmit:s=>{n(s)},children:({errors:s,touched:a})=>o.jsxs(S,{autoComplete:"off",children:[o.jsxs(z,{children:[t&&o.jsxs(o.Fragment,{children:[o.jsx(p,{type:"text",name:"name",placeholder:"Name",error:s.name&&a.name?"true":"false",touched:a.name?"true":"false"}),o.jsx(l,{name:"name",component:"p"})]}),o.jsx(p,{type:"email",name:"email",placeholder:"Email",error:s.email&&a.email?"true":"false",touched:a.email?"true":"false"}),o.jsx(l,{name:"email",component:"p"}),o.jsxs(F,{children:[o.jsx(p,{name:"password",type:g(),placeholder:"Password",error:s.password&&a.password?"true":"false",touched:a.password?"true":"false"}),o.jsx(E,{type:"button",onClick:()=>h(!d),children:o.jsx("svg",{width:"20",height:"20",stroke:`${e.color.white}`,viewBox:"0 0 20 20",children:d?o.jsx("use",{href:`${c}#eye-off`}):o.jsx("use",{href:`${c}#eye`})})})]}),o.jsx(l,{name:"password",component:"p"})]}),o.jsx(v,{type:"submit",children:x})]})})};export{D as A,T as S,A as a,B as b,C as c,W as d};
+`,D=({schema:a,handleSubmit:i,register:t,btnContent:x})=>{const[d,h]=w.useState(!1),g=()=>d?"text":"password",b=t?{email:"",password:"",name:""}:{email:"",password:""};return o.jsx($,{initialValues:b,validationSchema:a,onSubmit:s=>{i(s)},children:({errors:s,touched:n})=>o.jsxs(S,{autoComplete:"off",children:[o.jsxs(z,{children:[t&&o.jsxs(o.Fragment,{children:[o.jsx(l,{type:"text",name:"name",placeholder:"Name",error:s.name&&n.name?"true":"false",touched:n.name?"true":"false"}),o.jsx(p,{name:"name",component:"p"})]}),o.jsx(l,{type:"email",name:"email",placeholder:"Email",error:s.email&&n.email?"true":"false",touched:n.email?"true":"false"}),o.jsx(p,{name:"email",component:"p"}),o.jsxs(F,{children:[o.jsx(l,{name:"password",type:g(),placeholder:"Password",error:s.password&&n.password?"true":"false",touched:n.password?"true":"false"}),o.jsx(E,{type:"button",onClick:()=>h(!d),children:o.jsx("svg",{width:"20",height:"20",stroke:`${e.color.white}`,viewBox:"0 0 20 20",children:d?o.jsx("use",{href:`${c}#eye-off`}):o.jsx("use",{href:`${c}#eye`})})})]}),o.jsx(p,{name:"password",component:"p"})]}),o.jsx(v,{type:"submit",children:x})]})})};export{D as A,T as S,A as a,B as b,C as c,W as d};
