@@ -1,4 +1,4 @@
-import{s as t,t as o,j as e,a as b,b as x,K as E,g as S,M as I,G as T,u as O,O as P,P as M,d as j,Q as N}from"./index-ff4df21e.js";import{S as W,C as D,e as V,f as G,i as q,j as C,n as H}from"./AddExerciseSuccess.styled-b584b5a2.js";import{T as Q}from"./TitlePage-87fdc914.js";const Y=t.div`
+import{s as t,t as o,j as e,a as b,b as x,K as E,g as S,M as I,G as T,u as O,O as P,P as M,d as j,Q as N}from"./index-4fdf63f9.js";import{S as W,C as D,e as V,f as G,i as q,j as C,n as H}from"./AddExerciseSuccess.styled-ea0938cf.js";import{T as Q}from"./TitlePage-583051b8.js";const Y=t.div`
   max-width: 335px;
   margin: 0 auto;
   padding-top: 40px;
@@ -629,4 +629,4 @@ import{s as t,t as o,j as e,a as b,b as x,K as E,g as S,M as I,G as T,u as O,O a
     display: flex;
     flex-direction: column;
     width: 100%;
-`;function xo(){const r=j(_e),n=j(Je),s=j(Ue),i=j(h=>{var m;return(m=h.auth.user.bodyData)==null?void 0:m.blood})??"1",l=O(),[a]=I(),p=x.useMemo(()=>Object.fromEntries([...a]),[a]),{category:d="",recommended:c="all"}=p;return x.useEffect(()=>{l(N(p))},[l,p]),e.jsx(e.Fragment,{children:e.jsxs(no,{children:[e.jsx(so,{}),e.jsx("div",{className:"container",children:e.jsxs(ao,{children:[e.jsxs(Y,{children:[e.jsx(Q,{children:"Products"}),e.jsx(de,{category:d,recommended:c,bloodGroup:i})]}),n&&e.jsx(oo,{}),r.length>0&&e.jsx(Ke,{items:r,bloodGroup:i}),(s||r.length===0&&!n)&&e.jsx(io,{})]})})]})})}export{xo as default};
+`;function xo(){const r=j(_e),n=j(Je),s=j(Ue),i=j(h=>{var m;return(m=h.profile.items.bodyData)==null?void 0:m.blood})??"1",l=O(),[a]=I(),p=x.useMemo(()=>Object.fromEntries([...a]),[a]),{category:d="",recommended:c="all"}=p;return x.useEffect(()=>{l(N(p))},[l,p]),e.jsx(e.Fragment,{children:e.jsxs(no,{children:[e.jsx(so,{}),e.jsx("div",{className:"container",children:e.jsxs(ao,{children:[e.jsxs(Y,{children:[e.jsx(Q,{children:"Products"}),e.jsx(de,{category:d,recommended:c,bloodGroup:i})]}),n&&e.jsx(oo,{}),r.length>0&&e.jsx(Ke,{items:r,bloodGroup:i}),(s||r.length===0&&!n)&&e.jsx(io,{})]})})]})})}export{xo as default};
