@@ -29,8 +29,8 @@ export const diarySlice = createSlice({
                 state.items = action.payload;
                 state.isLoading = false;
                 state.error = null;
-                state.products = action.payload.products ?? [];
-                state.exercises = action.payload.exercises ?? [];
+                state.products = action?.payload?.products || [] ;
+                state.exercises = action?.payload?.exercises || [];
             })
             .addCase(getDiary.rejected, (state, action) => {
                 state.isLoading = false;

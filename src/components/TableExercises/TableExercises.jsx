@@ -23,21 +23,23 @@ import {
   TimeItem,
 } from './TableExercises.styled';
 import { removeExercise } from '../../redux/diary/api';
+import { TextNoFound } from '../DayExercises/DayExercises.styled';
 
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
   const dispatch = useDispatch();
   return (
     <>
-       <Header>
-          <HeaderBodyPart>Body Part</HeaderBodyPart>
-          <HeaderEquipment>Equipment</HeaderEquipment>
-          <HeaderName>Name</HeaderName>
-          <HeaderTarget>Target</HeaderTarget>
-          <HeaderBurnedCalories>Burned Calories</HeaderBurnedCalories>
-          <HeaderTime>Time</HeaderTime>
-          <p> </p>
-        </Header>
+      {exercisesItems?.length === 0 && (<TextNoFound>Not found exercises</TextNoFound>)}
+      {exercisesItems?.length > 0 && (<Header>
+        <HeaderBodyPart>Body Part</HeaderBodyPart>
+        <HeaderEquipment>Equipment</HeaderEquipment>
+        <HeaderName>Name</HeaderName>
+        <HeaderTarget>Target</HeaderTarget>
+        <HeaderBurnedCalories>Burned Calories</HeaderBurnedCalories>
+        <HeaderTime>Time</HeaderTime>
+        <p> </p>
+      </Header>)}
       <ScrollContainer>
         <Table>
           <Thead>
@@ -53,7 +55,7 @@ export const TableExercises = () => {
           </Thead>
 
           <tbody>
-            {exercisesItems.map((exercise) => (
+            {exercisesItems?.map((exercise) => (
               <RowItem key={exercise._id}>
                 <BodyPartItem>{exercise.exercise.bodyPart}</BodyPartItem>
                 <EquipmentItem>{exercise.exercise.equipment}</EquipmentItem>

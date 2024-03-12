@@ -22,21 +22,29 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from '../../redux/diary/diarySelectors.js';
 import { removeProduct } from '../../redux/diary/api.js';
+import { TextNoFound } from '../DayProducts/DayProducts.styled.jsx';
 
 export const TableProducts = () => {
   const productsItems = useSelector(selectProducts);
   const dispatch = useDispatch();
-  const bloodGroup = useSelector(state=> state.auth.user.bodyData?.blood) ?? "1";
+  const bloodGroup = useSelector(state => state.auth.user.bodyData?.blood) ?? "1";
+  console.log(`productsItems`, productsItems);
   return (
     <>
-     <Header>        
+    {/* {isLoading ?  <Loader /> : (!productsItems.length ? (<TextNoFound>Not found products</TextNoFound>) : (<TableProducts />))} */}
+      {productsItems?.length === 0 && (<TextNoFound>Not found products</TextNoFound>)}
+
+      {productsItems?.length > 0 && 
+            (<Header>        
         <HeaderTitle>Title</HeaderTitle>
         <HeaderCategory>Category</HeaderCategory>
         <HeaderCalories>Calories</HeaderCalories>
         <HeaderWeight>Weight</HeaderWeight>
         <HeaderRecommend>Recommend</HeaderRecommend>
         <p> </p>
-      </Header>
+      </Header>)     
+      }
+
       <ScrollContainer>
         <Table>
           <Thead>
@@ -50,7 +58,7 @@ export const TableProducts = () => {
             </tr>
           </Thead>
           <tbody>
-            {productsItems.map((product) => (
+            {productsItems?.map((product) => (
               <RowItem key={product._id}>
                 <TitleItem>{product.product.title}</TitleItem>
                 <CategoryItem>{product.product.category}</CategoryItem>
