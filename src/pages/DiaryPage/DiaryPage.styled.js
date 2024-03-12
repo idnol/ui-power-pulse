@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import {theme} from "../../vars.js";
 
+export const DiarySection = styled.section`
+  padding-top: 101px;
+  padding-bottom: 44px;
+  @media (min-width: ${theme.breakpoint.md}) {
+    padding-top: 156px;
+  }
+`;
+
 export const InfoWrapper = styled.div`
     display: flex;
     flex-direction: column;

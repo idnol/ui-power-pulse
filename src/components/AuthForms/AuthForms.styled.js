@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 export const StyledDiv = styled.div`
     //margin-top: 127px;
-    max-width: 335px;
-    margin-right: 178px;
+    /* max-width: 335px;
+    margin-right: 178px; */
     //margin-left: auto;
     //margin-right: auto;
     @media (min-width: ${theme.breakpoint.md}) {
