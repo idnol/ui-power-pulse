@@ -1,4 +1,4 @@
-import{s as e,t,N as n,j as i}from"./index-976443d8.js";import{W as r,S as o}from"./WelcomePage.styled-25195103.js";const s=e.div`
+import{s as e,t,N as n,j as i}from"./index-afe6ff0f.js";import{W as o,a as r,S as s}from"./WelcomePage.styled-b88ba48d.js";const a=e.div`
   position: relative;
   margin-right: 72px;
   //height: 202px;
@@ -6,9 +6,9 @@ import{s as e,t,N as n,j as i}from"./index-976443d8.js";import{W as r,S as o}fro
   // @media (min-width: ${t.breakpoint.md}) {
   //   height: 354px;
   //  }
-`,a=e.div`
+`,p=e.div`
   position: relative;
-`,p=e.h1`
+`,h=e.h1`
   //margin-top: 127px;
   margin-bottom: 0px;
   font-weight: 500;
@@ -27,7 +27,7 @@ import{s as e,t,N as n,j as i}from"./index-976443d8.js";import{W as r,S as o}fro
   @media (min-width: ${t.breakpoint.xl}) {
     //margin-top: 200px;
   }
-`,h=e.nav`
+`,d=e.nav`
   display: flex;
   gap: 14px;
   margin-top: 40px;
@@ -41,7 +41,7 @@ import{s as e,t,N as n,j as i}from"./index-976443d8.js";import{W as r,S as o}fro
     width: 392px;
     height: 56px;
   }
-`,d=e(n)`
+`,x=e(n)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +67,7 @@ import{s as e,t,N as n,j as i}from"./index-976443d8.js";import{W as r,S as o}fro
     font-size: 20px;
     line-height: 1.2;
   }
-`,x=e(n)`
+`,g=e(n)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,4 +103,4 @@ import{s as e,t,N as n,j as i}from"./index-976443d8.js";import{W as r,S as o}fro
     width: 185px;
     height: 67px;
   }
-`,g=()=>i.jsx(i.Fragment,{children:i.jsxs(s,{children:[i.jsxs(a,{children:[i.jsx(l,{children:i.jsx("use",{href:"/img/sprait.svg#icon-Line"})}),i.jsx(p,{children:"Transforming your body shape with Power Pulse"})]}),i.jsxs(h,{children:[i.jsx(d,{to:"/signup",children:"Sign Up"}),i.jsx(x,{to:"/signin",children:"Sign In"})]})]})});function w(){return i.jsx("section",{children:i.jsx("div",{className:"container",children:i.jsx("div",{className:"row",children:i.jsxs(r,{children:[i.jsx(g,{}),i.jsx(o,{})]})})})})}export{w as default};
+`,m=()=>i.jsx(i.Fragment,{children:i.jsxs(a,{children:[i.jsxs(p,{children:[i.jsx(l,{children:i.jsx("use",{href:"/img/sprait.svg#icon-Line"})}),i.jsx(h,{children:"Transforming your body shape with Power Pulse"})]}),i.jsxs(d,{children:[i.jsx(x,{to:"/signup",children:"Sign Up"}),i.jsx(g,{to:"/signin",children:"Sign In"})]})]})});function f(){return i.jsx(o,{children:i.jsx("div",{className:"container",children:i.jsxs(r,{children:[i.jsx(m,{}),i.jsx(s,{})]})})})}export{f as default};
