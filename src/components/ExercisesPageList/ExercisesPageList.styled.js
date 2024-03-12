@@ -32,7 +32,7 @@ export const ExercisesListContainer = styled.div`
 export const ExercisesList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   grid-row-gap: 20px;
 
   margin: 0 auto;
