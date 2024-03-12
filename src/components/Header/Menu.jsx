@@ -17,15 +17,7 @@ import { closeMenu } from './closeMenu.js';
 export const Menu = () => {
   
   return (
-    <div
-      id="menu-wrapper"
-      style={{
-        opacity: 0,
-        visibility: 'hidden',
-        display: 'none',
-      }}
-      
-    >
+    <div id="menu-wrapper">
       <Backdrop id="backdrop" >
         <CloseButton id="close-btn" onClick={closeMenu}>
           <CloseIcon>

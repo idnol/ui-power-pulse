@@ -102,6 +102,7 @@ export const User = styled.div`
 export const UserAvatar = styled.img`
   width: 37px;
   height: 37px;
+  object-fit: cover;
 `;
 
 export const UserIcon = styled.svg`
@@ -139,7 +140,7 @@ export const Backdrop = styled.div`
   z-index: 5;
   width: 200px;
   height: 100vh;
-
+  transition: left 0.5s ease-in-out;
   background-color: ${theme.color.orange};
 
   @media (min-width: ${theme.breakpoint.md}) {
