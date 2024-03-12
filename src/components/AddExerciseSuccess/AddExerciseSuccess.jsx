@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import sprite from 'assets/sprite-2.svg';
 import { useLocation } from 'react-router-dom';
+import wellDone from "assets/logo/like-1x.png"
+import wellDone2x from 'assets/logo/like-2x.png'
 import { theme } from '../../vars';
 
 import {
@@ -34,9 +36,9 @@ export const AddExerciseSuccess = ({ isOpen, onClose, calorise, time }) => {
         <Wrapper>
           <SuccessBox>
             <picture>
-              <source media={theme.breakpoint.sm} srcSet="/img/like-1x.png" />
-              <source media={theme.breakpoint.md} srcSet="/img/like-2x.png" />
-              <img src="/img/like-1x.png" alt="Like" loading="lazy"></img>
+              <source media={theme.breakpoint.sm} srcSet={wellDone} />
+              <source media={theme.breakpoint.md} srcSet={wellDone2x} />
+              <img src={wellDone} alt="Like" loading="lazy"></img>
             </picture>
             <TitleSuccess>Well done</TitleSuccess>
             <Counts>
