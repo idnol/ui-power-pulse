@@ -3,7 +3,7 @@ import { theme } from '../../vars.js';
 
 export const ScrollContainer = styled.div`
   min-height: 234px;
-  max-height: 750px;
+  max-height: 760px;
   overflow-y: auto;
   overflow-x: hidden;
 

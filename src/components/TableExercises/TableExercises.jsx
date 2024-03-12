@@ -29,6 +29,7 @@ import sprite from 'assets/sprite-2.svg'
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
   const dispatch = useDispatch();
+  
   return (
     <>
       {exercisesItems?.length === 0 && (<TextNoFound>Not found exercises</TextNoFound>)}
