@@ -32,7 +32,6 @@ export const TableProducts = () => {
 
   return (
     <>
-    {/* {isLoading ?  <Loader /> : (!productsItems.length ? (<TextNoFound>Not found products</TextNoFound>) : (<TableProducts />))} */}
       {productsItems?.length === 0 && (<TextNoFound>Not found products</TextNoFound>)}
 
       {productsItems?.length > 0 &&
@@ -69,7 +68,6 @@ export const TableProducts = () => {
                       {product?.product?.groupBloodNotAllowed?.[bloodGroup.toString()] ? (
                         <RecommendItem>
                           <SvgCircle>
-                            {/* <use href="/img/sprait.svg#circle" fill="#419B09" /> */}
                             <use href={`${sprite}#circle`} fill="#419B09" />
                           </SvgCircle>
                           Yes

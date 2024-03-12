@@ -100,23 +100,15 @@ export const SubcategoriesH3 = styled.h3`
     line-height: 1.2;
     margin: 0;
     text-transform: lowercase;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
+    max-width: 150px;
     &:first-letter {
         text-transform: uppercase;
     }
 
-    ${props =>
-        props.isLong &&
-        `
-            white-space: normal;
-            word-wrap: break-word;
 
-        `}
 `;
-
 
 export const SubcategoriesH4 = styled.h4`
     line-height: 1.5;

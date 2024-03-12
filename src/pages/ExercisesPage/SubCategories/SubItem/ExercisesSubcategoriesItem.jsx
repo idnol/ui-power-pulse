@@ -24,7 +24,7 @@ export default function ExercisesSubcategoriesItem({ subcategory }) {
         alt={subcategory.name}
       />
       <ContainerTextSubcategories>
-        <SubcategoriesH3 isLong={subcategory.name.length > 16}>{subcategory.name}</SubcategoriesH3>
+        <SubcategoriesH3>{subcategory.name}</SubcategoriesH3>
         <SubcategoriesH4>{subcategory.filter}</SubcategoriesH4>
       </ContainerTextSubcategories>
       </WrapperExes>

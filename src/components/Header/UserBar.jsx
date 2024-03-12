@@ -26,7 +26,7 @@ export const UserBar = () => {
 
   const isLoggedIn = useSelector(selectIsAuthenticated);
   const { bodyData } = useSelector(selectUser);
-  console.log(bodyData?.avatar)
+
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.keyCode === 27) {
@@ -43,7 +43,6 @@ export const UserBar = () => {
   if (!openSidebar) {
     return null;
   }
-
 
   return (
     <>

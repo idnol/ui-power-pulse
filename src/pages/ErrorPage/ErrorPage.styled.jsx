@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { theme } from '../../vars';
 import { Link } from 'react-router-dom';
+import image from "../../../public/img/side-view-1x-mob.jpg";
+import image2x from "../../../public/img/side-view-2x-mob.jpg";
+import imagedesc from "../../../public/img/side-view-1x-desk.jpg";
+import imagedesc2x from "../../../public/img/side-view-2x-desk.jpg";
 
 export const OrangePart = styled.div`
   position: fixed;
@@ -21,21 +25,21 @@ export const OrangePart = styled.div`
 
 export const StyledImagePart = styled.div`
   height: 100vh;
-  background-image: url(${`/public/img/side-view-1x-mob.jpg`});
+  background-image: url(${image}); 
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-width: ${theme.breakpoint.xl}) {
-    background-image: url(${`/public/img/side-view-1x-desk.jpg`});
+    background-image: url(${imagedesc});
   }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dpx) {
-    background-image: url(${`/public/img/side-view-2x-mob.jpg`});
+    background-image: url(${image2x});
 
     @media (min-width: ${theme.breakpoint.xl}) {
-      background-image: url(${`/public/img/side-view-2x-desk.jpg`});
+      background-image: url(${imagedesc2x});
     }
   }
 `;
