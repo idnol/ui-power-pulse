@@ -27,7 +27,7 @@ import sprite from 'assets/sprite-2.svg'
 export const TableProducts = () => {
   const productsItems = useSelector(selectProducts);
   const dispatch = useDispatch();
-  const bloodGroup = useSelector(state=> state.auth.user.bodyData?.blood) ?? "1";
+  const bloodGroup = useSelector(state => state.auth.user.bodyData?.blood) ?? "1";
 
   return (
     <>
