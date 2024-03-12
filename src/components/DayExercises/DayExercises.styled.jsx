@@ -7,8 +7,8 @@ export const BoxDayDiary = styled.div`
   border-radius: 12px;
   padding: 16px 8px 16px 16px;
   background: ${theme.color.greySeven};
-  max-width: 335px;
   min-width: 335px;
+  width: 335px;
   min-height: 335px;
   max-height: 1064px;
   overflow: hidden;

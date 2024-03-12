@@ -20,12 +20,16 @@ const getVisibleExercises = (exercises, filter) => {
   });
 };
 
-export const Exercises = ({ bodyPartFilter }) => {
+export const Exercises = ({ bodyPartFilter, onRenderBackground }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(exercisesGetAll());
   }, [dispatch]);
+
+  useEffect(() => {
+    onRenderBackground();
+  });
 
   const exercises = useSelector((state) => state.exercises.items);
   const visibleExercises = getVisibleExercises(exercises, bodyPartFilter);
