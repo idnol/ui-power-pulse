@@ -23,10 +23,10 @@ import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
 import { DatePickerItem } from './DatePicker/DatePicker.jsx';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
-
 export const UserForm = () => {
   const dispatch = useDispatch();
   const profileData = useSelector(selectProfile);
+
 
   const initialValues = {
     name: profileData.name || 'Name',
@@ -34,7 +34,9 @@ export const UserForm = () => {
     height: (profileData.bodyData && profileData.bodyData.height) || 150,
     currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || 35,
     desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || 35,
-    birthday: '2006.01.02',
+    // birthday:getData(profileData.bodyData?.birthday) || new Date(),
+    birthday: new Date(profileData.bodyData?.birthday) || new Date(),
+
     blood: profileData.bodyData.blood || 1,
     sex: profileData.bodyData.sex || 'male',
     levelActivity: parseInt(profileData.bodyData?.levelActivity, 10) || 1,
@@ -45,7 +47,7 @@ export const UserForm = () => {
 
     if (profileData.bodyData) {
       if (JSON.stringify(values) === JSON.stringify(initialValues)) {
-        toast.error('Nothing to change');
+        // toast.error('Nothing to change');
         return;
       }
       try {
@@ -98,7 +100,7 @@ export const UserForm = () => {
               ))}
               <div>
                 <FormLabel>Day of Birth</FormLabel>
-                <div style={{ position: 'relative' }} > <DatePickerItem number={initialValues.birthday} /></div>
+                <div className='datePickerWrapper' style={{ position: 'relative' }} > <DatePickerItem formik={formikProps} /></div>
               </div>
             </UserPersonalInfo>
 
