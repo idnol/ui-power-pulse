@@ -200,13 +200,21 @@ export const MenuList = styled.ul`
   gap: 16px;
 `;
 
+export const MenuItem = styled.li`
+  width: 111px;
+  height: 38px;
+
+  @media (min-width: ${theme.breakpoint.md}) {
+    width: 119px;
+    height: 44px;
+  }
+`;
+
 export const MenuUserLink = styled(NavLink)`
   display: block;
   border: ${theme.border.grey2};
   border-radius: 12px;
-  padding: 10px 27px;
-  width: 111px;
-  height: 38px;
+  padding: 10px 20px;
   color: ${theme.color.white};
   transition: 0.5s;
 

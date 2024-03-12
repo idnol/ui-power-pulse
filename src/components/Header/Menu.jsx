@@ -6,6 +6,7 @@ import {
   MenuList,
   MenuUserLink,
   LogOutWrapper,
+  MenuItem,
 } from './Header.styled.jsx';
 import sprite from 'assets/sprite-2.svg';
 import { theme } from '../../vars.js';
@@ -27,21 +28,21 @@ export const Menu = () => {
 
         <MenuUserNav>
           <MenuList>
-            <li width="111" height="38">
+            <MenuItem>
               <MenuUserLink to={'/diary'} onClick={closeMenu}>
                 Diary
               </MenuUserLink>
-            </li>
-            <li width="111" height="38">
+            </MenuItem>
+            <MenuItem>
               <MenuUserLink to={'/products'} onClick={closeMenu}>
                 Products
               </MenuUserLink>
-            </li>
-            <li width="111" height="38">
+            </MenuItem>
+            <MenuItem>
               <MenuUserLink to={'/exercises'} onClick={closeMenu}>
                 Exercises
               </MenuUserLink>
-            </li>
+            </MenuItem>
           </MenuList>
         </MenuUserNav>
 
