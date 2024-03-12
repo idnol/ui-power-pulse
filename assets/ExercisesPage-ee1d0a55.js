@@ -1,4 +1,4 @@
-import{b as d,p as Z,s as c,t as r,u as R,d as W,j as e,a as T,E as ee,F as te,G as ie,x as I,H as q,g as D,J as re}from"./index-242c98e2.js";import{M as ne,a as oe,W as se,S as ae,T as le,C as ce,b as de,V as pe,c as he,d as xe,B as ue,e as me,f as ge,g as fe,N as be,I as we,h as ke,i as je,j as A,k as $e,l as ye,m as ve,n as Se}from"./AddExerciseSuccess.styled-e59960fc.js";import{a as H}from"./ReusableStyles.styled-1fc7ad59.js";function Ce(t){const[i,n]=d.useState([]);return d.useEffect(()=>{(async()=>{try{const a=await Z.get(`/exercises/filters?filter=${t}`);n(a.data)}catch(a){console.error("Error fetching categories:",a)}})()},[t]),i}const Ee=c.div`
+import{b as d,p as Z,s as c,t as r,u as R,d as W,j as e,a as T,E as ee,F as te,G as ie,x as I,H as q,g as D,J as re}from"./index-d4992bb9.js";import{M as ne,a as oe,W as se,S as ae,T as le,C as ce,b as de,V as pe,c as he,d as xe,B as ue,e as me,f as ge,g as fe,N as be,I as we,h as ke,i as je,j as A,k as $e,l as ye,m as ve,n as Se}from"./AddExerciseSuccess.styled-02172aa4.js";import{a as H}from"./ReusableStyles.styled-7cfd56fd.js";function Ce(t){const[i,n]=d.useState([]);return d.useEffect(()=>{(async()=>{try{const a=await Z.get(`/exercises/filters?filter=${t}`);n(a.data)}catch(a){console.error("Error fetching categories:",a)}})()},[t]),i}const Ee=c.div`
   
 `,Te=c.div`
   max-width: 335px;
@@ -251,7 +251,7 @@ import{b as d,p as Z,s as c,t as r,u as R,d as W,j as e,a as T,E as ee,F as te,G
 `,Ye=c.section`
   padding-top: 71px;
   @media (min-width: ${r.breakpoint.md}) {
-    padding-top: 156px;
+    padding-top: 116px;
   }
   @media (min-width: ${r.breakpoint.xl}) {
     height: 100vh;
