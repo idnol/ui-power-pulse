@@ -19,8 +19,11 @@ export default function ExercisesPage() {
   };
 
   const handleRenderBackground = () => {
-    console.log('Rendering background...');
     setIsBackground(true);
+  };
+
+  const handleUnRenderBackground = () => {
+    setIsBackground(false);
   };
 
   return (
@@ -29,7 +32,7 @@ export default function ExercisesPage() {
       <div className="container">
         <Row>
           <Wrapper>
-            <ExercisesCategories onClick={handleCategoryClick} />
+            <ExercisesCategories onClick={handleCategoryClick} onRenderBackground={handleUnRenderBackground}/>
             {bodyPartFilter === '' ? (
               <ExercisesSubcategoriesList
                 categories={categories}

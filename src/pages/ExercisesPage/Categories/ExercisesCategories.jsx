@@ -16,8 +16,13 @@ import { clearExercisesFilter } from '../../../redux/exercises/filterSlice';
 
 import sprite from 'assets/sprite-2.svg';
 
-export default function ExercisesCategories({ onClick }) {
+export default function ExercisesCategories({ onClick, onRenderBackground }) {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    onRenderBackground();
+  });
+
   const [activeCategory, setActiveCategory] = useState('Body parts');
 
   const bodyPartFilter = useSelector((state) => state.filter.exercisesFilter);
