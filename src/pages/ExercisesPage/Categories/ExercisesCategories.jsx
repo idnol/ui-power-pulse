@@ -43,12 +43,14 @@ export default function ExercisesCategories({ onClick, onRenderBackground }) {
   return (
     <ExercisesContainer>
       <ButtonContainer>
+      {bodyPartFilter !== '' && (
         <Button onClick={handleBackButtonClick}>
           <ButtonIcon>
             <use href={`${sprite}#arrow-left-ex`} style={{ fill: 'rgba(239, 237, 232, 0.4)'}} />
           </ButtonIcon>
           <ButtonText>back</ButtonText>
         </Button>
+        )}
       </ButtonContainer>
       <SupportContainerExercise>
       <ExercisesTitle>
