@@ -22,9 +22,7 @@ export const DayExercises = () => {
             </SvgArrow>
           </StyledAddNavLink>
         </WrapperAdd>
-
         <TableExercises />
-        {/* {!exercises.length ? ( <TextNoFound>Not found products</TextNoFound> ) : ( <TableExercises />)} */}
       </BoxDayDiary>
     </>
   );
