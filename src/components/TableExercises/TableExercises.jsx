@@ -23,6 +23,7 @@ import {
   TimeItem,
 } from './TableExercises.styled';
 import { removeExercise } from '../../redux/diary/api';
+import sprite from 'assets/sprite-2.svg'
 
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
@@ -65,7 +66,7 @@ export const TableExercises = () => {
                 <DeleteItem>
                   <DeleteBtn onClick={() => dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }))}>
                     <SvgBasket>
-                      <use href="/img/sprait.svg#trash" />
+                      <use href={`${sprite}#trash`} />
                     </SvgBasket>
                   </DeleteBtn>
                 </DeleteItem>

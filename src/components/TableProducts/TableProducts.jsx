@@ -22,6 +22,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from '../../redux/diary/diarySelectors.js';
 import { removeProduct } from '../../redux/diary/api.js';
+import sprite from 'assets/sprite-2.svg'
 
 export const TableProducts = () => {
   const productsItems = useSelector(selectProducts);
@@ -60,14 +61,15 @@ export const TableProducts = () => {
                 {product?.product?.groupBloodNotAllowed?.[bloodGroup.toString()] ? (
                   <RecommendItem>
                     <SvgCircle>
-                      <use href="/img/sprait.svg#circle" fill="#419B09" />
+                      {/* <use href="/img/sprait.svg#circle" fill="#419B09" /> */}
+                      <use href={`${sprite}#trash`} fill="#419B09" />
                     </SvgCircle>
                     Yes
                   </RecommendItem>
                 ) : (
                   <RecommendItem>
                     <SvgCircle>
-                      <use href="/img/sprait.svg#circle" fill="#e9101d" />
+                      <use href={`${sprite}#trash`} fill="#e9101d" />
                     </SvgCircle>
                     No
                   </RecommendItem>
