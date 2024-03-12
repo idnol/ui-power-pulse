@@ -7,54 +7,48 @@ import { StyledBtnArrow, StyledMonthsName, StyledSvgArrowCalendar, StyledInputDa
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import {useDispatch, useSelector} from "react-redux";
 import {changeDate} from "../../redux/diary/diarySlice.js";
-import {selectorDate} from "../../redux/diary/diarySelectors.js";
+import { selectorDate } from "../../redux/diary/diarySelectors.js";
+import { getDate } from '../parts/handleData.js';
+import { getDiary } from '../../redux/diary/api.js';
 
 const StyledDatepicker = forwardRef((props, ref) => {
+
   const dispatch = useDispatch();
   const selectDate = useSelector(selectorDate)
-  
-  // const [selectedDate, setSelectedDate] = useState(Date.now());
   const [currentMonth, setCurrentMonth] = useState('');
-  const [isActiveLeftArrow, setIsActiveLeftArrow] = useState('');
-  const [isActiveRightArrow, setIsActiveRightArrow] = useState('active');
 
   const datePickerRef = useRef(null);
 
   useEffect(() => { setCurrentMonth(format(selectDate, 'MMMM yyyy')); }, [selectDate]);
 
-  useEffect(()=>{
-    console.log(selectDate)},[selectDate])
-
   const handlePreviousMonth = () => {
-    setIsActiveLeftArrow('active');
-    setIsActiveRightArrow('');
     const newDate = subMonths(selectDate, 1);
     dispatch(changeDate(newDate.toISOString()))
-    // dispatch(changeDate(newDate.toISOString()))
+    dispatch(getDiary(getDate(newDate)))
   };
 
     const handlePreviousDay = () => {
-    setIsActiveLeftArrow('active');
-    setIsActiveRightArrow('');
     const newDate = subDays(selectDate, 1);
-    dispatch(changeDate(newDate.toISOString()))
+      dispatch(changeDate(newDate.toISOString()))
+      dispatch(getDiary(getDate(newDate)))
   };
 
   const handleNextMonth = () => {
-    setIsActiveLeftArrow('');
-    setIsActiveRightArrow('active');
     const newDate = addMonths(selectDate, 1);
     dispatch(changeDate(newDate.toISOString()))
+    dispatch(getDiary(getDate(newDate)))
   };
 
     const handleNextDay = () => {
-    setIsActiveLeftArrow('');
-    setIsActiveRightArrow('active');
     const newDate = addDays(selectDate, 1);
-    dispatch(changeDate(newDate.toISOString()))
+      dispatch(changeDate(newDate.toISOString()))
+      dispatch(getDiary(getDate(newDate)))
   };
 
-  const handleDateChange = (newDate) => { dispatch(changeDate(newDate.toISOString())) };
+  const handleDateChange = (newDate) => {
+    dispatch(changeDate(newDate.toISOString()))
+    dispatch(getDiary(getDate(newDate)))
+  };
 
   const CustomInput = forwardRef(({ value, onClick, onKeyDown }, ref) => {
     const [inputValue, setInputValue] = useState('');
@@ -83,6 +77,7 @@ const StyledDatepicker = forwardRef((props, ref) => {
 
           if (!isNaN(newDate.getTime())) {
             dispatch(changeDate(newDate.toISOString()))
+            dispatch(getDiary(getDate(newDate)))
             handleDateChange(newDate);
           }
         }
@@ -90,10 +85,13 @@ const StyledDatepicker = forwardRef((props, ref) => {
 
     const handleBlur = () => {
       if (!isValidDate(inputValue) || inputValue.trim() === '') {
-        setInputValue(prevValue); }
+        setInputValue(prevValue);
+      }
 
       if (!isValidDate(inputValue) || inputValue.trim() === '') {
-        setInputValue(format(selectDate, 'dd/MM/yyyy')); } };
+        setInputValue(format(selectDate, 'dd/MM/yyyy'));
+      }
+    };
 
     const isValidDate = (dateString) => {
       const datePattern = /^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
@@ -108,21 +106,27 @@ const StyledDatepicker = forwardRef((props, ref) => {
         const year = formattedDate.substring(4, 8);
 
         let newDate;
+
         if (year.length < 4) {
           const currentYear = new Date().getFullYear();
-          newDate = new Date(`${currentYear}-${month}-${day}`); }
-        else { newDate = new Date(`${year}-${month}-${day}`); }
+          newDate = new Date(`${currentYear}-${month}-${day}`);
+        }
+        else {
+          newDate = new Date(`${year}-${month}-${day}`);
+        }
 
         if (!isNaN(newDate.getTime())) {
           dispatch(changeDate(newDate.toISOString()))
+          dispatch(getDiary(getDate(newDate)))
           setInputValue(format(newDate, 'dd/MM/yyyy'));
           return; }
     
-        setInputValue(format(selectDate, 'dd/MM/yyyy')); } };
-
+        setInputValue(format(selectDate, 'dd/MM/yyyy'));
+      }
+    };
     
     return (
-      <TitleWrapper>        
+      <TitleWrapper>
         <StyledInputDate
           type="text"
           value={inputValue}
@@ -140,23 +144,23 @@ const StyledDatepicker = forwardRef((props, ref) => {
         </StyledSvgCalendar>
 
         <StyledSvgArrow
-          className={isActiveLeftArrow}
           onClick={handlePreviousDay}>
           <use href={`${sprite}#arrow-left`} />
         </StyledSvgArrow>
 
         <StyledSvgArrow
-          className={isActiveRightArrow}
           onClick={handleNextDay}  >
           <use href={`${sprite}#arrow-right`} />
         </StyledSvgArrow>
       </TitleWrapper>
-    );});
-
+    );
+  });
+  
   CustomInput.displayName = 'CustomInput';
 
   return (
     <>
+
       <DatePicker
         ref={(el) => {
           datePickerRef.current = el;
@@ -167,21 +171,18 @@ const StyledDatepicker = forwardRef((props, ref) => {
         dateFormat={'dd/MM/yyyy'}
         calendarStartDay={1}
         formatWeekDay={(day) => day.substr(0, 2)}
-        customInput={
-          <CustomInput
+        customInput={           <CustomInput
             value={format(selectDate, 'dd/MM/yyyy')}
             onChange={()=> dispatch(changeDate)}
             onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); } }} />}
-        
         renderCustomHeader={({ decreaseMonth, increaseMonth }) => (
           <StyledMonthsWrapper>
             <StyledBtnArrow
               type="button"
               className="react-datepicker__navigation--previous"
               aria-label="Previous Month"
-              onClick={decreaseMonth}>              
+              onClick={decreaseMonth}>
                 <StyledSvgArrowCalendar
-                  className={isActiveLeftArrow}
                   onClick={handlePreviousMonth} >
                 <use href={`${sprite}#arrow-left`} />
                 </StyledSvgArrowCalendar>
@@ -197,7 +198,6 @@ const StyledDatepicker = forwardRef((props, ref) => {
               aria-label="Next Month"
               onClick={increaseMonth} >
                 <StyledSvgArrowCalendar
-                  className={isActiveRightArrow}
                   onClick={handleNextMonth} >
                 <use href={`${sprite}#arrow-right`} />
                 </StyledSvgArrowCalendar>
@@ -205,7 +205,9 @@ const StyledDatepicker = forwardRef((props, ref) => {
           </StyledMonthsWrapper> )}  />
 
       <CalendarGlobalStyles />
-    </> ); });
+    </>
+  );
+});
 
 StyledDatepicker.displayName = 'StyledDatepicker';
 

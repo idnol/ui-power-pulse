@@ -19,7 +19,6 @@ const profileSlice = createSlice({
     setBirthdate: (state, action) => {
       state.items.bodyData.birthday = action.payload;
     },
-
     setLoading: (state, action) => {
       state.isLoading = action.payload;
     },

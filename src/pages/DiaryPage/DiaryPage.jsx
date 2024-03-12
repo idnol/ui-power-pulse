@@ -13,8 +13,8 @@ export default function DiaryPage() {
       <div className="container">
         <div className="row">
           <Wrapper>
-            <HeadWrapper>
-             <TitlePage>Diary</TitlePage>
+            <HeadWrapper className='diaryHeadWrapper'>
+              <TitlePage>Diary</TitlePage>
               <StyledDatepicker />
             </HeadWrapper>
             <DiaryWrapper>

@@ -2,9 +2,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from '../../axios.js';
 
 export const getDiary = createAsyncThunk(
-    'diary/getDiaries', async (_, thunkAPI) =>{
+    'diary/getDiaries', async (dateProf, thunkAPI) =>{
         try {
-            const result = await axios('/diaries');
+            const result = await axios.get(`/diaries?date=${dateProf}`);
             return result.data
         } catch (error){
             return thunkAPI.rejectWithValue(error.message);
@@ -36,12 +36,12 @@ export const addExercise = createAsyncThunk(
 
 export const removeProduct = createAsyncThunk(
     'diary/deleteProduct', async (product, thunkAPI) =>{
-      try {
-          const deleted = await axios.delete(`/diaries/product`, { data: product });
-          return deleted.data
-      } catch (error){
-          return thunkAPI.rejectWithValue(error.message);
-      }
+        try {
+            const deleted = await axios.delete(`/diaries/product`, { data: product });
+            return deleted.data
+        } catch (error){
+            return thunkAPI.rejectWithValue(error.message);
+        }
     }
 )
 

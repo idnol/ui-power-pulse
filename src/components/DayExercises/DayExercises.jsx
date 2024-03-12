@@ -1,18 +1,19 @@
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { TableExercises } from '../TableExercises/TableExercises';
 import {
   BoxDayDiary,
   StyledAddNavLink,
   SvgArrow,
-  TextNoFound,
+  // TextNoFound,
   Title,
   WrapperAdd,
 } from './DayExercises.styled';
-import { selectExercises } from '../../redux/diary/diarySelectors';
+// import { selectExercises } from '../../redux/diary/diarySelectors';
 import sprite from 'assets/sprite-2.svg'
 
+
 export const DayExercises = () => {
-  const exercises = useSelector(selectExercises)
+  // const exercises = useSelector(selectExercises)
 
   return (
     <>
@@ -27,7 +28,8 @@ export const DayExercises = () => {
           </StyledAddNavLink>
         </WrapperAdd>
 
-        {!exercises.length ? ( <TextNoFound>Not found products</TextNoFound> ) : ( <TableExercises />)}
+        <TableExercises />
+        {/* {!exercises.length ? ( <TextNoFound>Not found products</TextNoFound> ) : ( <TableExercises />)} */}
       </BoxDayDiary>
     </>
   );
