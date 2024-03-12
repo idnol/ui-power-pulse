@@ -3,13 +3,12 @@ import { createGlobalStyle, styled } from 'styled-components';
 
 export const CalendarGlobalStyles = createGlobalStyle`
   .diaryHeadWrapper  .react-datepicker__wrapper {
-    width: 183px !important; 
+    width: 183px;
     height: 20px;
-    /* width: ${props => props.profile ? "147px" : "183px"}; */
   }
 
   .diaryHeadWrapper  .react-datepicker__input-container{
-    /* width: 183px; */
+    width: 183px;
     margin-left: auto;
     position: relative;
   }
@@ -58,7 +57,7 @@ export const CalendarGlobalStyles = createGlobalStyle`
   .diaryHeadWrapper  .react-datepicker__current-month {
     height: 19px;
     white-space: nowrap;
-    color: white;
+    color: ${theme.color.white};
   }
 
   .diaryHeadWrapper  .react-datepicker__day-name {
@@ -126,6 +125,7 @@ export const CalendarGlobalStyles = createGlobalStyle`
   .diaryHeadWrapper  .react-datepicker__month {
     width: 187px;
     min-height: 161px;
+    margin: 0;
   }
 
   .diaryHeadWrapper  .react-datepicker__aria-live {
@@ -142,6 +142,9 @@ export const CalendarGlobalStyles = createGlobalStyle`
   .diaryHeadWrapper  .react-datepicker__month-container{
     display: flex;
     flex-direction: column;
+    width: 187px;
+    min-height: 161px;
+    margin: 0;
   }
 
   .diaryHeadWrapper  .react-datepicker__day--outside-month{
@@ -271,64 +274,4 @@ export const StyledSvgCalendar = styled.svg`
   @media screen and (min-width: ${theme.breakpoint.md}) {
     width: 24px;
     height: 24px;
-  } `;
-
-export const StyledSvgCalendarProfile = styled.svg`
-  width: 18px;
-  height: 18px;
-  stroke: ${theme.color.white};
- 
-  /* margin-left: 8px; */
-  margin-left: auto;
-  stroke-width: 1.5;
-  /* stroke="#EFEDE8" */
-   /* stroke-width="1.5" */
-  cursor: pointer;
-
-  @media screen and (min-width: ${theme.breakpoint.md}) {
-    /* width: 24px;
-    height: 24px; */
-  } `;
-
-export const StyledInputDateProfile = styled.input`
-  width: 85px;
-  height: 24px;
-  background-color: ${theme.color.black};
-  color: ${theme.color.white};
-  border: none;
-  font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-
-  @media screen and (min-width: ${theme.breakpoint.md}) {
-    /* width: 129px;
-    height: 32px; */
-  } `;
-
-  export const TitleWrapperProfile = styled.div`
-  display: flex;
-  align-items: center;
-  /* width: 159px; */
-  /* height: 24px; */
-  border: none;
-  padding: 0;
-  background-color: ${theme.color.black};
-  color: ${theme.color.white};
-  font-family: 'Roboto', sans-serif;
-  /* font-weight: 700; */
-  /* font-size: 18px; */
-  /* line-height: 1.11;
-  letter-spacing: 0.02em; */
-  /* font-family: var(--font-family); */
-font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-/* color: var(--white); */
-  text-align: center;
-
-  @media screen and (min-width: ${theme.breakpoint.md}) {
-    /* font-size: 24px;
-    line-height: 1.33;
-    width: 239px; */
-    /* height: 32px; */
   } `;
