@@ -107,9 +107,6 @@ export const StyledOption = styled.li`
   &::first-letter {
     text-transform: capitalize;
   }
-   &:hover {
-    background-color: ${theme.color.grey};
-  }
    @media (min-width: ${theme.breakpoint.md}) {
     font-size: 16px;
     line-height: 1.5;
