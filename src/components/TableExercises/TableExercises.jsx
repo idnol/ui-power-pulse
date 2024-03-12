@@ -27,8 +27,8 @@ import sprite from 'assets/sprite-2.svg'
 
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
-  console.log(exercisesItems);
   const dispatch = useDispatch();
+  
   return (
     <>
        <Header>
