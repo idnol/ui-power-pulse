@@ -3,7 +3,7 @@ import { theme } from '../../vars.js';
 
 export const ScrollContainer = styled.div`
   min-height: 234px;
-  max-height: 990px;
+  max-height: 1000px;
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -147,6 +147,7 @@ export const RowItem = styled.tr`
   color: ${theme.color.white};
   margin-top: 66px;
   max-width: 297px;
+  padding-right: 4px;
 
   &:first-child {
     margin-top: 22px;
@@ -162,6 +163,7 @@ export const RowItem = styled.tr`
     flex-wrap: nowrap;
     align-items: baseline;
     margin-top: 6px;
+    padding-right: 0px;
 
     &:first-child {
       margin-top: 0;

@@ -9,9 +9,14 @@ export const BoxDayDiary = styled.div`
   background: ${theme.color.greySeven};
   //margin: 40px auto 40px auto;
   max-width: 335px;
+  min-width: 335px;
   min-height: 335px;
   max-height: 824px;
   overflow: hidden;
+
+   @media (max-width: 375px) {
+    min-width: 300px;
+  }
 
   @media (min-width: ${theme.breakpoint.md}) {
     //margin: 32px auto 32px auto;
