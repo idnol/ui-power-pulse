@@ -1,4 +1,4 @@
-import{s as i,t,j as o}from"./index-fa7acb07.js";const n=i.h2`
+import{s as i,t,j as o}from"./index-60ded857.js";const n=i.h2`
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
