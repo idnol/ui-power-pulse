@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { theme } from '../../../vars';
 
 export const ExercisesContainer = styled.div`
-  
+position: relative;
 `
 
 export const SupportContainerExercise = styled.div`
   max-width: 335px;
   margin-right: auto;
+ 
 
   @media (min-width: ${theme.breakpoint.md}) {
     max-width: 100%;
@@ -19,6 +20,12 @@ export const SupportContainerExercise = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   background-color: transparent;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  @media (min-width: ${theme.breakpoint.md}) {
+    top: -30%;
+  }
 `;
 
 export const Button = styled.button`

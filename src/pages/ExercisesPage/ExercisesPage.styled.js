@@ -24,13 +24,13 @@ export const Row = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100%; 
   @media (min-width: ${theme.breakpoint.xl}) {
     padding-top: 72px;
   }
 `;
 export const ExercisesSection = styled.section`
-  padding-top: 71px;
+  padding-top: 101px;
   @media (min-width: ${theme.breakpoint.md}) {
     padding-top: 116px;
   }
