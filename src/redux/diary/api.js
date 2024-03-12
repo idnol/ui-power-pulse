@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from '../../axios.js';
 
 export const getDiary = createAsyncThunk(
-    'diary/getDiaries', async (_, thunkAPI) =>{
+    'diary/getDiaries', async (date, thunkAPI) =>{
         try {
             const result = await axios('/diaries');
             return result.data
