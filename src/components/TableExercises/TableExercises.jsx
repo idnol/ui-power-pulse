@@ -22,7 +22,7 @@ import {
   Thead,
   TimeItem,
 } from './TableExercises.styled';
-import { removeExercise } from '../../redux/diary/api';
+import { getDiary, removeExercise } from '../../redux/diary/api';
 import { TextNoFound } from '../DayExercises/DayExercises.styled';
 import sprite from 'assets/sprite-2.svg'
 
@@ -68,7 +68,12 @@ export const TableExercises = () => {
                 <BurnedCaloriesItem>{exercise.calories}</BurnedCaloriesItem>
                 <TimeItem>{exercise.time}</TimeItem>
                 <DeleteItem>
-                  <DeleteBtn onClick={() => dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }))}>
+                  <DeleteBtn onClick={
+                    () => {
+                      dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }));
+                      dispatch(getDiary());
+                    }
+                  }>
                     <SvgBasket>
                       <use href={`${sprite}#trash`} />
                     </SvgBasket>

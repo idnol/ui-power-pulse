@@ -22,7 +22,7 @@ import {
 } from './AddProductForm.styled';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addProduct } from '../../../redux/diary/api.js';
+import { addProduct, getDiary } from '../../../redux/diary/api.js';
 import { toast, Toaster } from 'react-hot-toast';
 
 
@@ -53,6 +53,7 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
       };
 
       const resultAction = await dispatch(addProduct(data));
+      dispatch(getDiary());
 
       if (addProduct.fulfilled.match(resultAction)) {
         setIsInputValue('');
