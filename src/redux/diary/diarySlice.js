@@ -12,11 +12,16 @@ export const diarySlice = createSlice({
         exercises: [],
         isLoading: false,
         error: null,
-        isSuccess: false
+        isSuccess: false,
+        birthDate: getDate(),
+
         },
     reducers: {
         changeDate: (state, action) => {
             state.selectedDate = action.payload;
+        },
+        changebirthDate: (state, action) => {
+            state.birthDate = action.payload;
         },
     },
         extraReducers: (builder) => {
@@ -90,5 +95,5 @@ export const diarySlice = createSlice({
         },
 })
 
-export const { changeDate } = diarySlice.actions;
+export const { changeDate, changebirthDate } = diarySlice.actions;
 export const diaryReducer = diarySlice.reducer;

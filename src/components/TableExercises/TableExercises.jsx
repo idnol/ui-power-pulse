@@ -28,12 +28,13 @@ import sprite from 'assets/sprite-2.svg'
 
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
-  // console.log(exercisesItems);
   const dispatch = useDispatch();
   return (
     <>
       {exercisesItems?.length === 0 && (<TextNoFound>Not found exercises</TextNoFound>)}
-      {exercisesItems?.length > 0 && (<Header>
+      {exercisesItems?.length > 0 && (
+        <>
+      <Header>
         <HeaderBodyPart>Body Part</HeaderBodyPart>
         <HeaderEquipment>Equipment</HeaderEquipment>
         <HeaderName>Name</HeaderName>
@@ -41,7 +42,7 @@ export const TableExercises = () => {
         <HeaderBurnedCalories>Burned Calories</HeaderBurnedCalories>
         <HeaderTime>Time</HeaderTime>
         <p> </p>
-      </Header>)}
+      </Header>
       <ScrollContainer>
         <Table>
           <Thead>
@@ -76,7 +77,9 @@ export const TableExercises = () => {
             ))}
           </tbody>
         </Table>
-      </ScrollContainer>
+          </ScrollContainer> 
+          </>
+      )}
     </>
   );
 };
