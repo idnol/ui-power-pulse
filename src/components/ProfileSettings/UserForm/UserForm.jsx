@@ -23,7 +23,6 @@ import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
 import { DatePickerItem } from './DatePicker/DatePicker.jsx';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
-// import StyledDatepicker from '../../DatePicker/StyledDatePicker.jsx';
 export const UserForm = () => {
   const dispatch = useDispatch();
   const profileData = useSelector(selectProfile);
@@ -46,7 +45,6 @@ export const UserForm = () => {
 
     if (profileData.bodyData) {
       if (JSON.stringify(values) === JSON.stringify(initialValues)) {
-        // toast.error('Nothing to change');
         return;
       }
       try {

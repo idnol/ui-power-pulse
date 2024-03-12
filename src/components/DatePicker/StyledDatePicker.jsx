@@ -8,7 +8,6 @@ import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import {useDispatch, useSelector} from "react-redux";
 import {changeDate} from "../../redux/diary/diarySlice.js";
 import { selectorDate } from "../../redux/diary/diarySelectors.js";
-import { getDate } from '../parts/handleData.js';
 import { getDiary } from '../../redux/diary/api.js';
 
 const StyledDatepicker = forwardRef((props, ref) => {
@@ -19,35 +18,39 @@ const StyledDatepicker = forwardRef((props, ref) => {
 
   const datePickerRef = useRef(null);
 
-  useEffect(() => { setCurrentMonth(format(selectDate, 'MMMM yyyy')); }, [selectDate]);
+  useEffect(() => {
+    dispatch(getDiary(selectDate));
+    setCurrentMonth(format(selectDate, 'MMMM yyyy'));
+  }, [dispatch, selectDate]);
+
 
   const handlePreviousMonth = () => {
     const newDate = subMonths(selectDate, 1);
-    dispatch(changeDate(newDate.toISOString()))
-    dispatch(getDiary(getDate(newDate)))
+    dispatch(changeDate(newDate.toISOString()));
+    dispatch(getDiary(newDate));
   };
 
     const handlePreviousDay = () => {
-    const newDate = subDays(selectDate, 1);
-      dispatch(changeDate(newDate.toISOString()))
-      dispatch(getDiary(getDate(newDate)))
+      const newDate = subDays(selectDate, 1);
+      dispatch(changeDate(newDate.toISOString()));
+      dispatch(getDiary(newDate));
   };
 
   const handleNextMonth = () => {
     const newDate = addMonths(selectDate, 1);
-    dispatch(changeDate(newDate.toISOString()))
-    dispatch(getDiary(getDate(newDate)))
+    dispatch(changeDate(newDate.toISOString()));
+    dispatch(getDiary(newDate));
   };
 
     const handleNextDay = () => {
     const newDate = addDays(selectDate, 1);
       dispatch(changeDate(newDate.toISOString()))
-      dispatch(getDiary(getDate(newDate)))
+      dispatch(getDiary(newDate));
   };
 
   const handleDateChange = (newDate) => {
-    dispatch(changeDate(newDate.toISOString()))
-    dispatch(getDiary(getDate(newDate)))
+    dispatch(changeDate(newDate.toISOString()));
+    dispatch(getDiary(newDate));
   };
 
   const CustomInput = forwardRef(({ value, onClick, onKeyDown }, ref) => {
@@ -77,7 +80,7 @@ const StyledDatepicker = forwardRef((props, ref) => {
 
           if (!isNaN(newDate.getTime())) {
             dispatch(changeDate(newDate.toISOString()))
-            dispatch(getDiary(getDate(newDate)))
+            dispatch(getDiary(newDate))
             handleDateChange(newDate);
           }
         }
@@ -117,7 +120,7 @@ const StyledDatepicker = forwardRef((props, ref) => {
 
         if (!isNaN(newDate.getTime())) {
           dispatch(changeDate(newDate.toISOString()))
-          dispatch(getDiary(getDate(newDate)))
+          dispatch(getDiary(newDate))
           setInputValue(format(newDate, 'dd/MM/yyyy'));
           return; }
     

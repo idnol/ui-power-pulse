@@ -24,7 +24,6 @@ export const diarySlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getDiary.fulfilled, (state, action) => {
-                console.log(`action.payload`, action.payload);
                 state.items = action.payload;
                 state.isLoading = false;
                 state.error = null;

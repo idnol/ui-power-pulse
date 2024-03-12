@@ -5,11 +5,6 @@ import { theme } from '../../vars.js';
 export const Container = styled.div`
   position: relative;
   margin-right: 72px;
-  //height: 202px;
-
-  // @media (min-width: ${theme.breakpoint.md}) {
-  //   height: 354px;
-  //  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -17,7 +12,6 @@ export const TitleWrapper = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-  //margin-top: 127px;
   margin-bottom: 0px;
   font-weight: 500;
   font-size: 38px;
@@ -26,14 +20,9 @@ export const MainTitle = styled.h1`
   width: 335px;
 
   @media (min-width: ${theme.breakpoint.md}) {
-    //margin-top: 189px;
     font-size: 70px;
     line-height: 1.11;
     width: 598px;
-  }
-
-  @media (min-width: ${theme.breakpoint.xl}) {
-    //margin-top: 200px;
   }
 `;
 

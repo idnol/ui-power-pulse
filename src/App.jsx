@@ -6,9 +6,8 @@ import { refreshUser } from './redux/auth/api.js';
 import { RestrictedRoute } from './components/Routes/RestrictedRoute.jsx';
 import { PrivateRoute } from './components/Routes/PrivateRoute.jsx';
 import { Loader } from './components/parts/Loader/Loader.jsx';
-// import { selectUserBodyData } from './redux/auth/selectors.js';
 import {useAuth} from "./components/hooks/index.js";
-import {selectIsAuthenticated, selectIsLoggedin} from "./redux/auth/selectors.js";
+import {selectIsLoggedin} from "./redux/auth/selectors.js";
 import { Toaster } from 'react-hot-toast';
 
 
