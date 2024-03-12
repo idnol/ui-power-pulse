@@ -14,6 +14,10 @@ export const BoxDayDiary = styled.div`
   max-height: 824px;
   overflow: hidden;
 
+   @media (max-width: 375px) {
+    min-width: 300px;
+  }
+
   @media (min-width: ${theme.breakpoint.md}) {
     //margin: 32px auto 32px auto;
     max-width: 704px;
