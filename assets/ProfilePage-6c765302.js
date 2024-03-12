@@ -1,4 +1,4 @@
-import{s as a,t as i,j as e,a as f,u as w,d as b,e as $,b as y,f as _,g as p,h as z,i as U,x as L,k as A,I as R,m as C,o as E,p as q,q as O}from"./index-d4992bb9.js";import{c as T,a as D,e as g,f as N,u as M,d as P,F as S,b as B}from"./formik.esm-0ce617dd.js";import{i as V}from"./index-6f95fddb.js";import{T as H}from"./TitlePage-37f2e154.js";const J=a.div`
+import{s as a,t as i,j as e,a as f,u as w,d as b,b as y,e as _,f as p,g as z,h as U,x as L,i as A,I as R,k as C,m as E,o as q,p as O}from"./index-93474969.js";import{c as T,a as D,e as g,f as N,u as M,d as P,F as S,b as B}from"./formik.esm-2887f084.js";import{i as V}from"./index-b4ce35b9.js";import{T as H}from"./TitlePage-50ea4b2b.js";const J=a.div`
   display: flex;
   justify-content:space-between;
   flex-direction: column;
@@ -62,7 +62,7 @@ gap:8px;
     justify-content:flex-end;
     padding-right: 32px;
     margin-top:32px;
-`,ee=a.div`
+`,$=n=>n.profile.items,ee=a.div`
     display: flex;
     justify-content: center;
     align-items: center;
