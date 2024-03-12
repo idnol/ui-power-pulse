@@ -24,9 +24,11 @@ import {
 } from './TableExercises.styled';
 import { removeExercise } from '../../redux/diary/api';
 import { TextNoFound } from '../DayExercises/DayExercises.styled';
+import sprite from 'assets/sprite-2.svg'
 
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
+  // console.log(exercisesItems);
   const dispatch = useDispatch();
   return (
     <>
@@ -61,14 +63,12 @@ export const TableExercises = () => {
                 <EquipmentItem>{exercise.exercise.equipment}</EquipmentItem>
                 <NameItem>{exercise.exercise.name}</NameItem>
                 <TargetItem>{exercise.exercise.target}</TargetItem>
-                <BurnedCaloriesItem>
-                  {exercise.exercise.burnedCalories}
-                </BurnedCaloriesItem>
-                <TimeItem>{exercise.exercise.time}</TimeItem>
+                <BurnedCaloriesItem>{exercise.calories}</BurnedCaloriesItem>
+                <TimeItem>{exercise.time}</TimeItem>
                 <DeleteItem>
                   <DeleteBtn onClick={() => dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }))}>
                     <SvgBasket>
-                      <use href="/img/sprait.svg#trash" />
+                      <use href={`${sprite}#trash`} />
                     </SvgBasket>
                   </DeleteBtn>
                 </DeleteItem>

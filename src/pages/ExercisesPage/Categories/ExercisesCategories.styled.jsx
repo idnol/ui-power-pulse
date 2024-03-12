@@ -1,26 +1,54 @@
 import styled from 'styled-components';
+import { theme } from '../../../vars';
 
 export const ExercisesContainer = styled.div`
+  
+`
+
+export const SupportContainerExercise = styled.div`
   max-width: 335px;
-  margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${theme.breakpoint.md}) {
     max-width: 100%;
     display: flex;
     align-items: baseline;
   }
 `;
 
-export const ButtonContainer = styled.div``;
+export const ButtonContainer = styled.div`
+  display: flex;
+  background-color: transparent;
+`;
 
 export const Button = styled.button`
+  display: flex;
+  align-items: center;
   margin-bottom: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: ${theme.color.greyFifth};
+  @media (min-width: ${theme.breakpoint.md}) {
+    margin-bottom: 16px;
+  }
 `;
 
 export const ButtonIcon = styled.svg`
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+`;
+export const ButtonText = styled.span`
+  font-size: 14px;
+  line-height: 1.285;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  @media (min-width: ${theme.breakpoint.md}) {
+    font-size: 16px;
+    line-height: 1.33;
+  }
 `;
 
 export const ExercisesTitle = styled.h2`
@@ -30,11 +58,11 @@ export const ExercisesTitle = styled.h2`
   text-transform: capitalize;
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${theme.breakpoint.md}) {
     display: flex;
     justify-content: baseline;
     max-width: 200px;
-    line-height: 1, 375;
+    line-height: 1.375;
     font-size: 32px;
     margin-bottom: 64px;
   }
@@ -47,7 +75,7 @@ export const ExercisesUl = styled.ul`
   gap: 28px;
   margin-bottom: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${theme.breakpoint.md}) {
     gap: 32px;
     margin-left: auto;
     width: 279px;
@@ -57,10 +85,10 @@ export const ExercisesUl = styled.ul`
 `;
 
 export const ExercisesLi = styled.li`
-  line-height: 1, 285;
+  line-height: 1.285;
   font-size: 14px;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${theme.breakpoint.md}) {
     line-height: 1.5;
     height: 24px;
     font-size: 16px;
@@ -70,9 +98,9 @@ export const ExercisesLi = styled.li`
 export const StyledSpanCategories = styled.span`
   text-decoration: none;
   position: relative;
-  color: rgba(239, 237, 232, 0.4);
+  color: ${theme.color.greyFifth};
   &.active {
-    color: #efede8;
+    color: ${theme.color.white};
     &:after {
       content: '';
       position: absolute;
@@ -81,7 +109,7 @@ export const StyledSpanCategories = styled.span`
       transform: translateX(-50%);
       width: 100%;
       height: 4px;
-      background-color: #ef8964;
+      background-color: ${theme.color.orangeSecond};
       border-radius: 2px;
     }
   }

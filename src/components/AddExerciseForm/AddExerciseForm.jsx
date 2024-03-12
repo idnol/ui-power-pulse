@@ -15,10 +15,8 @@ import {
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import sprite from 'assets/sprite-2.svg';
 import { ExerciseDetailsItem } from '../ExerciseDetailsItem/ExerciseDetailsItem';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addExercise } from '../../redux/diary/api';
-
-import { selectError } from '../../redux/diary/diarySelectors';
 import { toast } from 'react-hot-toast';
 
 
@@ -39,6 +37,8 @@ export const AddExerciseForm = ({
   const remainingTimeRef = useRef(180);
   const [timerKey, setTimerKey] = useState(0);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
+  const [totalTime, setTotalTime] = useState(0);
+  const [totalBurnedCal, setTotalBurnedCal] = useState(0);
 
   const {
     name,
@@ -60,7 +60,7 @@ export const AddExerciseForm = ({
         const elapsedSeconds = duration - (remainingTimeRef.current - 1);
         const caloriesPerTraining = burnedCalories;
         setCurrentBurnedCal(
-          Math.round((elapsedSeconds * caloriesPerTraining) / duration)
+          Math.floor((elapsedSeconds * caloriesPerTraining) / duration)
         );
       }
     };
@@ -85,12 +85,20 @@ export const AddExerciseForm = ({
   };
 
   const togglePlayStop = () => {
+    if (!isPlaying && remainingTimeRef.current === 0) {
+      setTimerKey(prevKey => prevKey + 1);
+      remainingTimeRef.current = duration;
+      setCurrentBurnedCal(0);
+    }
     setIsPlaying(!isPlaying);
   };
 
   const onComplete = () => {
+    setTotalTime(prevTotalTime => prevTotalTime + duration - remainingTimeRef.current);
+    setTotalBurnedCal(prevTotalBurnedCal => prevTotalBurnedCal + currentBurnedCal);
     setTimerKey((prevKey) => prevKey + 1);
     setIsPlaying(false);
+    setCurrentBurnedCal(0);
     return { shouldRepeat: false };
   };
 
@@ -100,7 +108,7 @@ export const AddExerciseForm = ({
     try {
       const data = {
         exercise: id,
-        time: duration - remainingTimeRef.current,
+        time: (duration - remainingTimeRef.current) + totalTime,
       };
 
       const resultAction = await dispatch(addExercise(data));
@@ -168,7 +176,7 @@ export const AddExerciseForm = ({
               </StyledStartBtn>
               <StyledSecondaryText>
                 Burned calories:{' '}
-                <StyledCalories>{Math.round(currentBurnedCal)}</StyledCalories>
+                <StyledCalories>{Math.floor(currentBurnedCal + totalBurnedCal)}</StyledCalories>
               </StyledSecondaryText>
             </ContainerTimer>
             <StyledList>
@@ -183,8 +191,8 @@ export const AddExerciseForm = ({
       )}
       {isOpenSuccess && (
         <AddExerciseSuccess
-          calorise={Math.round(currentBurnedCal)}
-          time={Math.floor((duration - remainingTimeRef.current) / 60)}
+          calorise={Math.floor(currentBurnedCal + totalBurnedCal)}
+          time={Math.floor(((duration - remainingTimeRef.current) + totalTime) / 60)}
           isOpen={isOpenSuccess}
           onClose={() => comboModal()}
         />

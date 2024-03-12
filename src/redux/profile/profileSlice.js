@@ -16,10 +16,9 @@ const profileSlice = createSlice({
         state.items = { ...action.payload };
       }
     },
-    // changeBirthday: (state, action) => {
-    //   const BirthData = action.payload;
-    // },
-
+    setBirthdate: (state, action) => {
+      state.items.bodyData.birthday = action.payload;
+    },
     setLoading: (state, action) => {
       state.isLoading = action.payload;
     },
@@ -63,6 +62,6 @@ const profileSlice = createSlice({
       });
   }
 })
-export const { addUserInfo, setLoading } = profileSlice.actions;
+export const { addUserInfo, setLoading,setBirthdate } = profileSlice.actions;
 
 export const profileReducer = profileSlice.reducer;

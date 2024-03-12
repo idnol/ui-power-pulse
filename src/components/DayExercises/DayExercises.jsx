@@ -9,6 +9,8 @@ import {
   WrapperAdd,
 } from './DayExercises.styled';
 // import { selectExercises } from '../../redux/diary/diarySelectors';
+import sprite from 'assets/sprite-2.svg'
+
 
 export const DayExercises = () => {
   // const exercises = useSelector(selectExercises)
@@ -21,7 +23,7 @@ export const DayExercises = () => {
           <StyledAddNavLink to="/exercises">
           Add exercise
             <SvgArrow>
-              <use href="/img/sprait.svg#icon-Icon" />
+              <use href={`${sprite}#icon-Icon`} />
             </SvgArrow>
           </StyledAddNavLink>
         </WrapperAdd>

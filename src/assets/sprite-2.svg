@@ -258,7 +258,10 @@
         d="M16.235 0c2.122 0 4.157 0.843 5.657 2.343s2.343 3.535 2.343 5.657-0.843 4.157-2.343 5.657c-1.5 1.5-3.535 2.343-5.657 2.343s-4.157-0.843-5.657-2.343c-1.5-1.5-2.343-3.535-2.343-5.657s0.843-4.157 2.343-5.657c1.5-1.5 3.535-2.343 5.657-2.343zM16.235 32c0 0 16 0 16-4 0-4.8-7.8-10-16-10s-16 5.2-16 10c0 4 16 4 16 4z"></path>
     </symbol>
     <symbol id="arrow-left-ex" viewBox="0 0 32 32">
-      <path fill="none" stroke="#efede8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="M17 28 4 15m0 0L17 2M4 15h26" style="stroke:var(--color1, #efede8)"/>
+      <path fill="none" stroke="rgba(239, 237, 232, 0.4)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="M17 28 4 15m0 0L17 2M4 15h26"/>
+    </symbol>
+    <symbol id="icon-Icon" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.7733" d="M16 29.867l13.867-13.867M29.867 16l-13.867-13.867M29.867 16h-27.733"></path>
     </symbol>
   </defs>
 </svg>

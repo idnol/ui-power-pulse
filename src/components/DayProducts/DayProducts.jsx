@@ -10,6 +10,7 @@ import { TableProducts } from '../TableProducts/TableProducts.jsx';
 // import {  useSelector } from 'react-redux';
 // import { selectIsLoading, selectProducts } from '../../redux/diary/diarySelectors.js';
 // import { Loader } from '../parts/Loader/Loader.jsx';
+import sprite from 'assets/sprite-2.svg'
 
 export const DayProducts = () => {
   // const productsItems = useSelector(selectProducts);
@@ -23,7 +24,7 @@ export const DayProducts = () => {
           <StyledAddNavLink to="/products">
             Add product
             <SvgArrow>
-              <use href="/img/sprait.svg#icon-Icon" />
+              <use href={`${sprite}#icon-Icon`} />
             </SvgArrow>
           </StyledAddNavLink>
         </WrapperAdd>

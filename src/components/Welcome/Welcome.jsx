@@ -6,6 +6,7 @@ import {
   Container,
   WrapperNavLink, TitleWrapper,
 } from './Welcome.styled';
+import sprite from 'assets/sprite-2.svg'
 
 export const Welcome = () => {
   return (
@@ -13,7 +14,7 @@ export const Welcome = () => {
       <Container>
         <TitleWrapper>
           <SvgLine>
-            <use href="/img/sprait.svg#icon-Line" />
+            <use href={`${sprite}#icon-Line`} />
           </SvgLine>
           <MainTitle>Transforming your body shape with Power Pulse</MainTitle>
         </TitleWrapper>
