@@ -1,4 +1,4 @@
-import{s as t,t as e,L as n,d as r,Q as a,j as i}from"./index-5b3b7597.js";import{i as d,b as s,a as p,c as m}from"./side-view-2x-desk-dd305d4a.js";const h=t.div`
+import{s as t,t as e,L as n,d as r,Q as a,j as i}from"./index-848679e8.js";import{i as d,b as s,a as p,c as m}from"./side-view-2x-desk-dd305d4a.js";const h=t.div`
   position: fixed;
   top: 0;
   left: 0;

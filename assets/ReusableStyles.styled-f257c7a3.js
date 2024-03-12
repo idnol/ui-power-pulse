@@ -1,4 +1,4 @@
-import{s as t,t as e}from"./index-5b3b7597.js";const o=t.h2`
+import{s as t,t as e}from"./index-848679e8.js";const o=t.h2`
     line-height: 1.17;
     @media (min-width: ${e.breakpoint.md}) {
         font-size: 32px;
