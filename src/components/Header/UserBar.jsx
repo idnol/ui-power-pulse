@@ -46,8 +46,7 @@ export const UserBar = () => {
     return null;
   }
 
-  const isLoggedIn = useSelector(selectIsAuthenticated);
-  const { bodyData } = useSelector(selectProfile);
+
 
   return (
     <>
