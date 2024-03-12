@@ -4,10 +4,12 @@ import { getDiary } from '../../../redux/diary/api';
 import { current } from '../../../redux/profile/api';
 
 import sprite from 'assets/sprite-2.svg';
+import {selectProfile} from "../../../redux/profile/selectors.js";
 
 export const DayDashboardData = () => {
   const responseUser = useSelector((state) => state.auth.user) || {};
   const responseDiary = useSelector((state) => state.diary.items) || {};
+  const responseProfile = useSelector(selectProfile)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export const DayDashboardData = () => {
     {
       icon: `${sprite}#calorie-intake`,
       title: 'Daily calorie intake',
-      count: dailyCalories,
+      count: Math.floor(responseProfile.dailyCalorie),
       countType: 'cal',
       background: 'accent',
       textColor: 'whiteTextColor',
@@ -39,7 +41,7 @@ export const DayDashboardData = () => {
     {
       icon: `${sprite}#physical-activity`,
       title: 'Daily physical activity',
-      count: physicalGoal,
+      count: responseProfile.dailyExerciseTime,
       countType: 'time',
       background: 'accent',
       textColor: 'whiteTextColor',
