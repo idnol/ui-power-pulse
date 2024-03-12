@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = '//localhost:3333/api';
+axios.defaults.baseURL = 'https://be-power-pulse.onrender.com/api';
 
 export default axios;
