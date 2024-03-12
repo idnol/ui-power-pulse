@@ -3,13 +3,14 @@ import {
   Icon,
   Name,
 } from './ListItemName.styled';
+import sprite from 'assets/sprite-2.svg';
 
-export const ListItemName = ({titleName}) => {
+export const ListItemName = ({ titleName }) => {
   return (
     <>
       <NameContainer>
         <Icon>
-          <use href="../../../public/img/sprait.svg#run-man-circle"></use>
+          <use href={`${sprite}#run-man-circle`}></use>
         </Icon>
         <Name>{titleName}</Name>
       </NameContainer>
