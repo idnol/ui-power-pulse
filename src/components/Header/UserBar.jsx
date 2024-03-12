@@ -12,23 +12,21 @@ import sprite from 'assets/sprite-2.svg';
 import { theme } from '../../vars.js';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
 import { useSelector } from 'react-redux';
-import { selectIsAuthenticated } from '../../redux/auth/selectors.js';
-import { selectProfile } from '../../redux/profile/selectors.js';
+import { selectIsAuthenticated, selectUser } from '../../redux/auth/selectors.js';
 import { closeMenu } from './closeMenu.js';
 import { useEffect } from 'react';
 
 export const UserBar = () => {
   const openSidebar = () => {
-    const menu = document.getElementById('menu-wrapper');
     const backdrop = document.getElementById('backdrop');
     !backdrop.style.left || backdrop.style.left === '-100%'
       ? (backdrop.style.left = '0')
       : (backdrop.style.left = '-100%');
-    menu.style.visibility = 'visible';
-    menu.style.opacity = 1;
-    menu.style.display = 'block';
   };
 
+  const isLoggedIn = useSelector(selectIsAuthenticated);
+  const { bodyData } = useSelector(selectUser);
+  console.log(bodyData?.avatar)
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.keyCode === 27) {
@@ -41,13 +39,11 @@ export const UserBar = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, [openSidebar, closeMenu]);
+  }, []);
   if (!openSidebar) {
     return null;
   }
 
-  const isLoggedIn = useSelector(selectIsAuthenticated);
-  const { bodyData } = useSelector(selectProfile);
 
   return (
     <>
