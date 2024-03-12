@@ -87,6 +87,7 @@ export const ExercisesUl = styled.ul`
 export const ExercisesLi = styled.li`
   line-height: 1.285;
   font-size: 14px;
+  cursor: pointer;
 
   @media (min-width: ${theme.breakpoint.md}) {
     line-height: 1.5;
