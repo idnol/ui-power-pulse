@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
   }
 `;
 export const ExercisesSection = styled.section`
-  padding-top: 101px;
+  padding-top: 71px;
   @media (min-width: ${theme.breakpoint.md}) {
     padding-top: 156px;
   }
