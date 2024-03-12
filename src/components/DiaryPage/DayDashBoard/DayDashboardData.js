@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getDiary } from '../../../redux/diary/api';
 import { current } from '../../../redux/profile/api';
 
@@ -10,12 +10,19 @@ export const DayDashboardData = () => {
   const responseDiary = useSelector((state) => state.diary.items) || 0;
   const dispatch = useDispatch();
 
+  // const [diaryData, setDiaryData] = useState();
+  // console.log(diaryData);
+
   useEffect(() => {
     dispatch(current());
     dispatch(getDiary());
+    // setDiaryData(dispatch(getDiary()));
   }, [dispatch]);
 
-  const beData = [{ userData: responseUser }, { diaryData: responseDiary }];
+  const beData = [
+    { userData: responseUser },
+    { diaryData: responseDiary }
+  ];
 
   const sportTime = beData[1]?.diaryData?.statistic?.sportTime ?? 0;
 

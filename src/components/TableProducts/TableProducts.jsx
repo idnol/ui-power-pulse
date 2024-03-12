@@ -21,7 +21,7 @@ import {
 } from './TableProducts.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from '../../redux/diary/diarySelectors.js';
-import { removeProduct } from '../../redux/diary/api.js';
+import { getDiary, removeProduct } from '../../redux/diary/api.js';
 import { TextNoFound } from '../DayProducts/DayProducts.styled.jsx';
 import sprite from 'assets/sprite-2.svg'
 
@@ -83,7 +83,11 @@ export const TableProducts = () => {
                         </RecommendItem>
                       )}
                       <DeleteItem>
-                        <DeleteBtn onClick={() => dispatch(removeProduct({ id: product._id, calories: product.calories }))}>
+                        <DeleteBtn onClick={() => {
+                            dispatch(removeProduct({ id: product._id, calories: product.calories }))
+                            dispatch(getDiary());
+                          }
+                        }>
                           <SvgBasket>
                             <use href="/img/sprait.svg#trash" />
                           </SvgBasket>
