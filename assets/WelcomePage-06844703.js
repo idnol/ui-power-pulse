@@ -1,4 +1,4 @@
-import{s as e,t,N as n,j as i}from"./index-afe6ff0f.js";import{W as o,a as r,S as s}from"./WelcomePage.styled-b88ba48d.js";const a=e.div`
+import{s as e,t,N as n,j as i}from"./index-3c3fa908.js";import{W as o,a as r,S as s}from"./WelcomePage.styled-9e7c20f5.js";const a=e.div`
   position: relative;
   margin-right: 72px;
   //height: 202px;
