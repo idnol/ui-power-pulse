@@ -32,7 +32,7 @@ export const ScrollContainer = styled.div`
        width: 6px;
        border-radius: 12px;
      }
-
+    //
     &::-webkit-scrollbar-track {
       margin-block: 0.3em;
     }
@@ -139,6 +139,10 @@ export const RowItem = styled.tr`
 
   &:first-child {
     margin-top: 22px;
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
@@ -276,8 +280,7 @@ export const CaloriesItem = styled.td`
   }
 
   @media (max-width: 375px) {
-    margin-right: 8px;
-    max-width: 60px;
+    width: 27%;
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
@@ -322,8 +325,7 @@ export const WeightItem = styled.td`
   }
 
   @media (max-width: 375px) {
-    margin-right: 8px;
-    max-width: 60px;
+    width: 27%;
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
@@ -347,10 +349,6 @@ export const SvgCircle = styled.svg`
   width: 14px;
   height: 14px;
   margin-right: 8px;
-
-  @media (max-width: 375px) {
-    display: none;
-  }
 
   @media (min-width: ${theme.breakpoint.md}) {
     display: flex;
@@ -385,7 +383,7 @@ export const RecommendItem = styled.td`
   }
 
   @media (max-width: 375px) {
-    max-width: 60px;
+    width: 26%;
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
@@ -430,9 +428,5 @@ export const SvgBasket = styled.svg`
   &:hover {
     stroke: ${theme.color.white};
     transition-duration: 300ms;
-  }
-
-  @media (max-width: 375px) {
-    margin-left: 4px;
   }
 `;
