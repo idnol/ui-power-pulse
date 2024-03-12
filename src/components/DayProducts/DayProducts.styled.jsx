@@ -7,7 +7,6 @@ export const BoxDayDiary = styled.div`
   border-radius: 12px;
   padding: 16px 8px 16px 16px;
   background: ${theme.color.greySeven};
-  //margin: 40px auto 40px auto;
   max-width: 335px;
   width: 335px;
   min-height: 335px;
@@ -19,7 +18,6 @@ export const BoxDayDiary = styled.div`
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
-    //margin: 32px auto 32px auto;
     max-width: 704px;
     min-height: 234px;
     max-height: 234px;

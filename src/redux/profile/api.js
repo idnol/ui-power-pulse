@@ -8,8 +8,6 @@ export const current = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios('/users/current');
-      // setAuthHeader(res.data.token);
-
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -23,7 +21,6 @@ export const updateProfile = createAsyncThunk(
 
     try {
       const response = await axios.patch('/users/profile', requestData);
-      // setAuthHeader(response.data.token);
       if (response.status !== 200) {
         toast.error('Error');
       } else {

@@ -1,5 +1,5 @@
 const getDate = (data) => {
-    const today = data ? new Date(data) : new Date(); // Convert data to Date object if provided, or use the current date
+    const today = data ? new Date(data) : new Date();
 
     let day = today.getDate();
     let month = today.getMonth() + 1;

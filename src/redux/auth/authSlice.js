@@ -24,7 +24,6 @@ const authSlice = createSlice({
         state.user = action.payload.user;
         state.token = action.payload.token;
         state.isLoggedin = true;
-        // window.location.href = '/ui-power-pulse/profile'
       })
       .addCase(register.rejected, (state, action) => {
         state.isLoading = false;

@@ -17,9 +17,6 @@ export const HeaderContainer = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  // display: flex;
-  // align-items: center;
-  // color: #ffffff;
   cursor: pointer;
   width: 152px;
   height: 17px;

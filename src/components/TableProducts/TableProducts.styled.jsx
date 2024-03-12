@@ -32,7 +32,7 @@ export const ScrollContainer = styled.div`
        width: 6px;
        border-radius: 12px;
      }
-    //
+
     &::-webkit-scrollbar-track {
       margin-block: 0.3em;
     }

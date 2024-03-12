@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../redux/products/api';
 import { ProductsFilter } from '../../components/ProductsFilter/ProductsFilter';
-// import { Filter2 } from '../../components/ProductsFilter/Filter2.jsx';
 import { ProductsList } from '../../components/ProductsList/ProductsList';
 import {FilterWrapper} from '../../components/ProductsFilter/ProductsFilter.styled';
 import {
