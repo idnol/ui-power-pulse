@@ -1,4 +1,4 @@
-import{s as n,t as e,u as f,b as w,c as $,d as k,j as t,a as l}from"./index-f7800596.js";import{i as j,a as v,b as S,c as y}from"./side-view-2x-desk-dd305d4a.js";const E=n.div`
+import{s as n,t as e,u as f,b as w,c as $,d as k,j as t,a as l}from"./index-b81f81fd.js";import{i as j,a as v,b as S,c as y}from"./side-view-2x-desk-dd305d4a.js";const E=n.div`
 display: flex;
 flex-direction: column;
 gap: 20px;
@@ -6,15 +6,18 @@ width: 234px;
 height: 212px;
 margin-left: auto;
 transition-duration: 300ms;
+padding-top: 40px;
+
 
   @media screen and (min-width: ${e.breakpoint.md}) {
-  width: 405px;
-  height: 262px;  }
+    width: 405px;
+    height: 262px;
+  };
 
   @media screen and (min-width: ${e.breakpoint.xl}) {
   width: 638px;
   height: 245px;
-} `,z=n.div`
+  }`,z=n.div`
 display: flex;
 align-items: center;
 gap: 8px;
