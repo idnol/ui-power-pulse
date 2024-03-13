@@ -83,7 +83,7 @@ export const TableProducts = () => {
                       <DeleteItem>
                         <DeleteBtn onClick={() => {
                             dispatch(removeProduct({ id: product._id, calories: product.calories }))
-                            dispatch(getDiary());
+                            .then(() => dispatch(getDiary()));
                           }
                         }>
                           <SvgBasket>

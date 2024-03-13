@@ -41,7 +41,7 @@ export const TableExercises = () => {
         <HeaderName>Name</HeaderName>
         <HeaderTarget>Target</HeaderTarget>
         <HeaderBurnedCalories>Burned Calories</HeaderBurnedCalories>
-        <HeaderTime>Time</HeaderTime>
+        <HeaderTime>Time (sec)</HeaderTime>
         <p> </p>
       </Header>
       <ScrollContainer>
@@ -70,8 +70,8 @@ export const TableExercises = () => {
                 <DeleteItem>
                   <DeleteBtn onClick={
                     () => {
-                      dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }));
-                      dispatch(getDiary());
+                      dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }))
+                        .then(() => dispatch(getDiary()));
                     }
                   }>
                     <SvgBasket>
