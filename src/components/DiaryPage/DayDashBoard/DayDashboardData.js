@@ -7,7 +7,6 @@ import sprite from 'assets/sprite-2.svg';
 import { selectProfile } from '../../../redux/profile/selectors.js';
 
 export const DayDashboardData = () => {
-  const responseUser = useSelector((state) => state.auth.user) || {};
   const responseDiary = useSelector((state) => state.diary.items) || {};
   const responseProfile = useSelector(selectProfile);
   const dispatch = useDispatch();
@@ -18,14 +17,14 @@ export const DayDashboardData = () => {
   }, [dispatch]);
 
   const consumedCalories = responseDiary?.statistic?.calories ?? 0;
-  const dailyCalories = responseUser?.dailyCalorie ?? 0;
+  const dailyCalories = responseProfile?.dailyCalorie ?? 0;
 
   const remainingCalories = dailyCalories - consumedCalories;
   const burnedCalories = responseDiary?.statistic?.burnedCalories ?? 0;
 
   const sportTime = responseDiary?.statistic?.sportTime ?? 0;
   const physicalActivity = sportTime / 60;
-  const physicalGoal = responseUser?.dailyExerciseTime ?? 0;
+  const physicalGoal = responseProfile?.dailyExerciseTime ?? 0;
   const remaningTime = physicalActivity - physicalGoal;
 
   const dashboardData = [
