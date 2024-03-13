@@ -56,7 +56,7 @@ export default function ExercisesCategories({ onClick, onRenderBackground }) {
       <ExercisesTitle>
         {bodyPartFilter === '' ? 'Exercises' : bodyPartFilter}
       </ExercisesTitle>
-      <ExercisesUl>
+      <ExercisesUl id="uniqueId">
         <ExercisesLi>
           <StyledSpanCategories
             className={activeCategory === 'Body parts' ? 'active' : ''}
