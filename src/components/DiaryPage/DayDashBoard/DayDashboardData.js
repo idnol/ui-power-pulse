@@ -4,12 +4,12 @@ import { getDiary } from '../../../redux/diary/api';
 import { current } from '../../../redux/profile/api';
 
 import sprite from 'assets/sprite-2.svg';
-import {selectProfile} from "../../../redux/profile/selectors.js";
+import { selectProfile } from '../../../redux/profile/selectors.js';
 
 export const DayDashboardData = () => {
   const responseUser = useSelector((state) => state.auth.user) || {};
   const responseDiary = useSelector((state) => state.diary.items) || {};
-  const responseProfile = useSelector(selectProfile)
+  const responseProfile = useSelector(selectProfile);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export const DayDashboardData = () => {
   const dailyCalories = responseUser?.dailyCalorie ?? 0;
 
   const remainingCalories = dailyCalories - consumedCalories;
-  const burnedCalories = responseDiary?.statistic?.burnedCalories;
+  const burnedCalories = responseDiary?.statistic?.burnedCalories ?? 0;
 
   const sportTime = responseDiary?.statistic?.sportTime ?? 0;
   const physicalActivity = sportTime / 60;
