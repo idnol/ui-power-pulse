@@ -5,6 +5,9 @@ import { theme } from '../../vars.js';
 export const Container = styled.div`
   position: relative;
   margin-right: 72px;
+  @media (min-width: ${theme.breakpoint.xl}) {
+   padding-bottom: 132px;
+  }
 `;
 
 export const TitleWrapper = styled.div`

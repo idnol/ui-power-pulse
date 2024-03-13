@@ -19,7 +19,8 @@ export default function ProductsPage() {
   const products = useSelector(selectProducts);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-  const bloodGroup = useSelector(state=> state.profile.items.bodyData?.blood) ?? "1";
+  const bloodData = useSelector(state => state.auth.user.bodyData?.blood);
+  const bloodGroup = useSelector(state=> state.profile.items.bodyData?.blood) ?? bloodData ?? "1";
   const dispatch = useDispatch();
 
   const [searchParams] = useSearchParams();

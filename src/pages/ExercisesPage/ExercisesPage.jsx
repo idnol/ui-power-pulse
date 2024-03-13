@@ -2,10 +2,14 @@ import { useState } from 'react';
 import useFetchCategories from './ExercisesHelper/useFetchCategories';
 import ExercisesCategories from './Categories/ExercisesCategories';
 import ExercisesSubcategoriesList from './SubCategories/ExercisesSubcategoriesList';
-import { Wrapper, Row, ExercisesSection, HeaderInner } from './ExercisesPage.styled.js';
+import {
+  Wrapper,
+  Row,
+  ExercisesSection,
+  HeaderInner,
+} from './ExercisesPage.styled.js';
 import { useSelector } from 'react-redux';
 import { Exercises } from '../../components/ExercisesPageList/ExercisesPageList.jsx';
-
 
 export default function ExercisesPage() {
   const [isBackground, setIsBackground] = useState(false);
@@ -13,6 +17,7 @@ export default function ExercisesPage() {
   const categories = useFetchCategories(selectedCategory);
 
   const bodyPartFilter = useSelector((state) => state.filter.exercisesFilter);
+  const category = useSelector((state) => state.filter.category);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -28,18 +33,25 @@ export default function ExercisesPage() {
 
   return (
     <ExercisesSection $isbackground={isBackground}>
-      <HeaderInner/>
+      <HeaderInner />
       <div className="container">
         <Row>
           <Wrapper>
-            <ExercisesCategories onClick={handleCategoryClick} onRenderBackground={handleUnRenderBackground}/>
+            <ExercisesCategories
+              onClick={handleCategoryClick}
+              onRenderBackground={handleUnRenderBackground}
+            />
             {bodyPartFilter === '' ? (
               <ExercisesSubcategoriesList
                 categories={categories}
                 selectedCategory={selectedCategory}
               />
             ) : (
-              <Exercises bodyPartFilter={bodyPartFilter} onRenderBackground={handleRenderBackground}/>
+              <Exercises
+                bodyPartFilter={bodyPartFilter}
+                category={category}
+                onRenderBackground={handleRenderBackground}
+              />
             )}
           </Wrapper>
         </Row>
