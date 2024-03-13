@@ -1,4 +1,4 @@
-import{b as c,o as ee,s as d,t as i,u as P,d as J,j as e,a as E,D as te,E as re,F as ie,x as T,G as q,f as Y,H as ne}from"./index-ce615620.js";import{M as oe,a as se,W as ae,S as le,T as de,C as ce,b as pe,V as he,c as xe,d as ue,B as me,e as ge,f as fe,g as be,N as we,I as ke,h as je,i as ve,j as $,k as ye,l as Se,m as Ce,n as Ae}from"./AddExerciseSuccess.styled-ec6f2ad8.js";import{a as Z}from"./ReusableStyles.styled-efb5ef51.js";function Be(t){const[r,n]=c.useState([]);return c.useEffect(()=>{(async()=>{try{const a=await ee.get(`/exercises/filters?filter=${t}`);n(a.data)}catch(a){console.error("Error fetching categories:",a)}})()},[t]),r}const Ee=d.div`
+import{b as c,o as ee,s as d,t as i,u as P,d as J,j as e,a as E,D as te,E as re,F as ie,x as T,G as q,f as Y,H as ne}from"./index-71a48f6f.js";import{M as oe,a as se,W as ae,S as le,T as de,C as ce,b as pe,V as he,c as xe,d as ue,B as me,e as ge,f as fe,g as be,N as we,I as ke,h as je,i as ve,j as $,k as ye,l as Se,m as Ce,n as Ae}from"./AddExerciseSuccess.styled-7b9096ce.js";import{a as Z}from"./ReusableStyles.styled-8de74a5e.js";function Be(t){const[r,n]=c.useState([]);return c.useEffect(()=>{(async()=>{try{const a=await ee.get(`/exercises/filters?filter=${t}`);n(a.data)}catch(a){console.error("Error fetching categories:",a)}})()},[t]),r}const Ee=d.div`
 position: relative;
 `,Fe=d.div`
   max-width: 335px;
@@ -98,7 +98,7 @@ position: relative;
       border-radius: 2px;
     }
   }
-`;function Me({onClick:t,onRenderBackground:r}){const n=P();c.useEffect(()=>{r()});const[o,a]=c.useState("Body parts"),l=J(h=>h.filter.exercisesFilter);c.useEffect(()=>{t(o)},[t,o]);const s=h=>{t(h),a(h)},x=()=>{n(te())};return e.jsxs(Ee,{children:[e.jsx(Le,{children:l!==""&&e.jsxs(Te,{onClick:x,children:[e.jsx(Ue,{children:e.jsx("use",{href:`${E}#arrow-left-ex`,style:{fill:"rgba(239, 237, 232, 0.4)"}})}),e.jsx(Re,{children:"back"})]})}),e.jsxs(Fe,{children:[e.jsx(Pe,{children:l===""?"Exercises":l}),e.jsxs($e,{children:[e.jsx(M,{children:e.jsx(N,{className:o==="Body parts"?"active":"","data-target":"Body parts",onClick:()=>{s("Body parts"),x()},children:"Body parts"})}),e.jsx(M,{children:e.jsx(N,{className:o==="Muscles"?"active":"","data-target":"Muscles",onClick:()=>{s("Muscles"),x()},children:"Muscles"})}),e.jsx(M,{children:e.jsx(N,{className:o==="Equipment"?"active":"","data-target":"Equipment",onClick:()=>{s("Equipment"),x()},children:"Equipment"})})]})]})]})}d.div`
+`;function Me({onClick:t,onRenderBackground:r}){const n=P();c.useEffect(()=>{r()});const[o,a]=c.useState("Body parts"),l=J(h=>h.filter.exercisesFilter);c.useEffect(()=>{t(o)},[t,o]);const s=h=>{t(h),a(h)},x=()=>{n(te())};return e.jsxs(Ee,{children:[e.jsx(Le,{children:l!==""&&e.jsxs(Te,{onClick:x,children:[e.jsx(Ue,{children:e.jsx("use",{href:`${E}#arrow-left-ex`,style:{fill:"rgba(239, 237, 232, 0.4)"}})}),e.jsx(Re,{children:"back"})]})}),e.jsxs(Fe,{children:[e.jsx(Pe,{children:l===""?"Exercises":l}),e.jsxs($e,{id:"uniqueId",children:[e.jsx(M,{children:e.jsx(N,{className:o==="Body parts"?"active":"","data-target":"Body parts",onClick:()=>{s("Body parts"),x()},children:"Body parts"})}),e.jsx(M,{children:e.jsx(N,{className:o==="Muscles"?"active":"","data-target":"Muscles",onClick:()=>{s("Muscles"),x()},children:"Muscles"})}),e.jsx(M,{children:e.jsx(N,{className:o==="Equipment"?"active":"","data-target":"Equipment",onClick:()=>{s("Equipment"),x()},children:"Equipment"})})]})]})]})}d.div`
 `;const Ne=d.ul`
     display: flex;
     flex-wrap: wrap;
@@ -185,12 +185,10 @@ position: relative;
     text-transform: lowercase;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 150px;
+    max-width: 176px;
     &:first-letter {
         text-transform: uppercase;
     }
-
-
 `,De=d.h4`
     line-height: 1.5;
     font-size: 12px;
