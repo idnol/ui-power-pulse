@@ -99,6 +99,7 @@ export const User = styled.div`
 export const UserAvatar = styled.img`
   width: 37px;
   height: 37px;
+  object-fit: cover;
 `;
 
 export const UserIcon = styled.svg`
@@ -136,7 +137,7 @@ export const Backdrop = styled.div`
   z-index: 5;
   width: 200px;
   height: 100vh;
-
+  transition: left 0.5s ease-in-out;
   background-color: ${theme.color.orange};
 
   @media (min-width: ${theme.breakpoint.md}) {
@@ -199,13 +200,21 @@ export const MenuList = styled.ul`
   gap: 16px;
 `;
 
+export const MenuItem = styled.li`
+  width: 111px;
+  height: 38px;
+
+  @media (min-width: ${theme.breakpoint.md}) {
+    width: 119px;
+    height: 44px;
+  }
+`;
+
 export const MenuUserLink = styled(NavLink)`
   display: block;
   border: ${theme.border.grey2};
   border-radius: 12px;
-  padding: 10px 27px;
-  width: 111px;
-  height: 38px;
+  padding: 10px 20px;
   color: ${theme.color.white};
   transition: 0.5s;
 

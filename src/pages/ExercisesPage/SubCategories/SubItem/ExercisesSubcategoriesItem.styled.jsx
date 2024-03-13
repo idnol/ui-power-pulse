@@ -108,7 +108,6 @@ export const SubcategoriesH3 = styled.h3`
     }
 `;
 
-
 export const SubcategoriesH4 = styled.h4`
     line-height: 1.5;
     font-size: 12px;

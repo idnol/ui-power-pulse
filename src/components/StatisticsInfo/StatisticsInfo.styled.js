@@ -9,15 +9,18 @@ width: 234px;
 height: 212px;
 margin-left: auto;
 transition-duration: 300ms;
+padding-top: 40px;
+
 
   @media screen and (min-width: ${theme.breakpoint.md}) {
-  width: 405px;
-  height: 262px;  }
+    width: 405px;
+    height: 262px;
+  };
 
   @media screen and (min-width: ${theme.breakpoint.xl}) {
   width: 638px;
   height: 245px;
-} `;
+  }`;
 
 /* ---   FirstElement styled   --- */
 
