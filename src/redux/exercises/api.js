@@ -4,10 +4,8 @@ import axios from '../../axios.js';
 export const exercisesGetAll = createAsyncThunk(
   'exercises',
   async ({ type, name }, thunkAPI) => {
-    console.log({ type, name });
     try {
       const result = await axios(`/exercises?${type}=${name}`);
-      // const result = await axios(`/exercises`);
       return result.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
