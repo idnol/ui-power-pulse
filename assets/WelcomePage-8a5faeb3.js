@@ -1,4 +1,4 @@
-import{s as e,t,N as n,j as i,a as o}from"./index-59d1c4fa.js";import{W as r,a as s,S as a}from"./WelcomePage.styled-55b47722.js";import"./side-view-2x-desk-dd305d4a.js";const p=e.div`
+import{s as e,t,N as n,j as i,a as o}from"./index-7fed7879.js";import{W as r,a as s,S as a}from"./WelcomePage.styled-f16b3b5e.js";import"./side-view-2x-desk-dd305d4a.js";const p=e.div`
   position: relative;
   margin-right: 72px;
 `,h=e.div`
