@@ -42,7 +42,6 @@ export const Wrapper = styled.div`
     }
     @media (min-width: ${theme.breakpoint.xl}) {
       padding-top: 200px;
-      /* padding-bottom: 132px; */
       display: flex;
       align-items: end;
       height: 100%;
