@@ -1,12 +1,15 @@
-import{s as n,t as e,u as f,b as w,c as $,d as k,j as t,a as l}from"./index-047d49db.js";import{i as j,a as v,b as S,c as y}from"./side-view-2x-desk-dd305d4a.js";const E=n.div`
-display: flex;
-flex-direction: column;
-gap: 20px;
-width: 234px;
-height: 212px;
-margin-left: auto;
-transition-duration: 300ms;
-padding-top: 40px;
+import{s as n,t as e,u as f,b as w,c as $,d as k,j as t,a as l}from"./index-a5b5d58b.js";import{i as j,a as v,b as S,c as y}from"./side-view-2x-desk-dd305d4a.js";const E=n.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 234px;
+  height: 212px;
+  margin-left: auto;
+  transition-duration: 300ms;
+  padding-top: 40px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
 
 
   @media screen and (min-width: ${e.breakpoint.md}) {
@@ -162,13 +165,14 @@ color: rgba(239, 237, 232, 0.65);
   @media screen and (min-width: ${e.breakpoint.md}) {
   font-size: 16px;
   line-height: 1.5;
-}  `,N=i=>i.statistics.items,p=i=>{if(i<1e4)return i;if(i>=1e4&&i<1e6)return`${(i/1e3).toFixed()}K`;if(i>=1e6&&i<1e9)return`${(i/1e6).toFixed()}M`;if(i>=1e9&&i<1e12)return`${(i/1e9).toFixed()}B`},c=(i,d)=>{var r;return((r=d.find(h=>h[i]))==null?void 0:r[i])??null},b=(i,d)=>Math.floor(Math.random()*(d-i+1))+i,Q=()=>{const i=f();w.useEffect(()=>{i($())},[i]);const d=k(N),a=p(c("userQuantity",d)),r=p(c("exercisesQuantity",d)),h=p(c("burnedCaloriesUsersTotal",d)),g=p(c("sportTimeUsersTotal",d)),o=p(c("exercisesUsersTotal",d)),s=b(1,3),x=b(4,5);return t.jsxs(E,{children:[(r||a||o)&&t.jsxs(z,{children:[t.jsxs(W,{children:[r&&s===1&&t.jsx(F,{children:t.jsxs(T,{children:[" ",t.jsx("use",{href:`${l}#triangle`})," "]})}),a&&s===2&&t.jsx(m,{children:t.jsxs(u,{children:[" ",t.jsx("use",{href:`${l}#icon-user`})," "]})}),o&&s===3&&t.jsx(m,{children:t.jsxs(u,{children:[" ",t.jsx("use",{href:`${l}#dumbbell-stat`})," "]})})]}),t.jsxs("div",{children:[t.jsxs(B,{children:[s===1&&r&&r,s===2&&a&&a,s===3&&o&&o]}),t.jsxs(U,{children:[s===1&&r&&"Video tutorial",s===2&&a&&"Users",s===3&&o&&"Exercises"]})]})]}),(g||o)&&t.jsxs(V,{children:[t.jsxs(A,{children:[" ",t.jsx("use",{href:`${l}#run-man-circle`})," "]}),t.jsxs(D,{children:[t.jsxs(I,{children:[x===4&&h,x===5&&g]}),t.jsxs(M,{children:[x===4&&h&&"cal",x===5&&g&&"min"]})]})]})]})},R=n.section`
+}  `,N=i=>i.statistics.items,p=i=>{if(i<1e4)return i;if(i>=1e4&&i<1e6)return`${(i/1e3).toFixed()}K`;if(i>=1e6&&i<1e9)return`${(i/1e6).toFixed()}M`;if(i>=1e9&&i<1e12)return`${(i/1e9).toFixed()}B`},h=(i,s)=>{var r;return((r=s.find(c=>c[i]))==null?void 0:r[i])??null},b=(i,s)=>Math.floor(Math.random()*(s-i+1))+i,Q=()=>{const i=f();w.useEffect(()=>{i($())},[i]);const s=k(N),a=p(h("userQuantity",s)),r=p(h("exercisesQuantity",s)),c=p(h("burnedCaloriesUsersTotal",s)),g=p(h("sportTimeUsersTotal",s)),o=p(h("exercisesUsersTotal",s)),d=b(1,3),x=b(4,5);return t.jsxs(E,{children:[(r||a||o)&&t.jsxs(z,{children:[t.jsxs(W,{children:[r&&d===1&&t.jsx(F,{children:t.jsxs(T,{children:[" ",t.jsx("use",{href:`${l}#triangle`})," "]})}),a&&d===2&&t.jsx(m,{children:t.jsxs(u,{children:[" ",t.jsx("use",{href:`${l}#icon-user`})," "]})}),o&&d===3&&t.jsx(m,{children:t.jsxs(u,{children:[" ",t.jsx("use",{href:`${l}#dumbbell-stat`})," "]})})]}),t.jsxs("div",{children:[t.jsxs(B,{children:[d===1&&r&&r,d===2&&a&&a,d===3&&o&&o]}),t.jsxs(U,{children:[d===1&&r&&"Video tutorial",d===2&&a&&"Users",d===3&&o&&"Exercises"]})]})]}),(g||o)&&t.jsxs(V,{children:[t.jsxs(A,{children:[" ",t.jsx("use",{href:`${l}#run-man-circle`})," "]}),t.jsxs(D,{children:[t.jsxs(I,{children:[x===4&&c,x===5&&g]}),t.jsxs(M,{children:[x===4&&c&&"cal",x===5&&g&&"min"]})]})]})]})},R=n.section`
   height: 100vh;
   width: 100%;
   background-image: url(${j});
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
+ 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -189,6 +193,8 @@ color: rgba(239, 237, 232, 0.65);
   }
 `,K=n.div`
     padding-top: 127px;
+    height: 100vh;
+    position: relative;
     @media (min-width: ${e.breakpoint.md}) {
       padding-top: 189px;
     }
@@ -196,5 +202,6 @@ color: rgba(239, 237, 232, 0.65);
       padding-top: 200px;
       display: flex;
       align-items: end;
+      height: 100%;
     }
 `;export{Q as S,R as W,K as a};
