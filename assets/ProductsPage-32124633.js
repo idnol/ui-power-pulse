@@ -1,4 +1,4 @@
-import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M as P,w as M,O as N,d as j,P as W}from"./index-67a666fa.js";import{S as V,C as G,e as q,f as H,i as Y,j as C,n as J}from"./AddExerciseSuccess.styled-fed4fc37.js";import{T as K}from"./TitlePage-23f5aaa2.js";const Q=t.div`
+import{s as t,t as o,j as e,a as u,b as x,K as T,g as S,M as O,G as D,u as B,O as P,y as M,P as N,d as j,Q as W}from"./index-59d1c4fa.js";import{S as V,C as G,e as q,f as H,i as Q,j as C,n as Y}from"./AddExerciseSuccess.styled-23ed8bfb.js";import{T as K}from"./TitlePage-427f0856.js";const _=t.div`
   max-width: 335px;
   margin: 0 auto;
   padding-top: 40px;
@@ -15,7 +15,7 @@ import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M a
     align-items: center;
     justify-content: space-between;
   }
-`,_=t.div`
+`,J=t.div`
   margin-top: 40px;
   @media (min-width: ${o.breakpoint.md}) {
     max-width: 664px;
@@ -202,7 +202,7 @@ import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M a
     font-size: 16px;
     line-height: 1.5;
   }
-`,ce=({label:r,isOpen:n,onToggle:s,onSelect:i})=>{const l=["All","recommended","not recommended"],a=x.useRef(null),p=d=>{a.current&&!a.current.contains(d.target)&&s()};return x.useEffect(()=>(document.addEventListener("mousedown",p),()=>{document.removeEventListener("mousedown",p)})),e.jsxs(de,{children:[e.jsx(R,{onClick:s,children:r}),e.jsx(A,{children:e.jsx("use",{href:`${u}#arrow-down`})}),n&&e.jsx(L,{ref:a,children:l.map((d,c)=>e.jsx(z,{onClick:()=>i(d),children:d},c))})]})},le=({category:r,recommended:n,bloodGroup:s})=>{const[i,l]=O(),[a,p]=x.useState(!1),[d,c]=x.useState(!1),[h,m]=x.useState(""),w=g=>{m(g.target.value)},$=()=>{p(!a)},k=()=>{c(!d)},y=g=>{i.set("category",g),l(i),p(!1)},v=g=>{i.set("recommended",g),i.set("blood",s),l(i),c(!1)},f=g=>{g.preventDefault(),i.set("query",g.target[0].value),l(i)},b=()=>{i.set("query",""),l(i),m("")};return e.jsx(e.Fragment,{children:e.jsx(_,{children:e.jsxs(U,{children:[e.jsx(ne,{inputValue:h,onChange:w,onSubmit:f,onCleanForm:b}),e.jsxs(X,{children:[e.jsx(ae,{label:r||"Category",isOpen:a,onToggle:$,onSelect:y}),e.jsx(ce,{label:n||"All",isOpen:d,onToggle:k,onSelect:v})]})]})})})},pe=t.div`
+`,ce=({label:r,isOpen:n,onToggle:s,onSelect:i})=>{const l=["All","recommended","not recommended"],a=x.useRef(null),p=d=>{a.current&&!a.current.contains(d.target)&&s()};return x.useEffect(()=>(document.addEventListener("mousedown",p),()=>{document.removeEventListener("mousedown",p)})),e.jsxs(de,{children:[e.jsx(R,{onClick:s,children:r}),e.jsx(A,{children:e.jsx("use",{href:`${u}#arrow-down`})}),n&&e.jsx(L,{ref:a,children:l.map((d,c)=>e.jsx(z,{onClick:()=>i(d),children:d},c))})]})},le=({category:r,recommended:n,bloodGroup:s})=>{const[i,l]=O(),[a,p]=x.useState(!1),[d,c]=x.useState(!1),[h,m]=x.useState(""),w=g=>{m(g.target.value)},$=()=>{p(!a)},k=()=>{c(!d)},y=g=>{i.set("category",g),l(i),p(!1)},v=g=>{i.set("recommended",g),i.set("blood",s),l(i),c(!1)},f=g=>{g.preventDefault(),i.set("query",g.target[0].value),l(i)},b=()=>{i.set("query",""),l(i),m("")};return e.jsx(e.Fragment,{children:e.jsx(J,{children:e.jsxs(U,{children:[e.jsx(ne,{inputValue:h,onChange:w,onSubmit:f,onCleanForm:b}),e.jsxs(X,{children:[e.jsx(ae,{label:r||"Category",isOpen:a,onToggle:$,onSelect:y}),e.jsx(ce,{label:n||"All",isOpen:d,onToggle:k,onSelect:v})]})]})})})},pe=t.div`
   display: flex;
   gap: 16px;
   margin-bottom: 8px;
@@ -490,7 +490,7 @@ import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M a
     min-width: 142px;
     padding: 12px 40px;
   }
-`,Ye=t.p`
+`,Qe=t.p`
   font-size: 12px;
   margin-top: 16px;
   margin-bottom: 24px;
@@ -499,7 +499,7 @@ import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M a
   @media (min-width: ${o.breakpoint.md}) {
     margin-bottom: 64px;
   }
-`,Je=({onClose:r,title:n,calories:s,id:i})=>{const[l,a]=x.useState(""),[p,d]=x.useState("0"),[c,h]=x.useState(s),[m,w]=x.useState(!1),$=B(),k=f=>{const b=f.currentTarget.value;a(b);const E=Math.round(b*c/100);d(E)},y=async f=>{f.preventDefault();try{const b={product:i,weight:+l},g=await $(P(b));$(M()),P.fulfilled.match(g)?(a(""),w(!0)):(w(!1),d("0"),S.error("Oops, something went wrong"))}catch{w(!1),d("0"),S.error("Oops, something went wrong")}},v=()=>{r(),w(!1)};return e.jsxs(e.Fragment,{children:[e.jsx(Be,{onClick:r,children:e.jsx(Ae,{children:e.jsx(Re,{href:`${u}#x-modal`})})}),!m&&e.jsx(Oe,{children:e.jsxs("form",{onSubmit:y,children:[e.jsxs(Le,{children:[e.jsx(Ee,{children:e.jsx(Te,{children:n})}),e.jsxs(De,{children:[e.jsx(Ne,{name:"number",required:!0,value:l,onChange:k}),e.jsx(Me,{children:"grams"})]})]}),e.jsxs(We,{children:[e.jsx(Ye,{children:"Calories:"}),e.jsx(Ve,{children:p})]}),e.jsxs(Ge,{children:[e.jsx(qe,{type:"submit",children:"Add to diary"}),e.jsx(He,{type:"button",onClick:r,children:"Cancel"})]})]})}),m&&e.jsx(Ie,{calories:p,isOpen:m,onClose:()=>v()})]})},Ke=({item:{title:r,calories:n,category:s,weight:i,groupBloodNotAllowed:l,_id:a},bloodGroup:p})=>{const[d,c]=x.useState(!1),h=l[p],m=h?"Recommended":"Not recommended";return e.jsxs(e.Fragment,{children:[e.jsxs(ue,{children:[e.jsxs(ke,{children:[e.jsx(be,{children:"Diet"}),e.jsxs(ye,{children:[e.jsxs(fe,{children:[e.jsx(we,{$isAllowed:h}),m]}),e.jsxs($e,{type:"button",onClick:()=>c(!0),children:["Add",e.jsx(je,{children:e.jsx("use",{href:`${u}#arrow`})})]})]})]}),e.jsx(me,{titleName:r}),e.jsxs(Y,{children:[e.jsx(C,{text:"Calories: ",val:n}),e.jsx(C,{text:"Category: ",val:s}),e.jsx(C,{text:"Weight: ",val:i})]})]}),d&&e.jsx(J,{isOpen:d,onClose:()=>c(!1),children:e.jsx(Je,{onClose:()=>c(!1),id:a,title:r,calories:n})})]})},Qe=t.div`
+`,Ye=({onClose:r,title:n,calories:s,id:i})=>{const[l,a]=x.useState(""),[p,d]=x.useState("0"),[c,h]=x.useState(s),[m,w]=x.useState(!1),$=B(),k=f=>{const b=f.currentTarget.value;a(b);const E=Math.round(b*c/100);d(E)},y=async f=>{f.preventDefault();try{const b={product:i,weight:+l},g=await $(P(b));$(M()),P.fulfilled.match(g)?(a(""),w(!0)):(w(!1),d("0"),S.error("Oops, something went wrong"))}catch{w(!1),d("0"),S.error("Oops, something went wrong")}},v=()=>{r(),w(!1)};return e.jsxs(e.Fragment,{children:[e.jsx(Be,{onClick:r,children:e.jsx(Ae,{children:e.jsx(Re,{href:`${u}#x-modal`})})}),!m&&e.jsx(Oe,{children:e.jsxs("form",{onSubmit:y,children:[e.jsxs(Le,{children:[e.jsx(Ee,{children:e.jsx(Te,{children:n})}),e.jsxs(De,{children:[e.jsx(Ne,{name:"number",required:!0,value:l,onChange:k}),e.jsx(Me,{children:"grams"})]})]}),e.jsxs(We,{children:[e.jsx(Qe,{children:"Calories:"}),e.jsx(Ve,{children:p})]}),e.jsxs(Ge,{children:[e.jsx(qe,{type:"submit",children:"Add to diary"}),e.jsx(He,{type:"button",onClick:r,children:"Cancel"})]})]})}),m&&e.jsx(Ie,{calories:p,isOpen:m,onClose:()=>v()})]})},Ke=({item:{title:r,calories:n,category:s,weight:i,groupBloodNotAllowed:l,_id:a},bloodGroup:p})=>{const[d,c]=x.useState(!1),h=l[p],m=h?"Recommended":"Not recommended";return e.jsxs(e.Fragment,{children:[e.jsxs(ue,{children:[e.jsxs(ke,{children:[e.jsx(be,{children:"Diet"}),e.jsxs(ye,{children:[e.jsxs(fe,{children:[e.jsx(we,{$isAllowed:h}),m]}),e.jsxs($e,{type:"button",onClick:()=>c(!0),children:["Add",e.jsx(je,{children:e.jsx("use",{href:`${u}#arrow`})})]})]})]}),e.jsx(me,{titleName:r}),e.jsxs(Q,{children:[e.jsx(C,{text:"Calories: ",val:n}),e.jsx(C,{text:"Category: ",val:s}),e.jsx(C,{text:"Weight: ",val:i})]})]}),d&&e.jsx(Y,{isOpen:d,onClose:()=>c(!1),children:e.jsx(Ye,{onClose:()=>c(!1),id:a,title:r,calories:n})})]})},_e=t.div`
   max-width: 335px;
   margin: 0 auto;
   @media (min-width: ${o.breakpoint.md}) {
@@ -552,7 +552,7 @@ import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M a
       height: 153px;
     }
  }
-`,_e=t.ul`
+`,Je=t.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -562,7 +562,7 @@ import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M a
     gap: 16px;
     row-gap: 32px;
   }
-`,Ue=({items:r,bloodGroup:n})=>e.jsx(Qe,{children:e.jsx(_e,{children:r.map(s=>e.jsx("li",{children:e.jsx(Ke,{item:s,bloodGroup:n})},s._id))})}),Xe=r=>r.products.items,Ze=r=>r.products.isLoading,eo=r=>r.products.error,oo=t.section`
+`,Ue=({items:r,bloodGroup:n})=>e.jsx(_e,{children:e.jsx(Je,{children:r.map(s=>e.jsx("li",{children:e.jsx(Ke,{item:s,bloodGroup:n})},s._id))})}),Xe=r=>r.products.items,Ze=r=>r.products.isLoading,eo=r=>r.products.error,oo=t.section`
   position: fixed;
   top: 0;
   left: 0;
@@ -648,4 +648,4 @@ import{s as t,t as o,j as e,a as u,b as x,J as T,f as S,K as O,F as D,u as B,M a
     display: flex;
     flex-direction: column;
     width: 100%;
-`;function bo(){const r=j(Xe),n=j(Ze),s=j(eo),i=j(h=>{var m;return(m=h.profile.items.bodyData)==null?void 0:m.blood})??"1",l=B(),[a]=O(),p=x.useMemo(()=>Object.fromEntries([...a]),[a]),{category:d="",recommended:c="all"}=p;return x.useEffect(()=>{l(W(p))},[l,p]),e.jsx(e.Fragment,{children:e.jsxs(po,{children:[e.jsx(xo,{}),e.jsx("div",{className:"container",children:e.jsxs(ho,{children:[e.jsxs(Q,{children:[e.jsx(K,{children:"Products"}),e.jsx(le,{category:d,recommended:c,bloodGroup:i})]}),n&&e.jsx(io,{}),r.length>0&&e.jsx(Ue,{items:r,bloodGroup:i}),(s||r.length===0&&!n)&&e.jsx(ao,{})]})})]})})}export{bo as default};
+`;function bo(){const r=j(Xe),n=j(Ze),s=j(eo),i=j(h=>{var m;return(m=h.profile.items.bodyData)==null?void 0:m.blood})??"1",l=B(),[a]=O(),p=x.useMemo(()=>Object.fromEntries([...a]),[a]),{category:d="",recommended:c="all"}=p;return x.useEffect(()=>{l(W(p))},[l,p]),e.jsx(e.Fragment,{children:e.jsxs(po,{children:[e.jsx(xo,{}),e.jsx("div",{className:"container",children:e.jsxs(ho,{children:[e.jsxs(_,{children:[e.jsx(K,{children:"Products"}),e.jsx(le,{category:d,recommended:c,bloodGroup:i})]}),n&&e.jsx(io,{}),r.length>0&&e.jsx(Ue,{items:r,bloodGroup:i}),(s||r.length===0&&!n)&&e.jsx(ao,{})]})})]})})}export{bo as default};
