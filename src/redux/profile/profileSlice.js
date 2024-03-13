@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { current, updateAvatar, updateProfile } from './api.js';
+import { logout } from '../auth/api.js';
 
 const profileSlice = createSlice({
   name: 'profile',
@@ -54,14 +55,19 @@ const profileSlice = createSlice({
         state.isLoading = false;
         if (state.items && state.items.bodyData) {
           state.items.bodyData.avatar = action.payload.avatar;
-        }      
+        }
       })
       .addCase(updateAvatar.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-      });
+      })
+      .addCase(logout.fulfilled, state => {
+        state.items = {};
+        state.isLoading = false;
+        state.error = null;
+      })
   }
 })
-export const { addUserInfo, setLoading,setBirthdate } = profileSlice.actions;
+export const { addUserInfo, setLoading, setBirthdate } = profileSlice.actions;
 
 export const profileReducer = profileSlice.reducer;

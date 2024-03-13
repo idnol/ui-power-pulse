@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addExercise, addProduct, getDiary, removeExercise, removeProduct } from "./api";
+import { logout } from "../auth/api";
 
 export const diarySlice = createSlice({
     name: "diary",
@@ -11,15 +12,15 @@ export const diarySlice = createSlice({
         isLoading: false,
         error: null,
         isSuccess: false
-        },
+    },
     reducers: {
         changeDate: (state, action) => {
             state.selectedDate = action.payload;
         },
     },
-        extraReducers: (builder) => {
-            builder
-    
+    extraReducers: (builder) => {
+        builder
+
             .addCase(getDiary.pending, (state) => {
                 state.isLoading = true;
             })
@@ -34,13 +35,13 @@ export const diarySlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload;
             })
-    
+
             .addCase(addProduct.pending, (state) => {
                 state.isLoading = true;
 
             })
             .addCase(addProduct.fulfilled, (state) => {
-                state.isLoading = false;  
+                state.isLoading = false;
                 state.isSuccess = true;
                 state.error = null;
             })
@@ -83,7 +84,15 @@ export const diarySlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload;
             })
-        },
+
+            .addCase(logout.fulfilled, state => {
+                state.items = [];
+                state.products = [];
+                state.exercises = [];
+                state.isLoading = false;
+                state.error = null;
+            })
+    },
 })
 
 export const { changeDate } = diarySlice.actions;
