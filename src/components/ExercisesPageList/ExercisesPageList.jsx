@@ -50,19 +50,18 @@ export const Exercises = ({ bodyPartFilter, category, onRenderBackground }) => {
     onRenderBackground();
   });
 
-  // const exercises = useSelector((state) => state.exercises.items);
+  const exercises = useSelector((state) => state.exercises.items);
   // const visibleExercises = getVisibleExercises(exercises, bodyPartFilter);
 
   return (
-    <div></div>
-    // <ExercisesListContainer>
-    //   <ExercisesList>
-    //     {visibleExercises.map((item, index) => (
-    //       <ExercisesListItem key={index}>
-    //         <ListItem item={item} />
-    //       </ExercisesListItem>
-    //     ))}
-    //   </ExercisesList>
-    // </ExercisesListContainer>
+    <ExercisesListContainer>
+      <ExercisesList>
+        {exercises.map((item, index) => (
+          <ExercisesListItem key={index}>
+            <ListItem item={item} />
+          </ExercisesListItem>
+        ))}
+      </ExercisesList>
+    </ExercisesListContainer>
   );
 };
