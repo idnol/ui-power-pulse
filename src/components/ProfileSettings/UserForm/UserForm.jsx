@@ -20,9 +20,10 @@ import {
 
 import { RadioInput } from './RadioInput/RadioInput.jsx';
 import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
-import { DatePickerItem } from './DatePicker/DatePicker.jsx';
+// import { DatePickerItem } from './DatePicker/DatePicker.jsx';
 import { updateProfile } from '../../../redux/profile/api.js';
 import {selectProfile} from '../../../redux/profile/selectors.js'
+import TestDatepicker from './DatePicker/TestDatePicker.jsx';
 export const UserForm = () => {
   const dispatch = useDispatch();
   const profileData = useSelector(selectProfile);
@@ -98,7 +99,8 @@ export const UserForm = () => {
               <div>
                 <FormLabel>Day of Birth</FormLabel>
                 {/* <StyledDatepicker profile={ true } /> */}
-                <div className='datePickerWrapper' style={{ position: 'relative' }} > <DatePickerItem formik={formikProps} /></div>
+                {/* <div className='datePickerWrapper' style={{ position: 'relative' }} > <DatePickerItem formik={formikProps} /></div> */}
+                <div className='profileHeadWrapper' style={{ position: 'relative' }} > <TestDatepicker formik={formikProps} /></div>
               </div>
             </UserPersonalInfo>
             <UserHealthlInfo>
