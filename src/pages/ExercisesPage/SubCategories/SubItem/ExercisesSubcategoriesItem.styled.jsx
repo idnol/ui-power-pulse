@@ -102,12 +102,10 @@ export const SubcategoriesH3 = styled.h3`
     text-transform: lowercase;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 150px;
+    max-width: 176px;
     &:first-letter {
         text-transform: uppercase;
     }
-
-
 `;
 
 export const SubcategoriesH4 = styled.h4`
