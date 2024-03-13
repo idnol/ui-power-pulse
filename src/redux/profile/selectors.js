@@ -3,3 +3,5 @@ export const selectIsLoading = (state) => state.profile.isLoading;
 export const selectError = (state) => state.profile.error;
 
 export const selectDateBirthday = (state) => state.profile.items.bodyData;
+
+export const selectBirthday = (state) => state.profile.items.bodyData.birthday;
