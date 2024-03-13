@@ -1,4 +1,4 @@
-import{s as o,t,j as i,b as l,L as c}from"./index-60ded857.js";const d=o.li`
+import{s as o,t,j as i,b as l,L as c}from"./index-f05282c3.js";const d=o.li`
   color: ${t.color.greyFifth};
   font-feature-settings:
     'clig' off,
