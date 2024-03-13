@@ -2,14 +2,17 @@ import { styled } from 'styled-components';
 import { theme } from '../../vars.js';
 
 export const StatisticsInfoWrapper = styled.div`
-display: flex;
-flex-direction: column;
-gap: 20px;
-width: 234px;
-height: 212px;
-margin-left: auto;
-transition-duration: 300ms;
-padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 234px;
+  height: 212px;
+  margin-left: auto;
+  transition-duration: 300ms;
+  padding-top: 40px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
 
 
   @media screen and (min-width: ${theme.breakpoint.md}) {

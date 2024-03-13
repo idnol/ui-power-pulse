@@ -27,7 +27,6 @@ export const ProductsSection = styled.section`
 
 export const HeaderInner = styled.div`
   @media (min-width: ${theme.breakpoint.xl}) {
-    border-bottom: ${theme.border.grey2};
     background-color: ${theme.color.black};
     width: 100%;
     height: 84px;

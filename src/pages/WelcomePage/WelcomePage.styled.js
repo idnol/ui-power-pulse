@@ -13,6 +13,7 @@ export const WelcomeSection = styled.section`
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
+ 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -34,6 +35,8 @@ export const WelcomeSection = styled.section`
 `;
 export const Wrapper = styled.div`
     padding-top: 127px;
+    height: 100vh;
+    position: relative;
     @media (min-width: ${theme.breakpoint.md}) {
       padding-top: 189px;
     }
@@ -41,5 +44,6 @@ export const Wrapper = styled.div`
       padding-top: 200px;
       display: flex;
       align-items: end;
+      height: 100%;
     }
 `;
