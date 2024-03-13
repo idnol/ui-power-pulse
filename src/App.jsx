@@ -8,6 +8,7 @@ import { PrivateRoute } from './components/Routes/PrivateRoute.jsx';
 import { Loader } from './components/parts/Loader/Loader.jsx';
 import { useAuth } from "./components/hooks/index.js";
 import { Toaster } from 'react-hot-toast';
+import { current } from './redux/profile/api.js';
 
 
 const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage.jsx'));
@@ -29,7 +30,7 @@ function App() {
 
   useEffect(() => {
     dispatch(refreshUser());
-
+    dispatch(current())
   }, [dispatch]);
   return (
     isRefreshing ? <Loader /> : (

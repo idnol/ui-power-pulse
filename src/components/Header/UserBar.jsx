@@ -12,9 +12,10 @@ import sprite from 'assets/sprite-2.svg';
 import { theme } from '../../vars.js';
 import { LogOut } from '../parts/LogOut/LogOut.jsx';
 import { useSelector } from 'react-redux';
-import { selectIsAuthenticated, selectUser } from '../../redux/auth/selectors.js';
+import { selectIsAuthenticated} from '../../redux/auth/selectors.js';
 import { closeMenu } from './closeMenu.js';
 import { useEffect } from 'react';
+import { selectProfile } from '../../redux/profile/selectors.js';
 
 export const UserBar = () => {
   const openSidebar = () => {
@@ -25,7 +26,7 @@ export const UserBar = () => {
   };
 
   const isLoggedIn = useSelector(selectIsAuthenticated);
-  const { bodyData } = useSelector(selectUser);
+  const { bodyData } = useSelector(selectProfile);
 
   useEffect(() => {
     const handleKeyPress = (event) => {
