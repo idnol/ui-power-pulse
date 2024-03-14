@@ -1,4 +1,4 @@
-import{s as o,t,j as i,b as l,L as c}from"./index-879106ab.js";const d=o.li`
+import{s as o,t,j as i,b as l,L as c}from"./index-9c856ee4.js";const d=o.li`
   color: ${t.color.greyFifth};
   font-feature-settings:
     'clig' off,
@@ -7,7 +7,7 @@ import{s as o,t,j as i,b as l,L as c}from"./index-879106ab.js";const d=o.li`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 150% */
+  line-height: 1.5;
 
   margin-right: 16px;
   display: flex;
@@ -24,7 +24,7 @@ import{s as o,t,j as i,b as l,L as c}from"./index-879106ab.js";const d=o.li`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 150% */
+  line-height: 1.5;
  display: block;
  max-width: 76px;
  white-space: nowrap;
@@ -64,7 +64,7 @@ import{s as o,t,j as i,b as l,L as c}from"./index-879106ab.js";const d=o.li`
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 120% */
+  line-height: 1.2;
 
   max-width: 240px;
 
@@ -98,7 +98,7 @@ import{s as o,t,j as i,b as l,L as c}from"./index-879106ab.js";const d=o.li`
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.29;
 
   @media (min-width: ${t.breakpoint.md}) {
     font-size: 16px;

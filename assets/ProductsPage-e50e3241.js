@@ -1,4 +1,4 @@
-import{s as t,t as o,j as e,a as b,b as h,M as E,g as S,O,H as D,u as B,P,y as T,Q as M,d as j,S as N}from"./index-879106ab.js";import{S as W,C as V,e as G,f as q,i as H,j as C,n as Q}from"./AddExerciseSuccess.styled-52561ed3.js";import{T as Y}from"./TitlePage-197c8590.js";const _=t.div`
+import{s as t,t as o,j as e,a as b,b as h,M as E,g as S,O,H as D,u as B,P,y as T,Q as M,d as j,S as N}from"./index-9c856ee4.js";import{S as W,C as V,e as G,f as q,i as H,j as C,n as Q}from"./AddExerciseSuccess.styled-e0b29fd6.js";import{T as Y}from"./TitlePage-4d928737.js";const _=t.div`
   max-width: 335px;
   margin: 0 auto;
   padding-top: 40px;
@@ -221,7 +221,7 @@ import{s as t,t as o,j as e,a as b,b as h,M as E,g as S,O,H as D,u as B,P,y as T
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 120% */
+  line-height: 1.2;
   max-width: 240px;
   @media (min-width: ${o.breakpoint.md}) {
    font-size: 24px;
