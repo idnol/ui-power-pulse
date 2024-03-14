@@ -23,13 +23,12 @@ import {
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct, getDiary } from '../../../redux/diary/api.js';
-import { toast, Toaster } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 
 export const AddProductForm = ({ onClose, title, calories, id }) => {
   const [isInputValue, setIsInputValue] = useState('');
   const [isCaloriesValue, setIsCaloriesValue] = useState('0');
-  const [isCalories, setIsCalories] = useState(calories);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
 
   const dispatch = useDispatch();
@@ -37,10 +36,10 @@ export const AddProductForm = ({ onClose, title, calories, id }) => {
   const handleValue = (evt) => {
     const value = evt.currentTarget.value;
     setIsInputValue(value);
-    const val = isCalories;
+    const val = calories;
 
-    const calories = Math.round((value * val) / 100);
-    setIsCaloriesValue(calories);
+    const resultCalories = Math.round((value * val) / 100);
+    setIsCaloriesValue(resultCalories);
   };
 
   const onSubmit = async (evt) => {
