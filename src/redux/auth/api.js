@@ -45,7 +45,7 @@ export const logout = createAsyncThunk(
     const state = thunkAPI.getState();
     setAuthHeader(state.auth.token);
     try {
-      await axios.post('/users/logout');
+      await axios('/users/logout');
       clearAuthHeader();
     } catch (error) {
       toast.error(error.message);

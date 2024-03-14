@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectExercises } from '../../redux/diary/diarySelectors';
+import { selectExercises, selectorDate } from '../../redux/diary/diarySelectors';
 import {
   BodyPartItem,
   BurnedCaloriesItem,
@@ -28,6 +28,7 @@ import sprite from 'assets/sprite-2.svg'
 
 export const TableExercises = () => {
   const exercisesItems = useSelector(selectExercises);
+  const date = useSelector(selectorDate);
   const dispatch = useDispatch();
   
   return (
@@ -70,8 +71,8 @@ export const TableExercises = () => {
                 <DeleteItem>
                   <DeleteBtn onClick={
                     () => {
-                      dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time }))
-                        .then(() => dispatch(getDiary()));
+                      dispatch(removeExercise({ id: exercise._id, calories: exercise.calories, time: exercise.time, date: date }))
+                        .then(() => dispatch(getDiary(date)));
                     }
                   }>
                     <SvgBasket>
