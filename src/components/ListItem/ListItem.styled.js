@@ -41,7 +41,7 @@ export const Name = styled.p`
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 120% */
+  line-height: 1.2;
 
   max-width: 240px;
 
@@ -83,7 +83,7 @@ export const ButtonText = styled.p`
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.29;
 
   @media (min-width: ${theme.breakpoint.md}) {
     font-size: 16px;

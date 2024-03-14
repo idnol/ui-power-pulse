@@ -94,10 +94,6 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
     }
 
-    /* main {
-        padding-top: 136px;
-    } */
-
     .greenBorder {
     border: 1px solid ${theme.color.green};
     }

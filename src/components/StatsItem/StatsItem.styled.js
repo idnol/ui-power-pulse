@@ -10,7 +10,7 @@ export const StatsItem = styled.li`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 150% */
+  line-height: 1.5;
 
   margin-right: 16px;
   display: flex;
@@ -29,7 +29,7 @@ export const StatsSpan = styled.span`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 150% */
+  line-height: 1.5;
  display: block;
  max-width: 76px;
  white-space: nowrap;
