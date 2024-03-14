@@ -1,9 +1,9 @@
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-hot-toast';
-import {bloodOptions,sexOptions,levelOptions,bodyInfo} from './form-default-data.js'
+import { bloodOptions, sexOptions, levelOptions, bodyInfo } from './form-default-data.js'
 import { userSchema } from './user-validation-yup.js';
-import { Toaster} from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import ToastError from './helpers/ToastError.js';
 
 import {
@@ -20,9 +20,8 @@ import {
 
 import { RadioInput } from './RadioInput/RadioInput.jsx';
 import { PersonalInfoItem } from './PersonalInfoItem/PersonalInfoItem.jsx';
-// import { DatePickerItem } from './DatePicker/DatePicker.jsx';
 import { updateProfile } from '../../../redux/profile/api.js';
-import {selectProfile} from '../../../redux/profile/selectors.js'
+import { selectProfile } from '../../../redux/profile/selectors.js'
 import TestDatepicker from './DatePicker/TestDatePicker.jsx';
 export const UserForm = () => {
   const dispatch = useDispatch();
@@ -31,7 +30,7 @@ export const UserForm = () => {
 
   const initialValues = {
     name: profileData.name || 'Name',
-    email:profileData.email,
+    email: profileData.email,
     height: (profileData.bodyData && profileData.bodyData.height) || 150,
     currentWeight: (profileData.bodyData && profileData.bodyData.currentWeight) || 35,
     desiredWeight: (profileData.bodyData && profileData.bodyData.desiredWeight) || 35,
@@ -50,8 +49,8 @@ export const UserForm = () => {
       }
       try {
         const { _id, ...restData } = profileData;
-        const userData = { _id, ...values,blood: parseInt(values.blood, 10) };
-        dispatch(updateProfile({_id,...restData.bodyData,...userData}));
+        const userData = { _id, ...values, blood: parseInt(values.blood, 10) };
+        dispatch(updateProfile({ _id, ...restData.bodyData, ...userData }));
         toast.success('Profile updated successfully');
       } catch (error) {
         toast.error('Error updating user data:', error);
@@ -73,7 +72,7 @@ export const UserForm = () => {
             <UserInfo>
               <div>
                 <FormLabel>Name</FormLabel>
-                <FormInput type="text" name="name"/>
+                <FormInput type="text" name="name" />
                 <ToastError name="name" />
               </div>
               <div>
@@ -98,8 +97,6 @@ export const UserForm = () => {
               ))}
               <div>
                 <FormLabel>Day of Birth</FormLabel>
-                {/* <StyledDatepicker profile={ true } /> */}
-                {/* <div className='datePickerWrapper' style={{ position: 'relative' }} > <DatePickerItem formik={formikProps} /></div> */}
                 <div className='profileHeadWrapper' style={{ position: 'relative' }} > <TestDatepicker formik={formikProps} /></div>
               </div>
             </UserPersonalInfo>

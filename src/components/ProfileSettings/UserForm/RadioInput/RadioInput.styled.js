@@ -1,10 +1,6 @@
 import styled from 'styled-components';
-import {theme} from '../../../../vars'
-import { Field} from 'formik';
-
-
-
-
+import { theme } from '../../../../vars'
+import { Field } from 'formik';
 
 
 export const LabelFlex = styled.label`
@@ -19,7 +15,7 @@ color: var(--white);
 height: 36px;
 `
 
-export const  FormRadio = styled(Field)`
+export const FormRadio = styled(Field)`
 background: transparent;
 position: relative;
 appearance: none;

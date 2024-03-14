@@ -24,7 +24,7 @@ export const Name = styled.p`
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 120% */
+  line-height: 1.2;
   max-width: 240px;
   @media (min-width: ${theme.breakpoint.md}) {
    font-size: 24px;

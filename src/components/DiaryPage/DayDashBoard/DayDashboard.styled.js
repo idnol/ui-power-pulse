@@ -56,17 +56,8 @@ export const DashboardItem = styled.li`
   width: 100%;
   height: 96px;
 
-  &:nth-child(5) {
-    /* border: 1px solid
-      ${(props) =>
-      props.count < 0 ? `${theme.color.red}` : `${theme.border.grey2}`}; */
-  }
-
   &:nth-child(6) {
     order: 6;
-    /* border: 1px solid
-      ${(props) =>
-      props.count > 0 ? `${theme.color.green}` : `${theme.border.grey2}`}; */
   }
 
   @media (min-width: ${theme.breakpoint.md}) {
@@ -135,7 +126,7 @@ export const DashboardItemTitle = styled.p`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 133.333% */
+  line-height: 1.33;
 
   margin: 0;
 
@@ -157,7 +148,7 @@ export const DashboardItemNumber = styled.p`
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 20px; /* 111.111% */
+  line-height: 1.11;
 
   margin: 0;
 
@@ -187,7 +178,7 @@ export const AttentionText = styled.p`
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.29;
 
   max-width: 303px;
 
