@@ -20,13 +20,14 @@ import {
   Header,
 } from './TableProducts.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectProducts } from '../../redux/diary/diarySelectors.js';
+import { selectorDate, selectProducts } from '../../redux/diary/diarySelectors.js';
 import { getDiary, removeProduct } from '../../redux/diary/api.js';
 import { TextNoFound } from '../DayProducts/DayProducts.styled.jsx';
 import sprite from 'assets/sprite-2.svg'
 
 export const TableProducts = () => {
   const productsItems = useSelector(selectProducts);
+  const date = useSelector(selectorDate);
   const dispatch = useDispatch();
   const bloodGroup = useSelector(state => state.auth.user.bodyData?.blood) ?? "1";
 
@@ -82,8 +83,8 @@ export const TableProducts = () => {
                       )}
                       <DeleteItem>
                         <DeleteBtn onClick={() => {
-                            dispatch(removeProduct({ id: product._id, calories: product.calories }))
-                            .then(() => dispatch(getDiary()));
+                            dispatch(removeProduct({ id: product._id, calories: product.calories, date: date }))
+                            .then(() => dispatch(getDiary(date)));
                           }
                         }>
                           <SvgBasket>

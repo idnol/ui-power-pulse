@@ -39,10 +39,10 @@ export const addExercise = createAsyncThunk(
 export const removeProduct = createAsyncThunk(
     'diary/deleteProduct', async (product, thunkAPI) =>{
         try {
-            const deleted = await axios.delete(`/diaries/product`, { data: product });
-            return deleted.data
+          const deleted = await axios.delete(`/diaries/product`, { data: product });
+          return deleted.data
         } catch (error){
-            return thunkAPI.rejectWithValue(error.message);
+          return thunkAPI.rejectWithValue(error.message);
         }
     }
 )
@@ -50,10 +50,10 @@ export const removeProduct = createAsyncThunk(
 export const removeExercise = createAsyncThunk(
     'diary/deleteExercise', async (exercise, thunkAPI) =>{
         try {
-            const deleted = await axios.delete(`/diaries/exercise`, { data: exercise });
-            return deleted.data
+          const deleted = await axios.delete(`/diaries/exercise`, { data: exercise });
+          return deleted.data
         } catch (error){
-            return thunkAPI.rejectWithValue(error.message);
+          return thunkAPI.rejectWithValue(error.message);
         }
     }
 )
